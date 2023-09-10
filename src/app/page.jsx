@@ -30,9 +30,13 @@ export default function Home() {
             <PackageCard />
             <PackageCard />
           </div>
-          <div className="bg-black w-96 h-16 mx-auto rounded-xl mb-10">
-            <p className=" text-white text-center pt-5 ">Tampilkan Lebih Banyak</p>
-          </div>
+          <a href="/package">
+
+
+            <div className="bg-black w-96 h-16 mx-auto rounded-xl mb-10">
+              <p className=" text-white text-center pt-5 ">Tampilkan Lebih Banyak</p>
+            </div>
+          </a>
           <div className="bg-black w-full h-96 ">
             <p className="text-white ps-14 pt-10 ">Gallery Kegiatan</p>
           </div>
