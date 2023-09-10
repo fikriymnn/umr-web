@@ -44,7 +44,7 @@ export default function CustomNavbar() {
         </Navbar.Link>
         <Navbar.Link href="/about">
           <div className="flex">
-            <div className="w-2/12">
+            <div className="w-2/12 ">
               <Image
                 src='/assets/images/InfoSquared.png'
                 width={50}

@@ -1,0 +1,96 @@
+'use client';
+
+import { Footer } from 'flowbite-react';
+import { BsDribble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import Image from "next/image";
+export default function CustomFooter() {
+    return (
+        <Footer >
+
+            <div className="w-full bg-yellow-400">
+                <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
+                    <div className='w-96'>
+                        <p className='text-3xl font-extrabold pt-14 ps-14 pb-6'>Umroh Yuk</p>
+                        <p className='font-bold ps-14'>jl. Wastukencana Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 p-14">
+                        <div>
+                            <Footer.Title title="Tentang Perusahaan" className='font-extrabold text-black' />
+                            <Footer.LinkGroup col>
+                                <Footer.Link href="#" >
+                                    <p className='text-black font-bold'>
+                                        Beranda
+                                    </p>
+                                </Footer.Link>
+                                <Footer.Link href="#">
+                                    <p className='text-black font-bold'>
+                                        Paket Umroh
+                                    </p>
+                                </Footer.Link>
+                                <Footer.Link href="#">
+                                    <p className='text-black font-bold'>
+                                        Lainnya
+                                    </p>
+                                </Footer.Link>
+                                <Footer.Link href="#">
+                                    <p className='text-black font-bold'>
+                                        Tentang Kami
+                                    </p>
+                                </Footer.Link>
+                            </Footer.LinkGroup>
+                        </div>
+                        <div>
+                            <Footer.Title title="Jadi Mitra Kami" className='text-black font-extrabold' />
+                            <Footer.LinkGroup col>
+                                <Footer.Link href="#">
+                                    <p className='text-black font-bold'>
+                                        Gabung Mitra
+                                    </p>
+                                </Footer.Link>
+                                <Footer.Link href="#">
+                                    <p className='text-black font-bold'>
+                                        Mitra Kami
+                                    </p>
+                                </Footer.Link>
+                            </Footer.LinkGroup>
+                        </div>
+                        <div>
+
+                            <Footer.LinkGroup col>
+                                <Footer.Link href="#">
+                                    <div className='flex justify-center gap-1 bg-gray-500 rounded-3xl h-10  w-44' >
+                                        <Image
+                                            src='/assets/images/wa.png'
+                                            width={20}
+                                            height={20}
+                                            alt="Picture of the author"
+                                            className=''
+                                        />
+                                        <p className='text-white'>Hubungi Kami</p>
+                                    </div>
+                                </Footer.Link>
+                                <Footer.Link href="#">
+                                    <p className='text-black font-bold'>Phone: 08293874783773</p>
+                                </Footer.Link>
+                                <Footer.Link href="#">
+                                    <p className='text-black font-bold'>Fax: 1232242442</p>
+                                </Footer.Link>
+                                <Footer.Link href="#">
+                                    <p className='text-black font-bold'>Contact Center: 08293874783773</p>
+                                </Footer.Link>
+                            </Footer.LinkGroup>
+                        </div>
+                    </div>
+                </div>
+                <Footer.Divider />
+                <div className="w-full h-20 sm:flex sm:items-center sm:justify-between bg-black">
+                    <p className='text-white ps-14'>
+                        &copy;2023 Umroh Yuk Indonesia
+                    </p>
+                </div>
+            </div>
+        </Footer>
+    )
+}
+
+
