@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Testimonial from "@/components/testimonial";
+import Facility from "@/components/facility";
 import DefaultCarousel from "@/components/Carousel";
+import PackageCard from "@/components/packagecard"
 import { Carousel } from 'flowbite';
 
 function PackageDetail() {
@@ -12,7 +14,7 @@ function PackageDetail() {
                 <div className='w-8/12'>
                     <div className=' bg-white w-10/12 h-[681px] ms-20 rounded-xl'>
                         <div className='h-[60px] rounded-t-xl center'>
-                            <p className='text-xl text-semibold text-center pt-3 text-black'>Umroh Dream Exclusive Plus Kereta Cepat 10 Hari</p>
+                            <p className='text-xl text-bold text-center pt-3 text-black'>Umroh Dream Exclusive Plus Kereta Cepat 10 Hari</p>
                         </div>
                         <div className='bg-gray-900 w-full h-[315px] rounded-xl'>
                             <DefaultCarousel />
@@ -186,13 +188,166 @@ function PackageDetail() {
                         </div>
                         <div className='h-[20px]'></div>
                     </div>
+                    <div className='h-[50px]'></div>
+                    <div className='bg-white w-10/12 ms-20 rounded-xl'>
+                        <div className='h-[60px] w-[250px] bg-black mx-auto rounded-b-xl'>
+                            <p className='text-2xl font-semibold text-[#E3B02B] text-center pt-3'>Hotel Travel</p>
+                        </div>
+                        <Facility />
+                        <Facility />
+                        <Facility />
+                        <div className='h-[20px]'></div>
+                    </div>
+                    <div className='h-[50px]'></div>
+
 
                 </div>
-                <div className='w-4/12 z-10 fixed right-10'>
-                    {/* <DetailCard /> */}
+                <div className='w-4/12 z-10 mr-20'>
+                    <div className='bg-white rounded-xl'>
+                        <div className='p-7'>
+                            <div className='px-5'>
+                                <h1 className='text-xl font-semibold'>Harga</h1>
+                            </div>
+                            <div className='px-5'>
+                                <h2 className='text-3xl text-[#E3B02B] font-semibold pt-2'>RP 39.500.000</h2>
+                            </div>
+                            <div >
+                                <div className=' pt-3'>
+                                    <div className='bg-[#E3B02B]'>bar Disini</div>
+                                </div>
+                            </div>
+                            <div className='py-3'>
+                                <p>Lorem ipsum dolor sit Amet Lorem ipsum dolor sit AmetLorem ipsum dolor sit AmetLorem ipsum dolor sit AmetLorem ipsum dolor sit Amet</p>
+                            </div>
+                            <div className='item-center'>
+                                <a href="">
+                                    <div className='h-[80px] bg-[#E3B02B] hover:bg-[#fad26e] m-auto rounded-xl p-3 items-center'>
+
+                                        <div className='flex justify-center pt-3'>
+                                            <div className='w-1/12'>
+                                                <Image
+                                                    src='/assets/images/order.png'
+                                                    width={30}
+                                                    height={30}
+                                                    alt=".."
+                                                />
+                                            </div>
+                                            <p className='font-semibold ms-3'>Pesan Paket Umroh</p>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
+
             </div >
 
+            <div className='bg-white mx-20 rounded-xl'>
+                <div className='h-[60px] w-[250px] bg-black mx-auto rounded-b-xl'>
+                    <p className='text-2xl font-semibold text-[#E3B02B] text-center pt-3'>Jadwal Perjalanan</p>
+                </div>
+                <div className='grid grid-cols-3 gap-y-8 gap-x-16 pt-8 p-14'>
+                    <div className='w-3/9 border-[3px] border-gray-400 rounded-xl'>
+                        <div className='p-3'>
+                            <h1 className='font-semibold text-xl'>Hari 1</h1>
+                            <p>Umroh Plus Dubai Hari-1</p>
+                        </div>
+                    </div>
+                    <div className='w-3/9 border-[3px] border-gray-400 rounded-xl'>
+                        <div className='p-3'>
+                            <h1 className='font-semibold text-xl'>Hari 2</h1>
+                            <p>Umroh Plus Dubai Hari-1</p>
+                        </div>
+                    </div>
+                    <div className='w-3/9 border-[3px] border-gray-400 rounded-xl'>
+                        <div className='p-3'>
+                            <h1 className='font-semibold text-xl'>Hari 3</h1>
+                            <p>Umroh Plus Dubai Hari-1</p>
+                        </div>
+                    </div>
+                    <div className='w-3/9 border-[3px] border-gray-400 rounded-xl'>
+                        <div className='p-3'>
+                            <h1 className='font-semibold text-xl'>Hari 4</h1>
+                            <p>Umroh Plus Dubai Hari-1</p>
+                        </div>
+                    </div>
+                    <div className='w-3/9 border-[3px] border-gray-400 rounded-xl'>
+                        <div className='p-3'>
+                            <h1 className='font-semibold text-xl'>Hari 5</h1>
+                            <p>Umroh Plus Dubai Hari-1</p>
+                        </div>
+                    </div>
+                    <div className='w-3/9 border-[3px] border-gray-400 rounded-xl'>
+                        <div className='p-3'>
+                            <h1 className='font-semibold text-xl'>Hari 6</h1>
+                            <p>Umroh Plus Dubai Hari-1</p>
+                        </div>
+                    </div>
+                    <div className='w-3/9 border-[3px] border-gray-400 rounded-xl'>
+                        <div className='p-3'>
+                            <h1 className='font-semibold text-xl'>Hari 7</h1>
+                            <p>Umroh Plus Dubai Hari-1</p>
+                        </div>
+                    </div>
+                    <div className='w-3/9 border-[3px] border-gray-400 rounded-xl'>
+                        <div className='p-3'>
+                            <h1 className='font-semibold text-xl'>Hari 8</h1>
+                            <p>Umroh Plus Dubai Hari-1</p>
+                        </div>
+                    </div>
+                    <div className='w-3/9 border-[3px] border-gray-400 rounded-xl'>
+                        <div className='p-3'>
+                            <h1 className='font-semibold text-xl'>Hari 9</h1>
+                            <p>Umroh Plus Dubai Hari-1</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div className='flex'>
+                <div className='w-8/12'>
+                    <div className='h-[40px]'></div>
+                    <div className='bg-white w-10/12 ms-20 rounded-xl'>
+                        <div >
+                            <div className='h-[60px] w-[250px] bg-black mx-auto rounded-b-xl'>
+                                <p className='text-2xl font-semibold text-[#E3B02B] text-center pt-3'>Syarat & Ketentuan</p>
+                            </div>
+                            <div className='py-7 px-14 text-2xl font-semibold text-black'>
+                                <p>Syarat</p>
+                                <p>Syarat</p>
+                                <p>Ketentuan</p>
+                                <p>Syarat</p>
+                                <p>Syarat</p>
+                                <p>Ketentuan</p>
+                                <p>Syarat</p>
+                                <p>Syarat</p>
+                                <p>Ketentuan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className='h-[250px]'></div>
+            <div className='text-center'>
+                <h1 className='text-4xl font-bold'>Paket Umroh Lainnya</h1>
+            </div>
+            <div className='grid grid-cols-3 gap-10 p-20'>
+                <PackageCard />
+                <PackageCard />
+                <PackageCard />
+                <PackageCard />
+                <PackageCard />
+                <PackageCard />
+
+            </div>
         </div>
     )
 }
