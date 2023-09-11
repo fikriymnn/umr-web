@@ -4,18 +4,22 @@ import { ModalOptions, ModalInterface } from "flowbite";
 
 import DefaultCarousel from "@/components/Carousel";
 import PackageCard from "@/components/packagecard";
-import MultipleCarousel from "@/components/3DCarousel"
+import MultipleCarousel from "@/components/multipleCarousel"
+import ThreeCarousel from "@/components/threeCarousel";
 
 export default function Home() {
   return (
     <>
-      <div className=" bg ">
+      <div className=" bg  ">
+        <div>
+
+        </div>
         <div className="bg-white w-11/12 h-96 m-auto pt-10">
           <DefaultCarousel />
           {/* <MultipleCarousel/> */}
         </div>
         {/* <div className="h-64  "></div> */}
-        <div className=" bg-cover bg-[url('/assets/images/image2.png')] z-10 w-full">
+        <div className=" bg-cover bg-[url('/assets/images/image2.png')] z-10">
           <p className=" text-black text-xl font-bold p-14">
             List Paket Umroh Yang Tersedia
           </p>
@@ -33,18 +37,28 @@ export default function Home() {
           <a href="/package">
 
 
-            <div className="bg-black w-96 h-16 mx-auto rounded-xl mb-10">
-              <p className=" text-white text-center pt-5 ">Tampilkan Lebih Banyak</p>
+            <div className="flex items-center justify-center bg-black w-96 h-16 mx-auto rounded-xl mb-10">
+              <p className=" text-white text-center  ">Tampilkan Lebih Banyak</p>
             </div>
           </a>
           <div className="bg-black w-full h-96 ">
-            <p className="text-white ps-14 pt-10 ">Gallery Kegiatan</p>
+            <p className="text-white ps-14 pt-10 font-bold">Gallery Kegiatan</p>
+            <div className=" h-[250px] ps-14 z-20">
+
+              <ThreeCarousel />
+            </div>
           </div>
         </div>
       </div>
       <div className="grid grid-cols-2">
-        <div className=" bg-cover bg-[url('/assets/images/image2.png')] rotate-180 ">
-
+        <div className=" bg-cover bg-[url('/assets/images/image2.png')]  ">
+          <Image
+            src={'/assets/images/pakhaji.png'}
+            alt=""
+            width={512}
+            height={653}
+            className="mx-auto mt-10 mb-24"
+          />
         </div>
         <div className=" grid grid-cols-1 h-screen mx-auto  ">
           <div className="w-4/5 mx-auto mb-10 mt-16">
@@ -54,9 +68,9 @@ export default function Home() {
           <div>
 
           </div>
-          <div className=" flex w-4/5 h-24 bg-gray-400 mx-auto rounded-xl">
-            <div className=" bg-gray-400 w-4/12 grid place-content-center rounded-xl" >
-              <div className="bg-yellow-400 h-16 w-16 rounded-xl ">
+          <div className=" flex w-4/5 h-24 bg-[#959595] mx-auto rounded-xl">
+            <div className=" bg-[#959595] w-4/12 grid place-content-center rounded-xl" >
+              <div className="bg-[#E3B02B] h-16 w-16 rounded-xl ">
 
               </div>
             </div>
@@ -65,9 +79,9 @@ export default function Home() {
               <p className="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quia a dicta molestias sed</p>
             </div>
           </div>
-          <div className=" flex w-4/5 h-24 bg-gray-400 mx-auto rounded-xl">
-            <div className=" bg-gray-400 w-4/12 grid place-content-center rounded-xl" >
-              <div className="bg-yellow-400 h-16 w-16 rounded-xl ">
+          <div className=" flex w-4/5 h-24 bg-[#959595] mx-auto rounded-xl">
+            <div className=" bg-[#959595] w-4/12 grid place-content-center rounded-xl" >
+              <div className="bg-[#E3B02B] h-16 w-16 rounded-xl ">
 
               </div>
             </div>
@@ -76,9 +90,9 @@ export default function Home() {
               <p className="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quia a dicta molestias sed</p>
             </div>
           </div>
-          <div className=" flex w-4/5 h-24 bg-gray-400 mx-auto rounded-xl">
-            <div className=" bg-gray-400 w-4/12 grid place-content-center rounded-xl" >
-              <div className="bg-yellow-400 h-16 w-16 rounded-xl ">
+          <div className=" flex w-4/5 h-24 bg-[#959595] mx-auto rounded-xl">
+            <div className=" bg-[#959595] w-4/12 grid place-content-center rounded-xl" >
+              <div className="bg-[#E3B02B] h-16 w-16 rounded-xl ">
 
               </div>
             </div>
@@ -87,9 +101,9 @@ export default function Home() {
               <p className="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quia a dicta molestias sed</p>
             </div>
           </div>
-          <div className=" flex w-4/5 h-24 bg-gray-400 mx-auto rounded-xl mb-20">
-            <div className=" bg-gray-400 w-4/12 grid place-content-center rounded-xl" >
-              <div className="bg-yellow-400 h-16 w-16 rounded-xl ">
+          <div className=" flex w-4/5 h-24 bg-[#959595] mx-auto rounded-xl mb-20">
+            <div className=" bg-[#959595] w-4/12 grid place-content-center rounded-xl" >
+              <div className="bg-[#E3B02B] h-16 w-16 rounded-xl ">
 
               </div>
             </div>
@@ -102,7 +116,14 @@ export default function Home() {
 
       </div>
       <div className="bg-black w-full h-96 ">
-        <p className="text-white ps-14 pt-10 ">Gallery Kegiatan</p>
+        <div className="flex justify-between">
+          <p className="text-white ps-14 pt-10 font-bold">100+ Biro Travel</p>
+          <p className="text-white pe-14 pt-10 font-bold">Mitra Kami</p>
+        </div>
+        <div className=" h-[300px] ps-14 mt-14">
+
+          <MultipleCarousel className="mx-auto my-auto" />
+        </div>
       </div>
       <div className=" w-full ">
         <div className="px-14 w-11/12 mb-24">

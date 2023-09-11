@@ -4,10 +4,12 @@ import { Footer } from 'flowbite-react';
 import { BsDribble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 import Image from "next/image";
 export default function CustomFooter() {
+
+
     return (
         <Footer >
 
-            <div className="w-full bg-yellow-400">
+            <div className="w-full bg-[#E3B02B]">
                 <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                     <div className='w-96'>
                         <p className='text-3xl font-extrabold pt-14 ps-14 pb-6'>Umroh Yuk</p>
@@ -58,15 +60,15 @@ export default function CustomFooter() {
 
                             <Footer.LinkGroup col>
                                 <Footer.Link href="#">
-                                    <div className='flex justify-center gap-1 bg-gray-500 rounded-3xl h-10  w-44' >
+                                    <div className='flex justify-center gap-1 bg-[#404040]/[.65] rounded-3xl h-10  w-44' >
                                         <Image
                                             src='/assets/images/wa.png'
-                                            width={20}
-                                            height={20}
+                                            width={25}
+                                            height={5}
                                             alt="Picture of the author"
                                             className=''
                                         />
-                                        <p className='text-white'>Hubungi Kami</p>
+                                        <p className='text-white text-center pt-2'>Hubungi Kami</p>
                                     </div>
                                 </Footer.Link>
                                 <Footer.Link href="#">
