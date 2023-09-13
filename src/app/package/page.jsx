@@ -7,8 +7,9 @@ import PackageCard from "@/components/packagecard"
 
 function Package() {
     return (
-        <div className='bg'>
-            <div className="flex pt-10 bg-cover bg-[url('/assets/images/image2.png')] z-10">
+        <div className='bg mb-10'>
+            <div className="flex pt-10 bg-cover bg-[url('/assets/images/image2.png')] z-10 ">
+
                 <div className='w-4/12'>
                     <div className='bg-white w-10/12 ms-20 rounded-xl'>
                         <div >
