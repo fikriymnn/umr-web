@@ -23,10 +23,10 @@ function PackageDetail() {
                             <div className='flex'>
                                 <div className='w-1/12'>
                                     <Image
-                                        src='/assets/images/mdi_guest-room.png'
+                                        src='/assets/vector/bed.svg'
                                         width={25}
                                         height={25}
-                                        alt="Picture of the author"
+                                        alt="icon"
                                     />
                                 </div>
                                 <div>
@@ -37,10 +37,10 @@ function PackageDetail() {
                             <div className='flex'>
                                 <div className='w-1/12'>
                                     <Image
-                                        src='/assets/images/mdi_guest-room.png'
+                                        src='/assets/vector/calendar.svg'
                                         width={25}
                                         height={25}
-                                        alt="Picture of the author"
+                                        alt="icon"
                                     />
                                 </div>
                                 <div>
@@ -51,10 +51,10 @@ function PackageDetail() {
                             <div className='flex'>
                                 <div className='w-1/12'>
                                     <Image
-                                        src='/assets/images/mdi_guest-room.png'
+                                        src='/assets/vector/plane.svg'
                                         width={25}
                                         height={25}
-                                        alt="Picture of the author"
+                                        alt="icon"
                                     />
                                 </div>
                                 <div>
@@ -65,10 +65,10 @@ function PackageDetail() {
                             <div className='flex'>
                                 <div className='w-1/12'>
                                     <Image
-                                        src='/assets/images/mdi_guest-room.png'
+                                        src='/assets/vector/minlocation.svg'
                                         width={25}
                                         height={25}
-                                        alt="Picture of the author"
+                                        alt="icon"
                                     />
                                 </div>
                                 <div>
@@ -79,10 +79,10 @@ function PackageDetail() {
                             <div className='flex'>
                                 <div className='w-1/12'>
                                     <Image
-                                        src='/assets/images/mdi_guest-room.png'
+                                        src='/assets/vector/datetime.svg'
                                         width={25}
                                         height={25}
-                                        alt="Picture of the author"
+                                        alt="icon"
                                     />
                                 </div>
                                 <div>
@@ -93,10 +93,10 @@ function PackageDetail() {
                             <div className='flex'>
                                 <div className='w-1/12'>
                                     <Image
-                                        src='/assets/images/mdi_guest-room.png'
+                                        src='/assets/vector/hotel.svg'
                                         width={25}
                                         height={25}
-                                        alt="Picture of the author"
+                                        alt="icon"
                                     />
                                 </div>
                                 <div>
@@ -226,10 +226,10 @@ function PackageDetail() {
                                         <div className='flex justify-center pt-3'>
                                             <div className='w-1/12'>
                                                 <Image
-                                                    src='/assets/images/order.png'
-                                                    width={30}
-                                                    height={30}
-                                                    alt=".."
+                                                    src='/assets/vector/order.svg'
+                                                    width={25}
+                                                    height={25}
+                                                    alt="icon"
                                                 />
                                             </div>
                                             <p className='font-semibold ms-3'>Pesan Paket Umroh</p>
