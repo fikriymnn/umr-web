@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@availity/progress": "^1.5.2",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@types/node": "20.5.9",
