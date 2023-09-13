@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export default function CustomNavbar() {
   return (
-    <Navbar fluid rounded>
+    <Navbar fluid rounded className="h-[80px]">
       <Navbar.Brand href="/">
         {/* <img
           alt="Flowbite React Logo"
           className="mr-3 h-6 sm:h-9"
           src="/favicon.svg"
         /> */}
-        <span className="self-center whitespace-nowrap text-2xl font-bold dark:text-white ml-10">
+        <span className="self-center whitespace-nowrap text-3xl font-bold dark:text-white ml-10">
           UmrohYuk
         </span>
       </Navbar.Brand>
@@ -68,7 +68,14 @@ export default function CustomNavbar() {
             <p>Lainnya</p>
           </div>
         </Navbar.Link>
-        <Navbar.Link href="/search">S</Navbar.Link>
+        <Navbar.Link href="/search">
+          <Image
+            src='/assets/vector/magnifier.svg'
+            alt='icon'
+            width={25}
+            height={25}
+          />
+        </Navbar.Link>
 
       </Navbar.Collapse>
     </Navbar>
