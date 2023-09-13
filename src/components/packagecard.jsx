@@ -1,10 +1,12 @@
+'use client'
 import React from 'react'
 import Image from "next/image";
+//import Progress from 'flowbite-react';
 
 function PackageCard() {
     return (
         <a href="/package/detail">
-            <div className=' bg-white rounded-xl shadow-xl'>
+            <div className=' bg-white rounded-xl shadow-xl hover:translate-y-[-15px] duration-100 ease-in-out'>
                 <div className='p-3'>
                     <div className='flex'>
                         <div className='w-8/12 font-semibold '>
@@ -16,16 +18,25 @@ function PackageCard() {
                         </div>
                     </div>
                     <div className=' py-3'>
-                        <div className='bg-[#E3B02B]'>bar Disini</div>
+                        <div>
+                            <p>Availability Bar</p>
+                            {/* <Progress
+                                labelProgress
+                                labelText
+                                progress={50}
+                                size="lg"
+                                textLabel="Flowbite"
+                            /> */}
+                        </div>
                     </div>
                     <div className='grid grid-cols-2 gap-1'>
                         <div className='flex'>
                             <div className='w-1/6'>
                                 <Image
-                                    src='/assets/images/mdi_guest-room.png'
+                                    src='/assets/vector/bed.svg'
                                     width={25}
                                     height={25}
-                                    alt="Picture of the author"
+                                    alt='icon'
                                 />
                             </div>
                             <div>
@@ -35,10 +46,10 @@ function PackageCard() {
                         <div className='flex'>
                             <div className='w-1/6'>
                                 <Image
-                                    src='/assets/images/mdi_guest-room.png'
+                                    src='/assets/vector/calendar.svg'
                                     width={25}
                                     height={25}
-                                    alt="Picture of the author"
+                                    alt='icon'
                                 />
                             </div>
                             <div>
@@ -48,10 +59,10 @@ function PackageCard() {
                         <div className='flex'>
                             <div className='w-1/6'>
                                 <Image
-                                    src='/assets/images/mdi_guest-room.png'
+                                    src='/assets/vector/plane.svg'
                                     width={25}
                                     height={25}
-                                    alt="Picture of the author"
+                                    alt='icon'
                                 />
                             </div>
                             <div>
@@ -61,10 +72,10 @@ function PackageCard() {
                         <div className='flex'>
                             <div className='w-1/6'>
                                 <Image
-                                    src='/assets/images/mdi_guest-room.png'
+                                    src='/assets/vector/minlocation.svg'
                                     width={25}
                                     height={25}
-                                    alt="Picture of the author"
+                                    alt='icon'
                                 />
                             </div>
                             <div>
@@ -74,10 +85,10 @@ function PackageCard() {
                         <div className='flex'>
                             <div className='w-1/6'>
                                 <Image
-                                    src='/assets/images/mdi_guest-room.png'
+                                    src='/assets/vector/datetime.svg'
                                     width={25}
                                     height={25}
-                                    alt="Picture of the author"
+                                    alt='icon'
                                 />
                             </div>
                             <div>
@@ -87,10 +98,10 @@ function PackageCard() {
                         <div className='flex'>
                             <div className='w-1/6'>
                                 <Image
-                                    src='/assets/images/mdi_guest-room.png'
+                                    src='/assets/vector/hotel.svg'
                                     width={25}
                                     height={25}
-                                    alt="Picture of the author"
+                                    alt='icon'
                                 />
                             </div>
                             <div>
