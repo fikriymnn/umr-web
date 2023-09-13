@@ -34,3 +34,7 @@ body {
     rgba(253, 187, 45, 0.06666666666666665) 74%
   );
 }
+.bg-login{
+  background: rgb(227,176,43);
+background: linear-gradient(90deg, rgba(227,176,43,1) 0%, rgba(255,255,255,1) 100%);
+}
