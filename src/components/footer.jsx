@@ -60,15 +60,15 @@ export default function CustomFooter() {
 
                             <Footer.LinkGroup col>
                                 <Footer.Link href="#">
-                                    <div className='flex justify-center gap-1 bg-[#404040]/[.65] rounded-3xl h-10  w-44' >
+                                    <div className='flex justify-center items-center gap-1 bg-[#404040]/[.65] rounded-3xl h-10  w-44' >
                                         <Image
-                                            src='/assets/images/wa.png'
+                                            src='/assets/vector/whatsapp.svg'
                                             width={25}
                                             height={5}
                                             alt="Picture of the author"
                                             className=''
                                         />
-                                        <p className='text-white text-center pt-2'>Hubungi Kami</p>
+                                        <p className='text-white text-center'>Hubungi Kami</p>
                                     </div>
                                 </Footer.Link>
                                 <Footer.Link href="#">
