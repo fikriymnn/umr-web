@@ -20,7 +20,7 @@ export default function CustomNavbar() {
         <a href="/login">
           <p className="pt-1 pe-3 hover:text-[#E3B02B]">Masuk</p>
         </a>
-        <a href="/signin">
+        <a href="/register">
           <div className="text-center bg-[#E3B02B] hover:bg-white text-white hover:text-[#E3B02B] w-[110px] h-[30px] rounded-xl">
             <p className="pt-1">Daftar</p>
           </div>
