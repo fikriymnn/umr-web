@@ -14,14 +14,14 @@ function Facility() {
                 <div className='w-[122px] h-[88px] bg-gray-500'></div>
             </div>
             <h1 className='text-2xl text-black pt-5'>Fasilitas</h1>
-            <div className='grid grid-cols-3 pt-5 gap-y-2'>
+            <div className='grid grid-cols-3 pt-5 gap-y-1'>
                 <div className='flex '>
                     <div className='w-2/12'>
                         <Image
-                            src='/assets/images/mdi_guest-room.png'
-                            width={30}
-                            height={30}
-                            alt="Picture of the author"
+                            src='/assets/vector/wifi.svg'
+                            alt='icon'
+                            width={25}
+                            height={25}
                         />
                     </div>
                     <div>
@@ -31,10 +31,10 @@ function Facility() {
                 <div className='flex'>
                     <div className='w-2/12'>
                         <Image
-                            src='/assets/images/mdi_guest-room.png'
-                            width={30}
-                            height={30}
-                            alt="Picture of the author"
+                            src='/assets/vector/spoon.svg'
+                            alt='icon'
+                            width={25}
+                            height={25}
                         />
                     </div>
                     <div>
@@ -44,10 +44,10 @@ function Facility() {
                 <div className='flex'>
                     <div className='w-2/12'>
                         <Image
-                            src='/assets/images/mdi_guest-room.png'
-                            width={30}
-                            height={30}
-                            alt="Picture of the author"
+                            src='/assets/vector/door.svg'
+                            alt='icon'
+                            width={25}
+                            height={25}
                         />
                     </div>
                     <div>
@@ -57,10 +57,10 @@ function Facility() {
                 <div className='flex'>
                     <div className='w-2/12'>
                         <Image
-                            src='/assets/images/mdi_guest-room.png'
-                            width={30}
-                            height={30}
-                            alt="Picture of the author"
+                            src='/assets/vector/disabled.svg'
+                            alt='icon'
+                            width={25}
+                            height={25}
                         />
                     </div>
                     <div>
