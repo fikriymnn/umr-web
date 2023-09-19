@@ -26,7 +26,7 @@ function MultipleCarousel() {
     };
 
     return (
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsive} autoPlay={true} infinite={true}>
             <div className='text-white'>
                 <Image
                     src={'/assets/images/rectangle20.png'}
