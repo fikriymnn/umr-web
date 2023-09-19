@@ -1,4 +1,6 @@
+'use client';
 import { useState } from 'react';
+
 
 function Dropdown() {
     const [isOpen, setIsOpen] = useState(false);
