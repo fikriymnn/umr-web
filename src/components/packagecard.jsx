@@ -4,6 +4,13 @@ import Image from "next/image";
 //import Progress from 'flowbite-react';
 
 function PackageCard() {
+    const numero = {
+        total: 50,
+        available: 5,
+
+    }
+
+    const availability = (numero.available / numero.total) * 100 + "%";
     return (
         <a href="/package/detail">
             <div className=' bg-white rounded-xl shadow-xl hover:translate-y-[-15px] duration-100 ease-in-out'>
@@ -18,15 +25,13 @@ function PackageCard() {
                         </div>
                     </div>
                     <div className=' py-3'>
-                        <div>
-                            <p>Availability Bar</p>
-                            {/* <Progress
-                                labelProgress
-                                labelText
-                                progress={50}
-                                size="lg"
-                                textLabel="Flowbite"
-                            /> */}
+                        <div className='flex items-center justify-center'>
+                            <div className="w-[350px] h-7 rounded-xl border-2 border-black">
+                                <div className='w-[350px] absolute flex items-center justify-center text-center font-semibold'>
+                                    <p>Tersisa {numero.available} Paket</p>
+                                </div>
+                                <div style={{ width: availability }} className='h-full bg-[#be9223] rounded-xl'></div>
+                            </div>
                         </div>
                     </div>
                     <div className='grid grid-cols-2 gap-1'>
