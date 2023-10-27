@@ -8,7 +8,7 @@ function ProfilSaya() {
         <AccountNav account="bg-[#E3B02B] text-white" />
 
         <div className="w-full md:w-10/12 md:ps-5">
-          <div className="bg-white grid grid-cols-1 gap-3 md:rounded-xl rounded-b-xl border-2 border-slate-300 shadow-xl p-3">
+          <div className="bg-white grid grid-cols-1 gap-3 md:rounded-xl rounded-b-xl md:border-t-2 border-t-0 border-2 border-slate-300 shadow-xl p-3">
             <div className="text-xl font-extrabold px-5">
               <p>Profil</p>
             </div>
