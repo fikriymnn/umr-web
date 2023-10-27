@@ -1,155 +1,137 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import Testimonial from "@/components/testimonial";
-import Facility from "@/components/facility";
-import DefaultCarousel from "@/components/Carousel";
-import PackageCard from "@/components/packagecard"
-import { Carousel } from 'flowbite';
-import TableHarga from '@/components/tableHarga'
-import DropdownDetail from '@/components/DropdownDetail'
-import { Button, Card, Checkbox, Label, TextInput } from 'flowbite-react';
+"use client";
+import React from "react";
 
+import NamaCustomer from "@/components/namaCustomer";
+import Box from "@mui/material/Box";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
 
+import Typography from "@mui/material/Typography";
+import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
+import DatadiriFoam from "@/components/datadiriFoam";
+import TipePembayaranFoam from "@/components/tipePembayaranFoam";
 
+const steps = [
+  "Select campaign settings",
+  "Create an ad group",
+  "Create an ad",
+];
 function formPesan() {
-    return (
-        <div className='bg'>
+  const [activeStep, setActiveStep] = React.useState(0);
+  const [skipped, setSkipped] = React.useState(new Set());
 
-            <div className="flex pt-10 bg-cover bg-[url('/assets/images/image2.png')] z-10">
-                <div className='w-8/12'>
+  const isStepOptional = (step) => {
+    return step === 1;
+  };
 
-                    <div className='h-[50px]'></div>
-                    <div className='bg-white w-10/12 ms-20 rounded-xl'>
+  const isStepSkipped = (step) => {
+    return skipped.has(step);
+  };
 
-                        <div className='flex py-7 px-14'>
-                            <div className='w-[140px]'>
-                                <div className='w-[120px] h-[120px] bg-gray-500 rounded-full'></div>
-                            </div>
-                            <div className='w-full ps-5'>
-                                <h1 className=' text-black text-4xl pb-3 font-semibold'>Nama Pemesan</h1>
-                                <div className='flex pb-3'>
-                                    <p className='text-black text-2xl'>Rudi Kastana</p>
+  const handleNext = () => {
+    let newSkipped = skipped;
+    if (isStepSkipped(activeStep)) {
+      newSkipped = new Set(newSkipped.values());
+      newSkipped.delete(activeStep);
+    }
 
-                                </div>
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped(newSkipped);
+  };
 
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className='h-[50px]'></div>
-                    <div className='bg-white w-10/12 ms-20 rounded-xl'>
+  const handleSkip = () => {
+    if (!isStepOptional(activeStep)) {
+      // You probably want to guard against something like this,
+      // it should never occur unless someone's actively trying to break something.
+      throw new Error("You can't skip a step that isn't optional.");
+    }
 
-                        <div className='w-full py-7  font-semibold'>
-                            <div className='flex pb-1 px-14 gap-5'>
-                                <div>
-                                    <img src="../../assets/vector/vector.svg" alt="" />
-                                </div>
-                                <h1 className='text-2xl text-black pb-7'>Tipe Pembayaran</h1>
-                            </div>
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped((prevSkipped) => {
+      const newSkipped = new Set(prevSkipped.values());
+      newSkipped.add(activeStep);
+      return newSkipped;
+    });
+  };
 
-
-                            <div className=' flex justify-center items-center'>
-                                <div className=' w-10/12 h-[50px] rounded-xl bg-gray-500 flex justify-center items-center '>
-                                    <p className='text-[#E3B02B] text-center text-lg'>Uang Muka Sebesar Rp 6.000.000</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className=' flex justify-center items-center mb-20'>
-
-                            <TableHarga />
-                        </div>
-                        <div className='h-[20px]'></div>
-                    </div>
-
-                    <div className='bg-white w-10/12 ms-20 rounded-xl mt-10 mb-10'>
-
-                        <div className='w-full py-7 font-semibold'>
-                            <div className='flex pb-1 px-14 gap-5'>
-                                <div>
-                                    <img src="../../assets/vector/vectorya.svg" alt="" />
-                                </div>
-                                <h1 className='text-2xl text-black pb-7'>Jemaah Ke-1</h1>
-                            </div>
-
-
-                            <div className=' flex  px-14 gap-5'>
-                                <div className='grid grid-cols-1'>
-
-                                    <p>Gender</p>
-                                    <DropdownDetail />
-                                    <br />
-                                </div>
-                                <div>
-                                    <div>
-                                        <p>Nama Lengkap</p>
-                                    </div>
-                                    <TextInput
-                                        id="nama"
-                                        placeholder="Ketik Nama Lengkap.."
-                                        required
-                                        type="nama"
-                                        className='w-96 '
-                                    />
-                                    <div>
-                                        <p className='text-[#E3B02B] text-xs'>&#40;Sesuai dengan KTP &sol; Paspor tanpa gelar&#41;</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div className=' flex  px-14 gap-5 pt-5'>
-                                <div>
-                                    <div>
-                                        <p>Nomor Whatsapp</p>
-                                    </div>
-                                    <TextInput
-                                        id="whatsapp"
-                                        placeholder="Ketik Nomor Whatsapp.."
-                                        required
-                                        type="whatsapp"
-                                        className=' '
-                                    />
-
-                                </div>
-                                <div>
-                                    <div>
-                                        <p>Email</p>
-                                    </div>
-                                    <TextInput
-                                        id="Email"
-                                        placeholder="Ketik Email.."
-                                        required
-                                        type="Email"
-                                        className='mb-10 '
-                                    />
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className='px-14 w-10/12 ms-10 mb-20 h-96'> <p className='font-bold'>
-                        Jika anda setuju dengan <span className='text-[#E3B02B]'>Syarat & Kebijakan Privasi,</span>  Silahkan klik tombol &rdquo;Lanjut Pembayaran&rdquo; . untuk memilih cara pembayaran</p></div>
-
-
-
-                </div>
-
-
-
-
-            </div >
-
-
-
-
-
-
-
+  const handleReset = () => {
+    setActiveStep(0);
+  };
+  return (
+    <div className="bg">
+      <div className="flex flex-col pt-10 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
+        {/* <Box sx={{ width: "100%" }}>
+          <Stepper activeStep={activeStep} sx={{ width: "70%" }}>
+            {steps.map((label, index) => {
+              const stepProps = {};
+              const labelProps = {};
+              if (isStepOptional(index)) {
+                labelProps.optional = (
+                  <Typography variant="caption">Optional</Typography>
+                );
+              }
+              if (isStepSkipped(index)) {
+                stepProps.completed = false;
+              }
+              return (
+                <Step key={label} {...stepProps}>
+                  <StepLabel {...labelProps}>{label}</StepLabel>
+                </Step>
+              );
+            })}
+          </Stepper>
+          {activeStep === steps.length ? (
+            <React.Fragment>
+              <Typography sx={{ mt: 2, mb: 1 }}>
+                All steps completed - you&apos;re finished
+              </Typography>
+              <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}></Box>
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <Typography sx={{ mt: 2, mb: 1 }}>
+                Step {activeStep + 1}
+              </Typography>
+              <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+                <Button onClick={handleNext}>
+                  {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                </Button>
+              </Box>
+            </React.Fragment>
+          )}
+        </Box> */}
+        <div className="w-[607px] ">
+          <section>
+            <NamaCustomer />
+          </section>
+          <section>
+            <TipePembayaranFoam />
+          </section>
+          <section>
+            <DatadiriFoam button={handleNext} />
+          </section>
+          <section>
+            <div className="px-14 w-10/12 ms-10 mb-20 h-96 mt-5">
+              {" "}
+              <p className="font-bold">
+                Jika anda setuju dengan{" "}
+                <span className="text-[#E3B02B]">
+                  Syarat & Kebijakan Privasi,
+                </span>{" "}
+                Silahkan klik tombol &rdquo;Lanjut Pembayaran&rdquo; . untuk
+                memilih cara pembayaran
+              </p>
+            </div>
+          </section>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default formPesan
+export default formPesan;
