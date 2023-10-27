@@ -29,7 +29,7 @@ function AccountNav({ account, order }) {
           </button>
           <button>
             <a
-              href="/akun/PesananSaya"
+              href="/akun/PesananSaya/BelumBayar"
               className={`hover:bg-[#E3B02B] md:rounded-e-lg py-2 px-4 hover:text-white text-black duration-100 font-semibold text-start flex gap-2 ${order}`}
             >
               <svg
