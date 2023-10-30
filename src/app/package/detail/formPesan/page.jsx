@@ -18,94 +18,25 @@ const steps = [
   "Create an ad",
 ];
 function FormPesan() {
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [skipped, setSkipped] = React.useState(new Set());
-
-  const isStepOptional = (step) => {
-    return step === 1;
-  };
-
-  const isStepSkipped = (step) => {
-    return skipped.has(step);
-  };
-
-  const handleNext = () => {
-    let newSkipped = skipped;
-    if (isStepSkipped(activeStep)) {
-      newSkipped = new Set(newSkipped.values());
-      newSkipped.delete(activeStep);
-    }
-
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped(newSkipped);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleSkip = () => {
-    if (!isStepOptional(activeStep)) {
-      // You probably want to guard against something like this,
-      // it should never occur unless someone's actively trying to break something.
-      throw new Error("You can't skip a step that isn't optional.");
-    }
-
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped((prevSkipped) => {
-      const newSkipped = new Set(prevSkipped.values());
-      newSkipped.add(activeStep);
-      return newSkipped;
-    });
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-  };
   return (
     <div className="bg">
       <div className="flex flex-col pt-10 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
-        {/* <Box sx={{ width: "100%" }}>
-          <Stepper activeStep={activeStep} sx={{ width: "70%" }}>
-            {steps.map((label, index) => {
-              const stepProps = {};
-              const labelProps = {};
-              if (isStepOptional(index)) {
-                labelProps.optional = (
-                  <Typography variant="caption">Optional</Typography>
-                );
-              }
-              if (isStepSkipped(index)) {
-                stepProps.completed = false;
-              }
-              return (
-                <Step key={label} {...stepProps}>
-                  <StepLabel {...labelProps}>{label}</StepLabel>
-                </Step>
-              );
-            })}
-          </Stepper>
-          {activeStep === steps.length ? (
-            <React.Fragment>
-              <Typography sx={{ mt: 2, mb: 1 }}>
-                All steps completed - you&apos;re finished
-              </Typography>
-              <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}></Box>
-            </React.Fragment>
-          ) : (
-            <React.Fragment>
-              <Typography sx={{ mt: 2, mb: 1 }}>
-                Step {activeStep + 1}
-              </Typography>
-              <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-                <Button onClick={handleNext}>
-                  {activeStep === steps.length - 1 ? "Finish" : "Next"}
-                </Button>
-              </Box>
-            </React.Fragment>
-          )}
-        </Box> */}
-        <div className="w-[607px] ">
+        <div className="flex mx-auto gap-4 justify-between">
+          <div className="flex gap-1">
+            <p className="rounded-full border-2 border-amber-400 text-amber-400 w-10 text-center ">
+              1
+            </p>
+            <p className="rounded-full text-amber-400 w-full ">Data Pesanan</p>
+          </div>
+          <div className="w-12 h-1 bg-zinc-300 my-auto mx-auto rounded-full "></div>
+          <div className="flex gap-1">
+            <p className="rounded-full border-2 border-zinc-300 text-zinc-300 w-10 text-center ">
+              2
+            </p>
+            <p className="rounded-full text-zinc-300 w-full ">Bayar</p>
+          </div>
+        </div>
+        <div className="md:w-6/12  ">
           <section>
             <NamaCustomer />
           </section>
@@ -113,10 +44,10 @@ function FormPesan() {
             <TipePembayaranFoam />
           </section>
           <section>
-            <DatadiriFoam button={handleNext} />
+            <DatadiriFoam />
           </section>
           <section>
-            <div className="px-14 w-10/12 ms-10 mb-20 h-96 mt-5">
+            <div className="md:px-14 w-10/12 md:ms-10 mb-20 h-96 mt-5 ml-10 md:text-base sm:text-sm text-xs">
               {" "}
               <p className="font-bold">
                 Jika anda setuju dengan{" "}
