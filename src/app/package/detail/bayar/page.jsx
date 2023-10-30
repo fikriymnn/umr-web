@@ -7,7 +7,7 @@ function BayarPage() {
       <div className="bg">
         <div className="flex flex-col pt-10 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
           <section>
-            <div className="ml-20 w-[832px] h-[689px] bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+            <div className="ml-20 w-6/12 h-[689px] bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
               <div className="flex px-7 py-6 gap-2">
                 <div className="">
                   <svg

@@ -17,7 +17,7 @@ const steps = [
   "Create an ad group",
   "Create an ad",
 ];
-function formPesan() {
+function FormPesan() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
 
@@ -134,4 +134,4 @@ function formPesan() {
   );
 }
 
-export default formPesan;
+export default FormPesan;
