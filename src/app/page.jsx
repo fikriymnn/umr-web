@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <div className=" bg  ">
         <div></div>
-        <div className="bg-white w-11/12 h-96 m-auto pt-10">
+        <div className="bg-white w-11/12 md:h-96 sm:h-72 h-52 m-auto pt-10">
           <DefaultCarousel />
           {/* <MultipleCarousel/> */}
         </div>
@@ -22,7 +22,7 @@ export default function Home() {
           <p className=" text-black text-xl font-bold p-14">
             List Paket Umroh Yang Tersedia
           </p>
-          <div className="grid grid-cols-3 gap-10 mx-14 pb-10">
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mx-14 pb-10">
             <PackageCard />
             <PackageCard />
             <PackageCard />
@@ -40,7 +40,7 @@ export default function Home() {
               </p>
             </div>
           </a>
-          <div className="bg-black w-full h-96 ">
+          <div className="bg-black w-full md:h-96 h-80 ">
             <p className="text-white ps-14 pt-10 font-bold">Gallery Kegiatan</p>
             <div className=" h-[250px] ps-14 z-20">
               <ThreeCarousel />
@@ -48,24 +48,29 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2">
-        <div className=" bg-cover bg-[url('/assets/images/image2.png')]  ">
+      <div className="w-4/5 mx-auto  mt-16">
+        <p className="font-extrabold text-3xl md:hidden sm:visible visible">
+          Percayakan Perjalanan Umroh anda kepada umroh Yuk
+        </p>
+      </div>
+      <div className="grid md:grid-cols-2 grid-cols-1">
+        <div className=" mx-auto md:w-11/12 w-64 bg-cover bg-[url('/assets/images/image2.png')]  ">
           <Image
             src={"/assets/images/pakhaji.png"}
             alt=""
             width={512}
             height={653}
-            className="mx-auto mt-10 mb-24"
+            className="mx-auto md:mt-10 mt-10 md:mb-24"
           />
         </div>
         <Percayakan />
       </div>
-      <div className="bg-black w-full h-96 ">
+      <div className="bg-black w-full h-full md:pb-14 pb-10">
         <div className="flex justify-between">
           <p className="text-white ps-14 pt-10 font-bold">100+ Biro Travel</p>
           <p className="text-white pe-14 pt-10 font-bold">Mitra Kami</p>
         </div>
-        <div className=" h-[300px] ps-14 mt-14">
+        <div className="  ps-14 mt-14">
           <MultipleCarousel className="mx-auto my-auto" />
         </div>
       </div>

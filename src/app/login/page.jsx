@@ -78,7 +78,7 @@ function Login() {
               <p className="md:text-xl sm:text-lg text-base font-semibold">
                 Lorem Ipsum dolor sit amet
               </p>
-              <p className="font-medium md:text-lg sm:text-base text-sm">
+              <p className="font-medium md:text-lg sm:text-base text-sm text-opacity-60">
                 Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
               </p>
             </div>
@@ -102,7 +102,7 @@ function Login() {
               <p className="md:text-xl sm:text-lg text-base font-semibold">
                 Lorem Ipsum dolor sit amet
               </p>
-              <p className="font-medium md:text-lg sm:text-base text-sm">
+              <p className="font-medium md:text-lg sm:text-base text-sm text-opacity-60">
                 Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
               </p>
             </div>
@@ -126,7 +126,7 @@ function Login() {
               <p className="md:text-xl sm:text-lg text-base font-semibold">
                 Lorem Ipsum dolor sit amet
               </p>
-              <p className="font-medium md:text-lg sm:text-base text-sm">
+              <p className="font-medium md:text-lg sm:text-base text-sm text-opacity-60">
                 Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
               </p>
             </div>
@@ -153,7 +153,7 @@ function Login() {
               <p className="md:text-xl sm:text-lg text-base font-semibold">
                 Lorem Ipsum dolor sit amet
               </p>
-              <p className="font-medium md:text-lg sm:text-base text-sm">
+              <p className="font-medium md:text-lg sm:text-base text-sm text-opacity-60">
                 Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
               </p>
             </div>
