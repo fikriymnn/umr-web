@@ -1,11 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import "@splidejs/react-splide/css/sea-green";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+
 import Image from "next/image";
-import Carousel from "react-spring-3d-carousel";
+
 import uuidv4 from "uuid";
 import { config } from "react-spring";
+import dynamic from "next/dynamic";
+const Carousel = dynamic(() => import("react-spring-3d-carousel"), {
+  ssr: false,
+});
 
 function ThreeCarousel() {
   const [slid, setSlid] = useState(0);

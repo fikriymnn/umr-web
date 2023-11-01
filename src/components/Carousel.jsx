@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { Carousel } from 'flowbite-react';
+import { Carousel } from "flowbite-react";
 
 export default function DefaultCarousel() {
   return (
-    <Carousel pauseOnHover>
+    <Carousel>
       <img
         alt="..."
         src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
@@ -26,7 +26,5 @@ export default function DefaultCarousel() {
         src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
       />
     </Carousel>
-  )
+  );
 }
-
-
