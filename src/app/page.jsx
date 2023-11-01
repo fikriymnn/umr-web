@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { Modal } from "flowbite";
-import { ModalOptions, ModalInterface } from "flowbite";
 
 import DefaultCarousel from "@/components/Carousel";
 import PackageCard from "@/components/packagecard";
@@ -17,9 +15,48 @@ export default function Home() {
           <DefaultCarousel />
           {/* <MultipleCarousel/> */}
         </div>
+        <div className="md:mt-0 mt-5 bg-white bg-opacity-95 rounded-[10px] shadow md:w-9/12 w-11/12 md:h-28 h-24 mx-auto md:-translate-y-5 flex gap-2 items-center ">
+          <div className="w-[25%] ml-5 ">
+            <p className="md:text-base sm:text-sm text-[10px]">
+              Lokasi Keberangkatan
+            </p>
+            <input
+              type="text"
+              className="rounded-md border-gray-300 w-full md:h-full h-8"
+              placeholder="Masukan Lokasi Keberangkatan"
+            />
+          </div>
+          <div className="w-[25%]">
+            <p className="md:text-base sm:text-sm text-[10px]">
+              Waktu Keberangkatan
+            </p>
+            <input
+              type="text"
+              className="rounded-md border-gray-300 w-full md:h-full h-8"
+              placeholder="Masukan Waktu Keberangkatan"
+            />
+          </div>
+          <div className="w-[25%]">
+            <p className="md:text-base sm:text-sm text-[10px]">
+              Estimasi Biaya Umroh
+            </p>
+            <input
+              type="text"
+              className="rounded-md border-gray-300 w-full md:h-full h-8"
+              placeholder="Masukan Estimasi Biaya Umroh"
+            />
+          </div>
+          <div className="md:pl-10 md:mt-5   mt-[24px] w-[20%] ">
+            <div className="py-2 px-3 bg-black rounded-md text-white md:w-24 md:h-10 w-[70px] h-8 ">
+              <p className="md:text-base sm:text-[10px] text-[10px]">
+                Cari Paket
+              </p>
+            </div>
+          </div>
+        </div>
         {/* <div className="h-64  "></div> */}
         <div className=" bg-cover bg-[url('/assets/images/image2.png')] z-10">
-          <p className=" text-black text-xl font-bold p-14">
+          <p className=" text-black text-xl font-bold px-14 pt-14 pb-16">
             List Paket Umroh Yang Tersedia
           </p>
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mx-14 pb-10">
@@ -50,7 +87,7 @@ export default function Home() {
       </div>
       <div className="w-4/5 mx-auto  mt-16">
         <p className="font-extrabold text-3xl md:hidden sm:visible visible">
-          Percayakan Perjalanan Umroh anda kepada umroh Yuk
+          Percayakan Perjalanan Umroh anda kepada Ibadahku
         </p>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1">
@@ -76,7 +113,7 @@ export default function Home() {
       </div>
       <div className=" w-full ">
         <div className="px-14 w-11/12 mb-24">
-          <p className="text-black pt-10 font-extrabold text-3xl">Umroh Yuk</p>
+          <p className="text-black pt-10 font-extrabold text-3xl">Ibadahku</p>
           <p className="font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rerum
             minima perferendis alias maxime non sunt explicabo numquam odit quam
