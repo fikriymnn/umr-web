@@ -47,7 +47,7 @@ export default function Home() {
             />
           </div>
           <div className="md:pl-10 md:mt-5 w-full col-span-3 md:w-[20%] mb-1">
-            <div className="py-2 px-3 bg-black rounded-md text-white md:w-24 md:h-10 w-[70px] h-8 mx-auto">
+            <div className="py-2 px-3 bg-black rounded-md text-white md:w-24 md:h-10 w-[80px] h-8 mx-auto">
               <p className="md:text-[14px] sm:text-[10px] text-[10px] text-center ">
                 Cari Paket
               </p>
@@ -59,7 +59,7 @@ export default function Home() {
           <p className=" text-black text-xl font-bold md:px-14 px-5 pt-14 md:pb-16 pb-5">
             List Paket Umroh Yang Tersedia
           </p>
-          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-10 md:mx-14 mx-5 pb-10">
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-2 md:gap-10 sm:gap-6 gap-2 md:mx-14 mx-5 pb-10">
             <PackageCard />
             <PackageCard />
             <PackageCard />
