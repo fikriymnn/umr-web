@@ -3,6 +3,7 @@ import React from "react";
 function TabelHarga2() {
   return (
     <>
+
       <div className=" border-2  border-black rounded-lg">
         <div className="flex gap-10 justify-center items-center  border-b-2 border-black rounded-t-md">
           <p className="p-3 font-semibold md:text-base sm:text-sm text-xs">
@@ -51,6 +52,7 @@ function TabelHarga2() {
               Rp 6.000.000
             </p>
           </div>
+
         </div>
       </div>
     </>
