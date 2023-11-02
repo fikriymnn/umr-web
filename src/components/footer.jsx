@@ -14,7 +14,7 @@ export default function CustomFooter() {
     <Footer>
       <div className="w-full bg-[#E3B02B]">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div className="w-96">
+          <div className="md:w-96 w-11/12">
             <p className="text-3xl font-extrabold pt-14 md:ps-14 ps-9 pb-6">
               Ibadahku
             </p>

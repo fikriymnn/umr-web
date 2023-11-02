@@ -18,9 +18,9 @@ function Facility() {
       <h1 className="md:text-2xl sm:text-xl text-lg text-black pt-5">
         Fasilitas
       </h1>
-      <div className="grid grid-cols-3 pt-5 gap-y-1">
+      <div className="grid md:grid-cols-3 grid-cols-2 pt-5 gap-y-3 gap-3">
         <div className="flex ">
-          <div className="md:w-1/12 w-3/12 my-auto">
+          <div className="md:w-1/12 w-3/12 my-auto ">
             <Image
               src="/assets/vector/wifi.svg"
               alt="icon"
@@ -29,13 +29,13 @@ function Facility() {
             />
           </div>
           <div>
-            <p className="ps-1 md:text-xl sm:text-lg text-base text-black my-auto">
+            <p className="ps-1 md:text-lg sm:text-base text-sm text-black my-auto  ">
               Free WiFi
             </p>
           </div>
         </div>
         <div className="flex">
-          <div className="md:w-1/12 my-auto w-3/12">
+          <div className="md:w-1/12  w-3/12 my-auto">
             <Image
               src="/assets/vector/spoon.svg"
               alt="icon"
@@ -44,13 +44,13 @@ function Facility() {
             />
           </div>
           <div>
-            <p className="ps-1 md:text-xl sm:text-lg text-base text-black my-auto">
+            <p className="ps-1 md:text-lg sm:text-base text-sm text-black my-auto  ">
               Tempat Makan
             </p>
           </div>
         </div>
         <div className="flex">
-          <div className="md:w-1/12 w-3/12 my-auto">
+          <div className="md:w-1/12 w-3/12 my-auto ">
             <Image
               src="/assets/vector/door.svg"
               alt="icon"
@@ -59,13 +59,13 @@ function Facility() {
             />
           </div>
           <div>
-            <p className="ps-1 md:text-xl sm:text-lg text-base text-black my-auto">
+            <p className="ps-1 md:text-lg sm:text-base text-sm text-black my-auto  ">
               Pelayanan Kamar
             </p>
           </div>
         </div>
         <div className="flex">
-          <div className="md:w-1/12 w-3/12 my-auto">
+          <div className="md:w-1/12 w-3/12 my-auto ">
             <Image
               src="/assets/vector/disabled.svg"
               alt="icon"
@@ -74,7 +74,7 @@ function Facility() {
             />
           </div>
           <div>
-            <p className="ps-1 md:text-xl sm:text-lg text-base text-black my-auto">
+            <p className="ps-1 md:text-lg sm:text-base text-sm text-black my-auto  ">
               Disabilitas
             </p>
           </div>

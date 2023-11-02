@@ -39,7 +39,7 @@ function DatadiriFoam({}) {
                   <div>
                     <img src="../../assets/vector/vectorya.svg" alt="" />
                   </div>
-                  <h1 className="text-2xl text-black pb-7">
+                  <h1 className="md:text-2xl sm:text-xl text-lg text-black pb-7">
                     Jemaah Ke-
                     {i + 1}
                   </h1>
@@ -114,7 +114,6 @@ function DatadiriFoam({}) {
         </div>
       </div>
     </>
-
   );
 }
 
