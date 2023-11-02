@@ -15,13 +15,15 @@ export default function CustomFooter() {
       <div className="w-full bg-[#E3B02B]">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div className="w-96">
-            <p className="text-3xl font-extrabold pt-14 ps-14 pb-6">Ibadahku</p>
-            <p className="font-bold ps-14">
+            <p className="text-3xl font-extrabold pt-14 md:ps-14 ps-9 pb-6">
+              Ibadahku
+            </p>
+            <p className="font-bold md:ps-14 ps-9">
               jl. Wastukencana Lorem ipsum dolor sit amet consectetur
               adipisicing.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 p-14">
+          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 md:p-14 p-9">
             <div>
               <Footer.Title
                 title="Tentang Perusahaan"
@@ -87,7 +89,9 @@ export default function CustomFooter() {
         </div>
         <Footer.Divider />
         <div className="w-full h-20 sm:flex sm:items-center sm:justify-between bg-black">
-          <p className="text-white ps-14">&copy;2023 Umroh Yuk Indonesia</p>
+          <p className="text-white md:ps-14 ps-9">
+            &copy;2023 Umroh Yuk Indonesia
+          </p>
         </div>
       </div>
     </Footer>
