@@ -59,7 +59,7 @@ export default function Home() {
           <p className=" text-black text-xl font-bold md:px-14 px-5 pt-14 md:pb-16 pb-5">
             List Paket Umroh Yang Tersedia
           </p>
-          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 md:mx-14 mx-5 pb-10">
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-10 md:mx-14 mx-5 pb-10">
             <PackageCard />
             <PackageCard />
             <PackageCard />

@@ -16,10 +16,10 @@ function PackageCard() {
         <div className="p-3">
           <div className="md:flex gap-1">
             <div className="md:w-8/12  ">
-              <h1 className="md:text-[17px] sm:text-[15px] text-[17px] font-semibold">
+              <h1 className="md:text-[17px] sm:text-[15px] text-[12px] font-semibold">
                 Umroh Dream Exclusive Plus Kereta Cepat
               </h1>
-              <h2 className="md:text-[28px] sm:text-[24px] text-[28px] font-semibold  text-[#E3B02B] pt-2">
+              <h2 className="md:text-[28px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-2">
                 RP 39.5 Jt
               </h2>
             </div>
@@ -36,7 +36,7 @@ function PackageCard() {
           <div className=" py-3">
             <div className="flex items-center justify-center">
               <div className="w-full  h-7 rounded-xl border-2 relative border-black">
-                <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold">
+                <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold md:text-base sm:text-base text-xs">
                   <p>Tersisa {numero.available} Paket</p>
                 </div>
                 <div
@@ -48,7 +48,7 @@ function PackageCard() {
           </div>
           <div className="grid grid-cols-2 gap-1">
             <div className="flex">
-              <div className="w-1/6">
+              <div className="md:w-1/6">
                 <Image
                   src="/assets/vector/bed.svg"
                   width={25}
@@ -57,7 +57,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
                   Satu kamar 4 Orang
                 </p>
               </div>
@@ -72,7 +72,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
                   10 Sep 2023
                 </p>
               </div>
@@ -87,7 +87,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
                   Garuda
                 </p>
               </div>
@@ -102,7 +102,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
                   Jakarta, +2 Kota
                 </p>
               </div>
@@ -117,7 +117,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
                   9 Hari
                 </p>
               </div>
@@ -132,7 +132,9 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs">Hotel</p>
+                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
+                  Hotel
+                </p>
 
                 <div className="ps-1 pt-2 flex items-center space-x-1">
                   <svg

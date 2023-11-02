@@ -7,7 +7,6 @@ import PackageCard from "@/components/packagecard";
 import { Carousel } from "flowbite";
 
 function PackageDetail() {
-
   const numero = {
     total: 50,
     available: 5,
@@ -21,7 +20,7 @@ function PackageDetail() {
           <section id="main">
             <div className=" bg-white md:w-10/12 w-11/12  md:ms-20 rounded-xl mx-auto">
               <div className="h-[60px] rounded-t-xl center">
-                <p className="text-xl text-bold text-center md:pt-3 pt-1 text-black">
+                <p className="text-xl text-bold text-center md:pt-3 pt-1 px-2 text-black">
                   Umroh Dream Exclusive Plus Kereta Cepat 10 Hari
                 </p>
               </div>
@@ -187,13 +186,13 @@ function PackageDetail() {
           </section>
           <section id="Mitra travel">
             <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl mt-[50px]">
-              <div className="md:h-[60px] md:w-[250px] h-[40px] w-[150px] bg-black mx-auto rounded-b-xl">
-                <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1">
+              <div className=" md:w-[250px]  w-[150px] bg-black mx-auto rounded-b-xl">
+                <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1 px-2">
                   Mitra Travel
                 </p>
               </div>
               <div className="flex py-7 md:px-14 px-9">
-                <div className="md:w-3/12 w-3/12">
+                <div className="md:w-3/12 sm:w-3/12 w-2/12">
                   <div className="md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] w-[70px] h-[70px] bg-gray-500 rounded-full"></div>
                 </div>
                 <div className="w-full ps-5">
@@ -225,8 +224,8 @@ function PackageDetail() {
           </section>
           <section id="testimonial">
             <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl mb-[50px]">
-              <div className="md:h-[60px] md:w-[250px] sm:w-[200px] h-[40px] w-[150px] bg-black mx-auto rounded-b-xl">
-                <p className="md:text-2xl sm:text-xl text-lg  font-semibold text-[#E3B02B] text-center md:pt-3 pt-1">
+              <div className="md:w-[250px] sm:w-[200px]  w-[150px] bg-black mx-auto rounded-b-xl">
+                <p className="md:text-2xl sm:text-xl text-lg  font-semibold text-[#E3B02B] text-center md:pt-3 pt-1 px-2">
                   Testimoni Travel
                 </p>
               </div>
@@ -239,8 +238,8 @@ function PackageDetail() {
 
           <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl mt-[50px]">
             <div>
-              <div className="md:h-[60px] md:w-[250px] sm:w-[200px] h-[40px] w-[150px] bg-black mx-auto rounded-b-xl">
-                <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1">
+              <div className=" md:w-[250px] sm:w-[200px]  w-[150px] bg-black mx-auto rounded-b-xl">
+                <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1 px-2">
                   Fasilitas Umroh
                 </p>
               </div>
@@ -254,8 +253,8 @@ function PackageDetail() {
           </div>
           <div className="h-[50px]"></div>
           <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl">
-            <div className="md:h-[60px] md:w-[250px] sm:w-[200px] h-[40px] w-[150px] bg-black mx-auto rounded-b-xl">
-              <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1">
+            <div className=" md:w-[250px] sm:w-[200px]  w-[150px] bg-black mx-auto rounded-b-xl">
+              <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1 px-2">
                 Maskapai
               </p>
             </div>
@@ -273,8 +272,8 @@ function PackageDetail() {
           </div>
           <div className="h-[50px]"></div>
           <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl">
-            <div className="md:h-[60px] md:w-[250px] sm:w-[200px] h-[40px] w-[150px] bg-black mx-auto rounded-b-xl">
-              <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1">
+            <div className=" md:w-[250px] sm:w-[200px]  w-[150px] bg-black mx-auto rounded-b-xl">
+              <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1 px-2">
                 Hotel Travel
               </p>
             </div>
@@ -299,8 +298,8 @@ function PackageDetail() {
                 </h2>
               </div>
               <div className="mt-3 mx-auto">
-                <div className="w-[350px]  h-7 rounded-xl border-2 border-black">
-                  <div className="md:w-[350px] sm:w-[250px] w-[350px] absolute flex items-center justify-center text-center font-semibold">
+                <div className="w-full  h-7 rounded-xl border-2 relative border-black">
+                  <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold md:text-base sm:text-base text-xs pt-1">
                     <p>Tersisa {numero.available} Paket</p>
                   </div>
                   <div
@@ -339,8 +338,8 @@ function PackageDetail() {
       </div>
 
       <div className="bg-white mx-auto rounded-xl w-11/12 mt-[50px]">
-        <div className="md:h-[60px] md:w-[250px] sm:w-[200px] h-[40px] w-[170px] bg-black mx-auto rounded-b-xl">
-          <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1">
+        <div className=" md:w-[250px] sm:w-[200px]  w-[170px] bg-black mx-auto rounded-b-xl">
+          <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1 px-2">
             Jadwal Perjalanan
           </p>
         </div>
@@ -361,7 +360,6 @@ function PackageDetail() {
             <div className="p-3">
               <h1 className="font-semibold text-xl">Hari 3</h1>
               <p>Umroh Plus Dubai Hari-1</p>
-
             </div>
           </div>
           <div className="w-3/9 border-[3px] border-gray-400 rounded-xl">
@@ -374,7 +372,10 @@ function PackageDetail() {
             <div className="p-3">
               <h1 className="font-semibold text-xl">Hari 5</h1>
               <p>Umroh Plus Dubai Hari-1</p>
-
+            </div>
+          </div>
+          <div className="w-3/9 border-[3px] border-gray-400 rounded-xl">
+            <div className="p-3">
               <h1 className="font-semibold text-xl">Hari 6</h1>
               <p>Umroh Plus Dubai Hari-1</p>
             </div>
@@ -401,18 +402,16 @@ function PackageDetail() {
       </div>
 
       <div className="flex">
-
         <div className="md:w-8/12 w-full">
-          <div className="h-[40px]"></div>
-          <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl">
+          <div className=""></div>
+          <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl mt-[50px]">
             <div>
-              <div className="md:h-[60px] md:w-[250px] sm:w-[200px] h-[40px] w-[200px] bg-black mx-auto rounded-b-xl">
-                <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1">
+              <div className=" md:w-[250px] sm:w-[200px]  w-[200px] bg-black mx-auto rounded-b-xl">
+                <p className="md:text-2xl sm:text-xl text-lg font-semibold text-[#E3B02B] text-center md:pt-3 pt-1 px-2">
                   Syarat & Ketentuan
                 </p>
               </div>
-              <div className="py-7 md:px-14 px-9 md:text-2xl sm:text-xl text-lg font-semibold text-black">
-
+              <div className="py-7 md:px-14 px-9 md:text-2xl sm:text-xl text-base font-semibold text-black">
                 <p>Syarat</p>
                 <p>Syarat</p>
                 <p>Ketentuan</p>
@@ -434,7 +433,6 @@ function PackageDetail() {
       </div>
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 md:p-20 p-10">
-
         <PackageCard />
         <PackageCard />
         <PackageCard />
