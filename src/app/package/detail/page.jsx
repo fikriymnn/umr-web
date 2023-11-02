@@ -191,7 +191,7 @@ function PackageDetail() {
                   Mitra Travel
                 </p>
               </div>
-              <div className="flex py-7 px-14">
+              <div className="flex py-7 md:px-14 px-9">
                 <div className="md:w-3/12 w-3/12">
                   <div className="md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] w-[70px] h-[70px] bg-gray-500 rounded-full"></div>
                 </div>
@@ -243,7 +243,7 @@ function PackageDetail() {
                   Fasilitas Umroh
                 </p>
               </div>
-              <div className="py-7 px-14 md:text-2xl sm:text-xl text-lg font-semibold text-black">
+              <div className="py-7 md:px-14 px-9 md:text-2xl sm:text-xl text-lg font-semibold text-black">
                 <p>Kamar Hotel</p>
                 <p>List nomer 2</p>
                 <p>List Nomer 3</p>
@@ -258,7 +258,7 @@ function PackageDetail() {
                 Maskapai
               </p>
             </div>
-            <div className="flex py-7 px-14">
+            <div className="flex py-7 md:px-14 px-9">
               <div className="md:w-3/12 w-3/12">
                 <div className="md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] w-[70px] h-[70px] bg-gray-500 rounded-full"></div>
               </div>
@@ -285,7 +285,7 @@ function PackageDetail() {
           <div className="h-[50px]"></div>
         </div>
         <div className="md:w-4/12 w-11/12 mx-auto z-10 md:mr-20">
-          <div className="bg-white rounded-xl">
+          <div className="bg-white rounded-xl  shadow-lg">
             <div className="p-7">
               <div className="px-5">
                 <h1 className="md:text-xl sm:text-lg text-base font-semibold">
@@ -315,9 +315,9 @@ function PackageDetail() {
                   dolor sit Amet
                 </p>
               </div>
-              <div className=" ">
+              <div className="  ">
                 <a href="/package/detail/formPesan">
-                  <div className="my-auto  bg-[#E3B02B] hover:bg-[#fad26e] m-auto rounded-xl p-3 items-center justify-center">
+                  <div className="my-auto  bg-[#E3B02B] hover:bg-[#fad26e] shadow-lg m-auto rounded-xl p-3 items-center justify-center">
                     <div className="flex justify-center ">
                       <div className="md:w-1/12 w-1/12 ">
                         <Image
@@ -343,7 +343,7 @@ function PackageDetail() {
             Jadwal Perjalanan
           </p>
         </div>
-        <div className="grid md:grid-cols-3 grid-cols-2 gap-y-8 gap-x-16 pt-8 p-14">
+        <div className="grid md:grid-cols-3 grid-cols-2 gap-y-8 gap-x-16 pt-8 md:p-14 p-9">
           <div className="w-3/9 border-[3px] border-gray-400 rounded-xl">
             <div className="p-3">
               <h1 className="font-semibold text-xl">Hari 1</h1>
@@ -411,7 +411,7 @@ function PackageDetail() {
                   Syarat & Ketentuan
                 </p>
               </div>
-              <div className="py-7 px-14 md:text-2xl sm:text-xl text-lg font-semibold text-black">
+              <div className="py-7 md:px-14 px-9 md:text-2xl sm:text-xl text-lg font-semibold text-black">
                 <p>Syarat</p>
                 <p>Syarat</p>
                 <p>Ketentuan</p>
@@ -431,7 +431,7 @@ function PackageDetail() {
       <div className="text-center">
         <h1 className="text-4xl font-bold">Paket Umroh Lainnya</h1>
       </div>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 p-20">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 md:p-20 p-10">
         <PackageCard />
         <PackageCard />
         <PackageCard />
