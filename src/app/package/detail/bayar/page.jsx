@@ -1,25 +1,50 @@
 import React from "react";
 import StarsRating from "@/components/starsRating";
 
+import Image from "next/image";
+
+
 function BayarPage() {
   return (
     <>
       <div className="bg">
         <div className="flex flex-col pt-10 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
+
+          <div className="flex mx-auto gap-4 justify-between mb-10">
+            <div className="flex gap-1">
+              <p className="rounded-full border-2 border-amber-400 text-amber-400 w-10 text-center ">
+                1
+              </p>
+              <p className="rounded-full text-amber-400 w-full ">
+                Data Pesanan
+              </p>
+            </div>
+            <div className="w-12 h-1  my-auto mx-auto rounded-full bg-amber-400 "></div>
+            <div className="flex gap-1">
+              <p className="rounded-full border-2 border-amber-400 text-amber-400 w-10 text-center ">
+                2
+              </p>
+              <p className="rounded-full text-amber-400 w-full ">Bayar</p>
+            </div>
+          </div>
           <section>
-            <div className="ml-20 w-[832px] h-[689px] bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+            <div className="md:ml-20 mx-10 md:w-6/12 w-11-12  bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+
               <div className="flex px-7 py-6 gap-2">
                 <div className="">
                   <svg
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
+
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M19 7H11V14H3V5H1V20H3V17H21V20H23V11C23 9.93913 22.5786 8.92172 21.8284 8.17157C21.0783 7.42143 20.0609 7 19 7ZM7 13C7.79565 13 8.55871 12.6839 9.12132 12.1213C9.68393 11.5587 10 10.7956 10 10C10 9.20435 9.68393 8.44129 9.12132 7.87868C8.55871 7.31607 7.79565 7 7 7C6.20435 7 5.44129 7.31607 4.87868 7.87868C4.31607 8.44129 4 9.20435 4 10C4 10.7956 4.31607 11.5587 4.87868 12.1213C5.44129 12.6839 6.20435 13 7 13Z"
-                      fill="black"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.9997 2.66667C10.3672 2.66637 8.76326 3.09424 7.34786 3.90757C5.93245 4.7209 4.75512 5.89124 3.93337 7.30178C3.11163 8.71232 2.67422 10.3137 2.6648 11.9461C2.65538 13.5786 3.07428 15.1849 3.87969 16.6048C4.42407 15.8973 5.12386 15.3245 5.92495 14.9306C6.72605 14.5368 7.607 14.3324 8.49969 14.3333H15.4997C16.3924 14.3324 17.2733 14.5368 18.0744 14.9306C18.8755 15.3245 19.5753 15.8973 20.1197 16.6048C20.9251 15.1849 21.344 13.5786 21.3346 11.9461C21.3252 10.3137 20.8877 8.71232 20.066 7.30178C19.2443 5.89124 18.0669 4.7209 16.6515 3.90757C15.2361 3.09424 13.6321 2.66637 11.9997 2.66667ZM21.2665 19.0887C22.8264 17.0551 23.6701 14.5629 23.6664 12C23.6664 5.5565 18.4432 0.333336 11.9997 0.333336C5.55619 0.333336 0.333021 5.5565 0.333021 12C0.329169 14.5629 1.17291 17.0552 2.73285 19.0887L2.72702 19.1097L3.14119 19.5915C4.23539 20.8708 5.59397 21.8975 7.12329 22.6011C8.65261 23.3046 10.3163 23.6682 11.9997 23.6667C14.3649 23.671 16.675 22.9526 18.6205 21.6075C19.4499 21.0344 20.202 20.3569 20.8582 19.5915L21.2724 19.1097L21.2665 19.0887ZM11.9997 5C11.0714 5 10.1812 5.36875 9.52481 6.02513C8.86844 6.68151 8.49969 7.57174 8.49969 8.5C8.49969 9.42826 8.86844 10.3185 9.52481 10.9749C10.1812 11.6313 11.0714 12 11.9997 12C12.9279 12 13.8182 11.6313 14.4746 10.9749C15.1309 10.3185 15.4997 9.42826 15.4997 8.5C15.4997 7.57174 15.1309 6.68151 14.4746 6.02513C13.8182 5.36875 12.9279 5 11.9997 5Z"
+                      fill="currentColor"
+
                     />
                   </svg>
                 </div>
@@ -27,28 +52,305 @@ function BayarPage() {
                   <p className="text-2xl font-bold px- ">Pesanan Kamu</p>
                 </div>
               </div>
-              <div className="flex gap-3 ml-[73px]">
+
+              <div className="flex gap-3 md:ml-[73px] ml-10">
                 <div>
-                  <div className="w-[59px] h-[59px] bg-gray-500 rounded-full "></div>
+                  <div className="md:w-[59px] md:h-[59px] w-[40px] h-[40px]  bg-gray-500 rounded-full "></div>
                 </div>
                 <div className="grid grid-cols-1 ">
-                  <p className="text-xl font-semibold ">Travel Keren Dongs</p>
+                  <p className="md:text-lg font-semibold text-lg">
+                    Travel Keren Dongs
+                  </p>
                   <div className="flex gap-12">
-                    <p className="text-xl font-medium">60 Penilaian</p>
+                    <p className="text-lg font-medium">60 Penilaian</p>
                     <div className="flex justify-center items-center">
-                      <p className="text-xl font-medium">Rating</p>
+                      <p className="text-lg font-medium">Rating</p>
                       <StarsRating />
                     </div>
                   </div>
-                  <p className="text-xl font-medium">Nomor Izin Umroh:</p>
-                  <p className="text-xl font-medium">1230349594899489</p>
+                  <p className="text-lg font-medium">Nomor Izin Umroh:</p>
+                  <p className="text-lg font-medium">1230349594899489</p>
                 </div>
               </div>
-              <div className="border-4 w-10/12 ml-14 mt-12">
-                <p className="text-black text-2xl font-bold flex items-center justify-center">
-                  Umroh Dream Exclusive Plus Kereta Cepat 10 Hari
+
+              <div className=" md:w-11/12 sm:w-full w-11/12 md:ml-7 mx-auto mt-12 flex flex-col justify-center items-center">
+                <div className="my-4 md:mx-5">
+                  <div className="border-2 border-b-0 p-2 border-slate-200">
+                    <p className="md:text-2xl font-bold">
+                      Umroh Dream Exclusive Plus Kereta Cepat 10 Hari
+                    </p>
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mt-5">
+                      <div className="flex">
+                        <div className="w-1/12">
+                          <Image
+                            src="/assets/vector/bed.svg"
+                            width={25}
+                            height={25}
+                            alt="icon"
+                          />
+                        </div>
+                        <div>
+                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                            Pilihan Kamar
+                          </p>
+                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                            Satu Kamar 4 Orang QUAD
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className="w-1/12">
+                          <Image
+                            src="/assets/vector/calendar.svg"
+                            width={25}
+                            height={25}
+                            alt="icon"
+                          />
+                        </div>
+                        <div>
+                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                            Tanggal Keberangkatan
+                          </p>
+                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                            10 September 2023
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className="w-1/12">
+                          <Image
+                            src="/assets/vector/plane.svg"
+                            width={25}
+                            height={25}
+                            alt="icon"
+                          />
+                        </div>
+                        <div>
+                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                            Maskapai Pesawat
+                          </p>
+                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                            Garuda
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className="w-1/12">
+                          <Image
+                            src="/assets/vector/minlocation.svg"
+                            width={25}
+                            height={25}
+                            alt="icon"
+                          />
+                        </div>
+                        <div>
+                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                            Kota Keberangkatan
+                          </p>
+                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                            Jakarta
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className="w-1/12">
+                          <Image
+                            src="/assets/vector/datetime.svg"
+                            width={25}
+                            height={25}
+                            alt="icon"
+                          />
+                        </div>
+                        <div>
+                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                            Durasi Perjalanan
+                          </p>
+                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                            9 Hari
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <div className="w-1/12">
+                          <Image
+                            src="/assets/vector/hotel.svg"
+                            width={25}
+                            height={25}
+                            alt="icon"
+                          />
+                        </div>
+                        <div>
+                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                            Hotel
+                          </p>
+
+                          <div class="ps-1 pt-2 flex items-center space-x-1">
+                            <svg
+                              class="w-4 h-4 text-yellow-300"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="currentColor"
+                              viewBox="0 0 22 20"
+                            >
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg
+                              class="w-4 h-4 text-yellow-300"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="currentColor"
+                              viewBox="0 0 22 20"
+                            >
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg
+                              class="w-4 h-4 text-yellow-300"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="currentColor"
+                              viewBox="0 0 22 20"
+                            >
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg
+                              class="w-4 h-4 text-yellow-300"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="currentColor"
+                              viewBox="0 0 22 20"
+                            >
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                            <svg
+                              class="w-4 h-4 text-gray-300 dark:text-gray-500"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="currentColor"
+                              viewBox="0 0 22 20"
+                            >
+                              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex md:flex-row flex-col">
+                    <div className="flex border-2 md:border-e-0 p-2 border-slate-200 md:w-[40%] text-2xl py-3 font-bold  justify-center items-center ">
+                      <p className="my-2 text-center md:text-start">
+                        Total Biaya
+                      </p>
+                    </div>
+                    <div className="border-2 p-2 border-slate-200 md:w-[60%] md:border-t-2 border-t-0 text-2xl font-bold px-12 py-3 flex md:flex-row flex-col justify-center items-center ">
+                      <p className="my-2 text-center md:text-start">
+                        Rp 39.500.000
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div className="md:ml-20 mx-10 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+              <div className="flex px-7 py-6 gap-2">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.648 11.2653H6.35001C5.43573 11.2653 5.04389 10.2694 5.76226 9.79593L15.4112 3.47756C15.5894 3.37277 15.7923 3.3175 15.999 3.3175C16.2057 3.3175 16.4086 3.37277 16.5867 3.47756L26.2357 9.79593C26.9541 10.2694 26.5623 11.2653 25.648 11.2653Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M25.7959 20.2449H6.20402C5.75318 20.2449 5.3877 20.6104 5.3877 21.0613V23.5102C5.3877 23.9611 5.75318 24.3266 6.20402 24.3266H25.7959C26.2467 24.3266 26.6122 23.9611 26.6122 23.5102V21.0613C26.6122 20.6104 26.2467 20.2449 25.7959 20.2449Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.83594 11.2653V20.2449M11.9176 11.2653V20.2449M15.9992 11.2653V20.2449M20.0808 11.2653V20.2449M24.1625 11.2653V20.2449"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    cx="16"
+                    cy="16"
+                    r="15"
+                    stroke="black"
+                    stroke-width="2"
+                  />
+                </svg>
+                <p className="text-[17px] font-bold my-auto">
+                  Metode Pembayaran
                 </p>
               </div>
+              <div className="flex px-7 py-3 gap-2">
+                <div className="border-2 rounded-md bg-white">
+                  <Image
+                    src={"/assets/images/bca.png"}
+                    alt=""
+                    width={55}
+                    height={55}
+                  />
+                </div>
+                <p className="my-auto text-neutral-400 font-medium">
+                  Transfer Bank &#40;Transfer BCA&#41;
+                </p>
+              </div>
+              <div className="px-7 py-7 ">
+                <p className="font-semibold text-base pb-2">
+                  Nama Pemilik Rekening
+                </p>
+                <input
+                  type="text"
+                  className="rounded-lg w-full border-neutral-400 text-neutral-400 "
+                  placeholder="Ketik Nama Pemilik Rekening... "
+                />
+              </div>
+              <div className="px-7">
+                <p className="font-semibold text-base pb-2">Perhatian:</p>
+                <p className="font-medium text-sm">
+                  Anda bisa transfer dari layanan perbankan apapun &#40;
+                  internet banking, SMS&#47;M-Banking, ATM &#41;
+                </p>
+              </div>
+              <div className="px-7 py-10">
+                <p className="font-semibold text-base">Kode Promo</p>
+                <div className="border-[1px] rounded-lg  border-neutral-400 flex w-10/12">
+                  <input
+                    type="text"
+                    className="w-9/12 border-none mx-1"
+                    placeholder="Ketik Kode Promo.."
+                  />
+                  <button className="w-3/12 bg-amber-400 m-1 rounded-lg text-sm font-medium p-2 ">
+                    Reedem
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="md:ml-20 mx-10 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+              <div className="px-7 flex justify-between pt-5 mb-7 ">
+                <p className="font-bold text-base">Total Harga</p>
+                <p className="font-bold text-base text-amber-400">
+                  Rp 39.500.00
+                </p>
+              </div>
+              <div className="flex justify-center items-center mb-5">
+                <button className=" rounded-md w-11/12 bg-amber-400 m-2 font-semibold h-10">
+                  Bayar
+                </button>
+              </div>
+
             </div>
           </section>
         </div>
