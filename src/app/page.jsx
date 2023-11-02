@@ -101,7 +101,9 @@ export default function Home() {
             className="mx-auto md:mt-10 mt-10 md:mb-24"
           />
         </div>
-        <Percayakan />
+        <div className="">
+          <Percayakan />
+        </div>
       </div>
       <div className="bg-black w-full h-full md:pb-14 pb-10">
         <div className="flex justify-between">
@@ -114,8 +116,10 @@ export default function Home() {
       </div>
       <div className=" w-full ">
         <div className="px-14 w-11/12 mb-24">
-          <p className="text-black pt-10 font-extrabold text-3xl">Ibadahku</p>
-          <p className="font-semibold">
+          <p className="text-black pt-10 font-extrabold md:text-3xl sm:text-xl text-lg">
+            Ibadahku
+          </p>
+          <p className="font-semibold md:text-base text-sm md:line-clamp-none line-clamp-6">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rerum
             minima perferendis alias maxime non sunt explicabo numquam odit quam
             aliquid quasi ducimus velit veniam repellendus veritatis eius

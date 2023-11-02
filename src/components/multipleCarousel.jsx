@@ -29,65 +29,65 @@ function MultipleCarousel() {
     <>
       <div className="mx-auto md:mr-0 sm:mr-6 mr-10">
         <Carousel responsive={responsive} autoPlay={true} infinite={true}>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[100px] ">
+          <div className="text-white md:w-[200px] sm:w-[150px] w-[90px] ">
             <Image
-              src={"/assets/images/rectangle20.png"}
+              src={"/assets/images/cs-1.jpeg"}
               width={200}
               height={200}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[100px]">
+          <div className="text-white md:w-[200px] sm:w-[150px] w-[90px]">
             <Image
-              src={"/assets/images/rectangle20.png"}
+              src={"/assets/images/cs-1.jpeg"}
               width={200}
               height={200}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[100px]">
+          <div className="text-white md:w-[200px] sm:w-[150px] w-[90px]">
             <Image
-              src={"/assets/images/rectangle20.png"}
+              src={"/assets/images/cs-1.jpeg"}
               width={200}
               height={200}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[100px]">
+          <div className="text-white md:w-[200px] sm:w-[150px] w-[90px]">
             <Image
-              src={"/assets/images/rectangle20.png"}
+              src={"/assets/images/cs-1.jpeg"}
               width={200}
               height={200}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[100px]">
+          <div className="text-white md:w-[200px] sm:w-[150px] w-[90px]">
             <Image
-              src={"/assets/images/rectangle20.png"}
+              src={"/assets/images/cs-1.jpeg"}
               width={200}
               height={200}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[100px]">
+          <div className="text-white md:w-[200px] sm:w-[150px] w-[90px]">
             <Image
-              src={"/assets/images/rectangle20.png"}
+              src={"/assets/images/cs-1.jpeg"}
               width={200}
               height={200}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[100px]">
+          <div className="text-white md:w-[200px] sm:w-[150px] w-[90px]">
             <Image
-              src={"/assets/images/rectangle20.png"}
+              src={"/assets/images/cs-1.jpeg"}
               width={200}
               height={200}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[100px]">
+          <div className="text-white md:w-[200px] sm:w-[150px] w-[90px]">
             <Image
-              src={"/assets/images/rectangle20.png"}
+              src={"/assets/images/cs-1.jpeg"}
               width={200}
               height={200}
               alt=""
