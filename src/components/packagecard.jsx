@@ -57,7 +57,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-[10px] my-auto">
                   Satu kamar 4 Orang
                 </p>
               </div>
@@ -72,7 +72,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-[10px] my-auto">
                   10 Sep 2023
                 </p>
               </div>
@@ -87,7 +87,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-[10px] my-auto">
                   Garuda
                 </p>
               </div>
@@ -102,7 +102,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-[10px] my-auto">
                   Jakarta, +2 Kota
                 </p>
               </div>
@@ -117,7 +117,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-[10px] my-auto">
                   9 Hari
                 </p>
               </div>
@@ -132,7 +132,7 @@ function PackageCard() {
                 />
               </div>
               <div>
-                <p className="ps-1 text-black md:text-base sm:text-xs text-xs my-auto">
+                <p className="ps-1 text-black md:text-base sm:text-xs text-[10px] my-auto">
                   Hotel
                 </p>
                 <div className="md:w-10/12 w-[50px]">
