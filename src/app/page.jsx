@@ -11,9 +11,7 @@ export default function Home() {
     <>
       <div className=" bg  ">
         <div></div>
-
         <div className="bg-white w-11/12 md:h-96 sm:h-72 h-52 m-auto pt-10">
-
           <DefaultCarousel />
           {/* <MultipleCarousel/> */}
         </div>
@@ -50,7 +48,7 @@ export default function Home() {
           </div>
           <div className="md:pl-10 md:mt-5 w-full col-span-3 md:w-[20%] mb-1">
             <div className="py-2 px-3 bg-black rounded-md text-white md:w-24 md:h-10 w-[70px] h-8 mx-auto">
-              <p className="md:text-base sm:text-[10px] text-[10px]">
+              <p className="md:text-[14px] sm:text-[10px] text-[10px] text-center ">
                 Cari Paket
               </p>
             </div>
@@ -73,7 +71,7 @@ export default function Home() {
             <PackageCard />
           </div>
           <a href="/package">
-            <div className="flex items-center justify-center bg-black w-96 h-16 mx-auto rounded-xl mb-10">
+            <div className="flex items-center justify-center bg-black md:w-3/12 w-10/12 h-16 mx-auto rounded-xl mb-10">
               <p className=" text-white text-center  ">
                 Tampilkan Lebih Banyak
               </p>
@@ -87,6 +85,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="w-4/5 mx-auto  mt-16">
         <p className="font-extrabold text-3xl md:hidden sm:visible visible">
           Percayakan Perjalanan Umroh anda kepada Ibadahku
@@ -109,17 +108,13 @@ export default function Home() {
           <p className="text-white ps-14 pt-10 font-bold">100+ Biro Travel</p>
           <p className="text-white pe-14 pt-10 font-bold">Mitra Kami</p>
         </div>
-
         <div className="  ps-14 mt-14">
-
           <MultipleCarousel className="mx-auto my-auto" />
         </div>
       </div>
       <div className=" w-full ">
         <div className="px-14 w-11/12 mb-24">
-
           <p className="text-black pt-10 font-extrabold text-3xl">Ibadahku</p>
-
           <p className="font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rerum
             minima perferendis alias maxime non sunt explicabo numquam odit quam
