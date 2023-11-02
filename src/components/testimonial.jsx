@@ -2,7 +2,7 @@ import React from "react";
 
 function Testimonial() {
   return (
-    <div className="w-full py-7 px-14 font-semibold">
+    <div className="w-full py-7 md:px-14 px-9 font-semibold">
       <h1 className="md:text-2xl sm:text-xl text-lg text-black pb-1">
         Acep Wahyu
       </h1>
