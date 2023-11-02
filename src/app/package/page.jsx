@@ -16,7 +16,7 @@ function Package() {
         {isMobile && (
           <>
             <button
-              className="bg-red-900"
+              className="bg-red-900 h-1/12"
               onClick={() => setComp((prevComp) => (prevComp === 1 ? 0 : 1))}
             >
               Filter
