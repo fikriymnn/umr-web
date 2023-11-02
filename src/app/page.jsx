@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <div className="md:pl-10 md:mt-5 w-full col-span-3 md:w-[20%] mb-1">
             <div className="py-2 px-3 bg-black rounded-md text-white md:w-24 md:h-10 w-[70px] h-8 mx-auto">
-              <p className="md:text-base sm:text-[10px] text-[10px]">
+              <p className="md:text-[14px] sm:text-[10px] text-[10px] text-center ">
                 Cari Paket
               </p>
             </div>
