@@ -7,6 +7,7 @@ import DefaultCarousel from "@/components/Carousel";
 import PackageCard from "@/components/packagecard";
 import { Carousel } from "flowbite";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
+
 import { useState } from "react";
 function DatadiriFoam({}) {
   const [jamaah, setJamaah] = useState([
@@ -113,6 +114,7 @@ function DatadiriFoam({}) {
         </div>
       </div>
     </>
+
   );
 }
 

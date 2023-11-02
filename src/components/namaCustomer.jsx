@@ -4,6 +4,7 @@ function NamaCustomer() {
   return (
     <div>
       <div className="py-[50px]">
+
         <div className="bg-white md:w-10/12 w-11/12 md:ms-20 sm:ms-10 ms-7 rounded-xl shadow-2xl ">
           <div className="flex px-7 py-6 gap-5 ">
             <div className="">
@@ -24,6 +25,7 @@ function NamaCustomer() {
             <div>
               <p className="text-2xl font-bold ">Nama Pemesan</p>
               <p className="text-xl font-medium ">Rudi Kustandi</p>
+
             </div>
           </div>
         </div>

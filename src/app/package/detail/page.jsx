@@ -7,6 +7,7 @@ import PackageCard from "@/components/packagecard";
 import { Carousel } from "flowbite";
 
 function PackageDetail() {
+
   const numero = {
     total: 50,
     available: 5,
@@ -360,6 +361,7 @@ function PackageDetail() {
             <div className="p-3">
               <h1 className="font-semibold text-xl">Hari 3</h1>
               <p>Umroh Plus Dubai Hari-1</p>
+
             </div>
           </div>
           <div className="w-3/9 border-[3px] border-gray-400 rounded-xl">
@@ -372,10 +374,7 @@ function PackageDetail() {
             <div className="p-3">
               <h1 className="font-semibold text-xl">Hari 5</h1>
               <p>Umroh Plus Dubai Hari-1</p>
-            </div>
-          </div>
-          <div className="w-3/9 border-[3px] border-gray-400 rounded-xl">
-            <div className="p-3">
+
               <h1 className="font-semibold text-xl">Hari 6</h1>
               <p>Umroh Plus Dubai Hari-1</p>
             </div>
@@ -402,6 +401,7 @@ function PackageDetail() {
       </div>
 
       <div className="flex">
+
         <div className="md:w-8/12 w-full">
           <div className="h-[40px]"></div>
           <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl">
@@ -412,6 +412,7 @@ function PackageDetail() {
                 </p>
               </div>
               <div className="py-7 md:px-14 px-9 md:text-2xl sm:text-xl text-lg font-semibold text-black">
+
                 <p>Syarat</p>
                 <p>Syarat</p>
                 <p>Ketentuan</p>
@@ -431,7 +432,9 @@ function PackageDetail() {
       <div className="text-center">
         <h1 className="text-4xl font-bold">Paket Umroh Lainnya</h1>
       </div>
+
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 md:p-20 p-10">
+
         <PackageCard />
         <PackageCard />
         <PackageCard />

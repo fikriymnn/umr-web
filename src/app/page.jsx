@@ -11,7 +11,9 @@ export default function Home() {
     <>
       <div className=" bg  ">
         <div></div>
+
         <div className="bg-white w-11/12 md:h-96 sm:h-72 h-52 m-auto pt-10">
+
           <DefaultCarousel />
           {/* <MultipleCarousel/> */}
         </div>
@@ -107,13 +109,17 @@ export default function Home() {
           <p className="text-white ps-14 pt-10 font-bold">100+ Biro Travel</p>
           <p className="text-white pe-14 pt-10 font-bold">Mitra Kami</p>
         </div>
+
         <div className="  ps-14 mt-14">
+
           <MultipleCarousel className="mx-auto my-auto" />
         </div>
       </div>
       <div className=" w-full ">
         <div className="px-14 w-11/12 mb-24">
+
           <p className="text-black pt-10 font-extrabold text-3xl">Ibadahku</p>
+
           <p className="font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero rerum
             minima perferendis alias maxime non sunt explicabo numquam odit quam
