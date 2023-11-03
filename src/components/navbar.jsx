@@ -6,13 +6,8 @@ import Image from "next/image";
 export default function CustomNavbar() {
   return (
     <Navbar fluid rounded className="h-[80px]">
-      <Navbar.Brand href="/" className="ml-10">
-        {/* <img
-          alt="Flowbite React Logo"
-          className="mr-3 h-6 sm:h-9"
-          src="/favicon.svg"
-        /> */}
-        {/* <span className="self-center whitespace-nowrap text-3xl font-bold dark:text-white ml-10">
+      <Navbar.Brand href="/" className="md:ml-10 sm:ml-10 mx-auto">
+        {/* <span className="text-center whitespace-nowrap text-3xl font-bold dark:text-white ml-10">
           UmrohYuk
         </span> */}
         <Image
@@ -22,22 +17,24 @@ export default function CustomNavbar() {
           height={150}
         />
       </Navbar.Brand>
-      <div className="flex md:order-2 mr-10">
+      <div className="flex md:order-2 md:mr-10 mx-auto">
         <a href="/login">
-          <p className="pt-1 pe-3 hover:text-[#E3B02B]">Masuk</p>
+          <p className="pt-1 pe-3 md:text-base sm:text-base text-xs hover:text-[#E3B02B]">
+            Masuk
+          </p>
         </a>
         <a href="/register">
-          <div className="text-center bg-[#E3B02B] hover:bg-white text-white hover:text-[#E3B02B] w-[110px] h-[30px] rounded-xl">
+          <div className="text-center bg-[#E3B02B] hover:bg-white text-white md:text-base sm:text-base text-xs hover:text-[#E3B02B] w-[110px] h-[30px] rounded-xl">
             <p className="pt-1">Daftar</p>
           </div>
         </a>
         <Navbar.Toggle />
       </div>
 
-      <Navbar.Collapse>
+      <Navbar.Collapse className="z-50 bg-white">
         <Navbar.Link href="/package">
           <div className="flex">
-            <div className="w-2/12">
+            <div className="md:w-2/12 w-1/12">
               <Image
                 src="/assets/images/Kaaba.png"
                 width={50}
