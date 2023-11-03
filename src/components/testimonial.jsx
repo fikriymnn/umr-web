@@ -2,23 +2,25 @@ import React from "react";
 
 function Testimonial() {
   return (
-    <div className="w-full py-7 md:px-14 px-9 font-semibold">
+    <div className="w-full py-7 md:px-20 px-4 font-semibold">
       <h1 className="md:text-2xl sm:text-xl text-lg text-black pb-1">
         Acep Wahyu
       </h1>
       <h3 className="md:text-base sm:text-sm text-xs text-gray-400 pb-1">
         Jakarta
       </h3>
-      <p className="md:text-base sm:text-sm text-xs text-black pb-2">
-        Layanan umrohnya bagus banget aku suka, lain kali umroh lagi disini sama
-        keluarga, otw langganan ke travel ini aku rekomendasiin ke kalian juga
-        dijamin gabakal nyesel deh.
-      </p>
+      <div className="line-clamp-3 mb-2">
+        <p className="md:text-base sm:text-sm text-xs text-black ">
+          Layanan umrohnya bagus banget aku suka, lain kali umroh lagi disini
+          sama keluarga, otw langganan ke travel ini aku rekomendasiin ke kalian
+          juga dijamin gabakal nyesel deh.
+        </p>
+      </div>
       <div className="grid grid-cols-4 md:gap-5 gap-1">
-        <div className="w-full md:h-[88px] sm:h-[75px] h-[70px] bg-gray-500"></div>
-        <div className="w-full md:h-[88px] sm:h-[75px] h-[70px] bg-gray-500"></div>
-        <div className="w-full md:h-[88px] sm:h-[75px] h-[70px] bg-gray-500"></div>
-        <div className="w-full md:h-[88px] sm:h-[75px] h-[70px] bg-gray-500"></div>
+        <div className=" w-full h-full md:p-12 sm:p-8 p-6  bg-gray-500"></div>
+        <div className=" w-full h-full md:p-12 sm:p-8 p-6  bg-gray-500"></div>
+        <div className=" w-full h-full md:p-12 sm:p-8 p-6  bg-gray-500"></div>
+        <div className=" w-full h-full md:p-12 sm:p-8 p-6  bg-gray-500"></div>
       </div>
     </div>
   );

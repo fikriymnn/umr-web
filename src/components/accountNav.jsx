@@ -48,7 +48,7 @@ function AccountNav({ account, order }) {
           </button>
         </div>
         <div className="flex">
-          <button className=" text-black hover:text-red-700 py-2 px-5 font-semibold flex gap-2 items-center">
+          <button className=" text-black text-red-700 py-2 px-5 font-semibold flex gap-2 items-center">
             <svg
               width="20"
               height="20"

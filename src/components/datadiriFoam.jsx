@@ -31,11 +31,11 @@ function DatadiriFoam({}) {
   return (
     <>
       <div>
-        <div className="bg-white md:w-10/12 w-11/12 md:ms-20 sm:ms-10 ms-7 mx-auto rounded-xl mt-10 shadow-2xl h-full">
+        <div className="bg-white md:w-10/12 w-11/12 md:ms-20 sm:ms-10  mx-auto rounded-xl mt-10 shadow-2xl h-full">
           {jamaah.map((val, i) => {
             return (
               <div key={i} className="w-full pt-7 font-semibold">
-                <div className="flex pb-1 px-14 gap-5">
+                <div className="flex pb-1 md:px-14 mx-4 gap-5">
                   <div>
                     <img src="../../assets/vector/vectorya.svg" alt="" />
                   </div>
@@ -45,7 +45,7 @@ function DatadiriFoam({}) {
                   </h1>
                 </div>
 
-                <div className=" md:flex  px-14 gap-5">
+                <div className=" md:flex  md:px-14 mx-4 gap-5">
                   <div className="grid grid-cols-1">
                     <p>Gender</p>
                     <DropdownDetail />
@@ -69,7 +69,7 @@ function DatadiriFoam({}) {
                     </div>
                   </div>
                 </div>
-                <div className=" md:flex  px-14 gap-5 pt-5">
+                <div className=" md:flex  md:px-14 mx-4 gap-5 pt-5">
                   <div>
                     <div>
                       <p>Nomor Whatsapp</p>
@@ -82,7 +82,7 @@ function DatadiriFoam({}) {
                       className=" "
                     />
                   </div>
-                  <div>
+                  <div className="mt-5 md:mt-0">
                     <div>
                       <p>Email</p>
                     </div>
@@ -99,7 +99,7 @@ function DatadiriFoam({}) {
             );
           })}
 
-          <div className="flex justify-center items-center pb-20 pt-5">
+          <div className="flex justify-center items-center md:pb-20 pb-10 pt-5">
             <button onClick={handleClick} type="button">
               <img src="../../assets/vector/VectorPlus.svg" alt="" />
             </button>{" "}
