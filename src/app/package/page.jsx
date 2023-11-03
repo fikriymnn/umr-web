@@ -11,12 +11,12 @@ function Package() {
   const [comp, setComp] = useState(0);
 
   return (
-    <div className="bg mb-10">
+    <div className="bg pb-10">
       <div className="flex  pt-10 bg-cover  bg-[url('/assets/images/image2.png')] z-10 relative">
         {isMobile && (
           <>
             <button
-              className="bg-red-900 h-1/12"
+              className="bg-red-900 z-40"
               onClick={() => setComp((prevComp) => (prevComp === 1 ? 0 : 1))}
             >
               Filter

@@ -5,12 +5,12 @@ import Image from "next/image";
 
 function BelumBayar() {
   return (
-    <div className="px-14 py-10 bg-slate-100">
+    <div className="md:px-14 px-5 py-10 bg-slate-100">
       <div className=" flex md:flex-row flex-col">
         <AccountNav order="bg-[#E3B02B] text-white" />
 
         <div className="w-full md:w-10/12 md:ps-5">
-          <div className="bg-white grid grid-cols-1 gap-3 md:rounded-xl rounded-b-xl border-2 md:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 px-8">
+          <div className="bg-white grid grid-cols-1 gap-3 md:rounded-xl rounded-b-xl border-2 md:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 md:px-8 px-5">
             <div className="flex justify-center items-center md:gap-32 gap-3 pt-3">
               <OrderNav
                 belbay={"text-[#E3B02B] "}

@@ -3,7 +3,7 @@ import AccountNav from "@/components/accountNav";
 
 function ProfilSaya() {
   return (
-    <div className="px-14 py-10 bg-slate-100">
+    <div className="md:px-14 px-5 py-10 bg-slate-100">
       <div className=" flex md:flex-row flex-col">
         <AccountNav account="bg-[#E3B02B] text-white" />
 

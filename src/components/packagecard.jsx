@@ -52,8 +52,8 @@ function PackageCard() {
           </div>
           <div className=" py-3">
             <div className="flex items-center justify-center">
-              <div className="w-full h-7 rounded-xl border-2 relative border-black">
-                <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold md:text-base sm:text-base text-xs md:mt-0 sm:mb-0 mt-1">
+              <div className="w-full md:h-7 h-5 rounded-xl border-2 relative border-black">
+                <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold md:text-base sm:text-base text-xs md:mt-0 sm:mb-0 mt-[2px]">
                   <p>Tersisa {numero.available} Paket</p>
                 </div>
                 <div

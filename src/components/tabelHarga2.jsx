@@ -3,21 +3,63 @@ import React from "react";
 function TabelHarga2() {
   return (
     <>
-
-      <div className=" border-2  border-black rounded-lg">
+      {/* <div className=" border-2  border-black rounded-lg">
         <div className="flex gap-10 justify-center items-center  border-b-2 border-black rounded-t-md">
-          <p className="p-3 font-semibold md:text-base sm:text-sm text-xs">
+          <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
             Tahap
           </p>
-          <p className="p-3 font-semibold md:text-base sm:text-sm text-xs">
+          <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
             Tanggal Pembayaran
           </p>
-          <p className="p-3 font-semibold md:text-base sm:text-sm text-xs">
+          <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
             Jumlah
           </p>
         </div>
         <div className="flex  justify-center items-center">
           <div className="flex flex-col justify-center items-center   w-[350px]">
+            <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+              Uang Muka
+            </p>
+            <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+              Bayar ke-2
+            </p>
+            <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+              Bayar ke-3
+            </p>
+          </div>
+          <div className="flex flex-col justify-center items-center border-black border-x-2 w-full ">
+            <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs ">
+              17 Sept 23
+            </p>
+            <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+              17 Sept 23
+            </p>
+            <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+              17 Sept 23
+            </p>
+          </div>
+          <div className="flex flex-col justify-center items-center  w-[350px] ">
+            <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+              Rp 6.000.000
+            </p>
+            <div className="">
+              <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+                Rp 6.000.000
+              </p>
+            </div>
+            <p className="md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+              Rp 6.000.000
+            </p>
+          </div>
+        </div>
+      </div> */}
+
+      <div className=" border-2  border-black rounded-lg">
+        <div className="flex  ">
+          <div className="flex flex-col  w-[30%]">
+            <p className="p-3 font-semibold  border-b-2 border-black md:text-base sm:text-sm text-xs ">
+              Tahap
+            </p>
             <p className="p-3 font-semibold md:text-base sm:text-sm text-xs">
               Uang Muka
             </p>
@@ -28,7 +70,10 @@ function TabelHarga2() {
               Bayar ke-3
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center border-black border-x-2 w-full">
+          <div className="flex flex-col  border-black border-x-2 w-[40%]">
+            <p className="p-3 font-semibold  border-b-2 border-black md:text-base sm:text-sm text-xs ">
+              Pembayaran
+            </p>
             <p className="p-3 font-semibold md:text-base sm:text-sm text-xs">
               17 September 2023
             </p>
@@ -39,7 +84,10 @@ function TabelHarga2() {
               17 September 2023
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center  w-[350px] ">
+          <div className="flex flex-col  w-[30%] ">
+            <p className="p-3 font-semibold  border-b-2 border-black md:text-base sm:text-sm text-xs ">
+              Jumlah
+            </p>
             <p className="p-3 font-semibold md:text-base sm:text-sm text-xs">
               Rp 6.000.000
             </p>
@@ -52,7 +100,6 @@ function TabelHarga2() {
               Rp 6.000.000
             </p>
           </div>
-
         </div>
       </div>
     </>

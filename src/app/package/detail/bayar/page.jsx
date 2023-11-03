@@ -10,23 +10,25 @@ function BayarPage() {
         <div className="flex flex-col pt-10 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
           <div className="flex mx-auto gap-4 justify-between mb-10">
             <div className="flex gap-1">
-              <p className="rounded-full border-2 border-amber-400 text-amber-400 w-10 text-center ">
+              <p className="rounded-full border-2 border-amber-400 text-amber-400 md:w-10 w-7 md:text-base text-xs text-center ">
                 1
               </p>
-              <p className="rounded-full text-amber-400 w-full ">
+              <p className="rounded-full text-amber-400 w-full  md:text-base text-xs">
                 Data Pesanan
               </p>
             </div>
             <div className="w-12 h-1  my-auto mx-auto rounded-full bg-amber-400 "></div>
             <div className="flex gap-1">
-              <p className="rounded-full border-2 border-amber-400 text-amber-400 w-10 text-center ">
+              <p className="rounded-full border-2 border-amber-400 text-amber-400 md:w-10 w-7 md:text-base text-xs text-center ">
                 2
               </p>
-              <p className="rounded-full text-amber-400 w-full ">Bayar</p>
+              <p className="rounded-full text-amber-400 w-full  md:text-base text-xs">
+                Bayar
+              </p>
             </div>
           </div>
           <section>
-            <div className="md:ml-20 mx-10 md:w-6/12 w-11-12  bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+            <div className="md:ml-20 mx-4 md:w-6/12 w-11-12  bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
               <div className="flex px-7 py-6 gap-2">
                 <div className="">
                   <svg
@@ -50,7 +52,7 @@ function BayarPage() {
                 </div>
               </div>
 
-              <div className="flex gap-3 gap-y-4 md:ml-[73px] ml-10">
+              <div className="flex gap-3 gap-y-4 md:ml-[73px] ml-4">
                 <div>
                   <div className="md:w-[59px] md:h-[59px] w-[40px] h-[40px]  bg-gray-500 rounded-full "></div>
                 </div>
@@ -58,16 +60,17 @@ function BayarPage() {
                   <p className="md:text-lg font-semibold text-base">
                     Travel Keren Dongs
                   </p>
-                  <div className="flex gap-12">
+                  <div className="md:flex gap-12">
                     <p className="md:text-lg text-sm font-medium">
                       60 Penilaian
                     </p>
-                    <div className="flex justify-center items-center">
+                    <div className="flex md:justify-center md:items-center">
                       <p className="md:text-lg text-sm font-medium my-auto">
                         Rating
                       </p>
-
-                      <StarsRating />
+                      <div className="md:w-full w-5/12 my-auto ">
+                        <StarsRating />
+                      </div>
                     </div>
                   </div>
                   <p className="md:text-lg text-sm font-medium mt-3">
@@ -96,10 +99,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                          <p className="ps-1 font-bold md:text-[17px]  text-xs text-black">
                             Pilihan Kamar
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
                             Satu Kamar 4 Orang QUAD
                           </p>
                         </div>
@@ -114,10 +117,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
                             Tanggal Keberangkatan
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
                             10 September 2023
                           </p>
                         </div>
@@ -132,10 +135,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
                             Maskapai Pesawat
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
                             Garuda
                           </p>
                         </div>
@@ -150,10 +153,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
                             Kota Keberangkatan
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
                             Jakarta
                           </p>
                         </div>
@@ -168,10 +171,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
                             Durasi Perjalanan
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-black">
+                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
                             9 Hari
                           </p>
                         </div>
@@ -186,7 +189,7 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-black">
+                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
                             Hotel
                           </p>
 
@@ -258,7 +261,7 @@ function BayarPage() {
             </div>
           </section>
           <section>
-            <div className="md:ml-20 mx-10 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+            <div className="md:ml-20 mx-4 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
               <div className="flex px-7 py-6 gap-2">
                 <svg
                   width="32"
@@ -332,19 +335,19 @@ function BayarPage() {
               </div>
               <div className="px-7 py-10">
                 <p className="font-semibold text-base">Kode Promo</p>
-                <div className="border-[1px] rounded-lg  border-neutral-400 flex w-10/12">
+                <div className="border-[1px] rounded-lg  border-neutral-400 flex md:w-10/12 w-full">
                   <input
                     type="text"
                     className="w-9/12 border-none mx-1"
                     placeholder="Ketik Kode Promo.."
                   />
-                  <button className="w-3/12 bg-amber-400 m-1 rounded-lg text-sm font-medium p-2 ">
+                  <button className="w-3/12 bg-amber-400 m-1 rounded-lg md:text-sm text-xs font-medium p-2 ">
                     Reedem
                   </button>
                 </div>
               </div>
             </div>
-            <div className="md:ml-20 mx-10 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+            <div className="md:ml-20 mx-4 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
               <div className="px-7 flex justify-between pt-5 mb-7 ">
                 <p className="font-bold text-base">Total Harga</p>
                 <p className="font-bold text-base text-amber-400">

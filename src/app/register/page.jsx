@@ -5,8 +5,8 @@ import Image from "next/image";
 function Register() {
   return (
     <div className=" bg-login w-full  z-20">
-      <div className=" bg-cover bg-[url('/assets/images/image6.png')] z-10 w-full  md:grid grid-cols-2">
-        <div className="w-[389px]  md:ps-14 md:mx-0 mx-auto pt-10 ">
+      <div className=" bg-cover bg-[url('/assets/images/bgLogin.jpg')] z-10 w-full  md:grid grid-cols-2 md:pb-80 pb-40">
+        <div className="md:w-[389px] w-11/12  md:ps-14 md:mx-0 mx-auto pt-10 ">
           <p className="text-3xl font-extrabold text-white">Selamat Datang !</p>
           <p className="text-white pb-4">Masukan data diri anda</p>
           <Card>

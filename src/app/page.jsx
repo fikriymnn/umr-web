@@ -5,6 +5,7 @@ import PackageCard from "@/components/packagecard";
 import MultipleCarousel from "@/components/multipleCarousel";
 import ThreeCarousel from "@/components/threeCarousel";
 import Percayakan from "@/components/percayakan";
+import { isMobile } from "react-device-detect";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           <DefaultCarousel />
           {/* <MultipleCarousel/> */}
         </div>
-        <div className="md:mt-0 mt-5 bg-white bg-opacity-95 rounded-[10px] shadow md:w-9/12 w-11/12 md:h-28 mx-auto md:-translate-y-5 md:flex gap-2 items-center grid grid-cols-3">
+        <div className="md:mt-0 mt-5 md:py-0 py-3 bg-white bg-opacity-95 rounded-[10px] shadow md:w-9/12 w-11/12 md:h-28 mx-auto md:-translate-y-5 md:flex gap-2 items-center grid grid-cols-3">
           <div className="md:w-[25%] ml-5 ">
             <p className="md:text-base sm:text-sm text-[10px]">
               Lokasi Keberangkatan
@@ -86,11 +87,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-4/5 mx-auto  mt-16">
-        <p className="font-extrabold text-3xl md:hidden sm:visible visible">
-          Percayakan Perjalanan Umroh anda kepada Ibadahku
-        </p>
-      </div>
+      {isMobile && (
+        <div className="w-4/5 mx-auto  mt-16">
+          <p className="font-extrabold text-3xl md:hidden sm:visible visible">
+            Percayakan Perjalanan Umroh anda kepada Ibadahku
+          </p>
+        </div>
+      )}
       <div className="grid md:grid-cols-2 grid-cols-1">
         <div className=" mx-auto md:w-11/12 w-64 bg-cover bg-[url('/assets/images/image2.png')]  ">
           <Image
