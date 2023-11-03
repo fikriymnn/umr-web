@@ -5,8 +5,8 @@ import Image from "next/image";
 function Login() {
   return (
     <div className=" bg-login w-full min-h-screen z-20">
-      <div className=" bg-cover bg-[url('/assets/images/image6.png')] z-10 w-full min-h-screen grid md:grid-cols-2 items-center">
-        <div className="w-[389px]  md:ps-14 md:mx-0 mx-auto mt-10 ">
+      <div className=" bg-cover bg-[url('/assets/images/bgLogin.jpg')] z-10 w-full min-h-screen grid md:grid-cols-2 items-center">
+        <div className="md:w-[400px] w-11/12  md:ps-14 md:mx-0 mx-auto mt-10 ">
           <p className="text-3xl font-extrabold text-white ">
             Selamat Datang !
           </p>
@@ -45,7 +45,7 @@ function Login() {
             </form>
           </Card>
         </div>
-        <div className="mt-24 md:mx-0 mx-auto pb-10">
+        <div className="mt-24 md:mx-0 pb-10 mx-2">
           <div className="flex gap-6 mx-auto mb-5">
             <div className="my-auto ">
               <svg
@@ -74,7 +74,7 @@ function Login() {
                 </defs>
               </svg>
             </div>
-            <div className="w-80">
+            <div className="md:w-80">
               <p className="md:text-xl sm:text-lg text-base font-semibold">
                 Lorem Ipsum dolor sit amet
               </p>
@@ -98,7 +98,7 @@ function Login() {
                 />
               </svg>
             </div>
-            <div className="w-80">
+            <div className="md:w-80">
               <p className="md:text-xl sm:text-lg text-base font-semibold">
                 Lorem Ipsum dolor sit amet
               </p>
@@ -122,7 +122,7 @@ function Login() {
                 />
               </svg>
             </div>
-            <div className="w-80">
+            <div className="md:w-80">
               <p className="md:text-xl sm:text-lg text-base font-semibold">
                 Lorem Ipsum dolor sit amet
               </p>
@@ -149,7 +149,7 @@ function Login() {
                 />
               </svg>
             </div>
-            <div className="w-80">
+            <div className="md:w-80">
               <p className="md:text-xl sm:text-lg text-base font-semibold">
                 Lorem Ipsum dolor sit amet
               </p>
