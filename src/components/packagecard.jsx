@@ -53,7 +53,7 @@ function PackageCard() {
           <div className=" py-3">
             <div className="flex items-center justify-center">
               <div className="w-full md:h-7 h-5 rounded-xl border-2 relative border-black">
-                <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold md:text-base sm:text-base text-xs md:mt-0 sm:mb-0 mt-[2px]">
+                <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold md:text-base sm:text-xs text-xs md:mt-0 sm:mb-0 mt-[2px]">
                   <p>Tersisa {numero.available} Paket</p>
                 </div>
                 <div
@@ -149,11 +149,11 @@ function PackageCard() {
                   alt="icon"
                 />
               </div>
-              <div className="flex items-center justify-start">
+              <div className="md:flex-col flex ">
                 <p className="ps-1 text-black md:text-base sm:text-xs text-[10px] my-auto">
                   Hotel
                 </p>
-                <div className="md:w-10/12 w-[50px]">
+                <div className="md:w-11/12 w-[50px] ">
                   <div className="ps-1 pt-1 flex items-center space-x-1">
                     <svg
                       className="w-4 h-4 text-yellow-300"

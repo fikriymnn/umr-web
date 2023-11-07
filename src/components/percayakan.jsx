@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { isMobile } from "react-device-detect";
 
@@ -12,7 +13,7 @@ function Percayakan() {
             </p>
           </div>
         )}
-        <div className="grid grid-cols-1 md:gap-7 gap-3 ">
+        <div className="grid grid-cols-1 md:gap-7 gap-3 md:mt-0 sm:mt-5 mt-5">
           <div className=" flex w-4/5 py-3 px-1 bg-[#959595] mx-auto rounded-xl">
             <div className=" bg-[#959595] w-4/12 grid place-content-center rounded-xl">
               <div className="bg-[#E3B02B] h-16 w-16 rounded-xl  md:ml-0 sm:ml-0 ml-3"></div>

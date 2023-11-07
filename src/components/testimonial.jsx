@@ -3,14 +3,14 @@ import React from "react";
 function Testimonial() {
   return (
     <div className="w-full py-7 md:px-20 px-4 font-semibold">
-      <h1 className="md:text-2xl sm:text-xl text-lg text-black pb-1">
+      <h1 className="md:text-[20px] sm:text-xl text-lg text-black pb-1">
         Acep Wahyu
       </h1>
       <h3 className="md:text-base sm:text-sm text-xs text-gray-400 pb-1">
         Jakarta
       </h3>
       <div className="line-clamp-3 mb-2">
-        <p className="md:text-base sm:text-sm text-xs text-black ">
+        <p className="md:text-base sm:text-sm text-xs text-black font-medium">
           Layanan umrohnya bagus banget aku suka, lain kali umroh lagi disini
           sama keluarga, otw langganan ke travel ini aku rekomendasiin ke kalian
           juga dijamin gabakal nyesel deh.
