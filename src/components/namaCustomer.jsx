@@ -4,8 +4,8 @@ function NamaCustomer() {
   return (
     <div>
       <div className="py-[50px] ">
-        <div className="bg-white md:w-10/12 w-11/12 md:ms-20 sm:ms-10 ms-4 rounded-xl shadow-2xl ">
-          <div className="flex md:px-7 mx-3 py-6 gap-5 ">
+        <div className="bg-white   rounded-xl shadow-2xl ">
+          <div className="flex md:px-7 px-5 py-6 gap-5 ">
             <div className="">
               <svg
                 width="30"
