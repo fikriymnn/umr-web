@@ -12,9 +12,9 @@ function DropdownDetail() {
     <div className="relative inline-block text-left w-full">
       <button
         onClick={toggleDropdown}
-        className="flex justify-between items-center px-2 py-3 mt-1 text-gray-800 border border-gray-300 rounded-lg hover:bg-[#E3B02B] focus:outline-none focus:ring w-full"
+        className="flex justify-between items-center px-2 py-3 mt-1 text-gray-800 border border-gray-300 rounded-lg  focus:outline-none focus:ring w-full"
       >
-        <span className="text-xs text-gray-400">Pilih Gender</span>
+        <span className="text-xs text-gray-400">Pilih</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -36,22 +36,17 @@ function DropdownDetail() {
           {/* Dropdown content */}
           <a
             href="#"
-            className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]"
+            className="block px-4 py-2 text-gray-800 "
           >
             Option 1
           </a>
           <a
             href="#"
-            className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]"
+            className="block px-4 py-2 text-gray-800 "
           >
             Option 2
           </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]"
-          >
-            Option 3
-          </a>
+
         </div>
       )}
     </div>

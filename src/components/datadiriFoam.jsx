@@ -43,6 +43,13 @@ function DatadiriFoam({ }) {
                     Jemaah Ke-
                     {i + 1}
                   </h1>
+                  {jamaah.length !== 1 && (
+                    <div className="flex h-7 w-10 md:pt-1 text-center items-center text-white">
+                      <button type="button" onClick={(e) => handleDelete(i)}>
+                        <Image src={'/assets/images/delete.png'} width={20} height={20} alt="" />
+                      </button>
+                    </div>
+                  )}
                 </div>
 
                 <div className=" md:flex  md:px-14 mx-4 gap-5">
@@ -95,8 +102,21 @@ function DatadiriFoam({ }) {
                     />
                   </div>
                 </div>
-                <div className=" md:flex  md:px-14 mx-4 gap-5 pt-5">
+                <div className="  md:px-14 mx-4 gap-5 pt-5">
+
                   <di className="md:w-[50%] pt-5">
+                    <div>
+                      <p>Masukkan nomor KTP</p>
+                    </div>
+
+                    <div className="  rounded-md ">
+                      <TextInput
+                        type="text"
+                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
+                      />
+                    </div>
+                  </di>
+                  <div className=" pt-5">
                     <div>
                       <p>Lampiran Foto KTP</p>
                     </div>
@@ -107,8 +127,8 @@ function DatadiriFoam({ }) {
                         className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
                       />
                     </div>
-                  </di>
-                  <div className="md:w-[50%] pt-5">
+                  </div>
+                  <div className=" pt-5">
                     <div>
                       <p>Lampiran Foto Passport</p>
                     </div>
@@ -121,8 +141,8 @@ function DatadiriFoam({ }) {
                     </div>
                   </div>
                 </div>
-                <div className=" md:flex  md:px-14 mx-4 gap-5">
-                  <div className="md:w-[50%] pt-5">
+                <div className="   md:px-14 mx-4 gap-5">
+                  <div className=" pt-5">
                     <div>
                       <p>Lampiran Foto KK</p>
                     </div>
@@ -134,9 +154,11 @@ function DatadiriFoam({ }) {
                       />
                     </div>
                   </div>
-                  <div className="md:w-[50%] pt-5"></div>
+                  <div className=" pt-5"></div>
                 </div>
+
               </div>
+
             );
           })}
 
