@@ -42,7 +42,7 @@ function FormPesan() {
               </p>
             </div>
           </div>
-          <div className="md:w-6/12  ">
+          <div className="md:w-7/12 w-full md:px-20 sm:px-10 px-4 ">
             <section>
               <NamaCustomer />
             </section>
@@ -53,7 +53,7 @@ function FormPesan() {
               <DatadiriFoam />
             </section>
             <section>
-              <div className="md:px-14 w-10/12 md:ms-10 mb-20 md:h-96 h-52 mt-5 ml-10 md:text-base sm:text-sm text-xs">
+              <div className=" w-full md:px-6 px-4 mb-20 md:h-96 h-52 mt-5 md:text-base sm:text-sm text-xs">
                 {" "}
                 <p className="font-bold">
                   Jika anda setuju dengan{" "}

@@ -9,7 +9,7 @@ import { Carousel } from "flowbite";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 
 import { useState } from "react";
-function DatadiriFoam({}) {
+function DatadiriFoam({ }) {
   const [jamaah, setJamaah] = useState([
     { gender: "", name: "", noWhatsapp: "", email: "" },
   ]);
@@ -31,11 +31,11 @@ function DatadiriFoam({}) {
   return (
     <>
       <div>
-        <div className="bg-white md:w-10/12 w-11/12 md:ms-20 sm:ms-10  mx-auto rounded-xl mt-10 shadow-2xl h-full">
+        <div className="bg-white rounded-xl mt-10 shadow-2xl h-full">
           {jamaah.map((val, i) => {
             return (
-              <div key={i} className="w-full pt-7 font-semibold">
-                <div className="flex pb-1 md:px-14 mx-4 gap-5">
+              <div key={i} className="w-full font-semibold">
+                <div className="flex pb-1 md:px-7 px-5 py-6 gap-5">
                   <div>
                     <img src="../../assets/vector/vectorya.svg" alt="" />
                   </div>
@@ -94,6 +94,47 @@ function DatadiriFoam({}) {
                       className=" "
                     />
                   </div>
+                </div>
+                <div className=" md:flex  md:px-14 mx-4 gap-5 pt-5">
+                  <di className="md:w-[50%] pt-5">
+                    <div>
+                      <p>Lampiran Foto KTP</p>
+                    </div>
+
+                    <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
+                      <input
+                        type="file"
+                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
+                      />
+                    </div>
+                  </di>
+                  <div className="md:w-[50%] pt-5">
+                    <div>
+                      <p>Lampiran Foto Passport</p>
+                    </div>
+
+                    <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
+                      <input
+                        type="file"
+                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className=" md:flex  md:px-14 mx-4 gap-5">
+                  <div className="md:w-[50%] pt-5">
+                    <div>
+                      <p>Lampiran Foto KK</p>
+                    </div>
+
+                    <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
+                      <input
+                        type="file"
+                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
+                      />
+                    </div>
+                  </div>
+                  <div className="md:w-[50%] pt-5"></div>
                 </div>
               </div>
             );
