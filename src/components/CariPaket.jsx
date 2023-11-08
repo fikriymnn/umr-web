@@ -15,7 +15,7 @@ function CariPaket() {
           />
         </div>
         <div className="md:w-[25%]">
-          <p className="lg:w-full md:w-full sm:w-10/12 md:text-base sm:text-sm text-[10px]">
+          <p className="lg:w-full md:w-full w-9/12 md:text-base sm:text-sm text-[10px]">
             Waktu Keberangkatan
           </p>
           <input
