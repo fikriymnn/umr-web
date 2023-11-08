@@ -9,11 +9,11 @@ function MultipleCarousel() {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 6,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5,
+      items: 6,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -21,75 +21,75 @@ function MultipleCarousel() {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 2,
     },
   };
 
   return (
     <>
-      <div className="mx-auto md:mr-0 sm:mr-6 mr-10">
+      <div className="">
         <Carousel responsive={responsive} autoPlay={true} infinite={true}>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[150px] ">
+          <div className="text-white  flex justify-center items-center ">
             <Image
               src={"/assets/images/cs-1.jpeg"}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[150px]">
+          <div className="text-white  flex justify-center items-center">
             <Image
               src={"/assets/images/cs-1.jpeg"}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[150px]">
+          <div className="text-white  flex justify-center items-center">
             <Image
               src={"/assets/images/cs-1.jpeg"}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[150px]">
+          <div className="text-white  flex justify-center items-center">
             <Image
               src={"/assets/images/cs-1.jpeg"}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[150px]">
+          <div className="text-white  flex justify-center items-center">
             <Image
               src={"/assets/images/cs-1.jpeg"}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[150px]">
+          <div className="text-white  flex justify-center items-center">
             <Image
               src={"/assets/images/cs-1.jpeg"}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[150px]">
+          <div className="text-white  flex justify-center items-center">
             <Image
               src={"/assets/images/cs-1.jpeg"}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt=""
             />
           </div>
-          <div className="text-white md:w-[200px] sm:w-[150px] w-[150px]">
+          <div className="text-white  flex justify-center items-center">
             <Image
               src={"/assets/images/cs-1.jpeg"}
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt=""
             />
           </div>
