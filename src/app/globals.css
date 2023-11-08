@@ -46,3 +46,16 @@ body {
 .mahfud {
   display: grid;
 }
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(227 176 43 / var(--tw-bg-opacity));
+
+}
+.text-primary{--tw-text-opacity: 1;
+  color: rgb(227 176 43 / var(--tw-text-opacity))}
+
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
