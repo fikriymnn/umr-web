@@ -2,7 +2,7 @@ import React from "react";
 
 function Testimonial() {
   return (
-    <div className="w-full py-7 md:px-20 px-4 font-semibold">
+    <div className="w-full md:py-7 py-2 md:px-9 px-4 font-semibold">
       <h1 className="md:text-[20px] sm:text-xl text-lg text-black pb-1">
         Acep Wahyu
       </h1>
@@ -17,10 +17,10 @@ function Testimonial() {
         </p>
       </div>
       <div className="grid grid-cols-4 md:gap-5 gap-1">
-        <div className=" w-full h-full md:p-12 sm:p-8 p-6  bg-gray-500"></div>
-        <div className=" w-full h-full md:p-12 sm:p-8 p-6  bg-gray-500"></div>
-        <div className=" w-full h-full md:p-12 sm:p-8 p-6  bg-gray-500"></div>
-        <div className=" w-full h-full md:p-12 sm:p-8 p-6  bg-gray-500"></div>
+        <div className=" w-full h-full md:p-[55px] sm:p-8 p-6  bg-gray-500"></div>
+        <div className=" w-full h-full md:p-[55px] sm:p-8 p-6  bg-gray-500"></div>
+        <div className=" w-full h-full md:p-[55px] sm:p-8 p-6  bg-gray-500"></div>
+        <div className=" w-full h-full md:p-[55px] sm:p-8 p-6  bg-gray-500"></div>
       </div>
     </div>
   );

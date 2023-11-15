@@ -9,7 +9,7 @@ import { Carousel } from "flowbite";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 
 import { useState } from "react";
-function DatadiriFoam({ }) {
+function DatadiriFoam({}) {
   const [jamaah, setJamaah] = useState([
     { gender: "", name: "", noWhatsapp: "", email: "" },
   ]);
@@ -31,7 +31,7 @@ function DatadiriFoam({ }) {
   return (
     <>
       <div>
-        <div className="bg-white rounded-xl mt-10 shadow-2xl h-full">
+        <div className="bg-white rounded-xl md:mt-[50px] sm:mt-[30px] mt-[15px] shadow-2xl h-full">
           {jamaah.map((val, i) => {
             return (
               <div key={i} className="w-full font-semibold">
@@ -46,7 +46,12 @@ function DatadiriFoam({ }) {
                   {jamaah.length !== 1 && (
                     <div className="flex h-7 w-10 md:pt-1 text-center items-center text-white">
                       <button type="button" onClick={(e) => handleDelete(i)}>
-                        <Image src={'/assets/images/delete.png'} width={20} height={20} alt="" />
+                        <Image
+                          src={"/assets/images/delete.png"}
+                          width={20}
+                          height={20}
+                          alt=""
+                        />
                       </button>
                     </div>
                   )}
@@ -54,13 +59,13 @@ function DatadiriFoam({ }) {
 
                 <div className=" md:flex  md:px-14 mx-4 gap-5">
                   <div className="grid grid-cols-1">
-                    <p>Gender</p>
+                    <p className="md:text-base text-sm">Gender</p>
                     <DropdownDetail />
                     <br />
                   </div>
                   <div className="grid grid-cols-1 w-full">
                     <div>
-                      <p>Nama Lengkap</p>
+                      <p className="md:text-base text-sm">Nama Lengkap</p>
                     </div>
                     <TextInput
                       id="nama"
@@ -79,7 +84,7 @@ function DatadiriFoam({ }) {
                 <div className=" md:flex  md:px-14 mx-4 gap-5 pt-5">
                   <div>
                     <div>
-                      <p>Nomor Whatsapp</p>
+                      <p className="md:text-base text-sm">Nomor Whatsapp</p>
                     </div>
                     <TextInput
                       id="whatsapp"
@@ -91,7 +96,7 @@ function DatadiriFoam({ }) {
                   </div>
                   <div className="mt-5 md:mt-0">
                     <div>
-                      <p>Email</p>
+                      <p className="md:text-base text-sm">Email</p>
                     </div>
                     <TextInput
                       id="Email"
@@ -103,10 +108,9 @@ function DatadiriFoam({ }) {
                   </div>
                 </div>
                 <div className="  md:px-14 mx-4 gap-5 pt-5">
-
                   <di className="md:w-[50%] pt-5">
                     <div>
-                      <p>Masukkan nomor KTP</p>
+                      <p className="md:text-base text-sm">Masukkan nomor KTP</p>
                     </div>
 
                     <div className="  rounded-md ">
@@ -118,19 +122,21 @@ function DatadiriFoam({ }) {
                   </di>
                   <div className=" pt-5">
                     <div>
-                      <p>Lampiran Foto KTP</p>
+                      <p className="md:text-base text-sm">Lampiran Foto KTP</p>
                     </div>
 
                     <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
                       <input
                         type="file"
-                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
+                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500  file:text-white hover:file:bg-blue-600 "
                       />
                     </div>
                   </div>
                   <div className=" pt-5">
                     <div>
-                      <p>Lampiran Foto Passport</p>
+                      <p className="md:text-base text-sm">
+                        Lampiran Foto Passport
+                      </p>
                     </div>
 
                     <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
@@ -141,10 +147,10 @@ function DatadiriFoam({ }) {
                     </div>
                   </div>
                 </div>
-                <div className="   md:px-14 mx-4 gap-5">
+                <div className="   md:px-14 mx-4 gap-5 pb-5">
                   <div className=" pt-5">
                     <div>
-                      <p>Lampiran Foto KK</p>
+                      <p className="md:text-base text-sm">Lampiran Foto KK</p>
                     </div>
 
                     <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
@@ -154,23 +160,22 @@ function DatadiriFoam({ }) {
                       />
                     </div>
                   </div>
-                  <div className=" pt-5"></div>
                 </div>
-
               </div>
-
             );
           })}
 
-          <div className="flex justify-center items-center md:pb-20 pb-10 pt-5">
+          <div className="flex justify-center items-center md:pb-10 pb-5 pt-5">
             <button onClick={handleClick} type="button">
               <img src="../../assets/vector/VectorPlus.svg" alt="" />
             </button>{" "}
           </div>
           <div className="pb-10 ">
             <a href="/package/detail/bayar">
-              <div className="flex justify-center h-[60px] bg-[#E3B02B] hover:bg-[#fad26e] m-auto rounded-xl p-3 items-center w-11/12 ">
-                <p className="font-bold ">Lanjut Pembayaran</p>
+              <div className="flex justify-center  bg-[#E3B02B] hover:bg-[#fad26e] m-auto md:rounded-xl rounded-lg md:p-3 p-2 items-center md:w-11/12 w-10/12 ">
+                <p className="font-bold md:text-base text-sm">
+                  Lanjut Pembayaran
+                </p>
               </div>
             </a>
           </div>

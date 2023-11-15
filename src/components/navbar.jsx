@@ -34,7 +34,7 @@ export default function CustomNavbar() {
       <Navbar.Collapse className="z-50 bg-white">
         <Navbar.Link href="/package">
           <div className="flex">
-            <div className="md:w-2/12 w-1/12">
+            <div className="md:w-2/12 w-1/12 my-auto">
               <Image
                 src="/assets/images/Kaaba.png"
                 width={50}
@@ -47,7 +47,7 @@ export default function CustomNavbar() {
         </Navbar.Link>
         <Navbar.Link href="/about">
           <div className="flex">
-            <div className="w-2/12 ">
+            <div className="md:w-2/12 w-1/12 my-auto">
               <Image
                 src="/assets/images/InfoSquared.png"
                 width={50}
@@ -60,7 +60,7 @@ export default function CustomNavbar() {
         </Navbar.Link>
         <Navbar.Link href="/more">
           <div className="flex gap-1">
-            <div className="w-2/12 my-auto">
+            <div className="md:w-2/12 w-1/12 my-auto">
               <Image
                 src="/assets/images/grid.png"
                 width={50}

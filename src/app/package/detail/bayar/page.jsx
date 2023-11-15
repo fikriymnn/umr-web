@@ -7,10 +7,10 @@ function BayarPage() {
   return (
     <>
       <div className="bg ">
-        <div className="flex flex-col pt-10 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
-          <div className="flex mx-auto gap-4 justify-between mb-10">
+        <div className="flex flex-col pt-5 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
+          <div className="flex mx-auto gap-4 justify-between mb-5">
             <div className="flex gap-1">
-              <p className="rounded-full border-2 border-amber-400 text-amber-400 md:w-10 w-7 md:text-base text-xs text-center ">
+              <p className="rounded-full border-2 border-amber-400 text-amber-400 md:w-8 w-6 md:text-base text-xs text-center ">
                 1
               </p>
               <p className="rounded-full text-amber-400 w-full  md:text-base text-xs">
@@ -29,11 +29,11 @@ function BayarPage() {
           </div>
           <section>
             <div className="md:ml-20 mx-4 md:w-6/12 w-11-12  bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
-              <div className="flex px-7 py-6 gap-2">
+              <div className="flex md:px-7 px-4 py-6 gap-2">
                 <div className="">
                   <svg
-                    width="24"
-                    height="24"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -82,13 +82,13 @@ function BayarPage() {
                 </div>
               </div>
 
-              <div className=" md:w-11/12 sm:w-full w-11/12 md:ml-7 mx-auto mt-12 flex flex-col justify-center items-center">
+              <div className=" md:w-11/12 sm:w-full w-11/12 md:ml-7 mx-auto  mt-3 flex flex-col justify-center items-center">
                 <div className="my-4 md:mx-5">
                   <div className="border-2 border-b-0 p-2 border-slate-200">
                     <p className="md:text-2xl font-bold">
                       Umroh Dream Exclusive Plus Kereta Cepat 10 Hari
                     </p>
-                    <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mt-5">
+                    <div className="grid md:grid-cols-2 grid-cols-1 md:gap-7 gap-5 mt-5">
                       <div className="flex">
                         <div className="w-1/12">
                           <Image
@@ -262,7 +262,7 @@ function BayarPage() {
           </section>
           <section>
             <div className="md:ml-20 mx-4 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
-              <div className="flex px-7 py-6 gap-2">
+              <div className="flex md:px-7 px-4 py-6 gap-2">
                 <svg
                   width="32"
                   height="32"
@@ -303,7 +303,7 @@ function BayarPage() {
                   Metode Pembayaran
                 </p>
               </div>
-              <div className="flex px-7 py-3 gap-2">
+              <div className="flex md:px-7 px-4 py-3 gap-2">
                 <div className="border-2 rounded-md bg-white">
                   <Image
                     src={"/assets/images/bca.png"}
@@ -316,7 +316,7 @@ function BayarPage() {
                   Transfer Bank &#40;Transfer BCA&#41;
                 </p>
               </div>
-              <div className="px-7 py-7 ">
+              <div className="md:px-7 px-4 py-7 ">
                 <p className="font-semibold text-base pb-2">
                   Nama Pemilik Rekening
                 </p>
@@ -326,14 +326,14 @@ function BayarPage() {
                   placeholder="Ketik Nama Pemilik Rekening... "
                 />
               </div>
-              <div className="px-7">
+              <div className="md:px-7 px-4">
                 <p className="font-semibold text-base pb-2">Perhatian:</p>
                 <p className="font-medium text-sm">
                   Anda bisa transfer dari layanan perbankan apapun &#40;
                   internet banking, SMS&#47;M-Banking, ATM &#41;
                 </p>
               </div>
-              <div className="px-7 py-10">
+              <div className="md:px-7 px-4 py-10">
                 <p className="font-semibold text-base">Kode Promo</p>
                 <div className="border-[1px] rounded-lg  border-neutral-400 flex md:w-10/12 w-full">
                   <input
@@ -348,7 +348,7 @@ function BayarPage() {
               </div>
             </div>
             <div className="md:ml-20 mx-4 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
-              <div className="px-7 flex justify-between pt-5 mb-7 ">
+              <div className="md:px-7 px-4 flex justify-between pt-5 mb-7 ">
                 <p className="font-bold text-base">Total Harga</p>
                 <p className="font-bold text-base text-amber-400">
                   Rp 39.500.00
