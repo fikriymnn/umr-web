@@ -1,19 +1,20 @@
+
 import React from "react";
 
 import Dropdown from "@/components/Dropdown";
 import Image from "next/image";
 import DefaultCarousel from "@/components/Carousel";
 import PackageCard from "@/components/packagecard";
-
-import FilterPackage from "@/components/FilterPackage";
-import FilterPackageMobile from "@/components/FilterPackageMobile";
-
+import FilterNotMobilePackage from "@/components/FilterNotMobilePackage"
+import FilterIsMobilePackage from "@/components/FilterIsMobilePackage"
 function Package() {
+
+
   return (
     <div className="bg pb-10">
       <div className="flex  pt-10 bg-cover  bg-[url('/assets/images/image2.png')] z-10 relative">
-        <FilterPackageMobile />
-        <FilterPackage />
+        {/* <FilterIsMobilePackage /> */}
+        <FilterNotMobilePackage />
         <div className="md:w-8/12 w-full mx-auto md:ml-10 md:mr-20 md:p-0 px-5">
           <div className="bg-white shadow-xl rounded-xl md:w-10/12 w-full">
             <div className="flex md:flex-row flex-col">

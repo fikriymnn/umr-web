@@ -25,7 +25,7 @@ function PackageDetail() {
   return (
     <div className="bg">
       <div className="md:flex pt-10 bg-contain bg-[url('/assets/images/image2.png')] z-10">
-        <div className="md:w-8/12 w-full">
+        <div className="md:w-8/12  w-full">
           <MainInfoPackage />
           <MitraTravelSection />
           <TestimonialSection />
@@ -33,7 +33,7 @@ function PackageDetail() {
           <MaskapaiSection />
           <HotelTravelSection />
         </div>
-        <div className="md:w-4/12 w-11/12 mx-auto z-10 md:mr-20 ">
+        <div className="md:w-4/12  w-11/12 mx-auto z-10 md:mr-20 ">
           <div className="bg-white rounded-xl  shadow-lg md:mt-0 sm:mt[30px] mt-[15px]">
             <PesanPaketSection />
           </div>
