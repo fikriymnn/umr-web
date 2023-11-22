@@ -16,11 +16,11 @@ function Testimonial() {
           juga dijamin gabakal nyesel deh.
         </p>
       </div>
-      <div className="grid grid-cols-4 md:gap-5 gap-1">
-        <div className=" w-full h-full md:p-[55px] sm:p-8 p-6  bg-gray-500"></div>
-        <div className=" w-full h-full md:p-[55px] sm:p-8 p-6  bg-gray-500"></div>
-        <div className=" w-full h-full md:p-[55px] sm:p-8 p-6  bg-gray-500"></div>
-        <div className=" w-full h-full md:p-[55px] sm:p-8 p-6  bg-gray-500"></div>
+      <div className="grid grid-cols-4 md:gap-5 gap-2 md:pt-5 pt-2">
+        <div className="w-full h-full md:p-12 sm:p-8 p-6 bg-gray-500"></div>
+        <div className="w-full h-full md:p-12 sm:p-8 p-6 bg-gray-500"></div>
+        <div className="w-full h-full md:p-12 sm:p-8 p-6 bg-gray-500"></div>
+        <div className="w-full h-full md:p-12 sm:p-8 p-6 bg-gray-500"></div>
       </div>
     </div>
   );
