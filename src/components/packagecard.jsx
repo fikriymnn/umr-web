@@ -13,7 +13,7 @@ function PackageCard() {
   const availability = (numero.available / numero.total) * 100 + "%";
   return (
     <a href="/package/detail">
-      <div className=" bg-white rounded-xl shadow-xl md:hover:translate-y-[-15px] duration-100 ease-in-out">
+      <div className=" bg-white rounded-xl shadow-xl md:hover:scale-[102%] duration-100 ease-in-out">
         <div className="p-3">
           <div className="md:flex md:flex-row gap-1">
             {!isMobile && (
@@ -53,7 +53,7 @@ function PackageCard() {
           <div className=" py-3">
             <div className="flex items-center justify-center">
               <div className="w-full md:h-7 h-5 rounded-xl border-2 relative border-black">
-                <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold md:text-sm sm:text-xs text-xs md:mt-0 sm:mb-0 mt-[2px]">
+                <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold md:text-sm sm:text-xs text-xs  ">
                   <p>Tersisa {numero.available} Paket</p>
                 </div>
                 <div
