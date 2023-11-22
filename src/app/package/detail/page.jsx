@@ -24,8 +24,8 @@ function PackageDetail() {
   const availability = (numero.available / numero.total) * 100 + "%";
   return (
     <div className="bg">
-      <div className="md:flex pt-10 bg-contain bg-[url('/assets/images/image2.png')] z-10">
-        <div className="md:w-8/12  w-full">
+      <div className="md:flex  pt-10  bg-contain bg-[url('/assets/images/image2.png')] z-10">
+        <div className="md:w-8/12 sm:w-full  w-full">
           <MainInfoPackage />
           <MitraTravelSection />
           <TestimonialSection />

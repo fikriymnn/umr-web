@@ -1,6 +1,5 @@
 
 import React from "react";
-
 import Dropdown from "@/components/Dropdown";
 import Image from "next/image";
 import DefaultCarousel from "@/components/Carousel";
@@ -8,7 +7,6 @@ import PackageCard from "@/components/packagecard";
 import FilterNotMobilePackage from "@/components/FilterNotMobilePackage"
 import FilterIsMobilePackage from "@/components/FilterIsMobilePackage"
 function Package() {
-
 
   return (
     <div className="bg pb-10">

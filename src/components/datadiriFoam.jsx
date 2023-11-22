@@ -9,7 +9,7 @@ import { Carousel } from "flowbite";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 
 import { useState } from "react";
-function DatadiriFoam({}) {
+function DatadiriFoam({ }) {
   const [jamaah, setJamaah] = useState([
     { gender: "", name: "", noWhatsapp: "", email: "" },
   ]);
@@ -167,8 +167,8 @@ function DatadiriFoam({}) {
 
           <div className="flex justify-center items-center md:pb-10 pb-5 pt-5">
             <button onClick={handleClick} type="button">
-              <img src="../../assets/vector/VectorPlus.svg" alt="" />
-            </button>{" "}
+              <Image width={30} height={30} src="../../assets/vector/VectorPlus.svg" alt="" />
+            </button>
           </div>
           <div className="pb-10 ">
             <a href="/package/detail/bayar">
