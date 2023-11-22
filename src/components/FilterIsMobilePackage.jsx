@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { isMobile } from "react-device-detect";
 import { useEffect, useRef, useState } from "react";
