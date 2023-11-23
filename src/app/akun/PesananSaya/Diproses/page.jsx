@@ -184,7 +184,7 @@ function Diproses() {
                   <p className="my-2 text-center md:text-start">
                     Rp 29.999.999
                   </p>
-                  <div className="bg-orange-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center">
+                  <div className="bg-orange-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base">
                     Pesanan Diproses
                   </div>
                 </div>
