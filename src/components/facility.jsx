@@ -3,13 +3,15 @@ import Image from "next/image";
 
 function Facility() {
   return (
-    <div className="w-full py-7 md:px-20 px-4 ">
-      <h1 className="md:text-xl sm:text-xl text-lg font-semibold text-black pb-1">Mekkah</h1>
+    <div className="w-full md:py-4 py-3 md:px-9 px-4 ">
+      <h1 className="md:text-xl sm:text-xl text-lg font-semibold text-black pb-1">
+        Mekkah
+      </h1>
       <h3 className="md:text-xl sm:text-xl text-lg text-black pb-1">
         Rayyana Hotel
       </h3>
 
-      <div className="grid grid-cols-4 md:gap-5 gap-2 pt-5">
+      <div className="grid grid-cols-4 md:gap-5 gap-2 md:pt-5 pt-2">
         <div className="w-full h-full md:p-12 sm:p-8 p-6 bg-gray-500"></div>
         <div className="w-full h-full md:p-12 sm:p-8 p-6 bg-gray-500"></div>
         <div className="w-full h-full md:p-12 sm:p-8 p-6 bg-gray-500"></div>
@@ -18,7 +20,7 @@ function Facility() {
       <h1 className="md:text-xl sm:text-xl text-lg text-black pt-5">
         Fasilitas
       </h1>
-      <div className="grid md:grid-cols-3 grid-cols-1 pt-5 gap-y-3 ">
+      <div className="grid md:grid-cols-3 grid-cols-1 pt-5 gap-y-2 ">
         <div className="flex ">
           <div className="md:w-1/12 w-8    my-auto">
             <Image
@@ -29,7 +31,7 @@ function Facility() {
             />
           </div>
           <div>
-            <p className="ps-1 md:text-base sm:text-base text-sm text-black my-auto font-medium ">
+            <p className="ps-1 md:text-sm sm:text-base text-sm text-black my-auto font-medium ">
               Free WiFi
             </p>
           </div>
@@ -44,7 +46,7 @@ function Facility() {
             />
           </div>
           <div>
-            <p className="ps-1 md:text-base sm:text-base text-sm text-black my-auto font-medium  ">
+            <p className="ps-1 md:text-sm sm:text-base text-sm text-black my-auto font-medium  ">
               Tempat Makan
             </p>
           </div>
@@ -59,7 +61,7 @@ function Facility() {
             />
           </div>
           <div>
-            <p className="ps-1 md:text-base sm:text-base text-sm text-black my-auto font-medium  ">
+            <p className="ps-1 md:text-sm sm:text-base text-sm text-black my-auto font-medium  ">
               Pelayanan Kamar
             </p>
           </div>
@@ -74,7 +76,7 @@ function Facility() {
             />
           </div>
           <div>
-            <p className="ps-1 md:text-base sm:text-base text-sm text-black my-auto font-medium  ">
+            <p className="ps-1 md:text-sm sm:text-base text-sm text-black my-auto font-medium  ">
               Disabilitas
             </p>
           </div>

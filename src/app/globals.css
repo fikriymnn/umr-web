@@ -43,6 +43,34 @@ body {
   );
 }
 
+.txtprim{
+  color:  rgba(227, 176, 43, 1) ;
+}
+
+.bgprim{
+  background:  rgba(227, 176, 43, 1) ;
+}
+
+
 .mahfud {
   display: grid;
 }
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(227 176 43 / var(--tw-bg-opacity));
+
+}
+.text-primary{--tw-text-opacity: 1;
+  color: rgb(227 176 43 / var(--tw-text-opacity))}
+
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .shadowcard{
+    box-shadow: 3px 6px 12px 0px rgba(0,0,0,0.30);
+-webkit-box-shadow: 3px 6px 12px 0px rgba(0,0,0,0.30);
+-moz-box-shadow: 3px 6px 12px 0px rgba(0,0,0,0.30);
+  }
+  

@@ -13,7 +13,7 @@ function Dropdown() {
         <div className="relative inline-block text-left w-full">
             <button
                 onClick={toggleDropdown}
-                className="flex justify-between items-center px-4 py-2 text-gray-800 border border-gray-500 rounded-lg hover:bg-[#E3B02B] focus:outline-none focus:ring w-full"
+                className="flex justify-between items-center px-4 py-1 md:py-2 text-gray-800 border border-gray-500 rounded-lg  focus:outline-none focus:ring w-full"
             >
 
                 <span>Dropdown Button</span>

@@ -1,19 +1,23 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
 import { isMobile } from "react-device-detect";
+import Image from "next/image";
 
 function Percayakan_mobile() {
-    return (
+  return (
+    <>
+      {isMobile && (
         <>
-            {isMobile && (
-                <div className="w-4/5 mx-auto  mt-16">
-                    <p className="font-extrabold text-3xl md:hidden sm:visible visible">
-                        Percayakan Perjalanan Umroh anda kepada Ibadahku
-                    </p>
-                </div>
-            )}
+          <div className="w-4/5 mx-auto  mt-16">
+            <p className="font-extrabold text-2xl md:hidden sm:visible visible">
+              Percayakan Perjalanan Umroh anda kepada{" "}
+              <span className="text-primary">Ibadahku</span>
+            </p>
+          </div>
         </>
-    )
+      )}
+    </>
+  );
 }
 
-export default Percayakan_mobile
+export default Percayakan_mobile;
