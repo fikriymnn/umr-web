@@ -6,14 +6,14 @@ import { isMobile } from "react-device-detect";
 
 function PackageCard() {
   const numero = {
-    total: 50,
+    total: 8,
     available: 5,
   };
 
   const availability = (numero.available / numero.total) * 100 + "%";
   return (
     <a href="/package/detail">
-      <div className=" bg-white rounded-xl shadow-xl md:hover:scale-[102%] duration-100 ease-in-out">
+      <div className=" bg-white rounded-xl shadowcard md:hover:scale-[102%] duration-100 ease-in-out">
         <div className="p-3">
           <div className="md:flex md:flex-row gap-1">
             {!isMobile && (
@@ -52,13 +52,13 @@ function PackageCard() {
           </div>
           <div className=" py-3">
             <div className="flex items-center justify-center">
-              <div className="w-full md:h-7 h-5 rounded-xl border-2 relative border-black">
-                <div className="md:w-full sm:w-full w-full absolute flex items-center justify-center text-center font-semibold md:text-sm sm:text-xs text-xs  ">
+              <div className="w-full md:h-7 h-5 rounded-md border md:border-2 relative border-black">
+                <div className="md:w-full sm:w-full w-full h-full absolute flex items-center justify-center text-center font-semibold md:text-sm sm:text-xs text-xs ">
                   <p>Tersisa {numero.available} Paket</p>
                 </div>
                 <div
                   style={{ width: availability }}
-                  className="h-full bg-[#be9223] rounded-xl"
+                  className="h-full bg-[#ffc73a] rounded-[4px]"
                 ></div>
               </div>
             </div>
