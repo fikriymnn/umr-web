@@ -36,8 +36,8 @@ export default function Home() {
               <PackageCard />
               <PackageCard />
             </div>
-            <a href="/package">
-              <div className="flex items-center justify-center bg-black md:w-3/12 w-10/12 h-16 mx-auto rounded-xl mb-10">
+            <a href="/package" className="flex">
+              <div className="flex items-center justify-center bg-black p-4 mx-auto rounded-xl mb-10">
                 <p className=" text-white text-center  ">
                   Tampilkan Lebih Banyak
                 </p>

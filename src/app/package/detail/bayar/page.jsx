@@ -10,26 +10,26 @@ function BayarPage() {
         <div className="flex flex-col pt-5 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
           <div className="flex mx-auto gap-4 justify-between mb-5">
             <div className="flex gap-1">
-              <p className="rounded-full border-2 border-amber-400 text-amber-400 md:w-8 w-6 md:text-base text-xs text-center ">
+              <p className="rounded-full border-2 border-amber-400 text-amber-400 lg:w-8 w-6 lg:text-base text-xs text-center ">
                 1
               </p>
-              <p className="rounded-full text-amber-400 w-full  md:text-base text-xs">
+              <p className="rounded-full text-amber-400 w-full  lg:text-base text-xs">
                 Data Pesanan
               </p>
             </div>
             <div className="w-12 h-1  my-auto mx-auto rounded-full bg-amber-400 "></div>
             <div className="flex gap-1">
-              <p className="rounded-full border-2 border-amber-400 text-amber-400 md:w-10 w-7 md:text-base text-xs text-center ">
+              <p className="rounded-full border-2 border-amber-400 text-amber-400 lg:w-10 w-7 lg:text-base text-xs text-center ">
                 2
               </p>
-              <p className="rounded-full text-amber-400 w-full  md:text-base text-xs">
+              <p className="rounded-full text-amber-400 w-full  lg:text-base text-xs">
                 Bayar
               </p>
             </div>
           </div>
           <section>
-            <div className="md:ml-20 mx-4 md:w-6/12 w-11-12  bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
-              <div className="flex md:px-7 px-4 py-6 gap-2">
+            <div className="lg:ml-20 mx-4 lg:w-6/12 md:w-7/12 w-11-12  bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+              <div className="flex lg:px-7 px-4 py-6 gap-2">
                 <div className="">
                   <svg
                     width="32"
@@ -46,49 +46,49 @@ function BayarPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="md:text-2xl sm:text-xl text-base font-bold px- ">
+                  <p className="lg:text-2xl sm:text-xl text-base font-bold px- ">
                     Pesanan Kamu
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-3 gap-y-4 md:ml-[73px] ml-4">
+              <div className="flex gap-3 gap-y-4 lg:ml-[73px] ml-4">
                 <div>
-                  <div className="md:w-[59px] md:h-[59px] w-[40px] h-[40px]  bg-gray-500 rounded-full "></div>
+                  <div className="lg:w-[59px] lg:h-[59px] w-[40px] h-[40px]  bg-gray-500 rounded-full "></div>
                 </div>
                 <div className="grid grid-cols-1 ">
-                  <p className="md:text-lg font-semibold text-base">
+                  <p className="lg:text-lg font-semibold text-base">
                     Travel Keren Dongs
                   </p>
-                  <div className="md:flex gap-12">
-                    <p className="md:text-lg text-sm font-medium">
+                  <div className="lg:flex gap-12">
+                    <p className="lg:text-lg text-sm font-medium">
                       60 Penilaian
                     </p>
-                    <div className="flex md:justify-center md:items-center">
-                      <p className="md:text-lg text-sm font-medium my-auto">
+                    <div className="flex lg:justify-center lg:items-center">
+                      <p className="lg:text-lg text-sm font-medium my-auto">
                         Rating
                       </p>
-                      <div className="md:w-full w-5/12 my-auto ">
+                      <div className="lg:w-full w-5/12 my-auto ">
                         <StarsRating />
                       </div>
                     </div>
                   </div>
-                  <p className="md:text-lg text-sm font-medium mt-3">
+                  <p className="lg:text-lg text-sm font-medium mt-3">
                     Nomor Izin Umroh:
                   </p>
-                  <p className="md:text-lg text-sm font-medium">
+                  <p className="lg:text-lg text-sm font-medium">
                     1230349594899489
                   </p>
                 </div>
               </div>
 
-              <div className=" md:w-11/12 sm:w-full w-11/12 md:ml-7 mx-auto  mt-3 flex flex-col justify-center items-center">
-                <div className="my-4 md:mx-5">
+              <div className=" lg:w-11/12 w-11/12 lg:ml-7 mx-auto  mt-3 flex flex-col justify-center items-center">
+                <div className="my-4 lg:mx-5">
                   <div className="border-2 border-b-0 p-2 border-slate-200">
-                    <p className="md:text-2xl font-bold">
+                    <p className="lg:text-2xl font-bold">
                       Umroh Dream Exclusive Plus Kereta Cepat 10 Hari
                     </p>
-                    <div className="grid md:grid-cols-2 grid-cols-1 md:gap-7 gap-5 mt-5">
+                    <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-7 gap-5 mt-5">
                       <div className="flex">
                         <div className="w-1/12">
                           <Image
@@ -99,10 +99,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px]  text-xs text-black">
+                          <p className="ps-1 font-bold lg:text-[17px]  text-xs text-black">
                             Pilihan Kamar
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
+                          <p className="ps-1 pt-2 lg:text-[17px] text-xs text-black">
                             Satu Kamar 4 Orang QUAD
                           </p>
                         </div>
@@ -117,10 +117,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
+                          <p className="ps-1 font-bold lg:text-[17px] text-xs text-black">
                             Tanggal Keberangkatan
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
+                          <p className="ps-1 pt-2 lg:text-[17px] text-xs text-black">
                             10 September 2023
                           </p>
                         </div>
@@ -135,10 +135,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
+                          <p className="ps-1 font-bold lg:text-[17px] text-xs text-black">
                             Maskapai Pesawat
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
+                          <p className="ps-1 pt-2 lg:text-[17px] text-xs text-black">
                             Garuda
                           </p>
                         </div>
@@ -153,10 +153,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
+                          <p className="ps-1 font-bold lg:text-[17px] text-xs text-black">
                             Kota Keberangkatan
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
+                          <p className="ps-1 pt-2 lg:text-[17px] text-xs text-black">
                             Jakarta
                           </p>
                         </div>
@@ -171,10 +171,10 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
+                          <p className="ps-1 font-bold lg:text-[17px] text-xs text-black">
                             Durasi Perjalanan
                           </p>
-                          <p className="ps-1 pt-2 md:text-[17px] text-xs text-black">
+                          <p className="ps-1 pt-2 lg:text-[17px] text-xs text-black">
                             9 Hari
                           </p>
                         </div>
@@ -189,7 +189,7 @@ function BayarPage() {
                           />
                         </div>
                         <div>
-                          <p className="ps-1 font-bold md:text-[17px] text-xs text-black">
+                          <p className="ps-1 font-bold lg:text-[17px] text-xs text-black">
                             Hotel
                           </p>
 
@@ -244,14 +244,14 @@ function BayarPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex md:flex-row flex-col">
-                    <div className="flex border-2 md:border-e-0 p-2 border-slate-200 md:w-[40%] md:text-2xl sm:text-xl text-lg py-3 font-bold  justify-center items-center ">
-                      <p className="my-2 text-center md:text-start">
+                  <div className="flex lg:flex-row flex-col">
+                    <div className="flex border-2 lg:border-e-0 p-2 border-slate-200 lg:w-[40%] lg:text-2xl sm:text-xl text-lg py-3 font-bold  justify-center items-center ">
+                      <p className="my-2 text-center lg:text-start">
                         Total Biaya
                       </p>
                     </div>
-                    <div className="border-2 p-2 border-slate-200 md:w-[60%] md:border-t-2 border-t-0 md:text-2xl sm:text-xl text-lg font-bold px-12 py-3 flex md:flex-row flex-col justify-center items-center ">
-                      <p className="my-2 text-center md:text-start">
+                    <div className="border-2 p-2 border-slate-200 lg:w-[60%] lg:border-t-2 border-t-0 lg:text-2xl sm:text-xl text-lg font-bold px-12 py-3 flex lg:flex-row flex-col justify-center items-center ">
+                      <p className="my-2 text-center lg:text-start">
                         Rp 39.500.000
                       </p>
                     </div>
@@ -261,8 +261,8 @@ function BayarPage() {
             </div>
           </section>
           <section>
-            <div className="md:ml-20 mx-4 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
-              <div className="flex md:px-7 px-4 py-6 gap-2">
+            <div className="lg:ml-20 mx-4 lg:w-6/12 md:w-7/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+              <div className="flex lg:px-7 px-4 py-6 gap-2">
                 <svg
                   width="32"
                   height="32"
@@ -303,8 +303,8 @@ function BayarPage() {
                   Metode Pembayaran
                 </p>
               </div>
-              <div className="flex md:px-7 px-4 py-3 gap-2">
-                <div className="border-2 rounded-md bg-white">
+              <div className="flex lg:px-7 px-4 py-3 gap-2">
+                <div className="border-2 rounded-xl bg-white">
                   <Image
                     src={"/assets/images/bca.png"}
                     alt=""
@@ -316,7 +316,7 @@ function BayarPage() {
                   Transfer Bank &#40;Transfer BCA&#41;
                 </p>
               </div>
-              <div className="md:px-7 px-4 py-7 ">
+              <div className="lg:px-7 px-4 py-7 ">
                 <p className="font-semibold text-base pb-2">
                   Nama Pemilik Rekening
                 </p>
@@ -326,36 +326,36 @@ function BayarPage() {
                   placeholder="Ketik Nama Pemilik Rekening... "
                 />
               </div>
-              <div className="md:px-7 px-4">
+              <div className="lg:px-7 px-4">
                 <p className="font-semibold text-base pb-2">Perhatian:</p>
                 <p className="font-medium text-sm">
                   Anda bisa transfer dari layanan perbankan apapun &#40;
                   internet banking, SMS&#47;M-Banking, ATM &#41;
                 </p>
               </div>
-              <div className="md:px-7 px-4 py-10">
+              <div className="lg:px-7 px-4 py-10">
                 <p className="font-semibold text-base">Kode Promo</p>
-                <div className="border-[1px] rounded-lg  border-neutral-400 flex md:w-10/12 w-full">
+                <div className="border-[1px] rounded-lg  border-neutral-400 flex lg:w-10/12 w-full">
                   <input
                     type="text"
                     className="w-9/12 border-none mx-1"
                     placeholder="Ketik Kode Promo.."
                   />
-                  <button className="w-3/12 bg-amber-400 m-1 rounded-lg md:text-sm text-xs font-medium p-2 ">
+                  <button className="w-3/12 bg-amber-400 m-1 rounded-lg lg:text-sm text-xs font-medium p-2 ">
                     Reedem
                   </button>
                 </div>
               </div>
             </div>
-            <div className="md:ml-20 mx-4 md:w-6/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
-              <div className="md:px-7 px-4 flex justify-between pt-5 mb-7 ">
+            <div className="lg:ml-20 mx-4 lg:w-6/12 md:w-7/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+              <div className="lg:px-7 px-4 flex justify-between pt-5 mb-7 ">
                 <p className="font-bold text-base">Total Harga</p>
                 <p className="font-bold text-base text-amber-400">
                   Rp 39.500.00
                 </p>
               </div>
-              <a href="/akun/PesananSaya/Diproses" className="flex justify-center items-center mb-5">
-                <button className=" rounded-md w-11/12 bg-amber-400 m-2 font-semibold h-10">
+              <a href="/akun/PesananSaya/KonfirmasiBayar" className="flex justify-center items-center mb-5">
+                <button className=" rounded-xl w-11/12 bg-amber-400 m-2 font-semibold h-10">
                   Bayar
                 </button>
               </a>

@@ -17,35 +17,35 @@ function ThreeCarousel() {
   const slides = [
     {
       key: 1,
-      content: <img src="/assets/images/Rectangle14.png" alt="1" />,
+      content: <img src="/assets/images/haji.jpg" alt="1" />,
     },
     {
       key: 2,
-      content: <img src="/assets/images/Rectangle14.png" alt="2" />,
+      content: <img src="/assets/images/haji.jpg" alt="2" />,
     },
     {
       key: 3,
-      content: <img src="/assets/images/Rectangle14.png" alt="3" />,
+      content: <img src="/assets/images/haji.jpg" alt="3" />,
     },
     {
       key: 4,
-      content: <img src="/assets/images/Rectangle14.png" alt="4" />,
+      content: <img src="/assets/images/haji.jpg" alt="4" />,
     },
     {
       key: 5,
-      content: <img src="/assets/images/Rectangle14.png" alt="5" />,
+      content: <img src="/assets/images/haji.jpg" alt="5" />,
     },
     {
       key: 6,
-      content: <img src="/assets/images/Rectangle14.png" alt="6" />,
+      content: <img src="/assets/images/haji.jpg" alt="6" />,
     },
     {
       key: 7,
-      content: <img src="/assets/images/Rectangle14.png" alt="7" />,
+      content: <img src="/assets/images/haji.jpg" alt="7" />,
     },
     {
       key: 8,
-      content: <img src="/assets/images/Rectangle14.png" alt="8" />,
+      content: <img src="/assets/images/haji.jpg" alt="8" />,
     },
   ];
   return (
