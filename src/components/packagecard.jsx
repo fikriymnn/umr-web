@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { isMobile } from "react-device-detect";
+import { isMobile, isTablet } from "react-device-detect";
 //import Progress from 'flowbite-react';
 
 function PackageCard() {
@@ -37,19 +37,20 @@ function PackageCard() {
                 className="rounded-lg"
               />
             </div>
-            {isMobile && (
-              <>
-                <div className="md:w-8/12 md:hidden ">
-                  <h1 className="md:text-[17px] sm:text-[15px] text-[12px] font-semibold">
-                    Umroh Dream Exclusive Plus Kereta Cepat
-                  </h1>
-                  <h2 className="md:text-[28px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-2">
-                    RP 39.5 Jt
-                  </h2>
-                </div>
-              </>
-            )}
+
           </div>
+          {isMobile && (
+            <>
+              <div className="md:w-9/12 xl:hidden ">
+                <h1 className="md:text-[17px] sm:text-[15px] text-[12px] font-semibold">
+                  Umroh Dream Exclusive Plus Kereta Cepat
+                </h1>
+                <h2 className="md:text-[28px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-2">
+                  RP 39.5 Jt
+                </h2>
+              </div>
+            </>
+          )}
           <div className=" py-3">
             <div className="flex items-center justify-center">
               <div className="w-full md:h-7 h-5 rounded-md border md:border-2 relative border-black">

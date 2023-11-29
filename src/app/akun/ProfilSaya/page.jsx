@@ -3,12 +3,12 @@ import AccountNav from "@/components/accountNav";
 
 function ProfilSaya() {
   return (
-    <div className="md:px-14 px-5 py-10 bg-slate-100">
-      <div className=" flex md:flex-row flex-col">
+    <div className="lg:px-14 px-5 py-10 bg-slate-100">
+      <div className=" flex lg:flex-row flex-col">
         <AccountNav account="bg-[#E3B02B] text-white" />
 
-        <div className="w-full md:w-10/12 md:ps-5">
-          <div className="bg-white grid grid-cols-1 gap-3 md:rounded-xl rounded-b-xl md:border-t-2 border-t-0 border-2 border-slate-300 shadow-xl p-3">
+        <div className="w-full lg:w-10/12 lg:ps-5">
+          <div className="bg-white grid grid-cols-1 gap-3 lg:rounded-xl rounded-b-xl lg:border-t-2 border-t-0 border-2 border-slate-300 shadow-xl p-3">
             <div className="text-xl font-extrabold px-5">
               <p>Profil</p>
             </div>

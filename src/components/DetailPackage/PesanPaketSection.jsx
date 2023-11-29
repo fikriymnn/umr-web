@@ -8,7 +8,7 @@ function PesanPaketSection() {
 
   const availability = (numero.available / numero.total) * 100 + "%";
   return (
-    <div>
+    <div className="">
       <div className="p-7">
         <div className="">
           <h1 className="md:text-xl sm:text-lg text-base font-semibold">

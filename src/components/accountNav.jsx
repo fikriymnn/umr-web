@@ -2,13 +2,13 @@ import React from "react";
 
 function AccountNav({ account, order }) {
   return (
-    <div className="w-full md:w-2/12">
-      <div className="bg-white md:h-64 md:rounded-xl rounded-t-xl border-2 border-slate-300 shadow-xl md:py-5 flex md:flex-col md:justify-between">
-        <div className="w-full md:pe-2 grid md:grid-cols-1 md:gap-2">
+    <div className="w-full xl:w-2/12">
+      <div className="bg-white xl:h-64 xl:rounded-xl rounded-t-xl border-2 border-slate-300 shadow-xl xl:py-5 flex xl:flex-col xl:justify-between">
+        <div className="w-full xl:pe-2 grid xl:grid-cols-1 xl:gap-2">
           <button>
             <a
               href="/akun/ProfilSaya"
-              className={`hover:bg-[#E3B02B] rounded-ss-xl md:rounded-s-none md:rounded-e-lg py-2 px-4 hover:text-white text-black duration-100 font-semibold text-start flex gap-2 ${account}`}
+              className={`hover:bg-[#E3B02B] rounded-ss-xl xl:rounded-s-none xl:rounded-e-lg py-2 px-4 hover:text-white text-black duration-100 font-semibold text-start flex gap-2 ${account}`}
             >
               <svg
                 width="24"
@@ -30,7 +30,7 @@ function AccountNav({ account, order }) {
           <button>
             <a
               href="/akun/PesananSaya/BelumBayar"
-              className={`hover:bg-[#E3B02B] md:rounded-e-lg py-2 px-4 hover:text-white text-black duration-100 font-semibold text-start flex gap-2 ${order}`}
+              className={`hover:bg-[#E3B02B] xl:rounded-e-lg py-2 px-4 hover:text-white text-black duration-100 font-semibold text-start flex gap-2 ${order}`}
             >
               <svg
                 width="24"
