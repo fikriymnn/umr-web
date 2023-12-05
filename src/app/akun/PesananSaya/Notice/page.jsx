@@ -3,9 +3,9 @@ import Image from "next/image";
 
 function Notice() {
   return (
-    <div className="bg w-screen h-screen -translate-y-8 flex flex-col justify-center items-center text-center">
+    <div className="bg w-screen h-screen -translate-y-8 flex flex-col justify-center gap-5 items-center text-center">
       <Image
-        src="/assets/images/betol.png"
+        src="/assets/vector/successmark.svg"
         width={200}
         height={200}
         alt="icon"

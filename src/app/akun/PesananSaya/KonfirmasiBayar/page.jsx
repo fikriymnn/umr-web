@@ -47,7 +47,7 @@ function KonfirmasiBayar() {
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
-                  src="/assets/vector/bed.svg"
+                  src="/assets/vector/calendar.svg"
                   width={25}
                   height={25}
                   alt="icon"
@@ -56,7 +56,7 @@ function KonfirmasiBayar() {
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
-                  src="/assets/vector/bed.svg"
+                  src="/assets/vector/plane.svg"
                   width={25}
                   height={25}
                   alt="icon"
@@ -65,7 +65,7 @@ function KonfirmasiBayar() {
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
-                  src="/assets/vector/bed.svg"
+                  src="/assets/vector/datetime.svg"
                   width={25}
                   height={25}
                   alt="icon"
@@ -74,7 +74,7 @@ function KonfirmasiBayar() {
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
-                  src="/assets/vector/bed.svg"
+                  src="/assets/vector/buildings.svg"
                   width={25}
                   height={25}
                   alt="icon"
@@ -83,7 +83,7 @@ function KonfirmasiBayar() {
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
-                  src="/assets/vector/bed.svg"
+                  src="/assets/vector/hotel.svg"
                   width={25}
                   height={25}
                   alt="icon"
@@ -95,11 +95,11 @@ function KonfirmasiBayar() {
             <div className="border-2 border-slate-200 p-2 flex items-center gap-5">
               <Image
                 src="/assets/images/bca.png"
-                width={50}
-                height={50}
+                width={30}
+                height={30}
                 alt="icon"
               />
-              <div className="font-semibold">RUDI KUSTANDI</div>
+              <div className="font-semibold">Transfer BCA</div>
             </div>
             <div className="border-2 border-slate-200  flex items-center justify-between gap-5 mt-2 text-slate-400 font-medium">
               <div className="px-2">
@@ -113,6 +113,12 @@ function KonfirmasiBayar() {
               <p className="font-bold text-xl">Total Harga</p>
               <p className="font-bold text-xl text-amber-400">Rp 39.500.00</p>
             </div>
+            <p className="text-md font-semibold mt-4">Transaksi Pembayaran</p>
+            <p className="text-4xl">4564 8957 0999 4444</p>
+            <p>
+              Silahkan lakukan transaksi pembayaran kepada nomor rekening di
+              atas.
+            </p>
             <p className="text-md font-semibold mt-4">
               Unggah Bukti Pembayaran
             </p>
