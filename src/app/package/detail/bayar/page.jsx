@@ -354,8 +354,10 @@ function BayarPage() {
                   Rp 39.500.00
                 </p>
               </div>
+
               <a href="/akun/PesananSaya/KonfirmasiBayar" className="flex justify-center items-center mb-5">
                 <button className=" rounded-xl w-11/12 bg-amber-400 m-2 font-semibold h-10">
+
                   Bayar
                 </button>
               </a>
