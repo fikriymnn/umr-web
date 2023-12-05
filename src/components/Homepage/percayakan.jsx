@@ -10,7 +10,7 @@ function Percayakan() {
           <div className="w-10/12 mx-auto mb-10 md:mt-16 mt-5 ">
             <p className="font-extrabold text-3xl  ">
               Percayakan Perjalanan Umroh anda kepada
-              <span className="text-[#E3B02B]">Ibadahku</span>
+              <span className="text-[#E3B02B]"> Ibadahku</span>
             </p>
           </div>
         )}

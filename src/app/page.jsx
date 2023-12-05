@@ -2,12 +2,12 @@ import Image from "next/image";
 
 import DefaultCarousel from "@/components/Carousel";
 import PackageCard from "@/components/packagecard";
-import MultipleCarousel from "@/components/multipleCarousel";
-import ThreeCarousel from "@/components/threeCarousel";
-import Percayakan from "@/components/percayakan";
-import Percayakan_mobile from "@/components/percayakan_mobile";
-import CariPaket from "@/components/CariPaket";
-import AboutUsHomepage from "@/components/AboutUsHomepage";
+import MultipleCarousel from "@/components/Homepage/multipleCarousel";
+import ThreeCarousel from "@/components/Homepage/threeCarousel";
+import Percayakan from "@/components/Homepage/percayakan";
+import Percayakan_mobile from "@/components/Homepage/percayakan_mobile";
+import CariPaket from "@/components/Homepage/CariPaket";
+import AboutUsHomepage from "@/components/Homepage/AboutUsHomepage";
 
 export default function Home() {
   return (

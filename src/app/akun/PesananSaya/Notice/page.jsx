@@ -13,10 +13,10 @@ function Notice() {
       <div className="font-bold text-3xl text-amber-500">
         <p>Bukti Pembayaran Terkirim</p>
       </div>
-      <div className="py-2 px-60 text-lg font-medium">
+      <div className="py-2 lg:px-60 md:px-32 px-11 text-lg font-medium">
         <p>
           Terimakasih telah mengirim bukti pembayaran anda, tim Ibadahku akan
-          mengonfirmasi bukti transaksi anda, untuk mengecek status pesanan
+          mengonfirmasi bukti transaksi anda. Untuk mengecek status pesanan
           anda, masuk ke halaman{" "}
           <a
             className="font-bold text-amber-600 hover:text-amber-400"
