@@ -27,9 +27,9 @@ function MultipleCarousel() {
 
   return (
     <>
-      <div className="">
-        <Carousel responsive={responsive} autoPlay={true} infinite={true}>
-          <div className="text-white  flex justify-center items-center ">
+      <div className="z-10">
+        <Carousel responsive={responsive} autoPlay={true} infinite={true} >
+          <div className="text-white  flex justify-center items-center z-0">
             <Image
               src={"/assets/images/cs-1.jpeg"}
               width={150}

@@ -1,9 +1,17 @@
+'use client'
 import React from "react";
 import StarsRating from "@/components/starsRating";
-
+import { useState } from "react";
 import Image from "next/image";
 
+
+
 function BayarPage() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
       <div className="bg ">
@@ -303,7 +311,7 @@ function BayarPage() {
                   Metode Pembayaran
                 </p>
               </div>
-              <div className="relative inline-block text-left md:px-7 px-4">
+              <div className="relative text-left md:px-7 px-4 flex">
                 <button className="flex  py-3 gap-2 rounded-md bg-white">
                   <div className="border-2 rounded-md bg-white">
                     <Image
@@ -313,40 +321,52 @@ function BayarPage() {
                       height={55}
                     />
                   </div>
-                  <span className="my-auto text-neutral-400 font-medium">
+                  {/* <span className="my-auto text-neutral-400 font-medium">
                     Transfer Bank &#40;Transfer BCA&#41;
-                  </span>
+                  </span> */}
                 </button>
-                <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                  <div
-                    className="py-1"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="options-menu"
+                <div className="relative my-auto text-neutral-400 font-medium ">
+                  <button
+                    onClick={toggleDropdown}
+                    type="button"
+                    className="inline-flex justify-center w-full px-4 py-2 text-sm text-neutral-400  font-medium  bg-white  border-neutral-300 rounded-md hover:bg-neutral-100 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:bg-neutral-200"
+                    id="options-menu"
+                    aria-haspopup="true"
+                    aria-expanded={isOpen}
                   >
-                    {/* Add more dropdown items as needed */}
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
-                      role="menuitem"
+                    Transfer Bank &#40;Transfer BCA&#41;
+                  </button>
+
+                  {isOpen && (
+                    <div
+                      className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="options-menu"
                     >
-                      Item 1
-                    </a>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
-                      role="menuitem"
-                    >
-                      Item 2
-                    </a>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
-                      role="menuitem"
-                    >
-                      Item 3
-                    </a>
-                  </div>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                        role="menuitem"
+                      >
+                        Item 1
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                        role="menuitem"
+                      >
+                        Item 2
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                        role="menuitem"
+                      >
+                        Item 3
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="md:px-7 px-4 py-7 ">

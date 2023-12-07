@@ -5,7 +5,7 @@ function KonfirmasiBayar() {
   return (
     <>
       <div className="bg w-full h-full md:px-14 px-5 py-10">
-        <div className="bg-white rounded-md w-9/12 h-full md:px-7 px-5 py-6 shadow-xl">
+        <div className="bg-white rounded-md md:w-9/12 h-full md:px-7 px-5 py-6 shadow-xl">
           <div className="">
             <div className="flex  gap-5 ">
               <div className="">
@@ -24,16 +24,16 @@ function KonfirmasiBayar() {
                 </svg>
               </div>
               <div>
-                <p className="md:text-2xl sm:text-xl text-lg font-bold ">
+                <p className="md:text-2xl sm:text-xl  text-lg font-bold ">
                   Konfirmasi pesanan
                 </p>
               </div>
             </div>
           </div>
-          <div className="px-[50px] py-4">
+          <div className="md:px-[50px] py-4">
             <p className="text-md font-semibold">Pesanan</p>
             <div className="border-2 border-slate-200 p-2">
-              <p className="text-xl font-bold">
+              <p className="md:text-xl sm:text-lg text-base font-bold">
                 Umroh Dream Exclusive Plus Kereta Cepat 10 Hari
               </p>
               <div className="flex gap-4 items-center my-2">
@@ -105,30 +105,30 @@ function KonfirmasiBayar() {
               <div className="px-2">
                 <p>UMROHYUK2023</p>
               </div>
-              <div className="font-medium bgprim px-5 py-2 text-white">
+              <div className="md:text-base sm:text-sm text-xs font-medium bgprim px-5 py-2 text-white">
                 <p>Promo terpakai</p>
               </div>
             </div>
             <div className=" flex justify-between mt-5 mb-7 ">
-              <p className="font-bold text-xl">Total Harga</p>
-              <p className="font-bold text-xl text-amber-400">Rp 39.500.00</p>
+              <p className="font-bold md:text-xl sm:text-lg text-base">Total Harga</p>
+              <p className="font-bold md:text-xl sm:text-lg text-base text-amber-400">Rp 39.500.00</p>
             </div>
-            <p className="text-md font-semibold mt-4">Transaksi Pembayaran</p>
-            <p className="text-4xl">4564 8957 0999 4444</p>
+            <p className="md:text-base sm:text-sm text-xs font-semibold mt-4">Transaksi Pembayaran</p>
+            <p className="md:text-4xl sm:text-3xl text-2xl">4564 8957 0999 4444</p>
             <p>
               Silahkan lakukan transaksi pembayaran kepada nomor rekening di
               atas.
             </p>
-            <p className="text-md font-semibold mt-4">
+            <p className="md:text-base sm:text-sm text-xs font-semibold mt-4">
               Unggah Bukti Pembayaran
             </p>
-            <div className="border-2 border-slate-200 rounded-[8px] p-2">
+            <div className="border-2 border-slate-200 rounded-[8px] md:p-2 p-[2px]">
               <input
                 type="file"
                 className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
               />
             </div>
-            <div className="text-base my-2">
+            <div className="md:text-base sm:text-sm text-xs my-2">
               <p>
                 Unggah foto bukti transfer anda agar pesanan bisa dikonfirmasi.
                 anda bisa mengirim bukti transaksi dalam kurun waktu 24 jam
@@ -143,9 +143,9 @@ function KonfirmasiBayar() {
               </p>
             </div>
             <div>
-              <button className="w-full hover:bg-amber-200  rounded-md bg-amber-400 font-semibold h-10">
-                <a href="/akun/PesananSaya/Notice">Kirim</a>
-              </button>
+              <div className="">
+                <a href="/akun/PesananSaya/Notice" className="flex items-center justify-center text-center w-full hover:bg-amber-200  rounded-md bg-amber-400 font-semibold h-10">Kirim</a>
+              </div>
             </div>
           </div>
         </div>

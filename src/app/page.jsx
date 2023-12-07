@@ -79,7 +79,7 @@ export default function Home() {
             Mitra Kami
           </p>
         </div>
-        <div className="mt-14">
+        <div className="mt-14 z-20">
           <MultipleCarousel />
         </div>
       </div>
