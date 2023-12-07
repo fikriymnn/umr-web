@@ -303,20 +303,53 @@ function BayarPage() {
                   Metode Pembayaran
                 </p>
               </div>
-              <div className="flex lg:px-7 px-4 py-3 gap-2">
-                <div className="border-2 rounded-xl bg-white">
-                  <Image
-                    src={"/assets/images/bca.png"}
-                    alt=""
-                    width={55}
-                    height={55}
-                  />
+              <div className="relative inline-block text-left md:px-7 px-4">
+                <button className="flex  py-3 gap-2 rounded-md bg-white">
+                  <div className="border-2 rounded-md bg-white">
+                    <Image
+                      src={"/assets/images/bca.png"}
+                      alt=""
+                      width={55}
+                      height={55}
+                    />
+                  </div>
+                  <span className="my-auto text-neutral-400 font-medium">
+                    Transfer Bank &#40;Transfer BCA&#41;
+                  </span>
+                </button>
+                <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                  <div
+                    className="py-1"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="options-menu"
+                  >
+                    {/* Add more dropdown items as needed */}
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                      role="menuitem"
+                    >
+                      Item 1
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                      role="menuitem"
+                    >
+                      Item 2
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                      role="menuitem"
+                    >
+                      Item 3
+                    </a>
+                  </div>
                 </div>
-                <p className="my-auto text-neutral-400 font-medium">
-                  Transfer Bank &#40;Transfer BCA&#41;
-                </p>
               </div>
-              <div className="lg:px-7 px-4 py-7 ">
+              <div className="md:px-7 px-4 py-7 ">
                 <p className="font-semibold text-base pb-2">
                   Nama Pemilik Rekening
                 </p>
