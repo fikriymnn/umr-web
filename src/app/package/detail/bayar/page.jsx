@@ -1,9 +1,17 @@
+'use client'
 import React from "react";
 import StarsRating from "@/components/starsRating";
-
+import { useState } from "react";
 import Image from "next/image";
 
+
+
 function BayarPage() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
       <div className="bg ">
@@ -303,20 +311,65 @@ function BayarPage() {
                   Metode Pembayaran
                 </p>
               </div>
-              <div className="flex lg:px-7 px-4 py-3 gap-2">
-                <div className="border-2 rounded-xl bg-white">
-                  <Image
-                    src={"/assets/images/bca.png"}
-                    alt=""
-                    width={55}
-                    height={55}
-                  />
+              <div className="relative text-left md:px-7 px-4 flex">
+                <button className="flex  py-3 gap-2 rounded-md bg-white">
+                  <div className="border-2 rounded-md bg-white">
+                    <Image
+                      src={"/assets/images/bca.png"}
+                      alt=""
+                      width={55}
+                      height={55}
+                    />
+                  </div>
+                  {/* <span className="my-auto text-neutral-400 font-medium">
+                    Transfer Bank &#40;Transfer BCA&#41;
+                  </span> */}
+                </button>
+                <div className="relative my-auto text-neutral-400 font-medium ">
+                  <button
+                    onClick={toggleDropdown}
+                    type="button"
+                    className="inline-flex justify-center w-full px-4 py-2 text-sm text-neutral-400  font-medium  bg-white  border-neutral-300 rounded-md hover:bg-neutral-100 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:bg-neutral-200"
+                    id="options-menu"
+                    aria-haspopup="true"
+                    aria-expanded={isOpen}
+                  >
+                    Transfer Bank &#40;Transfer BCA&#41;
+                  </button>
+
+                  {isOpen && (
+                    <div
+                      className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="options-menu"
+                    >
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                        role="menuitem"
+                      >
+                        Item 1
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                        role="menuitem"
+                      >
+                        Item 2
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                        role="menuitem"
+                      >
+                        Item 3
+                      </a>
+                    </div>
+                  )}
                 </div>
-                <p className="my-auto text-neutral-400 font-medium">
-                  Transfer Bank &#40;Transfer BCA&#41;
-                </p>
               </div>
-              <div className="lg:px-7 px-4 py-7 ">
+              <div className="md:px-7 px-4 py-7 ">
                 <p className="font-semibold text-base pb-2">
                   Nama Pemilik Rekening
                 </p>
@@ -354,8 +407,10 @@ function BayarPage() {
                   Rp 39.500.00
                 </p>
               </div>
+
               <a href="/akun/PesananSaya/KonfirmasiBayar" className="flex justify-center items-center mb-5">
                 <button className=" rounded-xl w-11/12 bg-amber-400 m-2 font-semibold h-10">
+
                   Bayar
                 </button>
               </a>

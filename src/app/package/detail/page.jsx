@@ -5,7 +5,7 @@ import Facility from "@/components/facility";
 import DefaultCarousel from "@/components/Carousel";
 import PackageCard from "@/components/packagecard";
 import { Carousel } from "flowbite";
-import MainInfoPackage from "@/components/MainInfoPackage";
+import MainInfoPackage from "@/components/DetailPackage/MainInfoPackage";
 import MitraTravelSection from "@/components/DetailPackage/MitraTravelSection";
 import TestimonialSection from "@/components/DetailPackage/TestimonialSection";
 import FasilitasUmrohSection from "@/components/DetailPackage/FasilitasUmrohSection";
