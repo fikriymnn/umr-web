@@ -52,6 +52,7 @@ function ThreeCarousel() {
     <div className="z-100 h-full flex">
       <div className="z-10 m-auto text-red-900 w-1/12">
         <button
+          className="relative"
           onClick={() => {
             setSlid(slid - 1);
           }}
@@ -75,6 +76,7 @@ function ThreeCarousel() {
 
       <div className="z-10 md:mr-0 sm:mr-12 mr-12 m-auto text-red-900 w-1/12">
         <button
+          className="relative"
           onClick={() => {
             setSlid(slid + 1);
           }}
