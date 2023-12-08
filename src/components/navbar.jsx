@@ -22,7 +22,7 @@ export default function CustomNavbar() {
           <div className="flex justify-between">
             <a href="/" className="md:h-full bg-white p-5 md:border-none ">
               <Image
-                src="/assets/images/logo.png"
+                src="/assets/images/ibadahku1k2.png"
                 alt=""
                 width={140}
                 height={140}
@@ -80,7 +80,7 @@ export default function CustomNavbar() {
                           <p>Paket Umroh</p>
                         </a>
                         <a
-                          href="/"
+                          href="/tentangKami"
                           className="flex gap-2 items-center md:hover:scale-105 duration-100"
                         >
                           <Image
@@ -139,7 +139,7 @@ export default function CustomNavbar() {
                       <p>Paket Umroh</p>
                     </a>
                     <a
-                      href="/"
+                      href="/tentangKami"
                       className="flex gap-2 items-center md:hover:scale-105 duration-100"
                     >
                       <Image
