@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 import StepByStep2 from "@/components/Bayar/StepByStep2";
-import MetodePembayaran from "@/components/Bayar/MetodePembayaranSection";
+import MetodePembayaranSection from "@/components/Bayar/MetodePembayaranSection";
 import PesananKamuSection from "@/components/Bayar/PesananKamuSection";
 
 function BayarPage() {
@@ -16,7 +16,7 @@ function BayarPage() {
             <StepByStep2 />
           </div>
           <PesananKamuSection />
-          <MetodePembayaran />
+          <MetodePembayaranSection />
         </div>
       </div>
     </>
