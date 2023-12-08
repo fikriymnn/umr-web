@@ -1,5 +1,5 @@
 import React from "react";
-import BayarMitraTravelSection from "@/components/Bayar/bayarMitraTravelSection";
+import BayarMitraTravelSection from "@/components/Bayar/BayarMitraTravelSection";
 import FacilityAndPriceSection from "@/components/Bayar/FacilityAndPriceSection";
 
 function PesananKamuSection() {
