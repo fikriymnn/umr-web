@@ -15,14 +15,7 @@ function TentangKami() {
           Lorem Ipsum is Lorem Ips lorem Ipsum is Lorem Ipsum and Iorem Ipsum is
           Lorem Ipsum and Iorem Ipsum is Lorem Ipsum is Lorem Ipsum is Lore
           Lorem Ipsum is Lorem Ipsum is Lorem Ips Umum is Lorem Ipsum is Lorem
-          Ipsum is Lore mipsum is Lorem Ipsum is Lorem Ips lorem Ipsum is Lorem
-          Ipsum and Iorem Ipsum is Lorem Ipsum and Iorem Ipsum is Lorem Ipsum is
-          Lorem Ipsum is Lore Lorem Ipsum is Lorem Ipsum is Lorem Ips Umum is
-          Lorem Ipsum is Lorem Ipsum is Lore mipsum is Lorem Ipsum is Lorem Ips
-          lorem Ipsum is Lorem Ipsum and Iorem Ipsum is Lorem Ipsum and Iorem
-          Ipsum is Lorem Ipsum is Lorem Ipsum is Lore Lorem Ipsum is Lorem Ipsum
-          is Lorem Ips Umum is Lorem Ipsum is Lorem Ipsum is Lore mipsum is
-          Lorem Ipsum is Lorem Ips
+
         </p>
       </div>
       <div className="mt-5 md:flex w-full">
@@ -36,16 +29,7 @@ function TentangKami() {
             al ea commodo consequat et ea commodo consequat vel scelerisque
             Lorem ipsum dolor sit am id elit, consectetur adipiscing elit sed
             diam non pro pos posuere cubilia Cur et non pro posuere cubilia Cur
-            et non pro posuere cub dalam. Ut enim ad minim veniam et al ground
-            al ea commodo consequat et ea commodo consequat vel scelerisque
-            Lorem ipsum dolor sit am id elit, consectetur adipiscing elit sed
-            diam non pro pos posuere cubilia Cur et non pro posuere cubilia Cur
-            et non pro posuere cub dalam. Ut enim ad minim veniam et al ground
-            al ea commodo consequat et ea commodo consequat vel scelerisque
-            Lorem ipsum dolor sit am id elit, consectetur adipiscing elit sed
-            diam non pro pos posuere cubilia Cur et non pro posuere cubilia Cur
-            et non pro posuere cub dalam. Ut enim ad minim veniam et al ground
-            al ea commodo consequat et ea commodo consequat vel scelerisque
+
           </p>
         </div>
         <Image
@@ -56,27 +40,27 @@ function TentangKami() {
           className="mx-auto md:-translate-x-10 my-auto"
         />
       </div>
-      <div className="grid grid-cols-3 mt-20">
+      <div className="grid md:grid-cols-3 grid-cols-2 gap-5  mt-10 ">
         <Image
           src={"/assets/images/cs-2.jpg"}
           alt=""
           width={400}
           height={100}
-          className="mx-auto md:-translate-x-10 my-auto"
+          className="mx-auto "
         />
         <Image
           src={"/assets/images/cs-2.jpg"}
           alt=""
           width={400}
           height={100}
-          className="mx-auto md:-translate-x-10 my-auto"
+          className="mx-auto "
         />
         <Image
           src={"/assets/images/cs-2.jpg"}
           alt=""
           width={400}
           height={100}
-          className="mx-auto md:-translate-x-10 my-auto"
+          className="mx-auto "
         />
       </div>
     </div>

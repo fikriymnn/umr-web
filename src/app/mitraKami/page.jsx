@@ -6,10 +6,10 @@ function MitraKami() {
     return (
         <>
 
-            <div> <p className=" text-black text-xl font-bold p-14">
+            <div> <p className=" text-black text-xl font-bold md:px-32 py-14 p-7">
                 Mitra Kami
             </p></div>
-            <div className='grid grid-cols-2 gap-5 mx-14 pb-10'>
+            <div className='grid md:grid-cols-2 grid-cols-1 gap-5 md:mx-32 mx-7 pb-10'>
                 <MitraCard />
                 <MitraCard />
                 <MitraCard />

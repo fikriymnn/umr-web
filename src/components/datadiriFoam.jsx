@@ -9,7 +9,7 @@ import { Carousel } from "flowbite";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 
 import { useState } from "react";
-function DatadiriFoam({}) {
+function DatadiriFoam({ }) {
   const [jamaah, setJamaah] = useState([
     { gender: "", name: "", noWhatsapp: "", email: "" },
   ]);
@@ -81,7 +81,7 @@ function DatadiriFoam({}) {
                     </div>
                   </div>
                 </div>
-                <div className=" md:flex  md:px-14 mx-4 gap-5 pt-5">
+                <div className=" md:grid grid-cols-2  md:px-14 mx-4 gap-5 pt-5">
                   <div>
                     <div>
                       <p className="md:text-base text-sm">Nomor Whatsapp</p>
