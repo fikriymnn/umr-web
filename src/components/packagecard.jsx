@@ -19,10 +19,10 @@ function PackageCard() {
             {!isMobile && (
               <>
                 <div className="md:w-8/12">
-                  <h1 className="md:text-[17px] sm:text-[15px] text-[12px] font-semibold">
+                  <h1 className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold">
                     Umroh Dream Exclusive Plus Kereta Cepat
                   </h1>
-                  <h2 className="md:text-[28px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-2">
+                  <h2 className="md:text-[26px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-1">
                     RP 39.5 Jt
                   </h2>
                 </div>
@@ -37,21 +37,20 @@ function PackageCard() {
                 className="rounded-lg"
               />
             </div>
-
           </div>
           {isMobile && (
             <>
               <div className="md:w-9/12 xl:hidden ">
-                <h1 className="md:text-[17px] sm:text-[15px] text-[12px] font-semibold">
+                <h1 className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold">
                   Umroh Dream Exclusive Plus Kereta Cepat
                 </h1>
-                <h2 className="md:text-[28px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-2">
+                <h2 className="md:text-[26px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-2">
                   RP 39.5 Jt
                 </h2>
               </div>
             </>
           )}
-          <div className=" py-3">
+          <div className=" pb-1">
             <div className="flex items-center justify-center">
               <div className="w-full md:h-7 h-5 rounded-md border md:border-2 relative border-black">
                 <div className="md:w-full sm:w-full w-full h-full absolute flex items-center justify-center text-center font-semibold md:text-sm sm:text-xs text-xs ">
@@ -59,7 +58,7 @@ function PackageCard() {
                 </div>
                 <div
                   style={{ width: availability }}
-                  className="h-full bg-[#ffc73a] rounded-[4px]"
+                  className="h-full bg-[#F5CA77] rounded-[4px]"
                 ></div>
               </div>
             </div>
@@ -75,7 +74,7 @@ function PackageCard() {
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] my-auto">
+                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
                   Satu kamar 4 Orang
                 </p>
               </div>
@@ -91,7 +90,7 @@ function PackageCard() {
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] my-auto">
+                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
                   10 Sep 2023
                 </p>
               </div>
@@ -106,7 +105,7 @@ function PackageCard() {
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] my-auto">
+                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
                   Garuda
                 </p>
               </div>
@@ -121,7 +120,7 @@ function PackageCard() {
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] my-auto">
+                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
                   Jakarta, +2 Kota
                 </p>
               </div>
@@ -136,7 +135,7 @@ function PackageCard() {
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] my-auto">
+                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
                   9 Hari
                 </p>
               </div>
@@ -151,7 +150,7 @@ function PackageCard() {
                 />
               </div>
               <div className="md:flex-col flex ">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] my-auto">
+                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
                   Hotel
                 </p>
                 <div className="md:w-11/12 w-[50px] ">
