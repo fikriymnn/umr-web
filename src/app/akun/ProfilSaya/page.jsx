@@ -1,7 +1,34 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import AccountNav from "@/components/accountNav";
 
 function ProfilSaya() {
+  const [DataUser, setDataUser] = useState({
+    nama_lengkap: "",
+    no_whatsapp: "",
+    email: "",
+  });
+
+  useEffect(() => {
+    getuser();
+  });
+
+  async function getuser() {
+    try {
+      const res = await axios.get("http://localhost:5000/api/user", {
+        withCredentials: true,
+      });
+      if (res.data.success == true) {
+        setDataUser(res.data.data);
+
+        console.log(res.data.data._id);
+      }
+    } catch (error) {
+      console.log(error.response);
+    }
+  }
+
   return (
     <div className="lg:px-14 px-5 py-10 bg-slate-100">
       <div className=" flex lg:flex-row flex-col">
@@ -18,7 +45,7 @@ function ProfilSaya() {
                 <div className=""></div>
               </div>
               <div className="bg-slate-200 rounded-xl px-3 py-2 mt-2 font-medium">
-                <p>Rudi Kustandi</p>
+                <p>{DataUser.nama_lengkap}</p>
               </div>
             </div>
             <div className="bg-white border-2 border-slate-200 rounded-xl py-2 px-3 ">
@@ -40,7 +67,7 @@ function ProfilSaya() {
                 </button>
               </div>
               <div className="bg-slate-200 rounded-xl px-3 py-2 mt-2 font-medium">
-                <p>+6282119399861</p>
+                <p>{DataUser.no_whatsapp}</p>
               </div>
             </div>
             <div className="bg-white border-2 border-slate-200 rounded-xl py-2 px-3">
@@ -62,7 +89,7 @@ function ProfilSaya() {
                 </button>
               </div>
               <div className="bg-slate-200 rounded-xl px-3 py-2 mt-2 font-medium">
-                <p>rudikustandi@gmail.com</p>
+                <p>{DataUser.email}</p>
               </div>
             </div>
           </div>

@@ -1,8 +1,39 @@
 "use client";
-import React from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import Image from "next/image";
 function Register() {
+  const { push } = useRouter();
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+  const [NamaLengkap, setNamaLengkap] = useState("");
+  const [NoWhatsapp, setNoWhatsapp] = useState("");
+  const url = "http://localhost:5000/api/register";
+
+  async function submitRegister(e) {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        url,
+        {
+          nama_lengkap: NamaLengkap,
+          no_whatsapp: NoWhatsapp,
+          email: Email,
+          password: Password,
+        },
+        {
+          withCredentials: true,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      alert("register success");
+      push("/");
+    } catch (error) {
+      alert(error.response.data.message);
+    }
+  }
   return (
     <div className=" bg-login w-full  z-20">
       <div className=" bg-cover bg-[url('/assets/images/bgLogin.jpg')] z-10 w-full  md:grid grid-cols-2 md:pb-80 pb-40">
@@ -10,11 +41,12 @@ function Register() {
           <p className="text-3xl font-extrabold text-white">Selamat Datang !</p>
           <p className="text-white pb-4">Masukan data diri anda</p>
           <Card>
-            <form className="flex flex-col gap-4">
+            <form onSubmit={submitRegister} className="flex flex-col gap-4">
               <div>
                 <div className="mb-2 block"></div>
                 <TextInput
                   id="nama"
+                  onChange={(e) => setNamaLengkap(e.target.value)}
                   placeholder="Nama Lengkap"
                   required
                   type="nama"
@@ -26,6 +58,7 @@ function Register() {
                   <TextInput
                     addon="+62"
                     id="telp"
+                    onChange={(e) => setNoWhatsapp(e.target.value)}
                     placeholder="Nomor Whatsapp"
                     required
                   />
@@ -36,6 +69,7 @@ function Register() {
                 <TextInput
                   id="email"
                   placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                   type="email"
                 />
@@ -45,6 +79,7 @@ function Register() {
                 <div className="mb-2 block"></div>
                 <TextInput
                   id="password"
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                   type="password"
                   placeholder="Password"

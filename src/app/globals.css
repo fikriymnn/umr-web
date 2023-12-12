@@ -25,7 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
-
+.bg-col{
+   background: rgb(241, 235, 193);
+}
 .bg {
   background: rgb(255, 255, 255);
   background: linear-gradient(

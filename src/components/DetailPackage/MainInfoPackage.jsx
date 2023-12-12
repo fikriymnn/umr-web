@@ -6,7 +6,16 @@ import DefaultCarousel from "@/components/Carousel";
 import PackageCard from "@/components/packagecard";
 import { Carousel } from "flowbite";
 
-function MainInfoPackage() {
+function MainInfoPackage({
+  title,
+  carousel,
+  kamar,
+  maskapai,
+  durasi,
+  tanggalKeberangkatan,
+  kotaKeberangkatan,
+  bintangHotel,
+}) {
   const numero = {
     total: 50,
     available: 5,
@@ -18,11 +27,11 @@ function MainInfoPackage() {
       <div className=" bg-white md:w-10/12 w-11/12  md:ms-20   rounded-xl mx-auto">
         <div className=" rounded-t-xl center ">
           <p className="md:text-2xl text-sm font-bold text-center md:py-3 py-2 px-2 text-black ">
-            Umroh Dream Exclusive Plus Kereta Cepat 10 Hari
+            {title}
           </p>
         </div>
         <div className="bg-gray-900 w-full md:h-[315px] h-[200px]  rounded-xl">
-          <DefaultCarousel />
+          <DefaultCarousel image={carousel} />
         </div>
         <div className="grid grid-cols-2 gap-5 py-7 md:px-9 px-4">
           <div className="flex">
@@ -39,7 +48,7 @@ function MainInfoPackage() {
                 Pilihan Kamar
               </p>
               <p className="ps-1 pt-2 md:text-[17px] sm:text-lg text-xs text-black">
-                Satu Kamar 4 Orang QUAD
+                {kamar}
               </p>
             </div>
           </div>
@@ -75,7 +84,7 @@ function MainInfoPackage() {
                 Maskapai Pesawat
               </p>
               <p className="ps-1 pt-2 md:text-[17px] sm:text-lg text-xs">
-                Garuda
+                {maskapai}
               </p>
             </div>
           </div>
@@ -93,7 +102,7 @@ function MainInfoPackage() {
                 Kota Keberangkatan
               </p>
               <p className="ps-1 pt-2 md:text-[17px] sm:text-lg text-xs">
-                Jakarta
+                {kotaKeberangkatan}
               </p>
             </div>
           </div>
@@ -111,7 +120,7 @@ function MainInfoPackage() {
                 Durasi Perjalanan
               </p>
               <p className="ps-1 pt-2 md:text-[17px] sm:text-lg text-xs">
-                9 Hari
+                {durasi}
               </p>
             </div>
           </div>

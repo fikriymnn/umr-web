@@ -8,13 +8,28 @@ import Percayakan from "@/components/Homepage/percayakan";
 import Percayakan_mobile from "@/components/Homepage/percayakan_mobile";
 import CariPaket from "@/components/Homepage/CariPaket";
 import AboutUsHomepage from "@/components/Homepage/AboutUsHomepage";
+import axios from "axios";
 
-export default function Home() {
+async function GetDataPaket() {
+  let data;
+  try {
+    const res = await axios.get(
+      "http://localhost:5000/api/paket?skip=10&limit=9"
+    );
+    data = res.data.data;
+  } catch (error) {
+    data = null;
+  }
+  return data;
+}
+
+export default async function Home() {
+  const DataPaket = await GetDataPaket();
   return (
     <>
       <div className=" bg  ">
         <div className="w-11/12 md:h-96 sm:h-72 h-52 m-auto pt-10">
-          <DefaultCarousel />
+          {/* <DefaultCarousel /> */}
         </div>
         <section>
           <CariPaket />
@@ -25,16 +40,30 @@ export default function Home() {
             <p className=" text-black text-xl font-bold  py-5">
               List Paket Umroh Yang Tersedia
             </p>
-            <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 md:gap-4 sm:gap-3 gap-2 pb-10">
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 md:gap-4 sm:gap-3 gap-2 pb-10">
+              {DataPaket == null ? (
+                <div></div>
+              ) : (
+                DataPaket.map((data, index) => {
+                  return (
+                    <PackageCard
+                      key={index}
+                      id={data._id}
+                      //banner={""}
+                      banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
+                      durasi={data.durasi_perjalanan}
+                      ratingHotel={data.rating_hotel}
+                      kamar={data.pilihan_kamar}
+                      kuota={data.kuota}
+                      lokasi={data.kota_keberangkatan}
+                      maskapai={data.maskapai_penerbangan}
+                      price={data.price}
+                      title={data.title}
+                      waktuKeberangkatan={data.waktu_keberangkatan}
+                    />
+                  );
+                })
+              )}
             </div>
             <a href="/package" className="flex">
               <div className="flex items-center justify-center bg-black p-4 mx-auto rounded-xl mb-10">

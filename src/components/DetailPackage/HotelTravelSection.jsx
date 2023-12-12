@@ -1,7 +1,7 @@
 import React from "react";
 import Facility from "@/components/facility";
 
-function HotelTravelSection() {
+function HotelTravelSection({ hotel }) {
   return (
     <div>
       <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl md:mt-[50px] sm:mt[30px] mt-[15px]">
@@ -10,9 +10,18 @@ function HotelTravelSection() {
             Hotel Travel
           </p>
         </div>
-        <Facility />
-        <Facility />
-        <Facility />
+        {hotel.map((data, i) => {
+          return (
+            <Facility
+              key={i}
+              content={data.content}
+              fasilitas={data.fasilitas}
+              lokasi={data.city}
+              namaHotel={data.name}
+            />
+          );
+        })}
+
         <div className="h-[20px]"></div>
       </div>
     </div>
