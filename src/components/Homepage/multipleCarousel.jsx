@@ -17,7 +17,7 @@ function MultipleCarousel() {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 3,
+      items: 4,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -27,74 +27,75 @@ function MultipleCarousel() {
 
   return (
     <>
-      <div className="z-10">
-        <Carousel responsive={responsive} autoPlay={true} infinite={true} >
-          <div className="text-white  flex justify-center items-center z-0">
-            <Image
-              src={"/assets/images/cs-1.jpeg"}
-              width={150}
-              height={150}
-              alt=""
-            />
-          </div>
-          <div className="text-white  flex justify-center items-center">
-            <Image
-              src={"/assets/images/cs-1.jpeg"}
-              width={150}
-              height={150}
-              alt=""
-            />
-          </div>
-          <div className="text-white  flex justify-center items-center">
-            <Image
-              src={"/assets/images/cs-1.jpeg"}
-              width={150}
-              height={150}
-              alt=""
-            />
-          </div>
-          <div className="text-white  flex justify-center items-center">
-            <Image
-              src={"/assets/images/cs-1.jpeg"}
-              width={150}
-              height={150}
-              alt=""
-            />
-          </div>
-          <div className="text-white  flex justify-center items-center">
-            <Image
-              src={"/assets/images/cs-1.jpeg"}
-              width={150}
-              height={150}
-              alt=""
-            />
-          </div>
-          <div className="text-white  flex justify-center items-center">
-            <Image
-              src={"/assets/images/cs-1.jpeg"}
-              width={150}
-              height={150}
-              alt=""
-            />
-          </div>
-          <div className="text-white  flex justify-center items-center">
-            <Image
-              src={"/assets/images/cs-1.jpeg"}
-              width={150}
-              height={150}
-              alt=""
-            />
-          </div>
-          <div className="text-white  flex justify-center items-center">
-            <Image
-              src={"/assets/images/cs-1.jpeg"}
-              width={150}
-              height={150}
-              alt=""
-            />
-          </div>
-        </Carousel>
-      </div>
+
+      <Carousel responsive={responsive} autoPlay={true} infinite={true} >
+        <div className="text-white  flex justify-center items-center ">
+          <Image
+            src={"/assets/images/cs-1.jpeg"}
+            width={150}
+            height={150}
+            alt=""
+            className=""
+          />
+        </div>
+        <div className="text-white  flex justify-center items-center">
+          <Image
+            src={"/assets/images/cs-1.jpeg"}
+            width={150}
+            height={150}
+            alt=""
+          />
+        </div>
+        <div className="text-white  flex justify-center items-center">
+          <Image
+            src={"/assets/images/cs-1.jpeg"}
+            width={150}
+            height={150}
+            alt=""
+          />
+        </div>
+        <div className="text-white  flex justify-center items-center">
+          <Image
+            src={"/assets/images/cs-1.jpeg"}
+            width={150}
+            height={150}
+            alt=""
+          />
+        </div>
+        <div className="text-white  flex justify-center items-center">
+          <Image
+            src={"/assets/images/cs-1.jpeg"}
+            width={150}
+            height={150}
+            alt=""
+          />
+        </div>
+        <div className="text-white  flex justify-center items-center">
+          <Image
+            src={"/assets/images/cs-1.jpeg"}
+            width={150}
+            height={150}
+            alt=""
+          />
+        </div>
+        <div className="text-white  flex justify-center items-center">
+          <Image
+            src={"/assets/images/cs-1.jpeg"}
+            width={150}
+            height={150}
+            alt=""
+          />
+        </div>
+        <div className="text-white  flex justify-center items-center">
+          <Image
+            src={"/assets/images/cs-1.jpeg"}
+            width={150}
+            height={150}
+            alt=""
+          />
+        </div>
+      </Carousel>
+
     </>
   );
 }

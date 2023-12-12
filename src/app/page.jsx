@@ -8,7 +8,7 @@ import Percayakan from "@/components/Homepage/percayakan";
 import Percayakan_mobile from "@/components/Homepage/percayakan_mobile";
 import CariPaket from "@/components/Homepage/CariPaket";
 import AboutUsHomepage from "@/components/Homepage/AboutUsHomepage";
-
+import MitrakamiCarousel from "@/components/Homepage/mitrakamiCarousel"
 export default function Home() {
   return (
     <>
@@ -46,12 +46,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#FFFEFC] w-full md:h-96 h-80 shadow-lg shadowy">
+      <div className="bg w-full md:h-96 h-80 ">
         <p className="text-black lg:ps-14 md:ps-10 ps-5 pt-10 font-bold">
           Gallery Kegiatan
         </p>
-        <div className=" h-[250px] ps-14 z-20">
-          <ThreeCarousel />
+        <div className=" h-[250px] md:ps-14 z-20  ">
+          {/* <ThreeCarousel /> */}
+          <MitrakamiCarousel />
         </div>
       </div>
 
@@ -82,6 +83,7 @@ export default function Home() {
           </p>
         </div>
         <div className="mt-14 z-20">
+
           <MultipleCarousel />
         </div>
       </div>
