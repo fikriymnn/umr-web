@@ -29,7 +29,7 @@ export default async function Home() {
     <>
       <div className=" bg  ">
         <div className="w-11/12 md:h-96 sm:h-72 h-52 m-auto pt-10">
-          <DefaultCarousel />
+          {/* <DefaultCarousel /> */}
         </div>
         <section>
           <CariPaket />
@@ -41,25 +41,29 @@ export default async function Home() {
               List Paket Umroh Yang Tersedia
             </p>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 md:gap-4 sm:gap-3 gap-2 pb-10">
-              {DataPaket.map((data, index) => {
-                return (
-                  <PackageCard
-                    key={index}
-                    id={data._id}
-                    //banner={""}
-                    banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
-                    durasi={data.durasi_perjalanan}
-                    ratingHotel={data.rating_hotel}
-                    kamar={data.pilihan_kamar}
-                    kuota={data.kuota}
-                    lokasi={data.kota_keberangkatan}
-                    maskapai={data.maskapai_penerbangan}
-                    price={data.price}
-                    title={data.title}
-                    waktuKeberangkatan={data.waktu_keberangkatan}
-                  />
-                );
-              })}
+              {DataPaket == null ? (
+                <div></div>
+              ) : (
+                DataPaket.map((data, index) => {
+                  return (
+                    <PackageCard
+                      key={index}
+                      id={data._id}
+                      //banner={""}
+                      banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
+                      durasi={data.durasi_perjalanan}
+                      ratingHotel={data.rating_hotel}
+                      kamar={data.pilihan_kamar}
+                      kuota={data.kuota}
+                      lokasi={data.kota_keberangkatan}
+                      maskapai={data.maskapai_penerbangan}
+                      price={data.price}
+                      title={data.title}
+                      waktuKeberangkatan={data.waktu_keberangkatan}
+                    />
+                  );
+                })
+              )}
             </div>
             <a href="/package" className="flex">
               <div className="flex items-center justify-center bg-black p-4 mx-auto rounded-xl mb-10">

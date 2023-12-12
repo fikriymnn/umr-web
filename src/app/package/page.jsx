@@ -50,24 +50,28 @@ async function Package() {
               List Paket Umroh Yang Tersedia
             </h1>
             <div className="mahfud lg:grid-cols-2 md:grid-cols-3 grid-cols-2 md:gap-10 gap-2">
-              {DataPaket.map((data, index) => {
-                return (
-                  <PackageCard
-                    key={index}
-                    id={data._id}
-                    banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
-                    durasi={data.durasi_perjalanan}
-                    ratingHotel={data.rating_hotel}
-                    kamar={data.pilihan_kamar}
-                    kuota={data.kuota}
-                    lokasi={data.kota_keberangkatan}
-                    maskapai={data.maskapai_penerbangan}
-                    price={data.price}
-                    title={data.title}
-                    waktuKeberangkatan={data.waktu_keberangkatan}
-                  />
-                );
-              })}
+              {DataPaket == null ? (
+                <div></div>
+              ) : (
+                DataPaket.map((data, index) => {
+                  return (
+                    <PackageCard
+                      key={index}
+                      id={data._id}
+                      banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
+                      durasi={data.durasi_perjalanan}
+                      ratingHotel={data.rating_hotel}
+                      kamar={data.pilihan_kamar}
+                      kuota={data.kuota}
+                      lokasi={data.kota_keberangkatan}
+                      maskapai={data.maskapai_penerbangan}
+                      price={data.price}
+                      title={data.title}
+                      waktuKeberangkatan={data.waktu_keberangkatan}
+                    />
+                  );
+                })
+              )}
             </div>
           </div>
         </div>
