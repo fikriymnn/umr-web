@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-function PesanPaketSection() {
+function PesanPaketSection({ id, price, kuota, description }) {
   const numero = {
     total: 50,
     available: 5,
   };
 
-  const availability = (numero.available / numero.total) * 100 + "%";
+  const availability = (kuota / kuota) * 100 + "%";
   return (
     <div className="">
       <div className="p-7">
@@ -17,7 +17,7 @@ function PesanPaketSection() {
         </div>
         <div className="">
           <h2 className="md:text-3xl sm:text-2xl text-xl text-[#E3B02B] font-semibold pt-2">
-            RP 39.500.000
+            RP {price}
           </h2>
         </div>
         <div className="mt-3 mx-auto">
@@ -32,10 +32,7 @@ function PesanPaketSection() {
           </div>
         </div>
         <div className="py-3">
-          <p>
-            Lorem ipsum dolor sit Amet Lorem ipsum dolor sit AmetLorem ipsum
-            dolor sit AmetLorem ipsum dolor sit AmetLorem ipsum dolor sit Amet
-          </p>
+          <p>{description}</p>
         </div>
         <div className="  ">
           <a href="/package/detail/formPesan">

@@ -1,6 +1,6 @@
 import React from "react";
 
-function MaskapaiSection() {
+function MaskapaiSection({ maskapai }) {
   return (
     <div>
       <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl md:mt-[50px] sm:mt[30px] mt-[15px]">
@@ -15,7 +15,7 @@ function MaskapaiSection() {
           </div>
           <div className="w-full ps-5 my-auto">
             <h1 className=" text-black md:text-4xl sm:text-2xl text-xl   font-medium ">
-              Air Asia Airlines
+              {maskapai}
             </h1>
           </div>
         </div>

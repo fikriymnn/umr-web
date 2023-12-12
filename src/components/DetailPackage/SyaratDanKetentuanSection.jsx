@@ -1,6 +1,6 @@
 import React from "react";
 
-function SyaratDanKetentuanSection() {
+function SyaratDanKetentuanSection({ syarat }) {
   return (
     <div>
       <div>
@@ -10,15 +10,7 @@ function SyaratDanKetentuanSection() {
           </p>
         </div>
         <div className="py-7 md:px-9 px-4 md:text-2xl sm:text-xl text-base font-semibold text-black">
-          <p>Syarat</p>
-          <p>Syarat</p>
-          <p>Ketentuan</p>
-          <p>Syarat</p>
-          <p>Syarat</p>
-          <p>Ketentuan</p>
-          <p>Syarat</p>
-          <p>Syarat</p>
-          <p>Ketentuan</p>
+          {syarat}
         </div>
       </div>
     </div>

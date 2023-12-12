@@ -2,9 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import { isMobile, isTablet } from "react-device-detect";
+import { format } from "date-fns";
 //import Progress from 'flowbite-react';
 
 function PackageCard({
+  id,
   title,
   price,
   banner,
@@ -12,17 +14,21 @@ function PackageCard({
   kamar,
   maskapai,
   durasi,
-  lokjasi,
-  hotel,
+  lokasi,
+  ratingHotel,
+  waktuKeberangkatan,
 }) {
   const numero = {
-    total: 8,
-    available: 5,
+    total: kuota,
+    available: kuota,
   };
 
   const availability = (numero.available / numero.total) * 100 + "%";
+  const harga = price / 1000000;
+  // const date = Date(waktuKeberangkatan);
+  // const waktuBerangkat = format(date, "yyyy-MM-dd");
   return (
-    <a href="/package/detail">
+    <a href={`/package/detail?id=${id}`}>
       <div className=" bg-white rounded-xl shadowcard md:hover:scale-[102%] duration-100 ease-in-out">
         <div className="p-3">
           <div className="md:flex md:flex-row gap-1">
@@ -30,17 +36,17 @@ function PackageCard({
               <>
                 <div className="md:w-8/12">
                   <h1 className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold">
-                    Umroh Dream Exclusive Plus Kereta Cepat
+                    {title}
                   </h1>
                   <h2 className="md:text-[26px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-1">
-                    RP 39.5 Jt
+                    RP {price}
                   </h2>
                 </div>
               </>
             )}
             <div className="lg:w-4/12 sm:w-full md:w-full sm:h-full md:h-full h-full mx-auto rounded-xl">
               <Image
-                src={"/assets/images/haji.jpg"}
+                src={banner}
                 width={400}
                 height={95}
                 alt=""
@@ -52,7 +58,7 @@ function PackageCard({
             <>
               <div className="md:w-9/12 xl:hidden ">
                 <h1 className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold">
-                  Umroh Dream Exclusive Plus Kereta Cepat
+                  {title}
                 </h1>
                 <h2 className="md:text-[26px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-2">
                   RP 39.5 Jt
@@ -85,7 +91,7 @@ function PackageCard({
               </div>
               <div className="flex items-center justify-start">
                 <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
-                  Satu kamar 4 Orang
+                  {kamar}
                 </p>
               </div>
             </div>
@@ -101,7 +107,7 @@ function PackageCard({
               </div>
               <div className="flex items-center justify-start">
                 <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
-                  10 Sep 2023
+                  9 Sep, 2023
                 </p>
               </div>
             </div>
@@ -116,7 +122,7 @@ function PackageCard({
               </div>
               <div className="flex items-center justify-start">
                 <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
-                  Garuda
+                  {maskapai}
                 </p>
               </div>
             </div>
@@ -131,7 +137,7 @@ function PackageCard({
               </div>
               <div className="flex items-center justify-start">
                 <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
-                  Jakarta, +2 Kota
+                  {lokasi}
                 </p>
               </div>
             </div>
@@ -146,7 +152,7 @@ function PackageCard({
               </div>
               <div className="flex items-center justify-start">
                 <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
-                  9 Hari
+                  {durasi}
                 </p>
               </div>
             </div>
