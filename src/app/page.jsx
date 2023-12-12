@@ -14,7 +14,7 @@ async function GetDataPaket() {
   let data;
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/paket?skip=0&limit=9"
+      "http://localhost:5000/api/paket?skip=10&limit=9"
     );
     data = res.data.data;
   } catch (error) {
@@ -42,7 +42,23 @@ export default async function Home() {
             </p>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 md:gap-4 sm:gap-3 gap-2 pb-10">
               {DataPaket.map((data, index) => {
-                return <PackageCard key={index} />;
+                return (
+                  <PackageCard
+                    key={index}
+                    id={data._id}
+                    //banner={""}
+                    banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
+                    durasi={data.durasi_perjalanan}
+                    ratingHotel={data.rating_hotel}
+                    kamar={data.pilihan_kamar}
+                    kuota={data.kuota}
+                    lokasi={data.kota_keberangkatan}
+                    maskapai={data.maskapai_penerbangan}
+                    price={data.price}
+                    title={data.title}
+                    waktuKeberangkatan={data.waktu_keberangkatan}
+                  />
+                );
               })}
             </div>
             <a href="/package" className="flex">
