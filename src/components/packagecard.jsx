@@ -6,8 +6,8 @@ import { isMobile, isTablet } from "react-device-detect";
 
 function PackageCard() {
   const numero = {
-    total: 8,
-    available: 5,
+    total: 18,
+    available: 16,
   };
 
   const availability = (numero.available / numero.total) * 100 + "%";
@@ -34,7 +34,7 @@ function PackageCard() {
                 width={400}
                 height={95}
                 alt=""
-                className="rounded-lg"
+                className="rounded-lg pb-1"
               />
             </div>
           </div>
@@ -141,7 +141,7 @@ function PackageCard() {
               </div>
             </div>
             <div className="flex">
-              <div className="md:w-1/6 w-1/12">
+              <div className="md:w-1/6 w-1/12 md:my-0 my-auto">
                 <Image
                   src="/assets/vector/hotel.svg"
                   width={25}
@@ -150,10 +150,10 @@ function PackageCard() {
                 />
               </div>
               <div className="md:flex-col flex ">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
+                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] my-auto">
                   Hotel
                 </p>
-                <div className="md:w-11/12 w-[50px] ">
+                <div className="md:w-11/12 w-[50px]">
                   <div className="ps-1 pt-1 flex items-center space-x-1">
                     <svg
                       className="w-4 h-4 text-yellow-300"
