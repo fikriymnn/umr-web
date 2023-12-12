@@ -4,7 +4,17 @@ import Image from "next/image";
 import { isMobile, isTablet } from "react-device-detect";
 //import Progress from 'flowbite-react';
 
-function PackageCard() {
+function PackageCard({
+  title,
+  price,
+  banner,
+  kuota,
+  kamar,
+  maskapai,
+  durasi,
+  lokjasi,
+  hotel,
+}) {
   const numero = {
     total: 8,
     available: 5,

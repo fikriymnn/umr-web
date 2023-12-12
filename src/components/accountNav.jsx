@@ -1,6 +1,25 @@
 import React from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 function AccountNav({ account, order }) {
+  const { push } = useRouter();
+  async function submitLogout(e) {
+    e.preventDefault();
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/api/logout",
+
+        {
+          withCredentials: true,
+        }
+      );
+      alert("logout success");
+      push("/");
+    } catch (error) {
+      alert(error.response.data.message);
+    }
+  }
   return (
     <div className="w-full xl:w-2/12">
       <div className="bg-white xl:h-64 xl:rounded-xl rounded-t-xl border-2 border-slate-300 shadow-xl xl:py-5 flex xl:flex-col xl:justify-between">
@@ -48,7 +67,10 @@ function AccountNav({ account, order }) {
           </button>
         </div>
         <div className="flex">
-          <button className=" text-black text-red-700 py-2 px-5 font-semibold flex gap-2 items-center">
+          <button
+            onClick={submitLogout}
+            className=" text-black text-red-700 py-2 px-5 font-semibold flex gap-2 items-center"
+          >
             <svg
               width="20"
               height="20"

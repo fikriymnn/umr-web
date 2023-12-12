@@ -8,8 +8,23 @@ import Percayakan from "@/components/Homepage/percayakan";
 import Percayakan_mobile from "@/components/Homepage/percayakan_mobile";
 import CariPaket from "@/components/Homepage/CariPaket";
 import AboutUsHomepage from "@/components/Homepage/AboutUsHomepage";
+import axios from "axios";
 
-export default function Home() {
+async function GetDataPaket() {
+  let data;
+  try {
+    const res = await axios.get(
+      "http://localhost:5000/api/paket?skip=0&limit=9"
+    );
+    data = res.data.data;
+  } catch (error) {
+    data = null;
+  }
+  return data;
+}
+
+export default async function Home() {
+  const DataPaket = await GetDataPaket();
   return (
     <>
       <div className=" bg  ">
@@ -26,15 +41,9 @@ export default function Home() {
               List Paket Umroh Yang Tersedia
             </p>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 md:gap-4 sm:gap-6 gap-2 md:mx-14 mx-5 pb-10 ">
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
+              {DataPaket.map((data, index) => {
+                return <PackageCard key={index} />;
+              })}
             </div>
             <a href="/package" className="flex">
               <div className="flex items-center justify-center bg-black p-4 mx-auto rounded-xl mb-10">
