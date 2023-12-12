@@ -38,19 +38,16 @@ export default function CustomNavbar() {
                         className="h-full w-full p-7 flex flex-col justify-between"
                       >
                         <div
-                          className={`duration-100 bg-black h-1 w-full ${
-                            comp == 1 ? "rotate-45 translate-y-[9px]" : ""
-                          } rounded-full `}
+                          className={`duration-100 bg-black h-1 w-full ${comp == 1 ? "rotate-45 translate-y-[9px]" : ""
+                            } rounded-full `}
                         ></div>
                         <div
-                          className={`duration-100  h-1 w-full rounded-full ${
-                            comp == 1 ? "bg-white" : "bg-black"
-                          }`}
+                          className={`duration-100  h-1 w-full rounded-full ${comp == 1 ? "bg-white" : "bg-black"
+                            }`}
                         ></div>
                         <div
-                          className={`duration-100 bg-black h-1 w-full ${
-                            comp == 1 ? "-rotate-45 -translate-y-[9px]" : ""
-                          } rounded-full `}
+                          className={`duration-100 bg-black h-1 w-full ${comp == 1 ? "-rotate-45 -translate-y-[9px]" : ""
+                            } rounded-full `}
                         ></div>
                       </button>
                     </div>
@@ -125,7 +122,7 @@ export default function CustomNavbar() {
                 </>
               ) : (
                 <>
-                  <div className="md:h-full bg-white flex flex-col md:flex-row p-5 gap-5 font-semibold text-[17px]">
+                  <div className="md:h-full bg-white flex flex-col md:flex-row p-5 gap-5 font-semibold lg:text-[17px] md:text-[13px]">
                     <a
                       href="/package"
                       className="flex gap-2 items-center md:hover:scale-105 duration-100"
@@ -148,7 +145,7 @@ export default function CustomNavbar() {
                         width={20}
                         height={20}
                       />
-                      <p>Tentang Kami</p>
+                      <p className="">Tentang Kami</p>
                     </a>
                     <a
                       href="/mitraKami"
