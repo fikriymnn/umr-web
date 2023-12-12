@@ -37,7 +37,6 @@ function PackageCard() {
                 className="rounded-lg"
               />
             </div>
-
           </div>
           {isMobile && (
             <>
