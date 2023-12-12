@@ -35,12 +35,12 @@ export default async function Home() {
           <CariPaket />
         </section>
 
-        <div className=" bg-contain bg-[url('/assets/images/image2.png')] z-10">
-          <div className="lg:mx-20 md:mx-10 sm:mx-0">
-            <p className=" text-black text-xl font-bold md:px-14 px-5 pt-14 md:pb-16 pb-5">
+        <div className=" bg-image-container z-10 flex flex-col justify-center items-center">
+          <div className="md:w-9/12 w-11/12">
+            <p className=" text-black text-xl font-bold  py-5">
               List Paket Umroh Yang Tersedia
             </p>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 md:gap-4 sm:gap-6 gap-2 md:mx-14 mx-5 pb-10 ">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 md:gap-4 sm:gap-3 gap-2 pb-10">
               {DataPaket.map((data, index) => {
                 return <PackageCard key={index} />;
               })}
@@ -53,27 +53,29 @@ export default async function Home() {
               </div>
             </a>
           </div>
-          <div className="bg-black w-full md:h-96 h-80 ">
-            <p className="text-white lg:ps-14 md:ps-10 ps-5 pt-10 font-bold">
-              Gallery Kegiatan
-            </p>
-            <div className=" h-[250px] ps-14 z-20">
-              <ThreeCarousel />
-            </div>
-          </div>
+        </div>
+      </div>
+      <div className="bg-[#FFFEFC] w-full md:h-96 h-80 shadow-lg shadowy">
+        <p className="text-black lg:ps-14 md:ps-10 ps-5 pt-10 font-bold">
+          Gallery Kegiatan
+        </p>
+        <div className=" h-[250px] ps-14 z-20">
+          <ThreeCarousel />
         </div>
       </div>
 
       <Percayakan_mobile />
-      <div className="grid md:grid-cols-2 grid-cols-1">
-        <div className=" mx-auto md:w-11/12 w-64 bg-cover bg-[url('/assets/images/image2.png')]  ">
-          <Image
-            src={"/assets/images/pakhaji.png"}
-            alt=""
-            width={512}
-            height={653}
-            className="mx-auto md:mt-10 mt-10 md:mb-24"
-          />
+      <div className="grid md:grid-cols-2 grid-cols-1  bg mt-5">
+        <div className=" mx-auto md:w-11/12 w-64 bg-cover bg-image-container-left  ">
+          <div className=" unflip">
+            <Image
+              src={"/assets/images/pakhaji.png"}
+              alt=""
+              width={512}
+              height={653}
+              className="mx-auto md:mt-10 mt-10 md:mb-24"
+            />
+          </div>
         </div>
         <div className="">
           <Percayakan />

@@ -29,11 +29,24 @@ body {
    background: rgb(241, 235, 193);
 }
 .bg {
-  background: rgb(241, 235, 193);
+  background: rgb(255, 255, 255);
   background: linear-gradient(
-    0deg,
-    rgba(241, 235, 193, 1) 45%,
-    rgba(253, 187, 45, 0.06666666666666665) 74%
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 234, 181, 1) 44%,
+    rgba(255, 234, 181, 1) 60%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.bg-2 {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 234, 181, 1) 4%,
+    rgba(255, 234, 181, 1) 47%,
+    rgba(255, 255, 255, 1) 100%
   );
 }
 .bg-login {
@@ -45,34 +58,71 @@ body {
   );
 }
 
-.txtprim{
-  color:  rgba(227, 176, 43, 1) ;
+.txtprim {
+  color: rgba(227, 176, 43, 1);
 }
 
-.bgprim{
-  background:  rgba(227, 176, 43, 1) ;
+.bgprim {
+  background: rgba(227, 176, 43, 1);
 }
-
 
 .mahfud {
   display: grid;
 }
-.bg-primary{
+.bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(227 176 43 / var(--tw-bg-opacity));
-
 }
-.text-primary{--tw-text-opacity: 1;
-  color: rgb(227 176 43 / var(--tw-text-opacity))}
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(227 176 43 / var(--tw-text-opacity));
+}
 
-  .App {
-    font-family: sans-serif;
-    text-align: center;
-  }
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
 
-  .shadowcard{
-    box-shadow: 3px 6px 12px 0px rgba(0,0,0,0.30);
--webkit-box-shadow: 3px 6px 12px 0px rgba(0,0,0,0.30);
--moz-box-shadow: 3px 6px 12px 0px rgba(0,0,0,0.30);
-  }
-  
+.shadowcard {
+  box-shadow: 3px 6px 12px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 3px 6px 12px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 6px 12px 0px rgba(0, 0, 0, 0.3);
+}
+
+.shadowy {
+  box-shadow: 2px 0px 13px 4px rgba(0, 0, 0, 0.41);
+  -webkit-box-shadow: 2px 0px 13px 4px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 2px 0px 13px 4px rgba(0, 0, 0, 0.41);
+}
+
+.bg-image-container {
+  background-image: url("/assets/images/image2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right; /* Set the background position to the right */
+
+  /* Other styles for your container */
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg-image-container-left {
+  background-image: url("/assets/images/image2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left; /* Set the background position to the right */
+
+  /* Other styles for your container */
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scaleX(-1);
+}
+
+.unflip {
+  transform: scaleX(-1);
+}
