@@ -127,7 +127,11 @@ function FilterPackages() {
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div className="h-[20px]"></div>
+                                            <div onClick={toggleNav} className="flex justify-center">
+                                                <div className='w-4/12 p-2 text-center mb-6 bg-green-600 rounded-md text-white'>
+                                                    Search
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </>
