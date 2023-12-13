@@ -26,7 +26,7 @@ function FormPesan() {
               <DatadiriFoam />
             </section>
             <section>
-              <div className=" w-full lg:px-6 px-4 mb-20 lg:h-96 h-52 mt-5 lg:text-base sm:text-sm text-xs">
+              <div className=" w-full lg:px-6 px-4 mb-36  mt-5 lg:text-base sm:text-sm text-xs">
                 {" "}
                 <p className="font-bold">
                   Jika anda setuju dengan{" "}

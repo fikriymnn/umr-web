@@ -2,8 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import { isMobile, isTablet } from "react-device-detect";
-import { format } from "date-fns";
+// import { format } from "date-fns";
 //import Progress from 'flowbite-react';
+
 
 function PackageCard({
   id,
@@ -23,6 +24,17 @@ function PackageCard({
     available: kuota,
   };
 
+  const titleprice = (
+    <>
+      <h1 className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold">
+        {title}
+      </h1>
+      <h2 className="md:text-[26px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-1">
+        RP {price}
+      </h2>
+    </>
+  )
+
   const availability = (numero.available / numero.total) * 100 + "%";
   const harga = price / 1000000;
   // const date = Date(waktuKeberangkatan);
@@ -35,12 +47,7 @@ function PackageCard({
             {!isMobile && (
               <>
                 <div className="md:w-8/12">
-                  <h1 className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold">
-                    {title}
-                  </h1>
-                  <h2 className="md:text-[26px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-1">
-                    RP {price}
-                  </h2>
+                  {titleprice}
                 </div>
               </>
             )}
@@ -50,19 +57,14 @@ function PackageCard({
                 width={400}
                 height={95}
                 alt=""
-                className="rounded-lg"
+                className="rounded-lg pb-1"
               />
             </div>
           </div>
           {isMobile && (
             <>
               <div className="md:w-9/12 xl:hidden ">
-                <h1 className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold">
-                  {title}
-                </h1>
-                <h2 className="md:text-[26px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-2">
-                  RP 39.5 Jt
-                </h2>
+                {titleprice}
               </div>
             </>
           )}
@@ -157,7 +159,7 @@ function PackageCard({
               </div>
             </div>
             <div className="flex">
-              <div className="md:w-1/6 w-1/12">
+              <div className="md:w-1/6 w-1/12 md:my-0 my-auto">
                 <Image
                   src="/assets/vector/hotel.svg"
                   width={25}
@@ -166,10 +168,10 @@ function PackageCard({
                 />
               </div>
               <div className="md:flex-col flex ">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
+                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] my-auto">
                   Hotel
                 </p>
-                <div className="md:w-11/12 w-[50px] ">
+                <div className="md:w-11/12 w-[50px]">
                   <div className="ps-1 pt-1 flex items-center space-x-1">
                     <svg
                       className="w-4 h-4 text-yellow-300"

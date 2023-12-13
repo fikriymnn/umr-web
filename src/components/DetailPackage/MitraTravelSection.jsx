@@ -14,18 +14,18 @@ function MitraTravelSection({ profil, nama, rating, noizin }) {
             <div className="md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] w-[40px] h-[40px] bg-gray-500 rounded-full"></div>
           </div>
           <div className="w-full ps-5">
-            <h1 className=" text-black md:text-2xl sm:text-xl text-base pb-3 font-semibold">
+            <h1 className=" text-black md:text-2xl sm:text-xl text-base pb-1 font-semibold">
               {nama}
             </h1>
-            <div className="md:flex md:my-3 pb-1 gap-10">
-              <p className="text-black md:text-[24px] sm:text-xl text-sm">
+            <div className="flex md:mt-3 pb-1 md:gap-10 gap-4">
+              <p className="text-black md:text-[20px] sm:text-xl text-sm">
                 60 Penilaian
               </p>
-              <div className="flex md:gap-7">
-                <p className="text-black md:text-[24px] sm:text-xl text-sm">
+              <div className="flex ">
+                <p className="text-black md:text-[20px] sm:text-xl text-sm my-auto">
                   Rating
                 </p>
-                <div className="ps-1 flex items-center space-x-1 my-auto">
+                <div className="ps-1 flex items-center space-x-1 ">
                   <svg
                     className="w-4 h-4 text-yellow-300"
                     aria-hidden="true"
@@ -74,10 +74,10 @@ function MitraTravelSection({ profil, nama, rating, noizin }) {
                 </div>
               </div>
             </div>
-            <p className="text-black md:text-[24px] sm:text-xl text-sm md:mb-3 md:mt-2 mt-1 pb-1">
+            <p className="text-black md:text-[20px] sm:text-xl text-sm   pb-1">
               Nomor Izin Umroh
             </p>
-            <p className="text-black md:text-[24px] sm:text-xl text-sm md:pb-3 pb-1">
+            <p className="text-black md:text-[20px] sm:text-xl text-sm md:pb-3 pb-1">
               {noizin}
             </p>
           </div>

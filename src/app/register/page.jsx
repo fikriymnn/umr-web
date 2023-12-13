@@ -39,7 +39,7 @@ function Register() {
       <div className=" bg-cover bg-[url('/assets/images/bgLogin.jpg')] z-10 w-full  md:grid grid-cols-2 md:pb-80 pb-40">
         <div className="md:w-[389px] w-11/12  md:ps-14 md:mx-0 mx-auto pt-10 ">
           <p className="text-3xl font-extrabold text-white">Selamat Datang !</p>
-          <p className="text-white pb-4">Masukan data diri anda</p>
+          <p className="text-white pb-4">Masukkan data diri anda</p>
           <Card>
             <form onSubmit={submitRegister} className="flex flex-col gap-4">
               <div>
@@ -56,7 +56,7 @@ function Register() {
                 <div className="max-w-md">
                   <div className="mb-2 block"></div>
                   <TextInput
-                    addon="+62"
+
                     id="telp"
                     onChange={(e) => setNoWhatsapp(e.target.value)}
                     placeholder="Nomor Whatsapp"

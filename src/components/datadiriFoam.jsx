@@ -31,7 +31,7 @@ function DatadiriFoam({ }) {
   return (
     <>
       <div>
-        <div className="bg-white rounded-xl md:mt-[50px] sm:mt-[30px] mt-[15px] shadow-2xl h-full">
+        <div className="bg-white rounded-xl md:mt-[30px] sm:mt-[30px] mt-[15px] shadow-2xl h-full">
           {jamaah.map((val, i) => {
             return (
               <div key={i} className="w-full font-semibold">
