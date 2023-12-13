@@ -2,14 +2,19 @@
 
 import { Carousel } from "flowbite-react";
 
-export default function DefaultCarousel() {
+export default function DefaultCarousel({ image }) {
   return (
     <Carousel>
-      <img className="" alt="..." src="/assets/images/cs-1.jpeg" />
-      <img alt="..." src="/assets/images/cs-2.jpg" />
-      <img alt="..." src="/assets/images/cs-1.jpeg" />
-      <img alt="..." src="/assets/images/cs-2.jpg" />
-      <img alt="..." src="/assets/images/cs-1.jpeg" />
+      {image.map((data, i) => {
+        return (
+          <img
+            key={i}
+            className=""
+            alt="..."
+            src={`http://localhost:5000/images/${data.img}`}
+          />
+        );
+      })}
     </Carousel>
   );
 }

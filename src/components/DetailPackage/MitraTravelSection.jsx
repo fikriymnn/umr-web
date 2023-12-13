@@ -1,6 +1,6 @@
 import React from "react";
 
-function MitraTravelSection() {
+function MitraTravelSection({ profil, nama, rating, noizin }) {
   return (
     <section id="Mitra travel">
       <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl md:mt-[50px] sm:mt[30px] mt-[15px]">
@@ -15,7 +15,7 @@ function MitraTravelSection() {
           </div>
           <div className="w-full ps-5">
             <h1 className=" text-black md:text-2xl sm:text-xl text-base pb-3 font-semibold">
-              Travel Keren Dongs
+              {nama}
             </h1>
             <div className="md:flex md:my-3 pb-1 gap-10">
               <p className="text-black md:text-[24px] sm:text-xl text-sm">
@@ -78,7 +78,7 @@ function MitraTravelSection() {
               Nomor Izin Umroh
             </p>
             <p className="text-black md:text-[24px] sm:text-xl text-sm md:pb-3 pb-1">
-              123123123123
+              {noizin}
             </p>
           </div>
         </div>

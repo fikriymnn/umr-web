@@ -1,18 +1,30 @@
-
 import React from "react";
 import Dropdown from "@/components/Dropdown";
 import Image from "next/image";
 import DefaultCarousel from "@/components/Carousel";
 import PackageCard from "@/components/packagecard";
-import FilterNotMobilePackage from "@/components/FilterNotMobilePackage"
-import FilterIsMobilePackage from "@/components/FilterIsMobilePackage"
-import FilterPackages from "@/components/FilterPackages"
-function Package() {
-
+import FilterNotMobilePackage from "@/components/FilterNotMobilePackage";
+import FilterIsMobilePackage from "@/components/FilterIsMobilePackage";
+import FilterPackages from "@/components/FilterPackages";
+import axios from "axios";
+async function GetDataPaket() {
+  let data;
+  try {
+    const res = await axios.get(
+      "http://localhost:5000/api/paket?skip=9&limit=15"
+    );
+    data = res.data.data;
+  } catch (error) {
+    data = null;
+  }
+  return data;
+}
+async function Package() {
+  const DataPaket = await GetDataPaket();
   return (
     <div className="bg pb-10">
       <FilterPackages />
-      <div className='h-[40px]'></div>
+      <div className="h-[40px]"></div>
       <div className="flex  pt-5 bg-cover  bg-[url('/assets/images/image2.png')] z-10 relative">
         {/* <FilterIsMobilePackage /> */}
         <FilterNotMobilePackage />
@@ -38,12 +50,28 @@ function Package() {
               List Paket Umroh Yang Tersedia
             </h1>
             <div className="mahfud lg:grid-cols-2 md:grid-cols-3 grid-cols-2 md:gap-10 gap-2">
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
-              <PackageCard />
+              {DataPaket == null ? (
+                <div></div>
+              ) : (
+                DataPaket.map((data, index) => {
+                  return (
+                    <PackageCard
+                      key={index}
+                      id={data._id}
+                      banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
+                      durasi={data.durasi_perjalanan}
+                      ratingHotel={data.rating_hotel}
+                      kamar={data.pilihan_kamar}
+                      kuota={data.kuota}
+                      lokasi={data.kota_keberangkatan}
+                      maskapai={data.maskapai_penerbangan}
+                      price={data.price}
+                      title={data.title}
+                      waktuKeberangkatan={data.waktu_keberangkatan}
+                    />
+                  );
+                })
+              )}
             </div>
           </div>
         </div>

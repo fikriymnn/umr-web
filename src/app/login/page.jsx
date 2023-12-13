@@ -1,8 +1,32 @@
 "use client";
-import React from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import Image from "next/image";
 function Login() {
+  const { push } = useRouter();
+  const [Email, setEmail] = useState("");
+  const [Password, setPassword] = useState("");
+  const url = "http://localhost:5000/api/login";
+
+  async function submitLogin(e) {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        url,
+        { email: Email, password: Password },
+        {
+          withCredentials: true,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      alert("login success");
+      push("/");
+    } catch (error) {
+      alert(error.response.data.message);
+    }
+  }
   return (
     <div className=" bg-login w-full min-h-screen z-20">
       <div className=" bg-cover bg-[url('/assets/images/bgLogin.jpg')] z-10 w-full min-h-screen grid md:grid-cols-2 items-center">
@@ -12,12 +36,13 @@ function Login() {
           </p>
           <p className="text-white pb-4">Masukan Akun</p>
           <Card>
-            <form className="flex flex-col gap-4">
+            <form onSubmit={submitLogin} className="flex flex-col gap-4">
               <div>
                 <div className="mb-2 block"></div>
                 <TextInput
                   id="nama"
-                  placeholder="Nomor Whatsapp atau Email"
+                  placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                   type="nama"
                 />
@@ -27,6 +52,7 @@ function Login() {
                 <div className="mb-2 block"></div>
                 <TextInput
                   id="password"
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                   type="password"
                   placeholder="Password"
