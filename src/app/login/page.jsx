@@ -34,7 +34,7 @@ function Login() {
           <p className="text-3xl font-extrabold text-white ">
             Selamat Datang !
           </p>
-          <p className="text-white pb-4">Masukan Akun</p>
+          <p className="text-white pb-4">Masukkan Akun</p>
           <Card>
             <form onSubmit={submitLogin} className="flex flex-col gap-4">
               <div>

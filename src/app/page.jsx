@@ -10,6 +10,7 @@ import CariPaket from "@/components/Homepage/CariPaket";
 import AboutUsHomepage from "@/components/Homepage/AboutUsHomepage";
 import MitrakamiCarousel from "@/components/Homepage/mitrakamiCarousel"
 import axios from "axios";
+import FirstCarousel from "@/components/Homepage/firstCarousel"
 
 async function GetDataPaket() {
   let data;
@@ -31,6 +32,7 @@ export default async function Home() {
       <div className=" bg  ">
         <div className="w-11/12 md:h-96 sm:h-72 h-52 m-auto pt-10">
           {/* <DefaultCarousel /> */}
+          <FirstCarousel />
         </div>
         <section>
           <CariPaket />

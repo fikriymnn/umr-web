@@ -3,7 +3,10 @@
 import { Button, Navbar } from "flowbite-react";
 import Image from "next/image";
 import { isMobile } from "react-device-detect";
-import { useState, useEffect } from "react";
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 
 export default function CustomNavbar() {
   const [comp, setComp] = useState(0);
@@ -15,6 +18,30 @@ export default function CustomNavbar() {
   const toggleNav = () => {
     setComp((prevComp) => (prevComp === 1 ? 0 : 1));
   };
+  const [DataUser, setDataUser] = useState({
+    nama_lengkap: "",
+
+  });
+
+  useEffect(() => {
+    getuser();
+  });
+
+  async function getuser() {
+    try {
+      const res = await axios.get("http://localhost:5000/api/user", {
+        withCredentials: true,
+      });
+      if (res.data.success == true) {
+        setDataUser(res.data.data);
+
+        console.log(res.data.data._id);
+      }
+    } catch (error) {
+      console.log(error.response);
+    }
+  }
+
   return (
     <>
       <>
@@ -114,7 +141,7 @@ export default function CustomNavbar() {
                         </div>
                         <div className="flex items-center gap-2">
                           <div className="bg-slate-400 rounded-full w-10 h-10"></div>
-                          <p>Rudi Kustandi</p>
+                          <p>{DataUser.nama_lengkap}</p>
                         </div>
                       </div>
                     </>
@@ -176,7 +203,8 @@ export default function CustomNavbar() {
                       className="flex items-center gap-2"
                     >
                       <div className="bg-slate-400 rounded-full w-10 h-10"></div>
-                      <p>Rudi Kustandi</p>
+                      <p>{DataUser.nama_lengkap}</p>
+
                     </a>
                   </div>
                 </>
@@ -189,3 +217,29 @@ export default function CustomNavbar() {
     </>
   );
 }
+// {DataUser ? (
+//   <>
+//     <a
+//       href="/akun/ProfilSaya"
+//       className="flex items-center gap-2"
+//     >
+//       <div className="bg-slate-400 rounded-full w-10 h-10"></div>
+
+//       <p>{DataUser.nama_lengkap}</p>
+
+//     </a>
+//   </>
+// ) : (
+//   <>
+//     <div className="flex gap-5 items-center">
+//       <a className="md:hover:text-[#E3B02B]" href="/login">
+//         Masuk
+//       </a>
+//       <a href="/register">
+//         <div className="px-4 py-1 rounded-md bgprim text-white md:hover:bg-white md:hover:border border-[#E3B02B] md:hover:shadow-xl md:hover:text-[#E3B02B] duration-100">
+//           Daftar
+//         </div>
+//       </a>
+//     </div>
+//   </>
+// )}

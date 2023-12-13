@@ -3,7 +3,7 @@ import React from "react";
 function NamaCustomer() {
   return (
     <div>
-      <div className="md:py-[50px] sm:py-[30px] py-[15px]">
+      <div className="md:py-[30px] sm:py-[30px] py-[15px]">
         <div className="bg-white   rounded-xl shadow-2xl ">
           <div className="flex md:px-7 px-5 py-6 gap-5 ">
             <div className="">
