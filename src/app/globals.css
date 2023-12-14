@@ -108,6 +108,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+.bg-image-container-bayar {
+  background-image: url("/assets/images/image2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right; /* Set the background position to the right */
+
+  /* Other styles for your container */
+  z-index: 10;
+
+
+}
 .bg-image-container-left {
   background-image: url("/assets/images/image2.png");
   background-repeat: no-repeat;

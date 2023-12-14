@@ -11,7 +11,7 @@ async function GetDataPaket() {
   let data;
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/paket?skip=9&limit=15"
+      "http://localhost:5000/api/paket?skip=0&limit=15"
     );
     data = res.data.data;
   } catch (error) {
@@ -19,8 +19,10 @@ async function GetDataPaket() {
   }
   return data;
 }
+
 async function Package() {
   const DataPaket = await GetDataPaket();
+
   return (
     <div className="bg pb-10">
       <FilterPackages />

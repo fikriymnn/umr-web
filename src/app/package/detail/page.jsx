@@ -59,7 +59,7 @@ function PackageDetail() {
   async function GetDataPaket() {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/paket?skip=10&limit=6"
+        "http://localhost:5000/api/paket?skip=0&limit=6"
       );
       if (res.data.success == true) {
         setPaket(res.data.data);
@@ -76,76 +76,48 @@ function PackageDetail() {
   };
 
   const availability = (numero.available / numero.total) * 100 + "%";
+
   return (
     <div className="bg">
       <div className="lg:flex  pt-10  bg-contain bg-[url('/assets/images/image2.png')] z-10">
         <div className="lg:w-8/12 sm:w-full  w-full">
           {DetailPaket == null ? (
             <div>
-              <section id="main">
+              <section id="skeleton">
                 <div className=" bg-white md:w-10/12 w-11/12  md:ms-20   rounded-xl mx-auto">
-                  <div className=" rounded-t-xl center ">
-
-                  </div>
-                  <div className="bg-gray-100 w-full md:h-[315px] h-[200px]  rounded-xl">
-
-                  </div>
+                  <div className=" rounded-t-xl center "></div>
+                  <div className="bg-gray-100 w-full md:h-[315px] h-[200px]  rounded-xl"></div>
                   <div className="grid grid-cols-2 gap-5 py-7 md:px-9 px-4">
                     <div className="flex">
-                      <div className="md:w-1/12  w-3/12">
-
-                      </div>
-                      <div>
-
-                      </div>
+                      <div className="md:w-1/12  w-3/12"></div>
+                      <div></div>
                     </div>
                     <div className="flex">
-                      <div className="md:w-1/12 w-3/12">
-
-                      </div>
-                      <div>
-
-                      </div>
+                      <div className="md:w-1/12 w-3/12"></div>
+                      <div></div>
                     </div>
                     <div className="flex">
-                      <div className="md:w-1/12 w-3/12">
-
-                      </div>
-                      <div>
-
-                      </div>
+                      <div className="md:w-1/12 w-3/12"></div>
+                      <div></div>
                     </div>
                     <div className="flex">
-                      <div className="md:w-1/12 w-3/12">
-
-                      </div>
-                      <div>
-
-                      </div>
+                      <div className="md:w-1/12 w-3/12"></div>
+                      <div></div>
                     </div>
                     <div className="flex">
-                      <div className="md:w-1/12 w-3/12">
-
-                      </div>
-                      <div>
-
-                      </div>
+                      <div className="md:w-1/12 w-3/12"></div>
+                      <div></div>
                     </div>
                     <div className="flex">
-                      <div className="md:w-1/12 w-3/12">
-
-                      </div>
+                      <div className="md:w-1/12 w-3/12"></div>
                       <div>
-
-
-                        <div className="ps-1 pt-2 flex items-center space-x-1">
-
-                        </div>
+                        <div className="ps-1 pt-2 flex items-center space-x-1"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </section></div>
+              </section>
+            </div>
           ) : (
             <MainInfoPackage
               bintangHotel={DetailPaket.rating_hotel}
@@ -161,27 +133,19 @@ function PackageDetail() {
 
           {DetailMitra == null ? (
             <div>
-              <section id="Mitra travel">
+              <section id="skeleton">
                 <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl md:mt-[50px] sm:mt[30px] mt-[15px]">
-                  <div className=" md:w-[250px]  w-[150px] bg-gray-100 mx-auto rounded-b-xl">
-
-                  </div>
+                  <div className=" md:w-[250px]  w-[150px] bg-gray-100 mx-auto rounded-b-xl"></div>
                   <div className="flex md:py-7 py-3 md:px-9 px-4">
                     <div className="md:w-3/12 sm:w-3/12 w-2/12">
                       <div className="md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] w-[40px] h-[40px] bg-gray-100 rounded-full"></div>
                     </div>
                     <div className="w-full ps-5">
-
                       <div className="md:flex md:my-3 pb-1 gap-10">
-
                         <div className="flex md:gap-7">
-
-                          <div className="ps-1 flex items-center space-x-1 my-auto">
-
-                          </div>
+                          <div className="ps-1 flex items-center space-x-1 my-auto"></div>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -218,37 +182,26 @@ function PackageDetail() {
                   <div className="">
                     <div className="p-7">
                       <div className="">
-                        <h1 className="md:text-xl sm:text-lg text-base font-semibold w-full bg-black">
-
-                        </h1>
+                        <p className="md:text-xl sm:text-lg text-base font-semibold w-full bg-black"></p>
                       </div>
                       <div className="">
-                        <h2 className="md:text-3xl sm:text-2xl text-xl text-[#E3B02B] font-semibold pt-2">
-
-                        </h2>
+                        <p className="md:text-3xl sm:text-2xl text-xl text-[#E3B02B] font-semibold pt-2"></p>
                       </div>
                       <div className="mt-3 mx-auto">
                         <div className="w-full md:h-7 h-6 rounded-md border md:border-2 relative border-gray-100">
-                          <div className="md:w-full sm:w-full w-full h-full absolute flex items-center justify-center text-center font-semibold md:text-sm sm:text-xs text-xs ">
-
-                          </div>
+                          <div className="md:w-full sm:w-full w-full h-full absolute flex items-center justify-center text-center font-semibold md:text-sm sm:text-xs text-xs "></div>
                           <div
                             style={{ width: availability }}
                             className="h-full bg-gray-100 rounded-[4px]"
                           ></div>
                         </div>
                       </div>
-                      <div className="py-3">
-
-                      </div>
+                      <div className="py-3"></div>
                       <div className="  ">
                         <a href="/package/detail/formPesan">
                           <div className="my-auto  bg-gray-100 hover:bg-[#fad26e] shadow-lg m-auto rounded-xl p-3 items-center justify-center">
                             <div className="flex justify-center ">
-                              <div className="md:w-1/12 w-1/12 ">
-
-                              </div>
-
+                              <div className="md:w-1/12 w-1/12 "></div>
                             </div>
                           </div>
                         </a>

@@ -11,14 +11,12 @@ function PesanPaketSection({ id, price, kuota, description }) {
     <div className="">
       <div className="p-7">
         <div className="">
-          <h1 className="md:text-xl sm:text-lg text-base font-semibold">
-            Harga
-          </h1>
+          <p className="md:text-xl sm:text-lg text-base font-semibold">Harga</p>
         </div>
         <div className="">
-          <h2 className="md:text-3xl sm:text-2xl text-xl text-[#E3B02B] font-semibold pt-2">
+          <p className="md:text-3xl sm:text-2xl text-xl text-[#E3B02B] font-semibold pt-2">
             RP {price}
-          </h2>
+          </p>
         </div>
         <div className="mt-3 mx-auto">
           <div className="w-full md:h-7 h-6 rounded-md border md:border-2 relative border-black">

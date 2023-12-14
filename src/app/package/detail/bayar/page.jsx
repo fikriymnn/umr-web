@@ -11,7 +11,7 @@ function BayarPage() {
   return (
     <>
       <div className="bg ">
-        <div className="flex flex-col pt-5 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
+        <div className="flex flex-col pt-5 bg-left bg-contain bg-image-container-bayar z-10">
           <div className="flex mx-auto gap-4 justify-between mb-5">
             <StepByStep2 />
           </div>

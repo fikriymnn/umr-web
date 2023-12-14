@@ -16,7 +16,7 @@ function Facility({ lokasi, namaHotel, content, fasilitas }) {
           return (
             <img
               key={i}
-              className="w-full h-full md:p-12 sm:p-8 p-6 bg-gray-500"
+              className="w-full h-full xl:h-36 md:h-28  md:p-1 sm:h-20   sm:p-1 p-1 "
               alt=""
               src={`http://localhost:5000/images/${data.img}`}
             />

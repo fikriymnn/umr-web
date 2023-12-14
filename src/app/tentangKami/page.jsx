@@ -1,67 +1,91 @@
 import React from "react";
 import Image from "next/image";
+import MultipleCarousel from "@/components/Homepage/multipleCarousel";
 function TentangKami() {
   return (
-    <div className=" md:mx-16 mx-5 mb-16">
-      <div className=" flex flex-col  w-full text-center mt-10">
-        <p className=" text-sm font-semibold">Misi Kami</p>
-        <p className="md:text-3xl text-lg font-bold mt-1 mb-6">
-          Membuat Ibadah Lebih Modern dan Praktis
-        </p>
-        <p className="md:text-base text-xs  text-justify font-medium">
-          lorem Ipsum is Lorem Ipsum and Iorem Ipsum is Lorem Ipsum and Iorem
-          Ipsum is Lorem Ipsum is Lorem Ipsum is Lore Lorem Ipsum is Lorem Ipsum
-          is Lorem Ips Umum is Lorem Ipsum is Lorem Ipsum is Lore mipsum is
-          Lorem Ipsum is Lorem Ips lorem Ipsum is Lorem Ipsum and Iorem Ipsum is
-          Lorem Ipsum and Iorem Ipsum is Lorem Ipsum is Lorem Ipsum is Lore
-          Lorem Ipsum is Lorem Ipsum is Lorem Ips Umum is Lorem Ipsum is Lorem
+    <div className="bg">
+      <div className=" bg-image-container ">
+        <div className=" md:mx-64 mx-5 mb-16 ">
+          <div className=" flex flex-col  w-full text-center mt-10 ">
+            <p className=" text-sm font-semibold">Misi Kami</p>
+            <p className="md:text-3xl text-lg font-bold mt-1 mb-6">
+              Membuat Ibadah Lebih Modern dan Praktis
+            </p>
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-16">
+              <p className="md:text-base text-xs  text-justify font-medium">
+                lorem Ipsum is Lorem Ipsum and Iorem Ipsum is Lorem Ipsum and
+                Iorem Ipsum is Lorem Ipsum is Lorem Ipsum is Lore Lorem Ipsum is
+                Lorem Ipsum is Lorem Ips Umum is Lorem Ipsum is Lorem Ipsum is
+                Lore mipsum is Lorem Ipsum is Lorem Ips lorem Ipsum is Lorem
+                Ipsum and Iorem Ipsum is Lorem Ipsum and Iorem Ipsum is Lorem
+                Ipsum is Lorem Ipsum is Lore Lorem Ipsum is Lorem Ipsum is Lorem
+                Ips Umum is Lorem Ipsum is Lorem
+              </p>
+              <p className="md:text-base text-xs  text-justify font-medium">
+                lorem Ipsum is Lorem Ipsum and Iorem Ipsum is Lorem Ipsum and
+                Iorem Ipsum is Lorem Ipsum is Lorem Ipsum is Lore Lorem Ipsum is
+                Lorem Ipsum is Lorem Ips Umum is Lorem Ipsum is Lorem Ipsum is
+                Lore mipsum is Lorem Ipsum is Lorem Ips lorem Ipsum is Lorem
+                Ipsum and Iorem Ipsum is Lorem Ipsum and Iorem Ipsum is Lorem
+                Ipsum is Lorem Ipsum is Lore Lorem Ipsum is Lorem Ipsum is Lorem
+                Ips Umum is Lorem Ipsum is Lorem
+              </p>
+            </div>
+          </div>
 
-        </p>
-      </div>
-      <div className="mt-5 md:flex w-full">
-        <div className="bg-amber-100  my-5 py-10 pl-10 pr-16 ">
-          <p className="text-xs font-semibold">Our People</p>
-          <p className="text-lg font-semibold my-2">Lorem Ipsum</p>
-          <p className="md:text-base text-sm text-justify font-medium">
-            Lorem ipsum dolor sit am id elit, consectetur adipiscing elit sed
-            diam non pro pos posuere cubilia Cur et non pro posuere cubilia Cur
-            et non pro posuere cub dalam. Ut enim ad minim veniam et al ground
-            al ea commodo consequat et ea commodo consequat vel scelerisque
-            Lorem ipsum dolor sit am id elit, consectetur adipiscing elit sed
-            diam non pro pos posuere cubilia Cur et non pro posuere cubilia Cur
-
-          </p>
+          <div className="md:flex gap-10 mt-20 md:mx-64 ">
+            <div className="my-auto ">
+              <svg
+                width="70"
+                height="70"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M39.9999 70.8333L70.3899 66.075V18.3017L39.9999 9.16666M39.9999 70.8333V9.16666M39.9999 70.8333L9.60986 66.075V18.3017L39.9999 9.16666M70.3882 28.2L39.9999 19.635L9.60986 28.2M70.3882 35.0517L39.9999 28.01L9.60986 35.0517"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <div className="my-auto">
+              <p className="font-semibold">Sejarah Umrohku</p>
+              is Lorem Ipsum is Lorem Ips lorem Ipsum is Lorem Ipsum and Iorem
+              Ipsum is Lorem Ipsum and Iorem Ipsum is Lorem Ipsum is Lorem Ipsum
+              is Lore Lorem Ipsum is Lorem Ipsum is Lorem Ips Umum is Lorem
+              Ipsum
+            </div>
+          </div>
+          <div className="flex gap-10 mt-20 md:mx-64">
+            <div className="my-auto">
+              <p className="font-semibold">Sejarah Umrohku</p>
+              is Lorem Ipsum is Lorem Ips lorem Ipsum is Lorem Ipsum and Iorem
+              Ipsum is Lorem Ipsum and Iorem Ipsum is Lorem Ipsum is Lorem Ipsum
+              is Lore Lorem Ipsum is Lorem Ipsum is Lorem Ips Umum is Lorem
+              Ipsum
+            </div>
+            <div className="my-auto ">
+              <svg
+                width="70"
+                height="70"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M39.9999 70.8333L70.3899 66.075V18.3017L39.9999 9.16666M39.9999 70.8333V9.16666M39.9999 70.8333L9.60986 66.075V18.3017L39.9999 9.16666M70.3882 28.2L39.9999 19.635L9.60986 28.2M70.3882 35.0517L39.9999 28.01L9.60986 35.0517"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
-        <Image
-          src={"/assets/images/cs-1.jpeg"}
-          alt=""
-          width={400}
-          height={100}
-          className="mx-auto md:-translate-x-10 my-auto"
-        />
-      </div>
-      <div className="grid md:grid-cols-3 grid-cols-2 gap-5  mt-10 ">
-        <Image
-          src={"/assets/images/cs-2.jpg"}
-          alt=""
-          width={400}
-          height={100}
-          className="mx-auto "
-        />
-        <Image
-          src={"/assets/images/cs-2.jpg"}
-          alt=""
-          width={400}
-          height={100}
-          className="mx-auto "
-        />
-        <Image
-          src={"/assets/images/cs-2.jpg"}
-          alt=""
-          width={400}
-          height={100}
-          className="mx-auto "
-        />
       </div>
     </div>
   );
