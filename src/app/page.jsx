@@ -8,15 +8,15 @@ import Percayakan from "@/components/Homepage/percayakan";
 import Percayakan_mobile from "@/components/Homepage/percayakan_mobile";
 import CariPaket from "@/components/Homepage/CariPaket";
 import AboutUsHomepage from "@/components/Homepage/AboutUsHomepage";
-import MitrakamiCarousel from "@/components/Homepage/mitrakamiCarousel"
+import MitrakamiCarousel from "@/components/Homepage/mitrakamiCarousel";
 import axios from "axios";
-import FirstCarousel from "@/components/Homepage/firstCarousel"
+import FirstCarousel from "@/components/Homepage/firstCarousel";
 
 async function GetDataPaket() {
   let data;
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/paket?skip=10&limit=9"
+      "http://localhost:5000/api/paket?skip=0&limit=9"
     );
     data = res.data.data;
   } catch (error) {
@@ -115,7 +115,6 @@ export default async function Home() {
           </p>
         </div>
         <div className="mt-14 z-20">
-
           <MultipleCarousel />
         </div>
       </div>
