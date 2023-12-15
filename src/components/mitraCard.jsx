@@ -42,11 +42,9 @@ function MitraCard() {
           </div>
         </div>
         <div className="pb-2">
-          <a href="">
-            <p className="flex justify-end md:pe-10 pe-5 text-yellow-300 md:text-base text-sm">
-              Lihat Paket Lainnya &rsaquo;
-            </p>
-          </a>
+          <p className="flex justify-end md:pe-10 pe-5 text-yellow-300 md:text-base text-sm">
+            Lihat Paket Lainnya &rsaquo;
+          </p>
         </div>
         <div className="flex justify-evenly pb-9">
           <div className="bg-gray-300 md:h-[100px] md:w-[160px] h-[80px] w-[90px] rounded-md"></div>

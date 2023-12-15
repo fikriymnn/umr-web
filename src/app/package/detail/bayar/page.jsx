@@ -16,7 +16,7 @@ function BayarPage() {
             <StepByStep2 />
           </div>
           <PesananKamuSection />
-          <MetodePembayaranSection />
+          {/* <MetodePembayaranSection /> */}
         </div>
       </div>
     </>

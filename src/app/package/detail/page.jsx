@@ -23,6 +23,7 @@ function PackageDetail() {
   const id = searchParams.get("id");
   const [DetailPaket, setDetailPaket] = useState(null);
   const [DetailMitra, setDetailMitra] = useState(null);
+  const [Ulasan, setUlasan] = useState(null);
   const [Paket, setPaket] = useState(null);
   useEffect(() => {
     getDetailPaket(id);
@@ -38,6 +39,7 @@ function PackageDetail() {
       if (res.data.success == true) {
         setDetailPaket(res.data.data);
         getDetailMitra(res.data.data.id_mitra);
+        getDataTestimoni(res.data.data.id_mitra);
         //console.log(res.data.data);
       }
     } catch (error) {
@@ -50,6 +52,19 @@ function PackageDetail() {
       const res = await axios.get(`http://localhost:5000/api/mitra/${idMitra}`);
       if (res.data.success == true) {
         setDetailMitra(res.data.data);
+      }
+    } catch (error) {
+      console.log(error.response);
+    }
+  }
+
+  async function getDataTestimoni(idMitra) {
+    try {
+      const res = await axios.get(
+        `http://localhost:5000/api/ulasan/${idMitra}`
+      );
+      if (res.data.success == true) {
+        setUlasan(res.data.data);
       }
     } catch (error) {
       console.log(error.response);
@@ -155,10 +170,12 @@ function PackageDetail() {
             <MitraTravelSection
               nama={DetailMitra.nama_mitra}
               noizin={DetailMitra.no_izin_umroh}
+              rating={DetailMitra.rating}
+              profil={`http://localhost:5000/images/${DetailMitra.foto_profil}`}
             />
           )}
 
-          <TestimonialSection />
+          <TestimonialSection testimoni={Ulasan} />
 
           <FasilitasUmrohSection
             fasilitas={DetailPaket == null ? "" : DetailPaket.fasilitas_umroh}

@@ -1,7 +1,7 @@
 import React from "react";
 import Testimonial from "@/components/testimonial";
 
-function TestimonialSection() {
+function TestimonialSection({ testimoni }) {
   return (
     <section id="testimonial">
       <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20  rounded-xl md:mt-[50px] sm:mt[30px] mt-[15px]">
@@ -10,9 +10,8 @@ function TestimonialSection() {
             Testimoni Travel
           </p>
         </div>
-        <Testimonial />
-        <Testimonial />
-        <Testimonial />
+        {testimoni == null ? <div></div> : <Testimonial />}
+
         <div className="h-[20px]"></div>
       </div>
     </section>

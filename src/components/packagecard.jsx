@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { isMobile, isTablet } from "react-device-detect";
-// import { format } from "date-fns";
+import { format } from "date-fns";
 //import Progress from 'flowbite-react';
 
 function PackageCard({
@@ -11,6 +11,7 @@ function PackageCard({
   price,
   banner,
   kuota,
+  sisaKuota,
   kamar,
   maskapai,
   durasi,
@@ -20,7 +21,7 @@ function PackageCard({
 }) {
   const numero = {
     total: kuota,
-    available: kuota,
+    available: sisaKuota,
   };
 
   const titleprice = (
@@ -37,7 +38,7 @@ function PackageCard({
   );
 
   const availability = (numero.available / numero.total) * 100 + "%";
-  const harga = price / 1000000;
+
   // const date = Date(waktuKeberangkatan);
   // const waktuBerangkat = format(date, "yyyy-MM-dd");
   const maxRating = 5;
@@ -62,6 +63,10 @@ function PackageCard({
     }
     return stars;
   };
+
+  const date = new Date(waktuKeberangkatan);
+  // Format tanggal
+  const WaktuKeberangkatan = format(date, "d MMM y");
 
   return (
     <a href={`/package/detail?id=${id}`}>
@@ -132,7 +137,7 @@ function PackageCard({
               </div>
               <div className="flex items-center justify-start">
                 <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
-                  9 Sep, 2023
+                  {WaktuKeberangkatan}
                 </p>
               </div>
             </div>
