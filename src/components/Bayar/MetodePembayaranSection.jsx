@@ -2,10 +2,19 @@ import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 function MetodePembayaranSection() {
+  const Logo = ["bca.png", "mega.jpeg", "bsi.jpeg"];
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(
+    "Pilih Tujuan Transfer Bank "
+  );
+  const [selectedImage, setSelectedImage] = useState(Logo[0]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+  };
+  const handleItemClick = (clickedItem, image) => {
+    setSelectedItem(clickedItem);
+    setSelectedImage(image);
   };
   return (
     <section>
@@ -51,7 +60,8 @@ function MetodePembayaranSection() {
             >
               <div className="border-2 rounded-md bg-white">
                 <Image
-                  src={"/assets/images/bca.png"}
+                  Image
+                  src={`/assets/images/${selectedImage}`}
                   alt=""
                   width={55}
                   height={55}
@@ -68,27 +78,32 @@ function MetodePembayaranSection() {
                 aria-orientation="vertical"
                 aria-labelledby="options-menu"
               >
-                <a
+                <button
                   href="#"
-                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                  className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
                   role="menuitem"
+                  onClick={() => handleItemClick("BCA", Logo[0])}
                 >
-                  Item 1
-                </a>
-                <a
+                  BCA
+                </button>
+                <button
                   href="#"
-                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                  className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
                   role="menuitem"
+                  onClick={() => handleItemClick("BANK MEGA", Logo[1])}
                 >
-                  Item 2
-                </a>
-                <a
+                  BANK MEGA
+                </button>
+                <button
                   href="#"
-                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                  className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start text-start"
                   role="menuitem"
+                  onClick={() =>
+                    handleItemClick("BANK SYARIAH INDONESIA", Logo[2])
+                  }
                 >
-                  Item 3
-                </a>
+                  BANK SYARIAH INDONESIA
+                </button>
               </div>
             )}
           </div>
@@ -99,8 +114,9 @@ function MetodePembayaranSection() {
               id="options-menu"
               aria-haspopup="true"
               aria-expanded={isOpen}
+              onClick={toggleDropdown}
             >
-              Tujuan Transfer Bank &#40;Transfer BCA&#41;
+              {selectedItem}
             </button>
           </div>
         </div>
