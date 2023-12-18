@@ -56,7 +56,6 @@ function Register() {
                 <div className="max-w-md">
                   <div className="mb-2 block"></div>
                   <TextInput
-
                     id="telp"
                     onChange={(e) => setNoWhatsapp(e.target.value)}
                     placeholder="Nomor Whatsapp"
@@ -86,9 +85,12 @@ function Register() {
                 />
               </div>
 
-              <Button type="submit" className="bg-[#E3B02B]">
-                Submit
-              </Button>
+              <button
+                type="submit"
+                className="bg-[#E3B02B] p-2 rounded-lg text-white hover:bg-[#bb9023]"
+              >
+                Register
+              </button>
               <div className="flex justify-center">
                 <p className="text-black text-sm">Sudah Punya Akun?</p>
                 <a href="/login">
