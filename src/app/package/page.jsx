@@ -25,55 +25,57 @@ async function Package() {
 
   return (
     <div className="bg pb-10">
-      <FilterPackages />
-      <div className="h-[40px]"></div>
-      <div className="flex  pt-5 bg-cover  bg-[url('/assets/images/image2.png')] z-10 relative">
-        {/* <FilterIsMobilePackage /> */}
-        <FilterNotMobilePackage />
-        <div className="lg:w-8/12 w-full mx-auto lg:ml-10 lg:mr-20 lg:p-0 px-5">
-          <div className="bg-white shadow-xl rounded-xl lg:w-10/12 w-full">
-            <div className="flex lg:flex-row flex-col">
-              <div className="lg:w-3/6 w-full p-5 py-3">
-                <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
-                  Jenis Keberangkatan
-                </h1>
-                <Dropdown />
-              </div>
-              <div className="lg:w-3/6 w-full p-5 lg:py-3 pt-0">
-                <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
-                  Waktu Keberangkatan
-                </h1>
-                <Dropdown />
+      <div className="px-40 bg-cover  bg-[url('/assets/images/image2.png')]">
+        <FilterPackages />
+        <div className="h-[40px]"></div>
+        <div className="flex  pt-5   z-10 relative">
+          {/* <FilterIsMobilePackage /> */}
+          <FilterNotMobilePackage />
+          <div className="lg:w-8/12 w-full mx-auto lg:ml-10 lg:mr-20 lg:p-0 px-5">
+            <div className="bg-white shadow-xl rounded-xl lg:w-11/12 w-full">
+              <div className="flex lg:flex-row flex-col">
+                <div className="lg:w-3/6 w-full p-5 py-3">
+                  <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
+                    Jenis Keberangkatan
+                  </h1>
+                  <Dropdown />
+                </div>
+                <div className="lg:w-3/6 w-full p-5 lg:py-3 pt-0">
+                  <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
+                    Waktu Keberangkatan
+                  </h1>
+                  <Dropdown />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="mt-2 ">
-            <h1 className="text-xl font-semibold  my-5">
-              List Paket Umroh Yang Tersedia
-            </h1>
-            <div className="mahfud lg:grid-cols-2 md:grid-cols-3 grid-cols-2 md:gap-10 gap-2">
-              {DataPaket == null ? (
-                <div></div>
-              ) : (
-                DataPaket.map((data, index) => {
-                  return (
-                    <PackageCard
-                      key={index}
-                      id={data._id}
-                      banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
-                      durasi={data.durasi_perjalanan}
-                      ratingHotel={data.rating_hotel}
-                      kamar={data.pilihan_kamar}
-                      kuota={data.kuota}
-                      lokasi={data.kota_keberangkatan}
-                      maskapai={data.maskapai_penerbangan}
-                      price={data.price}
-                      title={data.title}
-                      waktuKeberangkatan={data.waktu_keberangkatan}
-                    />
-                  );
-                })
-              )}
+            <div className="mt-2 ">
+              <h1 className="text-xl font-semibold  my-5">
+                List Paket Umroh Yang Tersedia
+              </h1>
+              <div className="mahfud lg:grid-cols-2 md:grid-cols-3 grid-cols-2 md:gap-10 gap-2">
+                {DataPaket == null ? (
+                  <div></div>
+                ) : (
+                  DataPaket.map((data, index) => {
+                    return (
+                      <PackageCard
+                        key={index}
+                        id={data._id}
+                        banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
+                        durasi={data.durasi_perjalanan}
+                        ratingHotel={data.rating_hotel}
+                        kamar={data.pilihan_kamar}
+                        kuota={data.kuota}
+                        lokasi={data.kota_keberangkatan}
+                        maskapai={data.maskapai_penerbangan}
+                        price={data.price}
+                        title={data.title}
+                        waktuKeberangkatan={data.waktu_keberangkatan}
+                      />
+                    );
+                  })
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ function TentangKami() {
             </div>
           </div>
 
-          <div className="md:flex gap-10 mt-20 md:mx-64 ">
+          <div className="md:flex gap-10 mt-20 md:mx-20 ">
             <div className="my-auto ">
               <svg
                 width="70"
@@ -59,7 +59,7 @@ function TentangKami() {
               Ipsum
             </div>
           </div>
-          <div className="flex gap-10 mt-20 md:mx-64">
+          <div className="flex gap-10 mt-20 md:mx-20">
             <div className="my-auto">
               <p className="font-semibold">Sejarah Umrohku</p>
               is Lorem Ipsum is Lorem Ips lorem Ipsum is Lorem Ipsum and Iorem
