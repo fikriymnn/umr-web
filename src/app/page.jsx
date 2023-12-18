@@ -58,6 +58,7 @@ export default async function Home() {
                       ratingHotel={data.rating_hotel}
                       kamar={data.pilihan_kamar}
                       kuota={data.kuota}
+                      sisaKuota={data.sisa_kuota}
                       lokasi={data.kota_keberangkatan}
                       maskapai={data.maskapai_penerbangan}
                       price={data.price}

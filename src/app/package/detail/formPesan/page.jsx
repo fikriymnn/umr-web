@@ -8,6 +8,7 @@ import StepByStep from "@/components/StepByStep";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import DatadiriFoam from "@/components/datadiriFoam";
 import TipePembayaranFoam from "@/components/tipePembayaranFoam";
+import MetodePembayaranSection from "@/components/Bayar/MetodePembayaranSection";
 
 function FormPesan() {
   return (
@@ -24,6 +25,9 @@ function FormPesan() {
             </section>
             <section>
               <DatadiriFoam />
+            </section>
+            <section>
+              <MetodePembayaranSection />
             </section>
             <section>
               <div className=" w-full lg:px-6 px-4 mb-36  mt-5 lg:text-base sm:text-sm text-xs">

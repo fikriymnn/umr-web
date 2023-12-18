@@ -2,14 +2,23 @@ import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 function MetodePembayaranSection() {
+  const Logo = ["bca.png", "mega.jpeg", "bsi.jpeg"];
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(
+    "Pilih Tujuan Transfer Bank "
+  );
+  const [selectedImage, setSelectedImage] = useState(Logo[0]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+  const handleItemClick = (clickedItem, image) => {
+    setSelectedItem(clickedItem);
+    setSelectedImage(image);
+  };
   return (
     <section>
-      <div className="lg:ml-20 mx-4 lg:w-6/12 md:w-7/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+      <div className=" my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
         <div className="flex lg:px-7 px-4 py-6 gap-2">
           <svg
             width="32"
@@ -45,11 +54,14 @@ function MetodePembayaranSection() {
         </div>
         <div className="relative text-left md:px-7 px-4 flex">
           <div className="relative my-auto">
-
-            <button className="flex  py-3 gap-2 rounded-md bg-white" onClick={toggleDropdown}>
+            <button
+              className="flex  py-3 gap-2 rounded-md bg-white"
+              onClick={toggleDropdown}
+            >
               <div className="border-2 rounded-md bg-white">
                 <Image
-                  src={"/assets/images/bca.png"}
+                  Image
+                  src={`/assets/images/${selectedImage}`}
                   alt=""
                   width={55}
                   height={55}
@@ -66,43 +78,46 @@ function MetodePembayaranSection() {
                 aria-orientation="vertical"
                 aria-labelledby="options-menu"
               >
-                <a
+                <button
                   href="#"
-                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                  className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
                   role="menuitem"
+                  onClick={() => handleItemClick("BCA", Logo[0])}
                 >
-                  Item 1
-                </a>
-                <a
+                  BCA
+                </button>
+                <button
                   href="#"
-                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                  className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
                   role="menuitem"
+                  onClick={() => handleItemClick("BANK MEGA", Logo[1])}
                 >
-                  Item 2
-                </a>
-                <a
+                  BANK MEGA
+                </button>
+                <button
                   href="#"
-                  className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                  className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start text-start"
                   role="menuitem"
+                  onClick={() =>
+                    handleItemClick("BANK SYARIAH INDONESIA", Logo[2])
+                  }
                 >
-                  Item 3
-                </a>
+                  BANK SYARIAH INDONESIA
+                </button>
               </div>
             )}
           </div>
           <div className="relative my-auto  font-medium ">
             <button
-
               type="button"
               className="inline-flex justify-center w-full px-4 py-2 text-sm    font-medium  bg-white  border-neutral-300 rounded-md hover:bg-neutral-100 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:bg-neutral-200"
               id="options-menu"
               aria-haspopup="true"
               aria-expanded={isOpen}
+              onClick={toggleDropdown}
             >
-              Tujuan Transfer Bank &#40;Transfer BCA&#41;
+              {selectedItem}
             </button>
-
-
           </div>
         </div>
         <div className="md:px-7 px-4 py-7 ">
@@ -134,7 +149,7 @@ function MetodePembayaranSection() {
           </div>
         </div>
       </div>
-      <div className="lg:ml-20 mx-4 lg:w-6/12 md:w-7/12 w-11-12 my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+      <div className=" my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
         <div className="lg:px-7 px-4 flex justify-between pt-5 mb-7 ">
           <p className="font-bold text-base">Total Harga</p>
           <p className="font-bold text-base text-amber-400">Rp 39.500.00</p>

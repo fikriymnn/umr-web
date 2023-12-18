@@ -1,10 +1,15 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import StepByStep2 from "@/components/Bayar/StepByStep2";
 
 function KonfirmasiBayar() {
   return (
     <>
       <div className="bg w-full h-full md:px-14 px-5 py-10">
+        <div className="mb-5">
+          <StepByStep2 />
+        </div>
         <div className="bg-white rounded-md md:w-9/12 h-full md:px-7 px-5 py-6 shadow-xl">
           <div className="">
             <div className="flex  gap-5 ">
@@ -110,43 +115,62 @@ function KonfirmasiBayar() {
               </div>
             </div>
             <div className=" flex justify-between mt-5 mb-7 ">
-              <p className="font-bold md:text-xl sm:text-lg text-base">Total Harga</p>
-              <p className="font-bold md:text-xl sm:text-lg text-base text-amber-400">Rp 39.500.00</p>
+              <p className="font-bold md:text-xl sm:text-lg text-base">
+                Total Harga
+              </p>
+              <p className="font-bold md:text-xl sm:text-lg text-base text-amber-400">
+                Rp 39.500.00
+              </p>
             </div>
-            <p className="md:text-base sm:text-sm text-xs font-semibold mt-4">Transaksi Pembayaran</p>
-            <p className="md:text-4xl sm:text-3xl text-2xl">4564 8957 0999 4444</p>
+            <p className="md:text-base sm:text-sm text-xs font-semibold mt-4">
+              Transaksi Pembayaran
+            </p>
+            <p className="md:text-4xl sm:text-3xl text-2xl">
+              4564 8957 0999 4444
+            </p>
             <p>
               Silahkan lakukan transaksi pembayaran kepada nomor rekening di
               atas.
             </p>
-            <p className="md:text-base sm:text-sm text-xs font-semibold mt-4">
-              Unggah Bukti Pembayaran
-            </p>
-            <div className="border-2 border-slate-200 rounded-[8px] md:p-2 p-[2px]">
-              <input
-                type="file"
-                className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
-              />
-            </div>
-            <div className="md:text-base sm:text-sm text-xs my-2">
-              <p>
-                Unggah foto bukti transfer anda agar pesanan bisa dikonfirmasi.
-                anda bisa mengirim bukti transaksi dalam kurun waktu 24 jam
-                kedepan.
+
+            {/* THIS IS FORM */}
+            <form>
+              <p className="md:text-base sm:text-sm text-xs font-semibold mt-4">
+                Unggah Bukti Pembayaran
               </p>
-              <p className="text-amber-500">
-                *untuk mengakses halaman ini kembali setelah keluar, buka laman
-                <span className="font-semibold ms-1">
-                  akun &gt; pesanan saya &gt; belum bayar
-                </span>
-                , lalu klik tombol bayar
-              </p>
-            </div>
-            <div>
-              <div className="">
-                <a href="/akun/PesananSaya/Notice" className="flex items-center justify-center text-center w-full hover:bg-amber-200  rounded-md bg-amber-400 font-semibold h-10">Kirim</a>
+              <div className="border-2 border-slate-200 rounded-[8px] md:p-2 p-[2px]">
+                <input
+                  type="file"
+                  required
+                  className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
+                />
               </div>
-            </div>
+              <div className="md:text-base sm:text-sm text-xs my-2">
+                <p>
+                  Unggah foto bukti transfer anda agar pesanan bisa
+                  dikonfirmasi. anda bisa mengirim bukti transaksi dalam kurun
+                  waktu 24 jam kedepan.
+                </p>
+                <p className="text-amber-500">
+                  *untuk mengakses halaman ini kembali setelah keluar, buka
+                  laman
+                  <span className="font-semibold ms-1">
+                    akun &gt; pesanan saya &gt; belum bayar
+                  </span>
+                  , lalu klik tombol bayar
+                </p>
+              </div>
+              <div>
+                <div className="">
+                  <button
+                    type="submit"
+                    className="flex items-center justify-center text-center w-full hover:bg-amber-200  rounded-md bg-amber-400 font-semibold h-10"
+                  >
+                    Kirim
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ function Facility({ lokasi, namaHotel, content, fasilitas }) {
       </h1>
       <div className="grid md:grid-cols-3 grid-cols-1 pt-5 gap-y-2 ">
         {fasilitas.FreeWiFi == false ? (
-          <div></div>
+          <div className=""></div>
         ) : (
           <div className="flex ">
             <div className="md:w-1/12 w-8    my-auto">

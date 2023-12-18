@@ -1,11 +1,16 @@
 "use client";
+import { set } from "date-fns/esm/fp";
 import { useState } from "react";
 
 function DropdownDetail() {
   const [isOpen, setIsOpen] = useState(false);
+  const [gender, setGender] = useState();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+  };
+  const handleClick = (clickedGender) => {
+    setGender(clickedGender);
   };
 
   return (
@@ -14,7 +19,7 @@ function DropdownDetail() {
         onClick={toggleDropdown}
         className="flex justify-between items-center px-2 py-3 mt-1 text-gray-800 border border-gray-300 rounded-lg  focus:outline-none focus:ring w-full"
       >
-        <span className="text-xs text-gray-400">Pilih</span>
+        <span className="text-xs text-gray-400">{gender}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -34,19 +39,20 @@ function DropdownDetail() {
       {isOpen && (
         <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
           {/* Dropdown content */}
-          <a
+          <button
             href="#"
             className="block px-4 py-2 text-gray-800 "
+            onClick={() => handleClick("Laki-Laki")}
           >
-            Option 1
-          </a>
-          <a
+            Laki-Laki
+          </button>
+          <button
             href="#"
             className="block px-4 py-2 text-gray-800 "
+            onClick={() => handleClick("Perempuan")}
           >
-            Option 2
-          </a>
-
+            Perempuan
+          </button>
         </div>
       )}
     </div>

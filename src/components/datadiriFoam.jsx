@@ -9,7 +9,7 @@ import { Carousel } from "flowbite";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 
 import { useState } from "react";
-function DatadiriFoam({ }) {
+function DatadiriFoam({}) {
   const [jamaah, setJamaah] = useState([
     { gender: "", name: "", noWhatsapp: "", email: "" },
   ]);
@@ -174,15 +174,6 @@ function DatadiriFoam({ }) {
                 alt=""
               />
             </button>
-          </div>
-          <div className="pb-10 ">
-            <a href="/package/detail/bayar">
-              <div className="flex justify-center  bg-[#E3B02B] hover:bg-[#fad26e] m-auto md:rounded-xl rounded-lg md:p-3 p-2 items-center md:w-11/12 w-10/12 ">
-                <p className="font-bold md:text-base text-sm">
-                  Lanjut Pembayaran
-                </p>
-              </div>
-            </a>
           </div>
         </div>
       </div>

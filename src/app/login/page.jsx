@@ -59,9 +59,12 @@ function Login() {
                 />
               </div>
 
-              <Button type="submit" className="bg-[#E3B02B]">
-                Submit
-              </Button>
+              <button
+                type="submit"
+                className="bg-[#E3B02B] p-2 rounded-lg text-white hover:bg-[#bb9023]"
+              >
+                Login
+              </button>
               <div className="flex justify-center">
                 <p className="text-black text-sm">Belum Punya Akun?</p>
                 <a href="/register">
