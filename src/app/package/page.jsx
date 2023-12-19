@@ -25,14 +25,14 @@ async function Package() {
 
   return (
     <div className="bg pb-10">
-      <div className="px-40 bg-cover  bg-[url('/assets/images/image2.png')]">
+      <div className=" lg:px-20 bg-cover  bg-[url('/assets/images/image2.png')]">
         <FilterPackages />
         <div className="h-[40px]"></div>
         <div className="flex  pt-5   z-10 relative">
           {/* <FilterIsMobilePackage /> */}
           <FilterNotMobilePackage />
           <div className="lg:w-8/12 w-full mx-auto lg:ml-10 lg:mr-20 lg:p-0 px-5">
-            <div className="bg-white shadow-xl rounded-xl lg:w-11/12 w-full">
+            <div className="bg-white shadow-xl rounded-xl lg:w-full w-full">
               <div className="flex lg:flex-row flex-col">
                 <div className="lg:w-3/6 w-full p-5 py-3">
                   <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">

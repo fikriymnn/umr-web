@@ -94,7 +94,7 @@ function PackageDetail() {
 
   return (
     <div className="bg">
-      <div className="lg:flex  pt-10  bg-contain bg-[url('/assets/images/image2.png')] z-10">
+      <div className="lg:flex lg:px-10  pt-10  bg-contain bg-[url('/assets/images/image2.png')] z-10">
         <div className="lg:w-8/12 sm:w-full  w-full">
           {DetailPaket == null ? (
             <div>
