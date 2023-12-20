@@ -23,6 +23,7 @@ function Login() {
       );
       alert("login success");
       push("/");
+
     } catch (error) {
       alert(error.response.data.message);
     }

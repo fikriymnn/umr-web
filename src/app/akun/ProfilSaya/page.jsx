@@ -12,7 +12,7 @@ function ProfilSaya() {
 
   useEffect(() => {
     getuser();
-  });
+  }, [1]);
 
   async function getuser() {
     try {

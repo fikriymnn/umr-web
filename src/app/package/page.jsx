@@ -7,6 +7,7 @@ import FilterNotMobilePackage from "@/components/FilterNotMobilePackage";
 import FilterIsMobilePackage from "@/components/FilterIsMobilePackage";
 import FilterPackages from "@/components/FilterPackages";
 import axios from "axios";
+
 async function GetDataPaket() {
   let data;
   try {
@@ -29,7 +30,6 @@ async function Package() {
         <FilterPackages />
         <div className="h-[40px]"></div>
         <div className="flex  pt-5   z-10 relative">
-          {/* <FilterIsMobilePackage /> */}
           <FilterNotMobilePackage />
           <div className="lg:w-8/12 w-full mx-auto lg:ml-10 lg:mr-20 lg:p-0 px-5">
             <div className="bg-white shadow-xl rounded-xl lg:w-full w-full">
