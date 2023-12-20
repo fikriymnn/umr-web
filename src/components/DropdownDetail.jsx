@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function DropdownDetail() {
   const [isOpen, setIsOpen] = useState(false);
-  const [gender, setGender] = useState();
+  const [gender, setGender] = useState("pilih");
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
