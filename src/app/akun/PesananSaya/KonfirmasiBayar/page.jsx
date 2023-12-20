@@ -2,8 +2,19 @@
 import React from "react";
 import Image from "next/image";
 import StepByStep2 from "@/components/Bayar/StepByStep2";
+import { useRouter } from "next/navigation";
 
 function KonfirmasiBayar() {
+  const { push } = useRouter();
+  async function submitBukti(e) {
+    e.preventDefault();
+    try {
+
+      push("/akun/PesananSaya/Notice");
+    } catch (error) {
+      alert(error);
+    }
+  }
   return (
     <>
       <div className="bg w-full h-full md:px-14 px-5 py-10">
@@ -134,7 +145,7 @@ function KonfirmasiBayar() {
             </p>
 
             {/* THIS IS FORM */}
-            <form>
+            <form onSubmit={submitBukti}>
               <p className="md:text-base sm:text-sm text-xs font-semibold mt-4">
                 Unggah Bukti Pembayaran
               </p>

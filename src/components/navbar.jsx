@@ -25,7 +25,7 @@ export default function CustomNavbar() {
 
   useEffect(() => {
     getuser();
-  });
+  }, [1]);
 
   async function getuser() {
     try {
@@ -188,24 +188,32 @@ export default function CustomNavbar() {
                     </a>
                   </div>
                   <div className="md:h-full bg-slate-200 md:bg-white p-5 flex flex-col md:flex-row -center gap-5 font-semibold text-[17px] ">
-                    <div className="flex gap-5 items-center">
-                      <a className="md:hover:text-[#E3B02B]" href="/login">
-                        Masuk
-                      </a>
-                      <a href="/register">
-                        <div className="px-4 py-1 rounded-md bgprim text-white md:hover:bg-white md:hover:border border-[#E3B02B] md:hover:shadow-xl md:hover:text-[#E3B02B] duration-100">
-                          Daftar
-                        </div>
-                      </a>
-                    </div>
-                    <a
-                      href="/akun/ProfilSaya"
-                      className="flex items-center gap-2"
-                    >
-                      <div className="bg-slate-400 rounded-full w-10 h-10"></div>
-                      <p>{DataUser.nama_lengkap}</p>
+                    {getuser ? (
+                      <>
+                        <a
+                          href="/akun/ProfilSaya"
+                          className="flex items-center gap-2"
+                        >
+                          <div className="bg-slate-400 rounded-full w-10 h-10"></div>
 
-                    </a>
+                          <p>{DataUser.nama_lengkap}</p>
+
+                        </a>
+                      </>
+                    ) : (
+                      <>
+                        <div className="flex gap-5 items-center">
+                          <a className="md:hover:text-[#E3B02B]" href="/login">
+                            Masuk
+                          </a>
+                          <a href="/register">
+                            <div className="px-4 py-1 rounded-md bgprim text-white md:hover:bg-white md:hover:border border-[#E3B02B] md:hover:shadow-xl md:hover:text-[#E3B02B] duration-100">
+                              Daftar
+                            </div>
+                          </a>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </>
               )}
@@ -217,29 +225,3 @@ export default function CustomNavbar() {
     </>
   );
 }
-// {DataUser ? (
-//   <>
-//     <a
-//       href="/akun/ProfilSaya"
-//       className="flex items-center gap-2"
-//     >
-//       <div className="bg-slate-400 rounded-full w-10 h-10"></div>
-
-//       <p>{DataUser.nama_lengkap}</p>
-
-//     </a>
-//   </>
-// ) : (
-//   <>
-//     <div className="flex gap-5 items-center">
-//       <a className="md:hover:text-[#E3B02B]" href="/login">
-//         Masuk
-//       </a>
-//       <a href="/register">
-//         <div className="px-4 py-1 rounded-md bgprim text-white md:hover:bg-white md:hover:border border-[#E3B02B] md:hover:shadow-xl md:hover:text-[#E3B02B] duration-100">
-//           Daftar
-//         </div>
-//       </a>
-//     </div>
-//   </>
-// )}

@@ -1,6 +1,33 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+
 
 function NamaCustomer() {
+  const [DataUser, setDataUser] = useState({
+    nama_lengkap: "",
+
+  });
+
+  useEffect(() => {
+    getuser();
+  }, [1]);
+
+  async function getuser() {
+    try {
+      const res = await axios.get("http://localhost:5000/api/user", {
+        withCredentials: true,
+      });
+      if (res.data.success == true) {
+        setDataUser(res.data.data);
+
+        console.log(res.data.data._id);
+      }
+    } catch (error) {
+      console.log(error.response);
+    }
+  }
   return (
     <div>
       <div className="md:py-[30px] sm:py-[30px] py-[15px]">
@@ -26,7 +53,7 @@ function NamaCustomer() {
                 Nama Pemesan
               </p>
               <p className="md:text-xl sm:text-lg text-base font-medium ">
-                Rudi Kustandi
+                {DataUser.nama_lengkap}
               </p>
             </div>
           </div>

@@ -182,9 +182,9 @@ function BelumBayar() {
                   <p className="my-2 text-center md:text-start">
                     Rp 39.500.000
                   </p>
-                  <button className="bg-[#E3B02B] px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 hover:text-[#E3B02B] hover:bg-black">
+                  <a href="/akun/PesananSaya/KonfirmasiBayar" className="bg-[#E3B02B] px-7 rounded-lg md:my-auto md:mx-0 mx-auto py-2 md:mt-0 mt-2 hover:text-[#E3B02B] hover:bg-black">
                     Bayar
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
