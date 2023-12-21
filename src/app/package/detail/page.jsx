@@ -99,7 +99,7 @@ function PackageDetail() {
           {DetailPaket == null ? (
             <div>
               <section id="skeleton">
-                <div className=" bg-white md:w-10/12 w-11/12  md:ms-20   rounded-xl mx-auto">
+                <div className=" bg-white md:w-11/12 w-11/12    rounded-xl mx-auto">
                   <div className=" rounded-t-xl center "></div>
                   <div className="bg-gray-100 w-full md:h-[315px] h-[200px]  rounded-xl"></div>
                   <div className="grid grid-cols-2 gap-5 py-7 md:px-9 px-4">
@@ -149,7 +149,7 @@ function PackageDetail() {
           {DetailMitra == null ? (
             <div>
               <section id="skeleton">
-                <div className="bg-white md:w-10/12 w-11/12 mx-auto md:ms-20 rounded-xl md:mt-[50px] sm:mt[30px] mt-[15px]">
+                <div className="bg-white md:w-11/12 w-11/12 mx-auto  rounded-xl md:mt-[50px] sm:mt[30px] mt-[15px]">
                   <div className=" md:w-[250px]  w-[150px] bg-gray-100 mx-auto rounded-b-xl"></div>
                   <div className="flex md:py-7 py-3 md:px-9 px-4">
                     <div className="md:w-3/12 sm:w-3/12 w-2/12">
@@ -174,8 +174,30 @@ function PackageDetail() {
               profil={`http://localhost:5000/images/${DetailMitra.foto_profil}`}
             />
           )}
+          {DetailPaket == null ? (
+            <div>
+              <section id="skeleton">
+                <div className="bg-white md:w-11/12 w-11/12 mx-auto  rounded-xl md:mt-[50px] sm:mt[30px] mt-[15px]">
 
-          <TestimonialSection testimoni={Ulasan} />
+                  <div className="flex md:py-7 py-3 md:px-9 px-4">
+                    <div className="md:w-3/12 sm:w-3/12 w-2/12">
+                      <div className="md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] w-[40px] h-[40px] bg-gray-100 rounded-full"></div>
+                    </div>
+                    <div className="w-full ps-5">
+                      <div className="md:flex md:my-3 pb-1 gap-10">
+                        <div className="flex md:gap-7">
+                          <div className="ps-1 flex items-center space-x-1 my-auto"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          ) : (
+            <TestimonialSection testimoni={Ulasan} />
+
+          )}
 
           <FasilitasUmrohSection
             fasilitas={DetailPaket == null ? "" : DetailPaket.fasilitas_umroh}
@@ -270,7 +292,7 @@ function PackageDetail() {
         {Paket == null ? (
           <div></div>
         ) : (
-          Paket.map((data, i) => {
+          Paket.paket.map((data, i) => {
             return (
               <PackageCard
                 key={i}
