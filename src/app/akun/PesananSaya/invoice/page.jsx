@@ -10,7 +10,7 @@ const GenericPdfDownloader = () => {
 
     const downloadPdfDocument = () => {
         const input = document.getElementById("testId");
-        html2canvas(input, { width: 900, height: 1900 })
+        html2canvas(input, { width: 1200, height: 1600 })
             .then((canvas) => {
                 const imgData = canvas.toDataURL('image/png');
                 const pdf = new jsPDF('p', 'mm', 'a4');
@@ -29,7 +29,7 @@ const GenericPdfDownloader = () => {
             </div>
             <div className='flex justify-center items-center bg-slate-100'>
 
-                <div id="testId" style={{ width: 900, height: 700 }} className=''>
+                <div id="testId" style={{ width: 1200, height: 1600 }} className=''>
                     <div>
 
                         <div className='flex justify-between'>
@@ -38,8 +38,8 @@ const GenericPdfDownloader = () => {
                                 <Image
                                     src="/assets/images/ibadahku1k2.png"
                                     alt=""
-                                    width={200}
-                                    height={200}
+                                    width={100}
+                                    height={100}
                                 />
                                 <p className='font-bold md:text-2xl sm:text-xl text-lg'>IBADAHKU</p>
 
@@ -103,7 +103,7 @@ const GenericPdfDownloader = () => {
                         <tbody>
                             <tr className="flex">
                                 <td className="flex flex-col w-[50%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs">
-                                    Paket super hemat bersama
+                                    Paket super hemat bersama Komeng
                                 </td>
                                 <td className="flex flex-col  w-[15%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs">
                                     3
