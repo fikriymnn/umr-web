@@ -288,7 +288,7 @@ function PackageDetail() {
         </h1>
       </div>
 
-      <div className="grid  lg:grid-cols-3 md:grid-cols-3 grid-cols-2 lg:gap-10 md:gap-5 gap-2 lg:py-7 py-3 lg:px-9 px-4">
+      <div className="grid  lg:grid-cols-3 md:grid-cols-3 grid-cols-2 lg:gap-10 md:gap-5 gap-2 lg:py-7 py-3 lg:px-20 px-4">
         {Paket == null ? (
           <div></div>
         ) : (
