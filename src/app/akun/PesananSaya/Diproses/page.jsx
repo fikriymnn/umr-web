@@ -1,9 +1,25 @@
+'use client'
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
 import React from "react";
 import AccountNav from "@/components/accountNav";
 import OrderNav from "@/components/orderNav";
 import Image from "next/image";
 
 function Diproses() {
+  const downloadPdfDocument = () => {
+    const input = document.getElementById("testId");
+    html2canvas(input, { width: 1200, height: 1600 })
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        // Sesuaikan koordinat dan ukuran sesuai kebutuhan Anda
+        pdf.addImage(imgData, 'JPEG', 10, 10, 180, 240, '', 'FAST'); // Ganti 'FAST' dengan nilai kualitas yang diinginkan
+
+        pdf.save(`invoice.pdf`);
+      });
+
+  }
   return (
     <div className="md:px-14 px-5 py-10 bg-slate-100">
       <div className=" flex md:flex-row flex-col">
@@ -184,8 +200,16 @@ function Diproses() {
                   <p className="my-2 text-center md:text-start">
                     Rp 29.999.999
                   </p>
-                  <div className="bg-orange-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base">
-                    Pesanan Diproses
+                  <div className="flex gap-2">
+                    <div className="flex justify-center">
+                      <button onClick={downloadPdfDocument} className="bg-amber-500 px-7 rounded-lg md:py-0 py-1 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base  bg-no-repeat bg-center"
+                        style={{ backgroundImage: `url(/assets/vector/download.svg)` }}>
+
+                      </button>
+                    </div>
+                    <div className="bg-orange-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base">
+                      Pesanan Diproses
+                    </div>
                   </div>
                 </div>
               </div>
