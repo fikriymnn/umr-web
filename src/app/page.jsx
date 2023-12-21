@@ -45,9 +45,21 @@ export default async function Home() {
             </p>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 md:gap-4 sm:gap-3 gap-2 pb-10">
               {DataPaket == null ? (
-                <div></div>
+                <div id="SKELETON" className="grid grid-cols-3 gap-80">
+                  <div className="bg-slate-100 w-72 h-44 rounded-lg">
+
+                  </div>
+                  <div className="bg-slate-100 w-72 h-44 rounded-lg">
+
+                  </div>
+                  <div className="bg-slate-100 w-72 h-44 rounded-lg">
+
+                  </div>
+
+
+                </div>
               ) : (
-                DataPaket.map((data, index) => {
+                DataPaket.paket.map((data, index) => {
                   return (
                     <PackageCard
                       key={index}

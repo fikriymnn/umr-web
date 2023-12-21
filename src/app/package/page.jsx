@@ -56,7 +56,7 @@ async function Package() {
                 {DataPaket == null ? (
                   <div></div>
                 ) : (
-                  DataPaket.map((data, index) => {
+                  DataPaket.paket.map((data, index) => {
                     return (
                       <PackageCard
                         key={index}

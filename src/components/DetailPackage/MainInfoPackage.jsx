@@ -48,7 +48,7 @@ function MainInfoPackage({
 
   return (
     <section id="main">
-      <div className=" bg-white md:w-10/12 w-11/12  md:ms-20   rounded-xl mx-auto">
+      <div className=" bg-white md:w-11/12 w-11/12     rounded-xl mx-auto">
         <div className=" rounded-t-xl center ">
           <p className="md:text-2xl text-sm font-bold text-center md:py-3 py-2 px-2 text-black ">
             {title}

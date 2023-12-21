@@ -184,8 +184,16 @@ function Diproses() {
                   <p className="my-2 text-center md:text-start">
                     Rp 29.999.999
                   </p>
-                  <div className="bg-orange-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base">
-                    Pesanan Diproses
+                  <div className="flex gap-2">
+                    <div className="flex justify-center">
+                      <a href="invoice" className="bg-amber-500 px-7 rounded-lg md:py-0 py-1 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base  bg-no-repeat bg-center"
+                        style={{ backgroundImage: `url(/assets/vector/download.svg)` }}>
+
+                      </a>
+                    </div>
+                    <div className="bg-orange-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base">
+                      Pesanan Diproses
+                    </div>
                   </div>
                 </div>
               </div>
