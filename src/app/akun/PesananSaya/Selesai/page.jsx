@@ -182,8 +182,17 @@ function Selesai() {
                   <p className="my-2 text-center md:text-start">
                     Rp 58.599.000
                   </p>
-                  <div className="bg-green-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center">
-                    Pesanan Selesai
+                  <div className="flex gap-2">
+                    <div className="flex justify-center">
+                      <div className="bg-amber-500 px-7 rounded-lg md:py-0 py-1 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base  bg-no-repeat bg-center"
+                        style={{ backgroundImage: `url(/assets/vector/download.svg)` }}>
+
+                      </div>
+                    </div>
+
+                    <div className="bg-green-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center">
+                      Pesanan Selesai
+                    </div>
                   </div>
                 </div>
               </div>

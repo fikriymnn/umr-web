@@ -15,6 +15,28 @@ function KonfirmasiBayar() {
       alert(error);
     }
   }
+  const maxRating = 5;
+  const rating = 1;
+  const renderStars = () => {
+    const stars = [];
+    for (let i = 0; i < maxRating; i++) {
+      const isColored = i < rating;
+      stars.push(
+        <div className="w-5">
+          <img
+            key={i}
+            src={
+              isColored
+                ? "/assets/vector/Star.svg"
+                : "/assets/vector/StarGray.svg"
+            }
+            alt={`Star ${i + 1} `}
+          />
+        </div>
+      );
+    }
+    return stars;
+  };
   return (
     <>
       <div className="bg w-full h-full md:px-14 px-5 py-10">
@@ -104,7 +126,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>Ini bintang</p>
+                {renderStars()}
               </div>
             </div>
             <p className="text-md font-semibold mt-4">Metode Pembayaran</p>

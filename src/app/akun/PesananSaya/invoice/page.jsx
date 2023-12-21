@@ -10,7 +10,7 @@ const GenericPdfDownloader = () => {
 
     const downloadPdfDocument = () => {
         const input = document.getElementById("testId");
-        html2canvas(input, { width: 1200, height: 1600 })
+        html2canvas(input, { width: 900, height: 1900 })
             .then((canvas) => {
                 const imgData = canvas.toDataURL('image/png');
                 const pdf = new jsPDF('p', 'mm', 'a4');
@@ -23,10 +23,13 @@ const GenericPdfDownloader = () => {
     }
     return (
         <>
-            <button onClick={downloadPdfDocument}>Download Pdf</button>
+            <div className='w-full flex justify-center items-center p-3'>
+
+                <button className='p-3 bg-green-500 text-white' onClick={downloadPdfDocument}>Download Pdf</button>
+            </div>
             <div className='flex justify-center items-center bg-slate-100'>
 
-                <div id="testId" style={{ width: 1200, height: 1600 }}>
+                <div id="testId" style={{ width: 900, height: 700 }} className=''>
                     <div>
 
                         <div className='flex justify-between'>
@@ -38,7 +41,7 @@ const GenericPdfDownloader = () => {
                                     width={200}
                                     height={200}
                                 />
-                                <p className='font-bold text-lg'>IBADAHKU</p>
+                                <p className='font-bold md:text-2xl sm:text-xl text-lg'>IBADAHKU</p>
 
                             </div>
 
@@ -46,16 +49,16 @@ const GenericPdfDownloader = () => {
 
                             <div className='text-end mb-10'>
 
-                                <p className='text-4xl font-bold'>INVOICE</p>
-                                <p>#1</p>
+                                <p className='md:text-6xl sm:text-4xl text-2xl font-bold'>INVOICE</p>
+                                <p className='text-xl mt-3'>#1</p>
                             </div>
                         </div>
 
                         <div className='flex justify-between mt-5'>
                             <div>
 
-                                <p>Bill To:</p>
-                                <p className='font-semibold'>Bukan Saya</p>
+                                <p className='md:text-xl sm:text-lg text-sm'>Bill To:</p>
+                                <p className='font-semibold md:text-xl sm:text-lg text-sm'>Bukan Saya</p>
 
 
 
@@ -63,18 +66,18 @@ const GenericPdfDownloader = () => {
                             <div className='flex gap-5 '>
                                 <div className='text-end flex flex-col gap-2'>
 
-                                    <p className='text-slate-500'>Date:</p>
-                                    <p className='text-slate-500'>Payment Terms:</p>
-                                    <p className='text-slate-500'>Due Date:</p>
-                                    <p className='text-slate-500'>PO Number:</p>
-                                    <p className='font-semibold'>Balance Due:</p>
+                                    <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>Date:</p>
+                                    <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>Payment Terms:</p>
+                                    <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>Due Date:</p>
+                                    <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>PO Number:</p>
+                                    <p className='font-semibold md:text-xl sm:text-lg text-sm'>Balance Due:</p>
                                 </div>
                                 <div className='text-end flex flex-col gap-2'>
-                                    <p className=''>Des 20, 1945</p>
-                                    <p className=''>3</p>
-                                    <p className=''>Dec 1, 1975</p>
-                                    <p className=''>2223344</p>
-                                    <p className='font-semibold text-lg'>IDR 96.000.000</p>
+                                    <p className='md:text-xl sm:text-lg text-sm'>Des 20, 1945</p>
+                                    <p className='md:text-xl sm:text-lg text-sm'>3</p>
+                                    <p className='md:text-xl sm:text-lg text-sm'>Dec 1, 1975</p>
+                                    <p className='md:text-xl sm:text-lg text-sm'>2223344</p>
+                                    <p className='font-semibold md:text-xl sm:text-lg text-sm'>IDR 96.000.000</p>
                                 </div>
 
                             </div>
@@ -83,32 +86,32 @@ const GenericPdfDownloader = () => {
                     <table className=" w-full rounded-lg mt-10">
                         <thead>
                             <tr className="flex bg-gray-900 rounded-lg">
-                                <th className="text-white flex flex-col w-[50%] md:p-3 p-2 font-semibold  md:text-base sm:text-sm text-xs text-start">
+                                <th className="text-white flex flex-col w-[50%] md:p-3 p-2 font-semibold  md:text-lg sm:text-sm text-xs text-start my-auto">
                                     Item
                                 </th>
-                                <th className="text-white flex flex-col w-[15%] md:p-3 p-2 font-semibold  md:text-base sm:text-sm text-xs text-start">
+                                <th className="text-white flex flex-col w-[15%] md:p-3 p-2 font-semibold  md:text-lg sm:text-sm text-xs text-start">
                                     Quantity
                                 </th>
-                                <th className="text-white flex flex-col   w-[15%] md:p-3 p-2 font-semibold  md:text-base sm:text-sm text-xs text-end">
+                                <th className="text-white flex flex-col   w-[15%] md:p-3 p-2 font-semibold  md:text-lg sm:text-sm text-xs text-end">
                                     Rate
                                 </th>
-                                <th className="text-white flex flex-col w-[20%] md:p-3 p-2 font-semibold  md:text-base sm:text-sm text-xs text-end">
+                                <th className="text-white flex flex-col w-[20%] md:p-3 p-2 font-semibold  md:text-lg sm:text-sm text-xs text-end">
                                     Amount
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr className="flex">
-                                <td className="flex flex-col w-[50%] md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+                                <td className="flex flex-col w-[50%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs">
                                     Paket super hemat bersama
                                 </td>
-                                <td className="flex flex-col  w-[15%] md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs">
+                                <td className="flex flex-col  w-[15%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs">
                                     3
                                 </td>
-                                <td className="flex flex-col w-[15%] md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs text-end">
+                                <td className="flex flex-col w-[15%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs text-end">
                                     IDR 32,000,000.00
                                 </td>
-                                <td className="flex flex-col w-[20%] md:p-3 p-2 font-semibold md:text-base sm:text-sm text-xs text-end">
+                                <td className="flex flex-col w-[20%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs text-end">
                                     IDR 96,000,000.00
                                 </td>
                             </tr>
@@ -119,25 +122,25 @@ const GenericPdfDownloader = () => {
                         <div className='flex gap-5 justify-end mt-20 '>
                             <div className='text-end flex flex-col gap-2'>
 
-                                <p className='text-slate-500'>SubTotal:</p>
-                                <p className='text-slate-500'>Tax 4%:</p>
-                                <p className='text-slate-500'>Total:</p>
-                                <p className='text-slate-500'>Amount Paid:</p>
+                                <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>SubTotal:</p>
+                                <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>Tax 4%:</p>
+                                <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>Total:</p>
+                                <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>Amount Paid:</p>
 
                             </div>
                             <div className='text-end flex flex-col gap-2'>
-                                <p className=''>IDR 96,000,000.00</p>
-                                <p className=''>IDR 3,000,000.00</p>
-                                <p className=''>IDR 99,000,000.00</p>
-                                <p className=''>IDR 30,000,000.00</p>
+                                <p className='md:text-xl sm:text-lg text-sm'>IDR 96,000,000.00</p>
+                                <p className='md:text-xl sm:text-lg text-sm'>IDR 3,000,000.00</p>
+                                <p className='md:text-xl sm:text-lg text-sm'>IDR 99,000,000.00</p>
+                                <p className='md:text-xl sm:text-lg text-sm'>IDR 30,000,000.00</p>
 
                             </div>
 
                         </div>
                     </div>
                     <div>
-                        <p>Note: </p>
-                        <p>
+                        <p className='md:text-lg sm:text-base text-sm'>Note: </p>
+                        <p className='md:text-lg sm:text-base text-sm'>
 
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus facilis adipisci illo? Neque eos dolorem alias ad, tempore ea voluptates, magnam, eum earum tenetur praesentium accusantium id eligendi labore quo.
                         </p>
