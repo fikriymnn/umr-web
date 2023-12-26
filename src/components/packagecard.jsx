@@ -99,7 +99,7 @@ function PackageCard({
           <div className=" pb-1">
             <div className="flex items-center justify-center">
               <div className="w-full md:h-7 h-5 rounded-md border md:border-2 relative border-black">
-                <div className="md:w-full sm:w-full w-full h-full absolute flex items-center justify-center text-center font-semibold md:text-sm sm:text-xs text-xs ">
+                <div className="md:w-full sm:w-full w-full h-full absolute flex items-center justify-center text-center font-semibold md:text-xs sm:text-xs text-xs ">
                   <p>Tersisa {numero.available} Paket</p>
                 </div>
                 <div
@@ -120,7 +120,7 @@ function PackageCard({
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
+                <p className="ps-1 text-black md:text-xs sm:text-xs text-[10px] my-auto">
                   {kamar}
                 </p>
               </div>
@@ -136,7 +136,7 @@ function PackageCard({
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
+                <p className="ps-1 text-black md:text-xs sm:text-xs text-[10px] my-auto">
                   {WaktuKeberangkatan}
                 </p>
               </div>
@@ -151,7 +151,7 @@ function PackageCard({
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
+                <p className="ps-1 text-black md:text-xs sm:text-xs text-[10px] my-auto">
                   {maskapai}
                 </p>
               </div>
@@ -166,7 +166,7 @@ function PackageCard({
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
+                <p className="ps-1 text-black md:text-xs sm:text-xs text-[10px] my-auto">
                   {lokasi}
                 </p>
               </div>
@@ -181,7 +181,7 @@ function PackageCard({
                 />
               </div>
               <div className="flex items-center justify-start">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] mb-auto">
+                <p className="ps-1 text-black md:text-xs sm:text-xs text-[10px] my-auto">
                   {durasi}
                 </p>
               </div>
@@ -196,7 +196,7 @@ function PackageCard({
                 />
               </div>
               <div className="md:flex-col flex ">
-                <p className="ps-1 text-black md:text-sm sm:text-xs text-[10px] my-auto">
+                <p className="ps-1 text-black md:text-xs sm:text-xs text-[10px] my-auto">
                   Hotel
                 </p>
                 <div className="md:w-11/12 w-[50px]">
