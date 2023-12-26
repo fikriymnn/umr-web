@@ -1,16 +1,23 @@
 
 'use client'
-import React from 'react';
+import { React, useState } from 'react';
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
 import Image from 'next/image';
-
 const GenericPdfDownloader = () => {
-
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const handleImageLoad = () => {
+        setImageLoaded(true);
+    };
     const downloadPdfDocument = () => {
+        if (!imageLoaded) {
+            console.warn('Image not fully loaded. Aborting PDF download.');
+            return;
+        }
+
         const input = document.getElementById("testId");
-        const scaleOptions = { scale: 2 }; // Set the scale to a fixed value (you can adjust this as needed)
+        const scaleOptions = { scale: 4 }; // Set the scale to a fixed value (you can adjust this as needed)
 
         html2canvas(input, { width: 1200, height: 1600, ...scaleOptions })
             .then((canvas) => {
@@ -40,6 +47,8 @@ const GenericPdfDownloader = () => {
                                     alt=""
                                     width={100}
                                     height={100}
+                                    onLoad={handleImageLoad}
+                                    crossOrigin="anonymous"
                                 />
                                 <p className='font-bold md:text-2xl sm:text-xl text-lg'>IBADAHKU</p>
 

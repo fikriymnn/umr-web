@@ -177,10 +177,10 @@ function Diproses() {
                 </div>
               </div>
               <div className="flex md:flex-row flex-col">
-                <div className="border-2 md:border-e-0 p-2 border-slate-200 md:w-[30%] text-2xl py-3 font-bold md:ps-12 ">
+                <div className="border-2 md:border-e-0 p-2 border-slate-200 md:w-[30%]  md:text-2xl sm:text-lg text-base py-3 font-bold md:ps-12 ">
                   <p className="my-2 text-center md:text-start">Total Biaya</p>
                 </div>
-                <div className="border-2 p-2 border-slate-200 md:w-[70%] md:border-t-2 border-t-0 text-2xl font-bold px-12 py-3 flex md:flex-row flex-col justify-between ">
+                <div className="border-2 p-2 border-slate-200 md:w-[70%] md:border-t-2 border-t-0  md:text-2xl sm:text-lg text-base font-bold px-12 py-3 flex md:flex-row flex-col justify-between ">
                   <p className="my-2 text-center md:text-start">
                     Rp 29.999.999
                   </p>
