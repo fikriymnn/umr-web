@@ -23,7 +23,7 @@ function FormPesan() {
               <NamaCustomer />
             </section>
             <section>
-              <TipePembayaranFoam />
+              {/* <TipePembayaranFoam /> */}
             </section>
             <section>
               <DatadiriFoam />
