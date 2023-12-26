@@ -11,17 +11,26 @@ import axios from "axios";
 export default function CustomNavbar() {
   const [comp, setComp] = useState(0);
   const [isClient, setIsClient] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+  };
 
   useEffect(() => {
+    handleResize();
     setIsClient(true);
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
   const toggleNav = () => {
     setComp((prevComp) => (prevComp === 1 ? 0 : 1));
   };
-  const [DataUser, setDataUser] = useState({
-    nama_lengkap: "",
-
-  });
+  const [DataUser, setDataUser] = useState(null);
 
   useEffect(() => {
     getuser();
@@ -188,7 +197,7 @@ export default function CustomNavbar() {
                     </a>
                   </div>
                   <div className="md:h-full bg-slate-200 md:bg-white p-5 flex flex-col md:flex-row -center gap-5 font-semibold text-[17px] ">
-                    {getuser ? (
+                    {DataUser != null ? (
                       <>
                         <a
                           href="/akun/ProfilSaya"
@@ -196,7 +205,7 @@ export default function CustomNavbar() {
                         >
                           <div className="bg-slate-400 rounded-full w-10 h-10"></div>
 
-                          <p>{DataUser.nama_lengkap}</p>
+                          <p>{DataUser == null ? "" : DataUser.nama_lengkap}</p>
 
                         </a>
                       </>
