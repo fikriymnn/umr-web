@@ -10,22 +10,22 @@ const GenericPdfDownloader = () => {
 
     const downloadPdfDocument = () => {
         const input = document.getElementById("testId");
-        html2canvas(input, { width: 1200, height: 1600 })
+        const scaleOptions = { scale: 2 }; // Set the scale to a fixed value (you can adjust this as needed)
+
+        html2canvas(input, { width: 1200, height: 1600, ...scaleOptions })
             .then((canvas) => {
                 const imgData = canvas.toDataURL('image/png');
                 const pdf = new jsPDF('p', 'mm', 'a4');
-                // Sesuaikan koordinat dan ukuran sesuai kebutuhan Anda
-                pdf.addImage(imgData, 'JPEG', 10, 10, 180, 240, '', 'FAST'); // Ganti 'FAST' dengan nilai kualitas yang diinginkan
-
+                pdf.addImage(imgData, 'JPEG', 10, 10, 180, 240, '', 'FAST');
                 pdf.save(`invoice.pdf`);
             });
-
     }
+
     return (
         <>
             <div className='w-full flex justify-center items-center p-3'>
 
-                <button className='p-3 bg-green-500 text-white' onClick={downloadPdfDocument}>Download Pdf</button>
+                <button className='p-3 bg-green-500 text-white' onClick={downloadPdfDocument}>Download PDF</button>
             </div>
             <div className='flex justify-center items-center bg-slate-100'>
 
