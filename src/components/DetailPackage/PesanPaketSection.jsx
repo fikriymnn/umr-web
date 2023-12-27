@@ -33,7 +33,7 @@ function PesanPaketSection({ id, price, kuota, description }) {
           <p>{description}</p>
         </div>
         <div className="  ">
-          <a href="/package/detail/formPesan">
+          <a href={`/package/detail/formPesan?id=${id}`}>
             <div className="my-auto  bg-[#E3B02B] hover:bg-[#fad26e] shadow-lg m-auto rounded-xl p-3 items-center justify-center">
               <div className="flex justify-center ">
                 <div className="md:w-1/12 w-1/12 ">

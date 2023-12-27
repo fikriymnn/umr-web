@@ -9,28 +9,25 @@ import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import DatadiriFoam from "@/components/datadiriFoam";
 import TipePembayaranFoam from "@/components/tipePembayaranFoam";
 import MetodePembayaranSection from "@/components/Bayar/MetodePembayaranSection";
+import { useSearchParams } from "next/navigation";
 
 function FormPesan() {
-
-
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
   return (
     <>
       <div className="bg">
         <div className="flex flex-col pt-10 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
           <StepByStep />
           <div className="lg:w-7/12 w-full lg:px-20 sm:px-10 px-4 ">
+            <section>{/* <NamaCustomer /> */}</section>
+            <section>{/* <TipePembayaranFoam /> */}</section>
             <section>
-              <NamaCustomer />
+              <DatadiriFoam idPaket={id} />
             </section>
-            <section>
-              {/* <TipePembayaranFoam /> */}
-            </section>
-            <section>
-              <DatadiriFoam />
-            </section>
-            <section>
+            {/* <section>
               <MetodePembayaranSection />
-            </section>
+            </section> */}
             <section>
               <div className=" w-full lg:px-6 px-4 mb-36  mt-5 lg:text-base sm:text-sm text-xs">
                 {" "}
