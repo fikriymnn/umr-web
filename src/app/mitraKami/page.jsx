@@ -16,7 +16,7 @@ function MitraKami() {
                 Mitra Kami
               </p>
             </div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 sm:grid-cols-2 gap-3  pb-10 xl:p-0 lg:p-5 px-3">
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 sm:grid-cols-2 gap-3  pb-10 xl:p-0 lg:p-5 px-3">
               <MitraCard />
               <MitraCard />
               <MitraCard />

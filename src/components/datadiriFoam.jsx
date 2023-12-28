@@ -207,7 +207,7 @@ function DatadiriFoam({ idPaket }) {
               </div>
               <div>
                 <p className="md:text-2xl sm:text-xl text-lg font-bold ">
-                  {DataUser.nama_lengkap}
+                  Nama Pemesan
                 </p>
                 <p className="md:text-xl sm:text-lg text-base font-medium ">
                   {DataUser.nama_lengkap}
@@ -217,370 +217,378 @@ function DatadiriFoam({ idPaket }) {
           </div>
         </div>
       </div>
-      <div>
-        <div className="bg-white rounded-xl md:mt-[30px] sm:mt-[30px] mt-[15px] shadow-2xl h-full">
-          {jamaah.map((val, i) => {
-            return (
-              <div key={i} className="w-full font-semibold">
-                <div className="flex pb-1 md:px-7 px-5 py-6 gap-5">
-                  <div>
-                    <img src="../../assets/vector/vectorya.svg" alt="" />
-                  </div>
-                  <h1 className="md:text-2xl sm:text-xl text-lg text-black pb-7">
-                    Jemaah Ke-
-                    {i + 1}
-                  </h1>
-                  {jamaah.length !== 1 && (
-                    <div className="flex h-7 w-10 md:pt-1 text-center items-center text-white">
-                      <button type="button" onClick={(e) => handleDelete(i)}>
-                        <Image
-                          src={"/assets/images/delete.png"}
-                          width={20}
-                          height={20}
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                  )}
-                </div>
+      <form onSubmit={submitOrder} >
 
-                <div className=" md:flex  md:px-14 mx-4 gap-5">
-                  <div className="grid grid-cols-1">
-                    <p className="md:text-base text-sm">Gender</p>
-                    <div className="relative inline-block text-left w-full">
-                      <button
-                        onClick={toggleDropdownGender}
-                        className="flex justify-between items-center px-2 py-3 mt-1 text-gray-800 border border-gray-300 rounded-lg  focus:outline-none focus:ring w-full"
-                      >
-                        <span className="text-xs text-gray-400">
-                          {val.gender == "" ? "Pilih" : val.gender}
-                        </span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          className={`w-4 h-4 ml-2 ${
-                            isOpenGender ? "transform rotate-180" : ""
-                          }`}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
+        <div>
+          <div className="bg-white rounded-xl md:mt-[30px] sm:mt-[30px] mt-[15px] shadow-2xl h-full">
+            {jamaah.map((val, i) => {
+              return (
+                <div key={i} className="w-full font-semibold">
+                  <div className="flex pb-1 md:px-7 px-5 py-6 gap-5">
+                    <div>
+                      <img src="../../assets/vector/vectorya.svg" alt="" />
+                    </div>
+                    <h1 className="md:text-2xl sm:text-xl text-lg text-black pb-7">
+                      Jemaah Ke-
+                      {i + 1}
+                    </h1>
+                    {jamaah.length !== 1 && (
+                      <div className="flex h-7 w-10 md:pt-1 text-center items-center text-white">
+                        <button type="button" onClick={(e) => handleDelete(i)}>
+                          <Image
+                            src={"/assets/images/delete.png"}
+                            width={20}
+                            height={20}
+                            alt=""
                           />
-                        </svg>
-                      </button>
+                        </button>
+                      </div>
+                    )}
+                  </div>
 
-                      {isOpenGender && (
-                        <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
-                          {/* Dropdown content */}
-                          <button
-                            href="#"
-                            className="block px-4 py-2 text-gray-800 "
-                            onClick={(e) => handleChange(e, i, "laki-laki")}
-                            name="gender"
-                          >
-                            Laki-Laki
-                          </button>
-                          <button
-                            href="#"
-                            className="block px-4 py-2 text-gray-800 "
-                            onClick={(e) => handleChange(e, i, "perempuan")}
-                            name="gender"
-                          >
-                            Perempuan
-                          </button>
-                        </div>
-                      )}
-                    </div>
-                    <br />
-                  </div>
-                  <div className="grid grid-cols-1 w-full">
-                    <div>
-                      <p className="md:text-base text-sm">Nama Lengkap</p>
-                    </div>
-                    <TextInput
-                      id="name"
-                      placeholder="Ketik Nama Lengkap.."
-                      required
-                      type="name"
-                      className=""
-                      name="name"
-                      onChange={(e) => handleChange(e, i)}
-                    />
-                    <div>
-                      <p className="text-[#E3B02B] text-xs">
-                        &#40;Sesuai dengan KTP &#47; Paspor tanpa gelar&#41;
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className=" md:grid grid-cols-2  md:px-14 mx-4 gap-5 pt-5">
-                  <div>
-                    <div>
-                      <p className="md:text-base text-sm">Nomor Whatsapp</p>
-                    </div>
-                    <TextInput
-                      id="whatsapp"
-                      placeholder="Ketik Nomor Whatsapp.."
-                      required
-                      type="whatsapp"
-                      className=" "
-                      name="noWhatsapp"
-                      onChange={(e) => handleChange(e, i)}
-                    />
-                  </div>
-                  <div className="mt-5 md:mt-0">
-                    <div>
-                      <p className="md:text-base text-sm">Email</p>
-                    </div>
-                    <TextInput
-                      id="Email"
-                      placeholder="Ketik Email.."
-                      required
-                      type="Email"
-                      className=" "
-                      name="email"
-                      onChange={(e) => handleChange(e, i)}
-                    />
-                  </div>
-                </div>
-                <div className="  md:px-14 mx-4 gap-5 pt-5">
-                  <di className="md:w-[50%] pt-5">
-                    <div>
-                      <p className="md:text-base text-sm">Masukkan nomor KTP</p>
-                    </div>
+                  <div className=" md:flex  md:px-14 mx-4 gap-5">
+                    <div className="grid grid-cols-1">
+                      <p className="md:text-base text-sm">Gender</p>
+                      <div className="relative inline-block text-left w-full">
+                        <button
 
-                    <div className="  rounded-md ">
+                          onClick={toggleDropdownGender}
+                          className="flex justify-between items-center px-2 py-3 mt-1 text-gray-800 border border-gray-300 rounded-lg  focus:outline-none focus:ring w-full"
+                        >
+                          <span className="text-xs text-gray-400">
+                            {val.gender == "" ? "Pilih" : val.gender}
+                          </span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            className={`w-4 h-4 ml-2 ${isOpenGender ? "transform rotate-180" : ""
+                              }`}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
+
+                        {isOpenGender && (
+                          <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
+                            {/* Dropdown content */}
+                            <button
+                              href="#"
+                              className="block px-4 py-2 text-gray-800 "
+                              onClick={(e) => handleChange(e, i, "laki-laki")}
+                              name="gender"
+                            >
+                              Laki-Laki
+                            </button>
+                            <button
+                              href="#"
+                              className="block px-4 py-2 text-gray-800 "
+                              onClick={(e) => handleChange(e, i, "perempuan")}
+                              name="gender"
+                            >
+                              Perempuan
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                      <br />
+                    </div>
+                    <div className="grid grid-cols-1 w-full">
+                      <div>
+                        <p className="md:text-base text-sm">Nama Lengkap</p>
+                      </div>
                       <TextInput
-                        type="text"
-                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
-                        name="no_ktp"
+                        id="name"
+                        placeholder="Ketik Nama Lengkap.."
+                        required
+                        type="name"
+                        className=""
+                        name="name"
+                        onChange={(e) => handleChange(e, i)}
+                      />
+                      <div>
+                        <p className="text-[#E3B02B] text-xs">
+                          &#40;Sesuai dengan KTP &#47; Paspor tanpa gelar&#41;
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className=" md:grid grid-cols-2  md:px-14 mx-4 gap-5 pt-5">
+                    <div>
+                      <div>
+                        <p className="md:text-base text-sm">Nomor Whatsapp</p>
+                      </div>
+                      <TextInput
+                        id="whatsapp"
+                        placeholder="Ketik Nomor Whatsapp.."
+                        required
+                        type="whatsapp"
+                        className=" "
+                        name="noWhatsapp"
                         onChange={(e) => handleChange(e, i)}
                       />
                     </div>
-                  </di>
-                  <div className=" pt-5">
-                    <div>
-                      <p className="md:text-base text-sm">Lampiran Foto KTP</p>
-                    </div>
-
-                    <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
-                      <input
-                        type="file"
-                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500  file:text-white hover:file:bg-blue-600 "
-                        name="foto_ktp"
-                        onChange={(e) => changeImage(e, i)}
+                    <div className="mt-5 md:mt-0">
+                      <div>
+                        <p className="md:text-base text-sm">Email</p>
+                      </div>
+                      <TextInput
+                        id="Email"
+                        placeholder="Ketik Email.."
+                        required
+                        type="Email"
+                        className=" "
+                        name="email"
+                        onChange={(e) => handleChange(e, i)}
                       />
                     </div>
                   </div>
-                  <div className=" pt-5">
-                    <div>
-                      <p className="md:text-base text-sm">
-                        Lampiran Foto Passport
-                      </p>
-                    </div>
+                  <div className="  md:px-14 mx-4 gap-5 pt-5">
+                    <di className="md:w-[50%] pt-5">
+                      <div>
+                        <p className="md:text-base text-sm">Masukkan nomor KTP</p>
+                      </div>
 
-                    <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
-                      <input
-                        type="file"
-                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
-                        name="foto_passport"
-                        onChange={(e) => changeImage(e, i)}
-                      />
+                      <div className="  rounded-md ">
+                        <TextInput
+                          type="text"
+                          className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
+                          name="no_ktp"
+                          required
+                          onChange={(e) => handleChange(e, i)}
+                        />
+                      </div>
+                    </di>
+                    <div className=" pt-5">
+                      <div>
+                        <p className="md:text-base text-sm">Lampiran Foto KTP</p>
+                      </div>
+
+                      <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
+                        <input
+                          type="file"
+                          required
+                          className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500  file:text-white hover:file:bg-blue-600 "
+                          name="foto_ktp"
+                          onChange={(e) => changeImage(e, i)}
+                        />
+                      </div>
+                    </div>
+                    <div className=" pt-5">
+                      <div>
+                        <p className="md:text-base text-sm">
+                          Lampiran Foto Passport
+                        </p>
+                      </div>
+
+                      <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
+                        <input
+                          type="file"
+                          required
+                          className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
+                          name="foto_passport"
+                          onChange={(e) => changeImage(e, i)}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="   md:px-14 mx-4 gap-5 pb-5">
+                    <div className=" pt-5">
+                      <div>
+                        <p className="md:text-base text-sm">Lampiran Foto KK</p>
+                      </div>
+
+                      <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
+                        <input
+                          type="file"
+                          required
+                          className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
+                          name="foto_kk"
+                          onChange={(e) => changeImage(e, i)}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="   md:px-14 mx-4 gap-5 pb-5">
-                  <div className=" pt-5">
-                    <div>
-                      <p className="md:text-base text-sm">Lampiran Foto KK</p>
-                    </div>
+              );
+            })}
 
-                    <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
-                      <input
-                        type="file"
-                        className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
-                        name="foto_kk"
-                        onChange={(e) => changeImage(e, i)}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-
-          <div className="flex justify-center items-center md:pb-10 pb-5 pt-5">
-            <button onClick={handleClick} type="button">
-              <Image
-                width={30}
-                height={30}
-                src="../../assets/vector/VectorPlus.svg"
-                alt=""
-              />
-            </button>
+            <div className="flex justify-center items-center md:pb-10 pb-5 pt-5">
+              <button onClick={handleClick} type="button">
+                <Image
+                  width={30}
+                  height={30}
+                  src="../../assets/vector/VectorPlus.svg"
+                  alt=""
+                />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div>{JSON.stringify(jamaah)}</div>
-      <section>
-        <div className=" my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
-          <div className="flex lg:px-7 px-4 py-6 gap-2">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M25.648 11.2653H6.35001C5.43573 11.2653 5.04389 10.2694 5.76226 9.79593L15.4112 3.47756C15.5894 3.37277 15.7923 3.3175 15.999 3.3175C16.2057 3.3175 16.4086 3.37277 16.5867 3.47756L26.2357 9.79593C26.9541 10.2694 26.5623 11.2653 25.648 11.2653Z"
-                stroke="black"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M25.7959 20.2449H6.20402C5.75318 20.2449 5.3877 20.6104 5.3877 21.0613V23.5102C5.3877 23.9611 5.75318 24.3266 6.20402 24.3266H25.7959C26.2467 24.3266 26.6122 23.9611 26.6122 23.5102V21.0613C26.6122 20.6104 26.2467 20.2449 25.7959 20.2449Z"
-                stroke="black"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M7.83594 11.2653V20.2449M11.9176 11.2653V20.2449M15.9992 11.2653V20.2449M20.0808 11.2653V20.2449M24.1625 11.2653V20.2449"
-                stroke="black"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <circle cx="16" cy="16" r="15" stroke="black" strokeWidth="2" />
-            </svg>
-            <p className="text-[17px] font-bold my-auto">Metode Pembayaran</p>
-          </div>
-          <div className="relative text-left md:px-7 px-4 flex">
-            <div className="relative my-auto">
-              <button
-                className="flex  py-3 gap-2 rounded-md bg-white"
-                onClick={toggleDropdown}
+        <div>{JSON.stringify(jamaah)}</div>
+        <section>
+          <div className=" my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+            <div className="flex lg:px-7 px-4 py-6 gap-2">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <div className="border-2 rounded-md bg-white">
-                  <Image
-                    Image
-                    src={`/assets/images/${selectedImage.img}`}
-                    alt=""
-                    width={55}
-                    height={55}
-                  />
-                </div>
-                {/* <span className="my-auto text-neutral-400 font-medium">
+                <path
+                  d="M25.648 11.2653H6.35001C5.43573 11.2653 5.04389 10.2694 5.76226 9.79593L15.4112 3.47756C15.5894 3.37277 15.7923 3.3175 15.999 3.3175C16.2057 3.3175 16.4086 3.37277 16.5867 3.47756L26.2357 9.79593C26.9541 10.2694 26.5623 11.2653 25.648 11.2653Z"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M25.7959 20.2449H6.20402C5.75318 20.2449 5.3877 20.6104 5.3877 21.0613V23.5102C5.3877 23.9611 5.75318 24.3266 6.20402 24.3266H25.7959C26.2467 24.3266 26.6122 23.9611 26.6122 23.5102V21.0613C26.6122 20.6104 26.2467 20.2449 25.7959 20.2449Z"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M7.83594 11.2653V20.2449M11.9176 11.2653V20.2449M15.9992 11.2653V20.2449M20.0808 11.2653V20.2449M24.1625 11.2653V20.2449"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <circle cx="16" cy="16" r="15" stroke="black" strokeWidth="2" />
+              </svg>
+              <p className="text-[17px] font-bold my-auto">Metode Pembayaran</p>
+            </div>
+            <div className="relative text-left md:px-7 px-4 flex">
+              <div className="relative my-auto">
+                <button
+                  className="flex  py-3 gap-2 rounded-md bg-white"
+                  onClick={toggleDropdown}
+                >
+                  <div className="border-2 rounded-md bg-white">
+                    <Image
+                      Image
+                      src={`/assets/images/${selectedImage.img}`}
+                      alt=""
+                      width={55}
+                      height={55}
+                    />
+                  </div>
+                  {/* <span className="my-auto text-neutral-400 font-medium">
                     Transfer Bank &#40;Transfer BCA&#41;
                   </span> */}
-              </button>
-              {isOpen && (
-                <div
-                  className=" absolute  mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="options-menu"
+                </button>
+                {isOpen && (
+                  <div
+                    className=" absolute  mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="options-menu"
+                  >
+                    <button
+                      href="#"
+                      className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
+                      role="menuitem"
+                      onClick={() => handleItemClick("67867878676", Bank[0])}
+                    >
+                      BCA
+                    </button>
+                    <button
+                      href="#"
+                      className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
+                      role="menuitem"
+                      onClick={() => handleItemClick("678678678678", Bank[1])}
+                    >
+                      BANK MEGA
+                    </button>
+                    <button
+                      href="#"
+                      className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start text-start"
+                      role="menuitem"
+                      onClick={() => handleItemClick("6786786886", Bank[2])}
+                    >
+                      BANK SYARIAH INDONESIA
+                    </button>
+                  </div>
+                )}
+              </div>
+              <div className="relative my-auto  font-medium ">
+                <button
+                  type="button"
+                  className="inline-flex justify-center w-full px-4 py-2 text-sm    font-medium  bg-white  border-neutral-300 rounded-md hover:bg-neutral-100 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:bg-neutral-200"
+                  id="options-menu"
+                  aria-haspopup="true"
+                  aria-expanded={isOpen}
+                  onClick={toggleDropdown}
                 >
-                  <button
-                    href="#"
-                    className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
-                    role="menuitem"
-                    onClick={() => handleItemClick("67867878676", Bank[0])}
-                  >
-                    BCA
-                  </button>
-                  <button
-                    href="#"
-                    className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
-                    role="menuitem"
-                    onClick={() => handleItemClick("678678678678", Bank[1])}
-                  >
-                    BANK MEGA
-                  </button>
-                  <button
-                    href="#"
-                    className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start text-start"
-                    role="menuitem"
-                    onClick={() => handleItemClick("6786786886", Bank[2])}
-                  >
-                    BANK SYARIAH INDONESIA
-                  </button>
-                </div>
-              )}
+                  {noRekening}
+                </button>
+              </div>
             </div>
-            <div className="relative my-auto  font-medium ">
-              <button
-                type="button"
-                className="inline-flex justify-center w-full px-4 py-2 text-sm    font-medium  bg-white  border-neutral-300 rounded-md hover:bg-neutral-100 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:bg-neutral-200"
-                id="options-menu"
-                aria-haspopup="true"
-                aria-expanded={isOpen}
-                onClick={toggleDropdown}
-              >
-                {noRekening}
-              </button>
-            </div>
-          </div>
-          <div className="md:px-7 px-4 py-7 ">
-            <p className="font-semibold text-base pb-2">
-              Nama Pemilik Rekening
-            </p>
-            <input
-              type="text"
-              className="rounded-lg w-full border-neutral-400 text-neutral-400 "
-              placeholder="Ketik Nama Pemilik Rekening... "
-              onChange={(e) => setNamaPemilikRekening(e.target.value)}
-            />
-          </div>
-          <div className="lg:px-7 px-4">
-            <p className="font-semibold text-base pb-2">Perhatian:</p>
-            <p className="font-medium text-sm">
-              Anda bisa transfer dari layanan perbankan apapun &#40; internet
-              banking, SMS&#47;M-Banking, ATM &#41;
-            </p>
-          </div>
-          <div className="lg:px-7 px-4 py-10">
-            <p className="font-semibold text-base">Kode Promo</p>
-            <div className="border-[1px] rounded-lg  border-neutral-400 flex lg:w-10/12 w-full">
+            <div className="md:px-7 px-4 py-7 ">
+              <p className="font-semibold text-base pb-2">
+                Nama Pemilik Rekening
+              </p>
               <input
                 type="text"
-                className="w-9/12 border-none mx-1"
-                placeholder="Ketik Kode Promo.."
+                required
+                className="rounded-lg w-full border-neutral-400 text-neutral-400 "
+                placeholder="Ketik Nama Pemilik Rekening... "
+                onChange={(e) => setNamaPemilikRekening(e.target.value)}
               />
-              <button className="w-3/12 bg-amber-400 m-1 rounded-lg lg:text-sm text-xs font-medium p-2 ">
-                Reedem
-              </button>
+            </div>
+            <div className="lg:px-7 px-4">
+              <p className="font-semibold text-base pb-2">Perhatian:</p>
+              <p className="font-medium text-sm">
+                Anda bisa transfer dari layanan perbankan apapun &#40; internet
+                banking, SMS&#47;M-Banking, ATM &#41;
+              </p>
+            </div>
+            <div className="lg:px-7 px-4 py-10">
+              <p className="font-semibold text-base">Kode Promo</p>
+              <div className="border-[1px] rounded-lg  border-neutral-400 flex lg:w-10/12 w-full">
+                <input
+                  type="text"
+                  className="w-9/12 border-none mx-1"
+                  placeholder="Ketik Kode Promo.."
+                />
+                <button className="w-3/12 bg-amber-400 m-1 rounded-lg lg:text-sm text-xs font-medium p-2 ">
+                  Reedem
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className=" my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
-          <div className="lg:px-7 px-4 flex justify-between pt-5 mb-7 ">
-            <p className="font-bold text-base">Total Harga</p>
-            <p className="font-bold text-base text-amber-400">
-              Rp{DetailPaket == null ? 0 : DetailPaket.price * jamaah.length}
-            </p>
-          </div>
+          <div className=" my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
+            <div className="lg:px-7 px-4 flex justify-between pt-5 mb-7 ">
+              <p className="font-bold text-base">Total Harga</p>
+              <p className="font-bold text-base text-amber-400">
+                Rp{DetailPaket == null ? 0 : DetailPaket.price * jamaah.length}
+              </p>
+            </div>
 
-          <a
-            // href="/akun/PesananSaya/KonfirmasiBayar"
-            className="flex justify-center items-center mb-5"
-          >
-            <button
-              onClick={submitOrder}
-              className=" rounded-xl w-11/12 bg-amber-400 m-2 font-semibold h-10"
+            <a
+              // href="/akun/PesananSaya/KonfirmasiBayar"
+              className="flex justify-center items-center mb-5"
             >
-              Bayar
-            </button>
-          </a>
-        </div>
-      </section>
+              <button
+                type="submit"
+                className=" rounded-xl w-11/12 bg-amber-400 m-2 font-semibold h-10"
+              >
+                Bayar
+              </button>
+            </a>
+          </div>
+        </section>
+      </form>
     </>
   );
 }

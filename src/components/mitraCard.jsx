@@ -48,7 +48,7 @@ function MitraCard() {
                     <p className="text-black md:text-base text-sm my-auto">
                       Rating
                     </p>
-                    <div className="pb-1 flex mt-auto mr-2">
+                    <div className="pb-1 flex my-auto mr-2">
                       {renderStars()}
                     </div>
                   </div>
@@ -69,9 +69,9 @@ function MitraCard() {
           </p>
         </div>
         <div className="flex justify-evenly pb-5">
-          <div className="bg-gray-300 md:h-[75px] md:w-[90px] h-[80px] w-[90px] rounded-md"></div>
-          <div className="bg-gray-300 md:h-[75px] md:w-[90px] h-[80px] w-[90px] rounded-md"></div>
-          <div className="bg-gray-300 md:h-[75px] md:w-[90px] h-[80px] w-[90px] rounded-md"></div>
+          <div className="bg-gray-300 md:h-[75px] md:w-[120px] h-[80px] w-[90px] rounded-md"></div>
+          <div className="bg-gray-300 md:h-[75px] md:w-[120px] h-[80px] w-[90px] rounded-md"></div>
+          <div className="bg-gray-300 md:h-[75px] md:w-[120px] h-[80px] w-[90px] rounded-md"></div>
         </div>
       </div>
     </a>
