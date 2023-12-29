@@ -251,7 +251,8 @@ function DatadiriFoam({ idPaket }) {
                       <p className="md:text-base text-sm">Gender</p>
                       <div className="relative inline-block text-left w-full">
                         <button
-
+                          type="button"
+                          required
                           onClick={toggleDropdownGender}
                           className="flex justify-between items-center px-2 py-3 mt-1 text-gray-800 border border-gray-300 rounded-lg  focus:outline-none focus:ring w-full"
                         >
@@ -279,6 +280,7 @@ function DatadiriFoam({ idPaket }) {
                           <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
                             {/* Dropdown content */}
                             <button
+                              type="button"
                               href="#"
                               className="block px-4 py-2 text-gray-800 "
                               onClick={(e) => handleChange(e, i, "laki-laki")}
@@ -287,6 +289,7 @@ function DatadiriFoam({ idPaket }) {
                               Laki-Laki
                             </button>
                             <button
+                              type="button"
                               href="#"
                               className="block px-4 py-2 text-gray-800 "
                               onClick={(e) => handleChange(e, i, "perempuan")}
@@ -470,6 +473,7 @@ function DatadiriFoam({ idPaket }) {
             <div className="relative text-left md:px-7 px-4 flex">
               <div className="relative my-auto">
                 <button
+                  type="button"
                   className="flex  py-3 gap-2 rounded-md bg-white"
                   onClick={toggleDropdown}
                 >
@@ -494,6 +498,7 @@ function DatadiriFoam({ idPaket }) {
                     aria-labelledby="options-menu"
                   >
                     <button
+                      type="button"
                       href="#"
                       className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
                       role="menuitem"
@@ -502,6 +507,7 @@ function DatadiriFoam({ idPaket }) {
                       BCA
                     </button>
                     <button
+                      type="button"
                       href="#"
                       className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
                       role="menuitem"
@@ -510,6 +516,7 @@ function DatadiriFoam({ idPaket }) {
                       BANK MEGA
                     </button>
                     <button
+                      type="button"
                       href="#"
                       className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start text-start"
                       role="menuitem"
@@ -540,7 +547,7 @@ function DatadiriFoam({ idPaket }) {
               <input
                 type="text"
                 required
-                className="rounded-lg w-full border-neutral-400 text-neutral-400 "
+                className="rounded-lg w-full border-neutral-400 text-neutral-600 "
                 placeholder="Ketik Nama Pemilik Rekening... "
                 onChange={(e) => setNamaPemilikRekening(e.target.value)}
               />
@@ -560,7 +567,7 @@ function DatadiriFoam({ idPaket }) {
                   className="w-9/12 border-none mx-1"
                   placeholder="Ketik Kode Promo.."
                 />
-                <button className="w-3/12 bg-amber-400 m-1 rounded-lg lg:text-sm text-xs font-medium p-2 ">
+                <button type="button" className="w-3/12 bg-amber-400 m-1 rounded-lg lg:text-sm text-xs font-medium p-2 ">
                   Reedem
                 </button>
               </div>
