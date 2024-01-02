@@ -42,15 +42,8 @@ const GenericPdfDownloader = () => {
                         <div className='flex justify-between'>
                             <div>
 
-                                <Image
-                                    src="/assets/images/ibadahku1k2.png"
-                                    alt=""
-                                    width={100}
-                                    height={100}
-                                    onLoad={handleImageLoad}
-                                    crossOrigin="anonymous"
-                                />
-                                <p className='font-bold md:text-2xl sm:text-xl text-lg md:px-0 px-3'>IBADAHKU</p>
+
+                                <p className='font-bold md:text-3xl sm:text-xl text-lg md:px-0 px-3'>IBADAHKU</p>
 
                             </div>
 
