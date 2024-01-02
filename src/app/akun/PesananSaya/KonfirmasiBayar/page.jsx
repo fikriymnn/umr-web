@@ -1,22 +1,83 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import StepByStep2 from "@/components/Bayar/StepByStep2";
 import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import axios from "axios";
+import { format } from "date-fns";
 
 function KonfirmasiBayar() {
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
+  const [order, setOrder] = useState(null);
+  const [paket, setPaket] = useState(null);
+  const [buktiPembayaran, setBuktiPembayaran] = useState("");
   const { push } = useRouter();
+
+  useEffect(() => {
+    getDetailOrder(id);
+  }, [id]);
+
+  async function getDetailOrder(idd) {
+    try {
+      const res = await axios.get(`http://localhost:5000/api/order/${idd}`, {
+        withCredentials: true,
+      });
+      if (res.data.success == true) {
+        // console.log(res.data.data);
+        setOrder(res.data.data.order);
+        setPaket(res.data.data.paket);
+      }
+    } catch (error) {
+      console.log(error.response);
+    }
+  }
+
+  async function changeImage(event) {
+    event.preventDefault();
+
+    const file = event.target.files[0];
+    const formData = new FormData();
+    formData.append("content", file);
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/upload",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
+      const id = response.data.data;
+      setBuktiPembayaran(id);
+    } catch (error) {
+      alert(error.response.data.message);
+    }
+  }
+
   async function submitBukti(e) {
     e.preventDefault();
     try {
-
+      const response = await axios.put(
+        `http://localhost:5000/api/order/${id}`,
+        {
+          bukti_pembayaran: buktiPembayaran,
+          status: "diproses",
+        },
+        {
+          withCredentials: true,
+        }
+      );
       push("/akun/PesananSaya/Notice");
     } catch (error) {
-      alert(error);
+      alert(error.response.data.message);
     }
   }
   const maxRating = 5;
-  const rating = 1;
+  const rating = paket == null ? 0 : paket.rating_hotel;
   const renderStars = () => {
     const stars = [];
     for (let i = 0; i < maxRating; i++) {
@@ -37,6 +98,9 @@ function KonfirmasiBayar() {
     }
     return stars;
   };
+  const date = paket == null ? new Date() : new Date(paket.waktu_keberangkatan);
+  // Format tanggal
+  const WaktuKeberangkatan = format(date, "d MMM y");
   return (
     <>
       <div className="bg w-full h-full md:px-14 px-5 py-10">
@@ -72,7 +136,7 @@ function KonfirmasiBayar() {
             <p className="text-md font-semibold">Pesanan</p>
             <div className="border-2 border-slate-200 p-2">
               <p className="md:text-xl sm:text-lg text-base font-bold">
-                Umroh Dream Exclusive Plus Kereta Cepat 10 Hari
+                {paket == null ? "" : paket.title}
               </p>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -81,7 +145,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>Satu kamar 4 orang QUAD</p>
+                <p>{paket == null ? "" : paket.pilihan_kamar}</p>
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -90,7 +154,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>10 September 2023</p>
+                <p>{WaktuKeberangkatan}</p>
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -99,7 +163,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>Garuda</p>
+                <p>{paket == null ? "" : paket.maskapai_penerbangan}</p>
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -108,7 +172,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>9 Hari</p>
+                <p>{paket == null ? "" : paket.durasi_perjalanan}</p>
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -117,7 +181,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>Jakarta</p>
+                <p>{paket == null ? "" : paket.kota_keberangkatan}</p>
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -137,11 +201,13 @@ function KonfirmasiBayar() {
                 height={30}
                 alt="icon"
               />
-              <div className="font-semibold">Transfer BCA</div>
+              <div className="font-semibold">
+                Transfer {order == null ? "" : order.bank_tujuan}
+              </div>
             </div>
             <div className="border-2 border-slate-200  flex items-center justify-between gap-5 mt-2 text-slate-400 font-medium">
               <div className="px-2">
-                <p>UMROHYUK2023</p>
+                <p></p>
               </div>
               <div className="md:text-base sm:text-sm text-xs font-medium bgprim px-5 py-2 text-white">
                 <p>Promo terpakai</p>
@@ -152,14 +218,14 @@ function KonfirmasiBayar() {
                 Total Harga
               </p>
               <p className="font-bold md:text-xl sm:text-lg text-base text-amber-400">
-                Rp 39.500.00
+                Rp {order == null ? "" : order.jumlah_bayar}
               </p>
             </div>
             <p className="md:text-base sm:text-sm text-xs font-semibold mt-4">
               Transaksi Pembayaran
             </p>
             <p className="md:text-4xl sm:text-3xl text-2xl">
-              4564 8957 0999 4444
+              {order == null ? "" : order.no_rekening_bank}
             </p>
             <p>
               Silahkan lakukan transaksi pembayaran kepada nomor rekening di
@@ -174,6 +240,7 @@ function KonfirmasiBayar() {
               <div className="border-2 border-slate-200 rounded-[8px] md:p-2 p-[2px]">
                 <input
                   type="file"
+                  onChange={(e) => changeImage(e)}
                   required
                   className="block w-full text-sm text-gray-500  file:rounded-md rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600 "
                 />

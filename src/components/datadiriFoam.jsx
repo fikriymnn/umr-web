@@ -8,9 +8,11 @@ import PackageCard from "@/components/packagecard";
 import { Carousel } from "flowbite";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 import { useState, useEffect } from "react";
 function DatadiriFoam({ idPaket }) {
+  const { push } = useRouter();
   const Bank = [
     { img: "bca.png", bankName: "bca", value: "0780878787" },
     { img: "mega.jpeg", bankName: "mega", value: "78978788" },
@@ -177,7 +179,9 @@ function DatadiriFoam({ idPaket }) {
           withCredentials: true,
         }
       );
+
       alert("Order succsess");
+      push(`/akun/PesananSaya/KonfirmasiBayar?id=${response.data.data._id}`);
       console.log(response.data);
     } catch (error) {
       alert(error.response.data.message);
@@ -217,8 +221,7 @@ function DatadiriFoam({ idPaket }) {
           </div>
         </div>
       </div>
-      <form onSubmit={submitOrder} >
-
+      <form onSubmit={submitOrder}>
         <div>
           <div className="bg-white rounded-xl md:mt-[30px] sm:mt-[30px] mt-[15px] shadow-2xl h-full">
             {jamaah.map((val, i) => {
@@ -251,9 +254,9 @@ function DatadiriFoam({ idPaket }) {
                       <p className="md:text-base text-sm">Gender</p>
                       <div className="relative inline-block text-left w-full">
                         <button
-                          type="button"
-                          required
+
                           onClick={toggleDropdownGender}
+                          type="button"
                           className="flex justify-between items-center px-2 py-3 mt-1 text-gray-800 border border-gray-300 rounded-lg  focus:outline-none focus:ring w-full"
                         >
                           <span className="text-xs text-gray-400">
@@ -280,8 +283,9 @@ function DatadiriFoam({ idPaket }) {
                           <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
                             {/* Dropdown content */}
                             <button
-                              type="button"
+
                               href="#"
+                              type="button"
                               className="block px-4 py-2 text-gray-800 "
                               onClick={(e) => handleChange(e, i, "laki-laki")}
                               name="gender"
@@ -289,8 +293,9 @@ function DatadiriFoam({ idPaket }) {
                               Laki-Laki
                             </button>
                             <button
-                              type="button"
+
                               href="#"
+                              type="button"
                               className="block px-4 py-2 text-gray-800 "
                               onClick={(e) => handleChange(e, i, "perempuan")}
                               name="gender"
@@ -355,7 +360,9 @@ function DatadiriFoam({ idPaket }) {
                   <div className="  md:px-14 mx-4 gap-5 pt-5">
                     <di className="md:w-[50%] pt-5">
                       <div>
-                        <p className="md:text-base text-sm">Masukkan nomor KTP</p>
+                        <p className="md:text-base text-sm">
+                          Masukkan nomor KTP
+                        </p>
                       </div>
 
                       <div className="  rounded-md ">
@@ -370,7 +377,9 @@ function DatadiriFoam({ idPaket }) {
                     </di>
                     <div className=" pt-5">
                       <div>
-                        <p className="md:text-base text-sm">Lampiran Foto KTP</p>
+                        <p className="md:text-base text-sm">
+                          Lampiran Foto KTP
+                        </p>
                       </div>
 
                       <div className="border-[1px] border-gray-300 bg-gray-50 rounded-md p-1">
@@ -434,7 +443,7 @@ function DatadiriFoam({ idPaket }) {
             </div>
           </div>
         </div>
-        <div>{JSON.stringify(jamaah)}</div>
+
         <section>
           <div className=" my-5 bg-white rounded-[10px] shadow border-2 border-neutral-400 border-opacity-20">
             <div className="flex lg:px-7 px-4 py-6 gap-2">
@@ -473,6 +482,7 @@ function DatadiriFoam({ idPaket }) {
             <div className="relative text-left md:px-7 px-4 flex">
               <div className="relative my-auto">
                 <button
+
                   type="button"
                   className="flex  py-3 gap-2 rounded-md bg-white"
                   onClick={toggleDropdown}
@@ -500,6 +510,7 @@ function DatadiriFoam({ idPaket }) {
                     <button
                       type="button"
                       href="#"
+
                       className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
                       role="menuitem"
                       onClick={() => handleItemClick("67867878676", Bank[0])}
@@ -509,6 +520,7 @@ function DatadiriFoam({ idPaket }) {
                     <button
                       type="button"
                       href="#"
+
                       className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start"
                       role="menuitem"
                       onClick={() => handleItemClick("678678678678", Bank[1])}
@@ -518,6 +530,7 @@ function DatadiriFoam({ idPaket }) {
                     <button
                       type="button"
                       href="#"
+
                       className=" px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100 w-full flex justify-start text-start"
                       role="menuitem"
                       onClick={() => handleItemClick("6786786886", Bank[2])}
