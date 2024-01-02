@@ -9,7 +9,7 @@ import FilterNotMobilePackage from "@/components/FilterNotMobilePackage";
 import FilterPackages from "@/components/FilterPackages";
 function DetailMitra() {
   return (
-    <div className="bg">
+    <div className="">
       <FilterPackages />
       <div className="pt-10 bg-cover bg-[url('/assets/images/image2.png')] z-10">
         <div className="bg-white rounded-xl md:mx-20 mx-5 mb-10 md:flex justify-between">

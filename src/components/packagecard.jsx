@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { isMobile, isTablet } from "react-device-detect";
 import { format } from "date-fns";
@@ -23,6 +23,22 @@ function PackageCard({
     total: kuota,
     available: sisaKuota,
   };
+  const [isMobile, setIsMobile] = useState(false);
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+  };
+  useEffect(() => {
+    // Initial check on mount
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const titleprice = (
     <>
@@ -200,7 +216,7 @@ function PackageCard({
                   Hotel
                 </p>
                 <div className="md:w-11/12 w-[50px]">
-                  <div className="ps-1 pt-1 flex items-center">
+                  <div className="ps-1 pt-1 flex items-center justify-center my-auto">
                     {renderStars()}
                   </div>
                 </div>

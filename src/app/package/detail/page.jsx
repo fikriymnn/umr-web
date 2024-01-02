@@ -251,10 +251,12 @@ function PackageDetail() {
               </div>
             ) : (
               <PesanPaketSection
+
                 id={DetailPaket._id}
                 description={DetailPaket.description}
                 kuota={DetailPaket.kuota}
                 price={DetailPaket.price}
+                sisaKuota={DetailPaket.sisa_kuota}
               />
             )}
           </div>

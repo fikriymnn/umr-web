@@ -1,8 +1,27 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
 function Percayakan() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+  };
+
+  useEffect(() => {
+    // Initial check on mount
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div>
       <div className=" grid grid-cols-1  mx-auto mb-10 ">

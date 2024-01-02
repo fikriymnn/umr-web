@@ -10,10 +10,27 @@ import SingleCarousel from "@/components/Homepage/singleCarousel"
 
 function MitrakamiCarousel() {
   const [isClient, setIsClient] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+  };
 
   useEffect(() => {
     setIsClient(true);
+    // Initial check on mount
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+
+
 
 
   return (

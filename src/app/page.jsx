@@ -45,19 +45,20 @@ export default async function Home() {
             </p>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 md:gap-4 sm:gap-3 gap-2 pb-10">
               {DataPaket == null ? (
-                <div id="SKELETON" className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-80">
-                  <div className="bg-slate-100 w-72 h-44 rounded-lg">
+                <div id="SKELETON" className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-80">
+                  <div className="bg-slate-100 lg:w-72 md:w-60 sm:w-40 w-28 h-44 rounded-lg">
 
                   </div>
-                  <div className="bg-slate-100 w-72 h-44 rounded-lg">
+                  <div className="bg-slate-100 lg:w-72 md:w-60 sm:w-40 w-28 h-44 rounded-lg">
 
                   </div>
-                  <div className="bg-slate-100 w-72 h-44 rounded-lg">
+                  <div className="bg-slate-100 lg:w-72 md:w-60 sm:w-40 w-28 h-44 rounded-lg">
 
                   </div>
 
 
                 </div>
+
               ) : (
                 DataPaket.paket.map((data, index) => {
                   return (

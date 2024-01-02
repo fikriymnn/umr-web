@@ -7,9 +7,21 @@ import Image from "next/image";
 function FilterPackages() {
   const [comp, setComp] = useState(0);
   const [isClient, setIsClient] = useState(false);
-
+  const [isMobile, setIsMobile] = useState(false);
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+  };
   useEffect(() => {
     setIsClient(true);
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
   const toggleNav = () => {
     setComp((prevComp) => (prevComp === 1 ? 0 : 1));

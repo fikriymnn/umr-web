@@ -52,7 +52,7 @@ async function Package() {
               <h1 className="text-xl font-semibold  my-5">
                 List Paket Umroh Yang Tersedia
               </h1>
-              <div className="mahfud lg:grid-cols-2 md:grid-cols-3 grid-cols-2 md:gap-10 gap-2">
+              <div className="mahfud  grid-cols-2 md:gap-10 gap-2">
                 {DataPaket == null ? (
                   <div></div>
                 ) : (
