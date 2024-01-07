@@ -20,15 +20,11 @@ function FormPesan() {
         <div className="flex flex-col pt-10 bg-left bg-contain bg-[url('/assets/images/image2.png')] z-10">
           <StepByStep />
           <div className="lg:w-7/12 w-full lg:px-20 sm:px-10 px-4 ">
-            <section>{/* <NamaCustomer /> */}</section>
-            <section>{/* <TipePembayaranFoam /> */}</section>
+
             <section>
               <DatadiriFoam idPaket={id} />
-            </section>
-            {/* <section>
-              <MetodePembayaranSection />
-            </section> */}
-            <section>
+
+
               <div className=" w-full lg:px-6 px-4 mb-36  mt-5 lg:text-base sm:text-sm text-xs">
                 {" "}
                 <p className="font-bold">

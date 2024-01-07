@@ -47,7 +47,7 @@ function PackageCard({
         {title}
         {title}
       </p>
-      <p className="md:text-[26px] sm:text-[24px] text-[15px] font-semibold  text-[#E3B02B] pt-1">
+      <p className="lg:text-[20px] md:text-[17px] sm:text-[20px] text-[15px] font-semibold  text-[#E3B02B] pt-1">
         RP {price}
       </p>
     </>
@@ -95,7 +95,7 @@ function PackageCard({
               </>
             )}
             <div
-              className="lg:w-4/12 sm:w-full md:w-full sm:h-full md:h-20 h-full mx-auto rounded-xl bg-cover bg-no-repeat bg-center"
+              className="lg:w-4/12 sm:w-full md:w-7/12 sm:h-full md:h-20 h-full mx-auto rounded-xl bg-cover bg-no-repeat bg-center"
               style={{ backgroundImage: `url(${banner})` }}
             >
               {/* <Image
@@ -109,7 +109,7 @@ function PackageCard({
           </div>
           {isMobile && (
             <>
-              <div className="md:w-9/12 xl:hidden ">{titleprice}</div>
+              <div className="md:w-9/12 xl:hidden py-2">{titleprice}</div>
             </>
           )}
           <div className=" pb-1">

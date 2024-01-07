@@ -264,7 +264,7 @@ function PackageDetail() {
       </div>
       <div className="lg:flex">
         <div className="lg:w-8/12 w-full">
-          <div className="bg-white lg:w-10/12 w-11/12 mx-auto lg:ms-20  rounded-xl lg:mt-[50px] sm:mt[30px] mt-[15px] ">
+          <div className="bg-white lg:w-10/12 w-11/12 mx-auto lg:ms-20  rounded-xl  md:mt-[30px] mt-[15px] ">
             {DetailPaket == null ? (
               <div></div>
             ) : (
@@ -273,7 +273,7 @@ function PackageDetail() {
           </div>
 
           <div className=" w-full">
-            <div className="bg-white lg:w-10/12 w-11/12 mx-auto lg:ms-20  rounded-xl lg:mt-[50px] sm:mt[30px] mt-[15px]">
+            <div className="bg-white lg:w-10/12 w-11/12 mx-auto lg:ms-20  rounded-xl  md:mt-[30px] mt-[15px]">
               <SyaratDanKetentuanSection
                 syarat={DetailPaket == null ? "" : DetailPaket.syarat_ketentuan}
               />
