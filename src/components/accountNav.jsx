@@ -16,7 +16,8 @@ function AccountNav({ account, order }) {
         }
       );
       alert("logout success");
-      push("/login");
+      push("/");
+
     } catch (error) {
       alert(error.response.data.message);
     }
