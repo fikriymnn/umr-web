@@ -58,6 +58,7 @@ async function Package() {
                 ) : (
                   DataPaket.paket.map((data, index) => {
                     return (
+
                       <PackageCard
                         key={index}
                         id={data._id}

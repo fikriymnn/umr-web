@@ -168,6 +168,7 @@ function PackageDetail() {
             </div>
           ) : (
             <MitraTravelSection
+
               nama={DetailMitra.nama_mitra}
               noizin={DetailMitra.no_izin_umroh}
               rating={DetailMitra.rating}
