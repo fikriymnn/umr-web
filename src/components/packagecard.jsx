@@ -64,7 +64,7 @@ function PackageCard({
     for (let i = 0; i < maxRating; i++) {
       const isColored = i < rating;
       stars.push(
-        <div className="w-5">
+        <div className="w-3">
           <img
             key={i}
             src={
