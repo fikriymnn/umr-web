@@ -213,7 +213,15 @@ function KonfirmasiBayar() {
                 <p>Promo terpakai</p>
               </div>
             </div>
-            <div className=" flex justify-between mt-5 mb-7 ">
+            <div className=" flex justify-between mt-5 mb-2 ">
+              <p className="font-semibold md:text-xl sm:text-lg text-base">
+                Total Jemaah
+              </p>
+              <p className="font-semibold md:text-xl sm:text-lg text-base ">
+                {order == null ? "" : order.jamaah.length} Orang
+              </p>
+            </div>
+            <div className=" flex justify-between mt-1 mb-7 ">
               <p className="font-bold md:text-xl sm:text-lg text-base">
                 Total Harga
               </p>

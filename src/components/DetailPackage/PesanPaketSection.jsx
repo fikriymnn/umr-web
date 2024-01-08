@@ -1,6 +1,10 @@
-import React from "react";
+'use client'
 import Image from "next/image";
+
+
 function PesanPaketSection({ id, price, kuota, description, sisaKuota }) {
+
+
   const numero = {
     total: kuota,
     available: sisaKuota,
@@ -33,6 +37,7 @@ function PesanPaketSection({ id, price, kuota, description, sisaKuota }) {
           <p>{description}</p>
         </div>
         <div className="  ">
+
           <a href={`/package/detail/formPesan?id=${id}`}>
             <div className="my-auto  bg-[#E3B02B] hover:bg-[#fad26e] shadow-lg m-auto rounded-xl p-3 items-center justify-center">
               <div className="flex justify-center ">

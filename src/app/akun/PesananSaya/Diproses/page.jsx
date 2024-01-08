@@ -204,6 +204,24 @@ function Diproses() {
                     <div className="flex md:flex-row flex-col">
                       <div className="border-2 md:border-e-0 p-2 border-slate-200 md:w-[30%]  md:text-2xl sm:text-lg text-base py-3 font-bold md:ps-12 ">
                         <p className="my-2 text-center md:text-start">
+                          Total Jemaah
+                        </p>
+                      </div>
+                      <div className="border-2 p-2 border-slate-200 md:w-[70%] md:border-t-2 border-t-0  md:text-2xl sm:text-lg text-base font-bold px-12 py-3 flex md:flex-row flex-col justify-between ">
+                        <p className="my-2 text-center md:text-start">
+                          {data.order.jamaah.length} Jamaah
+                        </p>
+                        <div className="flex gap-2">
+
+                          <div className="bg-green-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base">
+                            Details
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex md:flex-row flex-col">
+                      <div className="border-2 md:border-e-0 p-2 border-slate-200 md:w-[30%]  md:text-2xl sm:text-lg text-base py-3 font-bold md:ps-12 ">
+                        <p className="my-2 text-center md:text-start">
                           Total Biaya
                         </p>
                       </div>
@@ -213,13 +231,13 @@ function Diproses() {
                         </p>
                         <div className="flex gap-2">
                           <div className="flex justify-center">
-                            <link
+                            <a
                               href="invoice"
                               className="bg-amber-500 px-7 rounded-lg md:py-0 py-1 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base  bg-no-repeat bg-center"
                               style={{
                                 backgroundImage: `url(/assets/vector/download.svg)`,
                               }}
-                            ></link>
+                            ></a>
                           </div>
                           <div className="bg-orange-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base">
                             Pesanan Diproses

@@ -68,18 +68,18 @@ const GenericPdfDownloader = () => {
                             <div className='flex gap-5 md:justify-normal justify-between px-3 '>
                                 <div className='md:text-end text-start flex flex-col gap-2 '>
 
-                                    <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>Date:</p>
-                                    <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>Payment Terms:</p>
-                                    <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>Due Date:</p>
-                                    <p className='text-slate-500 md:text-xl sm:text-lg text-sm'>PO Number:</p>
-                                    <p className='font-semibold md:text-xl sm:text-lg text-sm'>Balance Due:</p>
+                                    <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>Date:</p>
+                                    <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>Payment Terms:</p>
+                                    <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>Due Date:</p>
+                                    <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>PO Number:</p>
+                                    <p className='font-semibold md:text-xl sm:text-lg text-xs'>Balance Due:</p>
                                 </div>
                                 <div className='text-end flex flex-col gap-2'>
-                                    <p className='md:text-xl sm:text-lg text-sm'>Des 20, 1945</p>
-                                    <p className='md:text-xl sm:text-lg text-sm'>3</p>
-                                    <p className='md:text-xl sm:text-lg text-sm'>Dec 1, 1975</p>
-                                    <p className='md:text-xl sm:text-lg text-sm'>2223344</p>
-                                    <p className='font-semibold md:text-xl sm:text-lg text-sm'>IDR 96.000.000</p>
+                                    <p className='md:text-xl sm:text-lg text-xs'>Des 20, 1945</p>
+                                    <p className='md:text-xl sm:text-lg text-xs'>3</p>
+                                    <p className='md:text-xl sm:text-lg text-xs'>Dec 1, 1975</p>
+                                    <p className='md:text-xl sm:text-lg text-xs'>2223344</p>
+                                    <p className='font-semibold md:text-xl sm:text-lg text-xs'>IDR 96.000.000</p>
                                 </div>
 
                             </div>
@@ -104,16 +104,16 @@ const GenericPdfDownloader = () => {
                         </thead>
                         <tbody>
                             <tr className="flex">
-                                <td className="flex flex-col md:w-[50%] w-[35%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs">
+                                <td className="flex flex-col md:w-[50%] w-[35%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px]">
                                     Paket super hemat bersama Komeng
                                 </td>
-                                <td className="flex flex-col  w-[15%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs">
+                                <td className="flex flex-col  w-[15%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px]">
                                     3
                                 </td>
-                                <td className="flex flex-col md:w-[15%] w-[25%]  md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs text-end">
+                                <td className="flex flex-col md:w-[15%] w-[25%]  md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px] text-end">
                                     IDR 32,000,000.00
                                 </td>
-                                <td className="flex flex-col md:w-[20%] w-[25%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-xs text-end">
+                                <td className="flex flex-col md:w-[20%] w-[25%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px] text-end">
                                     IDR 96,000,000.00
                                 </td>
                             </tr>
@@ -124,17 +124,17 @@ const GenericPdfDownloader = () => {
                         <div className='flex gap-5 justify-end mt-20 px-3'>
                             <div className='text-end flex flex-col gap-2'>
 
-                                <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>SubTotal:</p>
-                                <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>Tax 4%:</p>
-                                <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>Total:</p>
-                                <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>Amount Paid:</p>
+                                <p className='text-slate-500 md:text-xl sm:text-lg text-[10px]'>SubTotal:</p>
+                                <p className='text-slate-500 md:text-xl sm:text-lg text-[10px]'>Tax 4%:</p>
+                                <p className='text-slate-500 md:text-xl sm:text-lg text-[10px]'>Total:</p>
+                                <p className='text-slate-500 md:text-xl sm:text-lg text-[10px]'>Amount Paid:</p>
 
                             </div>
                             <div className='text-end flex flex-col gap-2'>
-                                <p className='md:text-xl sm:text-lg text-xs'>IDR 96,000,000.00</p>
-                                <p className='md:text-xl sm:text-lg text-xs'>IDR 3,000,000.00</p>
-                                <p className='md:text-xl sm:text-lg text-xs'>IDR 99,000,000.00</p>
-                                <p className='md:text-xl sm:text-lg text-xs'>IDR 30,000,000.00</p>
+                                <p className='md:text-xl sm:text-lg text-[10px]'>IDR 96,000,000.00</p>
+                                <p className='md:text-xl sm:text-lg text-[10px]'>IDR 3,000,000.00</p>
+                                <p className='md:text-xl sm:text-lg text-[10px]'>IDR 99,000,000.00</p>
+                                <p className='md:text-xl sm:text-lg text-[10px]'>IDR 30,000,000.00</p>
 
                             </div>
 

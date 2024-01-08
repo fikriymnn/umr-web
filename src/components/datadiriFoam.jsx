@@ -74,6 +74,7 @@ function DatadiriFoam({ idPaket }) {
     setNoRekening(clickedItem);
     setSelectedImage(image);
     setNamaBank(image.bankName);
+    setIsOpen(!isOpen);
   };
   const [isOpenGender, setIsOpenGender] = useState(false);
 
@@ -115,6 +116,7 @@ function DatadiriFoam({ idPaket }) {
     const onchangeVal = [...jamaah];
     if (name == "gender") {
       onchangeVal[i]["gender"] = gender;
+      setIsOpenGender(!isOpenGender);
     } else {
       onchangeVal[i][name] = value;
     }
@@ -489,7 +491,7 @@ function DatadiriFoam({ idPaket }) {
                 >
                   <div className="border-2 rounded-md bg-white">
                     <Image
-                      Image
+
                       src={`/assets/images/${selectedImage.img}`}
                       alt=""
                       width={55}

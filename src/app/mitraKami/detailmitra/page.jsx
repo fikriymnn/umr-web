@@ -134,12 +134,7 @@ function DetailMitra() {
                   List Paket Umroh Yang Tersedia
                 </h1>
                 <div className="mahfud lg:grid-cols-2 md:grid-cols-3 grid-cols-2 md:gap-10 gap-2">
-                  {/* <PackageCard />
-                                    <PackageCard />
-                                    <PackageCard />
-                                    <PackageCard />
-                                    <PackageCard />
-                                    <PackageCard /> */}
+
                 </div>
               </div>
             </div>
