@@ -491,7 +491,7 @@ function DatadiriFoam({ idPaket }) {
                 >
                   <div className="border-2 rounded-md bg-white">
                     <Image
-                      Image
+
                       src={`/assets/images/${selectedImage.img}`}
                       alt=""
                       width={55}
