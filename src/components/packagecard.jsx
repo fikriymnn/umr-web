@@ -23,6 +23,7 @@ function PackageCard({
     total: kuota,
     available: sisaKuota,
   };
+
   const [isMobile, setIsMobile] = useState(false);
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
@@ -40,16 +41,27 @@ function PackageCard({
     };
   }, []);
 
+  const nominal = price;
+
+  const formattedNominal = nominal.toLocaleString('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+  });
+
+
   const titleprice = (
     <>
-      <p className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold line-clamp-2 ">
-        {title}
-        {title}
-        {title}
-      </p>
-      <p className="lg:text-[20px] md:text-[17px] sm:text-[20px] text-[15px] font-semibold  text-[#E3B02B] pt-1">
-        RP {price}
-      </p>
+      <div className="flex flex-col h-16 sm:h-20 md:h-24 lg:h-24">
+
+        <p className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold line-clamp-2 ">
+          {title} {title} {title}
+
+        </p>
+        <p className="lg:text-[20px] md:text-[15px] sm:text-[20px] text-[15px] font-semibold  text-[#E3B02B] md:mb-5 mt-auto flex ">
+          {formattedNominal}
+        </p>
+      </div>
     </>
   );
 
@@ -64,7 +76,7 @@ function PackageCard({
     for (let i = 0; i < maxRating; i++) {
       const isColored = i < rating;
       stars.push(
-        <div className="w-5">
+        <div className="w-3">
           <img
             key={i}
             src={
@@ -98,13 +110,7 @@ function PackageCard({
               className="lg:w-4/12 sm:w-full md:w-7/12 sm:h-full md:h-20 h-full mx-auto rounded-xl bg-cover bg-no-repeat bg-center"
               style={{ backgroundImage: `url(${banner})` }}
             >
-              {/* <Image
-                src={banner}
-                width={400}
-                height={95}
-                alt=""
-                className="rounded-lg pb-1"
-              /> */}
+
             </div>
           </div>
           {isMobile && (

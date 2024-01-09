@@ -44,13 +44,13 @@ function BelumBayar() {
   }
 
   return (
-    <div className="md:px-14 px-5 py-10 bg-slate-100">
-      <div className=" flex md:flex-row flex-col">
+    <div className="lg:px-14 px-5 py-10 bg-slate-100">
+      <div className=" flex lg:flex-row flex-col">
         <AccountNav order="bg-[#E3B02B] text-white" />
 
-        <div className="w-full md:w-10/12 md:ps-5">
-          <div className="bg-white grid grid-cols-1 gap-3 md:rounded-xl rounded-b-xl border-2 md:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 md:px-8 px-5">
-            <div className="flex justify-center items-center md:gap-32 gap-3 pt-3">
+        <div className="w-full lg:w-10/12 lg:ps-5">
+          <div className="bg-white grid grid-cols-1 gap-3 lg:rounded-xl rounded-b-xl border-2 lg:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 lg:px-8 px-5">
+            <div className="flex justify-center items-center lg:gap-32 gap-3 pt-3">
               <OrderNav
                 belbay={"text-[#E3B02B] "}
                 belbayl={"h-[2px] bg-[#E3B02B]"}
@@ -85,13 +85,19 @@ function BelumBayar() {
                 const date = new Date(data.paket.waktu_keberangkatan);
                 // Format tanggal
                 const WaktuKeberangkatan = format(date, "d MMM y");
+                const nominal = data.order.jumlah_bayar;
+                const formattedNominal = nominal.toLocaleString('id-ID', {
+                  style: 'currency',
+                  currency: 'IDR',
+                  minimumFractionDigits: 0,
+                });
                 return (
                   <div key={i} className="my-4">
                     <div className="border-2 border-b-0 p-2 border-slate-200">
-                      <p className="md:text-2xl font-bold">
+                      <p className="lg:text-2xl font-bold">
                         {data.paket.title}
                       </p>
-                      <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mt-5">
+                      <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 mt-5">
                         <div className="flex">
                           <div className="w-1/12">
                             <Image
@@ -102,10 +108,10 @@ function BelumBayar() {
                             />
                           </div>
                           <div>
-                            <p className="ps-1 font-bold md:text-xl text-black">
+                            <p className="ps-1 font-bold lg:text-xl text-black">
                               Pilihan Kamar
                             </p>
-                            <p className="ps-1 pt-2 md:text-xl text-black">
+                            <p className="ps-1 pt-2 lg:text-xl text-black">
                               {data.paket.pilihan_kamar}
                             </p>
                           </div>
@@ -120,10 +126,10 @@ function BelumBayar() {
                             />
                           </div>
                           <div>
-                            <p className="ps-1 font-bold md:text-xl text-black">
+                            <p className="ps-1 font-bold lg:text-xl text-black">
                               Tanggal Keberangkatan
                             </p>
-                            <p className="ps-1 pt-2 md:text-xl text-black">
+                            <p className="ps-1 pt-2 lg:text-xl text-black">
                               {WaktuKeberangkatan}
                             </p>
                           </div>
@@ -138,10 +144,10 @@ function BelumBayar() {
                             />
                           </div>
                           <div>
-                            <p className="ps-1 font-bold md:text-xl text-black">
+                            <p className="ps-1 font-bold lg:text-xl text-black">
                               Maskapai Pesawat
                             </p>
-                            <p className="ps-1 pt-2 md:text-xl text-black">
+                            <p className="ps-1 pt-2 lg:text-xl text-black">
                               {data.paket.maskapai_penerbangan}
                             </p>
                           </div>
@@ -156,10 +162,10 @@ function BelumBayar() {
                             />
                           </div>
                           <div>
-                            <p className="ps-1 font-bold md:text-xl text-black">
+                            <p className="ps-1 font-bold lg:text-xl text-black">
                               Kota Keberangkatan
                             </p>
-                            <p className="ps-1 pt-2 md:text-xl text-black">
+                            <p className="ps-1 pt-2 lg:text-xl text-black">
                               {data.paket.kota_keberangkatan}
                             </p>
                           </div>
@@ -174,10 +180,10 @@ function BelumBayar() {
                             />
                           </div>
                           <div>
-                            <p className="ps-1 font-bold md:text-xl text-black">
+                            <p className="ps-1 font-bold lg:text-xl text-black">
                               Durasi Perjalanan
                             </p>
-                            <p className="ps-1 pt-2 md:text-xl text-black">
+                            <p className="ps-1 pt-2 lg:text-xl text-black">
                               {data.paket.durasi_perjalanan}
                             </p>
                           </div>
@@ -192,7 +198,7 @@ function BelumBayar() {
                             />
                           </div>
                           <div>
-                            <p className="ps-1 font-bold md:text-xl text-black">
+                            <p className="ps-1 font-bold lg:text-xl text-black">
                               Hotel
                             </p>
                             <div className="ps-1 pt-2 flex items-center space-x-1">
@@ -202,40 +208,40 @@ function BelumBayar() {
                         </div>
                       </div>
                     </div>
-                    <div className="flex md:flex-row flex-col">
-                      <div className="border-2 md:border-e-0 p-2 border-slate-200 md:w-[30%]  md:text-2xl sm:text-lg text-base py-3 font-bold md:ps-12 ">
-                        <p className="my-2 text-center md:text-start">
+                    <div className="flex lg:flex-row flex-col">
+                      <div className="border-2 lg:border-e-0 p-2 border-slate-200 lg:w-[30%]  lg:text-2xl sm:text-lg text-base py-3 font-semibold lg:ps-12 ">
+                        <p className="my-2 text-center lg:text-start">
                           Total Jemaah
                         </p>
                       </div>
-                      <div className="border-2 p-2 border-slate-200 md:w-[70%] md:border-t-2 border-t-0  md:text-2xl sm:text-lg text-base font-bold px-12 py-3 flex md:flex-row flex-col justify-between ">
-                        <p className="my-2 text-center md:text-start">
+                      <div className="border-2 p-2 border-slate-200 lg:w-[70%] lg:border-t-2 border-t-0  lg:text-2xl sm:text-lg text-base font-semibold px-12 py-3 flex lg:flex-row flex-col justify-between ">
+                        <p className="my-2 text-center lg:text-start">
                           {data.order.jamaah.length} Jamaah
                         </p>
-                        <div className="flex gap-2">
+                        {/* <div className="flex gap-2">
 
                           <a
                             href={`/akun/PesananSaya/KonfirmasiBayar?id=${data.order._id}`}
-                            className="bg-green-500 text-white px-7 rounded-lg md:my-auto md:mx-0 mx-auto py-2 md:mt-0 mt-2 hover:text-[#E3B02B] hover:bg-black"
+                            className="bg-green-500 text-white px-7 rounded-lg lg:my-auto lg:mx-0 mx-auto py-2 lg:mt-0 mt-2 hover:text-[#E3B02B] hover:bg-black"
                           >
                             Detail
                           </a>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
-                    <div className="flex md:flex-row flex-col">
-                      <div className="border-2 md:border-e-0 p-2 border-slate-200 md:w-[30%]  md:text-2xl sm:text-lg text-base py-3 font-bold md:ps-12 ">
-                        <p className="my-2 text-center md:text-start">
+                    <div className="flex lg:flex-row flex-col">
+                      <div className="border-2 lg:border-e-0 p-2 border-slate-200 lg:w-[30%]  lg:text-2xl sm:text-lg text-base py-3 font-bold lg:ps-12 ">
+                        <p className="my-2 text-center lg:text-start">
                           Total Biaya
                         </p>
                       </div>
-                      <div className="border-2 p-2 border-slate-200 md:w-[70%] md:border-t-2 border-t-0  md:text-2xl sm:text-lg text-base font-bold px-12 py-3 flex md:flex-row flex-col justify-between ">
-                        <p className="my-2 text-center md:text-start">
-                          Rp {data.order.jumlah_bayar}
+                      <div className="border-2 p-2 border-slate-200 lg:w-[70%] lg:border-t-2 border-t-0  lg:text-2xl sm:text-lg text-base font-bold px-12 py-3 flex lg:flex-row flex-col justify-between ">
+                        <p className="my-2 text-center lg:text-start">
+                          {formattedNominal}
                         </p>
                         <a
                           href={`/akun/PesananSaya/KonfirmasiBayar?id=${data.order._id}`}
-                          className="bg-[#E3B02B] text-white px-7 rounded-lg md:my-auto md:mx-0 mx-auto py-2 md:mt-0 mt-2 hover:text-[#E3B02B] hover:bg-black"
+                          className="bg-[#E3B02B] text-white px-7 rounded-lg lg:my-auto lg:mx-0 mx-auto py-2 lg:mt-0 mt-2 hover:text-[#E3B02B] hover:bg-black"
                         >
                           Bayar
                         </a>

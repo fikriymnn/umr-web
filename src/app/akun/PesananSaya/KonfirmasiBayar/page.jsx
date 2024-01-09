@@ -101,6 +101,13 @@ function KonfirmasiBayar() {
   const date = paket == null ? new Date() : new Date(paket.waktu_keberangkatan);
   // Format tanggal
   const WaktuKeberangkatan = format(date, "d MMM y");
+
+  const nominal = order.jumlah_bayar;
+  const formattedNominal = nominal.toLocaleString('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+  });
   return (
     <>
       <div className="bg w-full h-full md:px-14 px-5 py-10">
@@ -226,7 +233,7 @@ function KonfirmasiBayar() {
                 Total Harga
               </p>
               <p className="font-bold md:text-xl sm:text-lg text-base text-amber-400">
-                Rp {order == null ? "" : order.jumlah_bayar}
+                {order == null ? "" : formattedNominal}
               </p>
             </div>
             <p className="md:text-base sm:text-sm text-xs font-semibold mt-4">

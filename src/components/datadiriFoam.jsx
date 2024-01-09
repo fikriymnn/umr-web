@@ -190,6 +190,14 @@ function DatadiriFoam({ idPaket }) {
       console.log(error.response.data);
     }
   }
+  const nominal = DetailPaket.price * jamaah.length;
+
+  const formattedNominal = nominal.toLocaleString('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+  });
+
   return (
     <>
       <div>
@@ -593,7 +601,7 @@ function DatadiriFoam({ idPaket }) {
             <div className="lg:px-7 px-4 flex justify-between pt-5 mb-7 ">
               <p className="font-bold text-base">Total Harga</p>
               <p className="font-bold text-base text-amber-400">
-                Rp{DetailPaket == null ? 0 : DetailPaket.price * jamaah.length}
+                {DetailPaket == null ? 0 : formattedNominal}
               </p>
             </div>
 

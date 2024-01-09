@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
@@ -34,10 +35,10 @@ function Percayakan() {
           </div>
         )}
         <div className="grid grid-cols-1 md:gap-7 gap-3 md:mt-0 sm:mt-5 mt-5">
-          <div className=" flex shadow-md w-10/12 py-3 px-1 bg-[#ffffff] mx-auto rounded-xl shadow-md">
-            <div className="flex px-1">
-              <div className=" bg-[#ffffff]  grid place-content-center rounded-xl lg:px-7 md:px-1 ">
-                <div className="bg-primary h-16 w-16 rounded-xl  "></div>
+          <div className=" flex  w-10/12 py-3 px-1 bg-[#ffffff] mx-auto rounded-xl shadow-md bg-cover bg-no-repeat">
+            <div className="flex md:px-4 px-3">
+              <div className=" bg-[#ffffff]  grid place-content-center rounded-xl  md:px-1 ">
+                <div className="bg-primary h-16 w-16 rounded-[8px] mr-3  " ></div>
               </div>
               <div className="grid grid-cols-1  ps-2">
                 <p className="text-black  md:text-base sm:text-base text-xs font-bold pt-2">
@@ -51,9 +52,9 @@ function Percayakan() {
             </div>
           </div>
           <div className=" flex shadow-md w-10/12 py-3 px-1 bg-[#ffffff] mx-auto rounded-xl">
-            <div className="flex px-1">
-              <div className=" bg-[#ffffff]  grid place-content-center rounded-xl lg:px-7 md:px-1 ">
-                <div className="bg-primary h-16 w-16 rounded-xl  "></div>
+            <div className="flex md:px-4 px-3">
+              <div className=" bg-[#ffffff]  grid place-content-center rounded-xl  md:px-1 ">
+                <div className="bg-primary h-16 w-16 rounded-[8px] mr-3  "></div>
               </div>
               <div className="grid grid-cols-1  ps-2">
                 <p className="text-black  md:text-base sm:text-base text-xs font-bold pt-2">
@@ -67,9 +68,9 @@ function Percayakan() {
             </div>
           </div>
           <div className=" flex shadow-md w-10/12 py-3 px-1 bg-[#ffffff] mx-auto rounded-xl">
-            <div className="flex px-1">
-              <div className=" bg-[#ffffff]  grid place-content-center rounded-xl lg:px-7 md:px-1 ">
-                <div className="bg-primary h-16 w-16 rounded-xl  "></div>
+            <div className="flex md:px-4 px-3">
+              <div className=" bg-[#ffffff]  grid place-content-center rounded-xl  md:px-1 ">
+                <div className="bg-primary h-16 w-16 rounded-[8px] mr-3  "></div>
               </div>
               <div className="grid grid-cols-1  ps-2">
                 <p className="text-black  md:text-base sm:text-base text-xs font-bold pt-2">
@@ -83,9 +84,9 @@ function Percayakan() {
             </div>
           </div>
           <div className=" flex shadow-md w-10/12 py-3 px-1 bg-[#ffffff] mx-auto rounded-xl">
-            <div className="flex px-1">
-              <div className=" bg-[#ffffff]  grid place-content-center rounded-xl lg:px-7 md:px-1 ">
-                <div className="bg-primary h-16 w-16 rounded-xl  "></div>
+            <div className="flex md:px-4 px-3">
+              <div className=" bg-[#ffffff]  grid place-content-center rounded-xl  md:px-1 ">
+                <div className="bg-primary h-16 w-16 rounded-[8px] mr-3  "></div>
               </div>
               <div className="grid grid-cols-1  ps-2">
                 <p className="text-black  md:text-base sm:text-base text-xs font-bold pt-2">
