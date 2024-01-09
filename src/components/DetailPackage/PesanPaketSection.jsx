@@ -3,7 +3,13 @@ import Image from "next/image";
 
 
 function PesanPaketSection({ id, price, kuota, description, sisaKuota }) {
+  const nominal = price;
 
+  const formattedNominal = nominal.toLocaleString('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+  });
 
   const numero = {
     total: kuota,
@@ -19,7 +25,7 @@ function PesanPaketSection({ id, price, kuota, description, sisaKuota }) {
         </div>
         <div className="">
           <p className="md:text-3xl sm:text-2xl text-xl text-[#E3B02B] font-semibold pt-2">
-            RP {price}
+            {formattedNominal}
           </p>
         </div>
         <div className="mt-3 mx-auto">
