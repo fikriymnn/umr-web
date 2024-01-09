@@ -1,14 +1,6 @@
 "use client";
-
-
-import NamaCustomer from "@/components/namaCustomer";
-
 import StepByStep from "@/components/StepByStep";
-
-import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import DatadiriFoam from "@/components/datadiriFoam";
-import TipePembayaranFoam from "@/components/tipePembayaranFoam";
-import MetodePembayaranSection from "@/components/Bayar/MetodePembayaranSection";
 import { useSearchParams } from "next/navigation";
 import React, { useEffect } from "react";
 import axios from "axios";

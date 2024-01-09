@@ -1,10 +1,7 @@
 import React from "react";
 import Dropdown from "@/components/Dropdown";
-import Image from "next/image";
-import DefaultCarousel from "@/components/Carousel";
 import PackageCard from "@/components/packagecard";
 import FilterNotMobilePackage from "@/components/FilterNotMobilePackage";
-import FilterIsMobilePackage from "@/components/FilterIsMobilePackage";
 import FilterPackages from "@/components/FilterPackages";
 import axios from "axios";
 
