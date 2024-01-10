@@ -30,22 +30,18 @@ export default function CustomFooter() {
                 className="font-extrabold text-black"
               />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">
+                <Footer.Link href="/">
                   <p className="text-black font-bold md:text-base text-sm">
                     Beranda
                   </p>
                 </Footer.Link>
-                <Footer.Link href="#">
+                <Footer.Link href="/package">
                   <p className="text-black font-bold md:text-base text-sm">
                     Paket Umroh
                   </p>
                 </Footer.Link>
-                <Footer.Link href="#">
-                  <p className="text-black font-bold md:text-base text-sm">
-                    Lainnya
-                  </p>
-                </Footer.Link>
-                <Footer.Link href="#">
+
+                <Footer.Link href="/tentangKami">
                   <p className="text-black font-bold md:text-base text-sm">
                     Tentang Kami
                   </p>
@@ -72,7 +68,7 @@ export default function CustomFooter() {
             </div>
             <div>
               <Footer.LinkGroup col>
-                <Footer.Link href="#">
+                <Footer.Link href="">
                   <div className="flex justify-center items-center gap-1 bg-[#404040]/[.65] rounded-3xl h-10  w-44">
                     <Image
                       src="/assets/vector/whatsapp.svg"
