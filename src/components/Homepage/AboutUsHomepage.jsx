@@ -20,6 +20,9 @@ function AboutUsHomepage() {
         eligendi assumenda error excepturi aperiam soluta amet delectus hic.
         Maxime, eos nisi? Sequi, iusto.
       </p>
+      <a href="/tentangKami" className="font-semibold md:text-base text-sm md:line-clamp-none line-clamp-6 text-amber-500 pt-2">
+        lainnya...
+      </a>
     </div>
   );
 }
