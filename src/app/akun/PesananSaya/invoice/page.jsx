@@ -11,10 +11,7 @@ const GenericPdfDownloader = () => {
         setImageLoaded(true);
     };
     const downloadPdfDocument = () => {
-        if (!imageLoaded) {
-            console.warn('Image not fully loaded. Aborting PDF download.');
-            return;
-        }
+
 
         const input = document.getElementById("testId");
         const scaleOptions = { scale: 4 }; // Set the scale to a fixed value (you can adjust this as needed)
