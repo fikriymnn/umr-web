@@ -108,7 +108,7 @@ export default async function Home() {
           <Percayakan />
         </div>
       </div>
-      <div className="bg-black w-full h-full lg:px-14 md:px-10 px-5 pb-10">
+      {/* <div className="bg-black w-full h-full lg:px-14 md:px-10 px-5 pb-10">
         <div className="flex justify-between">
           <p className="text-white  md:pt-10 sm:pt-7 pt-4 font-bold">
             100+ Biro Travel
@@ -118,9 +118,10 @@ export default async function Home() {
           </p>
         </div>
         <div className="mt-14 z-20">
-          <MultipleCarousel />
         </div>
-      </div>
+      </div> */}
+      <MultipleCarousel JumlahTravel={"100+ Biro Travel"} />
+
       <div className=" w-full ">
         <AboutUsHomepage />
       </div>
