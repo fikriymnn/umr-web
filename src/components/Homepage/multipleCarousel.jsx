@@ -29,7 +29,7 @@ function MultipleCarousel({ JumlahTravel }) {
 
   return (
     <>
-      <div onMouseEnter={() => setArrowHover(true)} onMouseLeave={() => setArrowHover(false)} className="bg-black w-full h-full lg:px-14 md:px-10 px-5 pb-10 ">
+      <div onMouseEnter={() => setArrowHover(true)} onMouseLeave={() => setArrowHover(false)} className="bg-[#292929] w-full h-full lg:px-14 md:px-10 px-5 pb-10 ">
         <div className="flex justify-between">
           <p className="text-white  md:pt-10 sm:pt-7 pt-4 font-bold">
             {JumlahTravel}
