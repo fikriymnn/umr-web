@@ -29,7 +29,7 @@ function PackageCard({
     setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
   };
   useEffect(() => {
-    // Initial check on mount
+
     handleResize();
 
     // Event listener for window resize

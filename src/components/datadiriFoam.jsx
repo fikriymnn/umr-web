@@ -1,11 +1,7 @@
 import React from "react";
-import DropdownDetail from "@/components/DropdownDetail";
+
 import Image from "next/image";
-import Testimonial from "@/components/testimonial";
-import Facility from "@/components/facility";
-import DefaultCarousel from "@/components/Carousel";
-import PackageCard from "@/components/packagecard";
-import { Carousel } from "flowbite";
+
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -190,13 +186,13 @@ function DatadiriFoam({ idPaket }) {
       console.log(error.response.data);
     }
   }
-  // const nominal = price * jamaah.length;
+  const nominal = DetailPaket == null ? 0 : DetailPaket.price * jamaah.length;
 
-  // const formattedNominal = nominal.toLocaleString('id-ID', {
-  //   style: 'currency',
-  //   currency: 'IDR',
-  //   minimumFractionDigits: 0,
-  // });
+  const formattedNominal = nominal.toLocaleString('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+  });
 
   return (
     <>
@@ -601,7 +597,7 @@ function DatadiriFoam({ idPaket }) {
             <div className="lg:px-7 px-4 flex justify-between pt-5 mb-7 ">
               <p className="font-bold text-base">Total Harga</p>
               <p className="font-bold text-base text-amber-400">
-                {DetailPaket == null ? 0 : DetailPaket.price * jamaah.length}
+                {formattedNominal}
               </p>
             </div>
 

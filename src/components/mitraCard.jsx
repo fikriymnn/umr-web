@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import StarsRating from "@/components/starsRating";
-function MitraCard() {
+function MitraCard({ namaTravel, noIzin, penilaian, ratingNilai, profil }) {
   const maxRating = 5;
   const rating = 2;
   const renderStars = () => {
@@ -25,22 +25,23 @@ function MitraCard() {
     return stars;
   };
   return (
-    <a href="mitraKami/detailmitra">
+    <a href="mitraKami/detailmitra" >
       <div className=" bg-white rounded-xl shadow-xl md:hover:scale-[101%] duration-100 ease-in-out">
         <div className="px-3 pt-3 pb-1">
           <div className=" md:w-10/12 w-full  flex rounded-xl">
             <div className="flex py-1 ">
               <div className=" ">
-                <div className="md:w-[60px] md:h-[60px] w-[60px] h-[60px] bg-gray-500 rounded-full "></div>
+                <div className="md:w-[60px] md:h-[60px] w-[60px] h-[60px] bg-gray-500 rounded-full bg-cover bg-no-repeat bg-center"
+                  style={{ backgroundImage: `url(${profil})` }}></div>
               </div>
               <div className="md:w-9/12 ps-5">
                 <h1 className=" text-black md:text-lg text-lg md:pb-1 pb-0 font-semibold">
-                  Travel Keren Dongs
+                  {namaTravel}
                 </h1>
                 <div className="md:flex md:pb-1 pb-2 md:gap-5">
                   <div className="flex gap-1">
                     <p className="text-black md:text-base text-sm font-bold">
-                      60
+                      {penilaian}
                     </p>
                     <p className="text-black md:text-base text-sm">Penilaian</p>
                   </div>
@@ -49,7 +50,15 @@ function MitraCard() {
                       Rating
                     </p>
                     <div className="pb-1 flex my-auto mr-2">
-                      {renderStars()}
+                      <img
+
+                        src={
+                          "/assets/vector/Star.svg"
+
+                        }
+                        alt={`Star  `}
+                      />
+                      {ratingNilai}
                     </div>
                   </div>
                 </div>
@@ -57,7 +66,7 @@ function MitraCard() {
                   Nomor Izin Umroh:
                 </p>
                 <p className="text-black md:text-base text-sm  pb-0">
-                  123123123123
+                  {noIzin}
                 </p>
               </div>
             </div>

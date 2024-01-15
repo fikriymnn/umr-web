@@ -102,7 +102,7 @@ function KonfirmasiBayar() {
   // Format tanggal
   const WaktuKeberangkatan = format(date, "d MMM y");
 
-  const nominal = order.jumlah_bayar;
+  const nominal = order == null ? "" : order.jumlah_bayar;
   const formattedNominal = nominal.toLocaleString('id-ID', {
     style: 'currency',
     currency: 'IDR',

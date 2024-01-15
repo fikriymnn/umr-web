@@ -238,7 +238,7 @@ function PackageDetail() {
                       <div className="py-3"></div>
                       <div className="  ">
                         <a href="/package/detail/formPesan">
-                          <div className="my-auto  bg-gray-100 hover:bg-[#fad26e] shadow-lg m-auto rounded-xl p-3 items-center justify-center">
+                          <div className="my-auto  bg-gray-100 shadow-lg m-auto rounded-xl p-3 items-center justify-center">
                             <div className="flex justify-center ">
                               <div className="md:w-1/12 w-1/12 "></div>
                             </div>
@@ -297,6 +297,7 @@ function PackageDetail() {
           Paket.paket.map((data, i) => {
             return (
               <PackageCard
+                sisaKuota={data.sisa_kuota}
                 key={i}
                 id={data._id}
                 //banner={""}
