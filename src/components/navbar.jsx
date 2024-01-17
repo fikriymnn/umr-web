@@ -146,7 +146,7 @@ export default function CustomNavbar() {
                             >
                               <div className="bg-slate-400 rounded-full w-10 h-10"></div>
 
-                              <p>{DataUser == null ? "" : DataUser.nama_lengkap}</p>
+                              <p>{DataUser == null ? "" : DataUser.nama_lengkap.split(" ").slice(0, 2).join(" ")}</p>
 
                             </a>
                           </>
@@ -217,7 +217,7 @@ export default function CustomNavbar() {
                         >
                           <div className="bg-slate-400 rounded-full w-10 h-10"></div>
 
-                          <p>{DataUser == null ? "" : DataUser.nama_lengkap}</p>
+                          <p>{DataUser == null ? "" : DataUser.nama_lengkap.split(" ").slice(0, 2).join(" ")}</p>
 
                         </a>
                       </>
