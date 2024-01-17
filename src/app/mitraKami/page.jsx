@@ -39,7 +39,7 @@ async function MitraKami() {
                   return (
                     <>
 
-                      <MitraCard namaTravel={data.nama_mitra}
+                      <MitraCard id={data._id} namaTravel={data.nama_mitra}
                         key={index}
                         noIzin={data.no_izin_umroh} penilaian={"data.rating.length"} ratingNilai={data.rating.toFixed(1)} profil={`http://localhost:5000/images/${data.foto_profil}`} />
                     </>
