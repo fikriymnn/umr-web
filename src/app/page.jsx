@@ -13,7 +13,7 @@ async function GetDataPaket() {
   let data;
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/paket?skip=0&limit=9"
+      `${process.env.NEXT_PUBLIC_URL}/api/paket?skip=0&limit=9`
     );
     data = res.data.data;
   } catch (error) {
@@ -55,7 +55,7 @@ export default async function Home() {
                       key={index}
                       id={data._id}
 
-                      banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
+                      banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
                       durasi={data.durasi_perjalanan}
                       ratingHotel={data.rating_hotel}
                       kamar={data.pilihan_kamar}
