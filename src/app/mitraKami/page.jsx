@@ -32,14 +32,14 @@ async function MitraKami() {
             </div>
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 sm:grid-cols-2 gap-3  pb-10 xl:p-0 lg:p-5 px-3 mb-20">
               {DataMitra == null ? (
-                <div key={index}>skksks</div>
+                <div>skksks</div>
               ) : (
                 DataMitra.map((data, index) => {
 
                   return (
                     <>
 
-                      <MitraCard namaTravel={data.nama_mitra}
+                      <MitraCard id={data._id} namaTravel={data.nama_mitra}
                         key={index}
                         noIzin={data.no_izin_umroh} penilaian={"data.rating.length"} ratingNilai={data.rating.toFixed(1)} profil={`http://localhost:5000/images/${data.foto_profil}`} />
                     </>

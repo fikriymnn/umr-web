@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import StarsRating from "@/components/starsRating";
-function MitraCard({ namaTravel, noIzin, penilaian, ratingNilai, profil }) {
+function MitraCard({ id, namaTravel, noIzin, penilaian, ratingNilai, profil }) {
   const maxRating = 5;
   const rating = 2;
   const renderStars = () => {
@@ -25,7 +25,7 @@ function MitraCard({ namaTravel, noIzin, penilaian, ratingNilai, profil }) {
     return stars;
   };
   return (
-    <a href="mitraKami/detailmitra" >
+    <a href={`/mitraKami/detailmitra?id=${id}`} >
       <div className=" bg-white rounded-xl shadow-xl md:hover:scale-[101%] duration-100 ease-in-out">
         <div className="px-3 pt-3 pb-1">
           <div className=" md:w-10/12 w-full  flex rounded-xl">
