@@ -108,7 +108,11 @@ const GenericPdfDownloader = () => {
                                             <p className='md:text-xl sm:text-lg text-xs'>3</p>
                                             <p className='md:text-xl sm:text-lg text-xs'>Dec 1, 1975</p>
                                             <p className='md:text-xl sm:text-lg text-xs'>2223344</p>
-                                            <p className='font-semibold md:text-xl sm:text-lg text-xs'>{order == null ? "ddd" : order.order.jumlah_bayar}</p>
+                                            <p className='font-semibold md:text-xl sm:text-lg text-xs'>{order == null ? "ddd" : order.order.jumlah_bayar.toLocaleString('id-ID', {
+                                                style: 'currency',
+                                                currency: 'IDR',
+                                                minimumFractionDigits: 0,
+                                            })}</p>
                                         </div>
 
                                     </div>
@@ -134,16 +138,24 @@ const GenericPdfDownloader = () => {
                                 <tbody>
                                     <tr className="flex">
                                         <td className="flex flex-col md:w-[50%] w-[35%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px]">
-                                            Paket super hemat bersama Komeng
+                                            {order.paket.title}
                                         </td>
                                         <td className="flex flex-col  w-[15%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px]">
                                             {order.order.jamaah.length}
                                         </td>
                                         <td className="flex flex-col md:w-[15%] w-[25%]  md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px] text-end">
-                                            IDR 32,000,000.00
+                                            {order.paket.price.toLocaleString('id-ID', {
+                                                style: 'currency',
+                                                currency: 'IDR',
+                                                minimumFractionDigits: 0,
+                                            })}
                                         </td>
                                         <td className="flex flex-col md:w-[20%] w-[25%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px] text-end">
-                                            IDR 96,000,000.00
+                                            {order.order.jumlah_bayar.toLocaleString('id-ID', {
+                                                style: 'currency',
+                                                currency: 'IDR',
+                                                minimumFractionDigits: 0,
+                                            })}
                                         </td>
                                     </tr>
 
