@@ -18,6 +18,7 @@ function PackageCard({
   lokasi,
   ratingHotel,
   waktuKeberangkatan,
+  key
 }) {
   const numero = {
     total: kuota,
@@ -97,7 +98,7 @@ function PackageCard({
   const WaktuKeberangkatan = format(date, "d MMM y");
 
   return (
-    <a href={`/package/detail?id=${id}`}>
+    <a href={`/package/detail?id=${id}`} key={key}>
       <div className=" bg-white rounded-xl shadowcard md:hover:scale-[102%] duration-100 ease-in-out">
         <div className="p-3">
           <div className="h-24 md:flex md:flex-row gap-1">
