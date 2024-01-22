@@ -1,6 +1,5 @@
 'use client'
-import React from "react";
-"use client"
+
 import React, { useEffect, useState } from "react";
 import Dropdown from "@/components/Dropdown";
 import PackageCard from "@/components/packagecard";
@@ -86,7 +85,7 @@ function Package() {
         <div className="flex  pt-5   z-10 relative">
           <FilterNotMobilePackage />
           <div className="lg:w-8/12 w-full mx-auto lg:ml-10 lg:mr-20 lg:p-0 px-5">
-            <div className="bg-white shadow-xl rounded-xl lg:w-full w-full">
+            {/* <div className="bg-white shadow-xl rounded-xl lg:w-full w-full">
               <div className="flex lg:flex-row flex-col">
                 <div className="lg:w-3/6 w-full p-5 py-3">
                   <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
@@ -101,12 +100,12 @@ function Package() {
                   <Dropdown />
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="mt-2 ">
               <h1 className="text-xl font-semibold  my-5">
                 List Paket Umroh Yang Tersedia
               </h1>
-              <div className="mahfud  grid-cols-2 md:gap-10 gap-2">
+              <div className="mahfud  grid-cols-2 md:gap-5 gap-2">
                 {dataPaket == null ? (
                   <div>loading</div>
                 ) : (
@@ -136,7 +135,10 @@ function Package() {
 
 
               </div>
-              <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons />
+              <div className="flex justify-center items-center my-20">
+
+                <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons />
+              </div>
             </div>
           </div>
         </div>

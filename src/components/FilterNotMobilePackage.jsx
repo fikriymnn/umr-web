@@ -2,6 +2,7 @@
 import React from "react";
 import { isMobile } from "react-device-detect";
 import { useEffect, useRef, useState } from "react";
+import { Dropdown } from "flowbite-react";
 function FilterNotMobilePackage() {
   const [isMobile, setIsMobile] = useState(false);
   const [comp, setComp] = useState(0);
@@ -20,7 +21,31 @@ function FilterNotMobilePackage() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  const [DropdownKota, setDropdownKota] = useState(false);
+  const [DropdownKategori, setDropdownKategori] = useState(false);
+  const [DropdownEstimasi, setDropdownEstimasi] = useState(false);
+  const [DropdownDurasi, setDropdownDurasi] = useState(false);
+  const [DropdownJenis, setDropdownJenis] = useState(false);
+  const [DropdownWaktu, setDropdownWaktu] = useState(false);
 
+  const toggleDropdownKota = () => {
+    setDropdownKota(!DropdownKota);
+  };
+  const toggleDropdownKategori = () => {
+    setDropdownKategori(!DropdownKategori);
+  };
+  const toggleDropdownEstimasi = () => {
+    setDropdownEstimasi(!DropdownEstimasi);
+  };
+  const toggleDropdownDurasi = () => {
+    setDropdownDurasi(!DropdownDurasi);
+  };
+  const toggleDropdownJenis = () => {
+    setDropdownJenis(!DropdownJenis);
+  };
+  const toggleDropdownWaktu = () => {
+    setDropdownWaktu(!DropdownWaktu);
+  };
   return (
     <>
       {!isMobile && (
@@ -34,79 +59,218 @@ function FilterNotMobilePackage() {
               </div>
               <div className="py-5 px-7 text-xl text-center font-medium text-black">
                 <h1 className="font-semibold">Kota Keberangkatan</h1>
-                <div className="grid grid-cols-2 gap-5 py-3">
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Semua
-                  </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Bandung
-                  </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Jakarta
-                  </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Bogor
-                  </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Semarang
-                  </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Jogjakarta
-                  </button>
+                <div className="">
+                  <div className="relative inline-block text-left w-full">
+                    <button
+                      onClick={toggleDropdownKota}
+                      className="flex justify-between items-center px-4 py-1 md:py-2 text-gray-800 border border-gray-500 rounded-lg  focus:outline-none focus:ring w-full"
+                    >
+
+                      <span className="text-base">Dropdown Button</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className={`w-4 h-4 ml-2 ${DropdownKota ? 'transform rotate-180' : ''}`}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+
+                    {DropdownKota && (
+                      <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
+                        {/* Dropdown content */}
+                        <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 1</a>
+                        <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 2</a>
+                        <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 3</a>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
 
               <div className="py-5 px-7 text-xl text-center font-medium text-black">
                 <h1 className="font-semibold">Kategori Paket Umroh</h1>
-                <div className="grid grid-cols-2 gap-5 py-3">
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Semua
+                <div className="relative inline-block text-left w-full">
+                  <button
+                    onClick={toggleDropdownKategori}
+                    className="flex justify-between items-center px-4 py-1 md:py-2 text-gray-800 border border-gray-500 rounded-lg  focus:outline-none focus:ring w-full"
+                  >
+
+                    <span className="text-base">Dropdown Button</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className={`w-4 h-4 ml-2 ${DropdownKategori ? 'transform rotate-180' : ''}`}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Reguler
-                  </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Plus Wisata
-                  </button>
+
+                  {DropdownKategori && (
+                    <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
+                      {/* Dropdown content */}
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 1</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 2</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 3</a>
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div className="py-5 px-7 text-xl text-center font-medium text-black">
                 <h1 className="font-semibold">Estimasi Biaya Umroh</h1>
-                <div className="grid grid-cols-2 gap-5 py-3">
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Semua
+                <div className="relative inline-block text-left w-full">
+                  <button
+                    onClick={toggleDropdownEstimasi}
+                    className="flex justify-between items-center px-4 py-1 md:py-2 text-gray-800 border border-gray-500 rounded-lg  focus:outline-none focus:ring w-full"
+                  >
+
+                    <span className="text-base">Dropdown Button</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className={`w-4 h-4 ml-2 ${DropdownEstimasi ? 'transform rotate-180' : ''}`}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    30jt - 40jt
-                  </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    &lt; 30jt
-                  </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    &gt; 30jt
-                  </button>
+
+                  {DropdownEstimasi && (
+                    <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
+                      {/* Dropdown content */}
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 1</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 2</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 3</a>
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div className="py-5 px-7 text-xl text-center font-medium text-black">
                 <h1 className="font-semibold">Durasi Perjalanan</h1>
-                <div className="grid grid-cols-2 gap-5 py-3">
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    Semua
+                <div className="relative inline-block text-left w-full">
+                  <button
+                    onClick={toggleDropdownDurasi}
+                    className="flex justify-between items-center px-4 py-1 md:py-2 text-gray-800 border border-gray-500 rounded-lg  focus:outline-none focus:ring w-full"
+                  >
+
+                    <span className="text-base">Dropdown Button</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className={`w-4 h-4 ml-2 ${DropdownDurasi ? 'transform rotate-180' : ''}`}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    7 Hari
+
+                  {DropdownDurasi && (
+                    <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
+                      {/* Dropdown content */}
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 1</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 2</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 3</a>
+                    </div>
+                  )}
+                </div>
+
+              </div>
+              <div className="py-5 px-7 text-xl text-center font-medium text-black">
+                <h1 className="font-semibold">Jenis Keberangkatan</h1>
+                <div className="relative inline-block text-left w-full">
+                  <button
+                    onClick={toggleDropdownJenis}
+                    className="flex justify-between items-center px-4 py-1 md:py-2 text-gray-800 border border-gray-500 rounded-lg  focus:outline-none focus:ring w-full"
+                  >
+
+                    <span className="text-base">Dropdown Button</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className={`w-4 h-4 ml-2 ${DropdownJenis ? 'transform rotate-180' : ''}`}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    8 hari
+
+                  {DropdownJenis && (
+                    <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
+                      {/* Dropdown content */}
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 1</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 2</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 3</a>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className="py-5 px-7 text-xl text-center font-medium text-black">
+                <h1 className="font-semibold">Waktu Keberangkatan</h1>
+                <div className="relative inline-block text-left w-full">
+                  <button
+                    onClick={toggleDropdownWaktu}
+                    className="flex justify-between items-center px-4 py-1 md:py-2 text-gray-800 border border-gray-500 rounded-lg  focus:outline-none focus:ring w-full"
+                  >
+
+                    <span className="text-base">Dropdown Button</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className={`w-4 h-4 ml-2 ${DropdownWaktu ? 'transform rotate-180' : ''}`}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    9 hari
-                  </button>
-                  <button className="text-sm p-2 hover:bg-[#E3B02B] border border-gray-500 rounded-xl flex items-center justify-center">
-                    10 hari
-                  </button>
+
+                  {DropdownWaktu && (
+                    <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
+                      {/* Dropdown content */}
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 1</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 2</a>
+                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 3</a>
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="h-[20px]"></div>
