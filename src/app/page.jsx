@@ -13,7 +13,7 @@ async function GetDataPaket() {
   let data;
   try {
     const res = await axios.get(
-      `${process.env.NEXT_PUBLIC_URL}/api/paket?skip=0&limit=9`
+      `http://localhost:5000/api/paket?skip=0&limit=9`
     );
     data = res.data.data;
   } catch (error) {
@@ -51,22 +51,25 @@ export default async function Home() {
               ) : (
                 DataPaket.paket.map((data, index) => {
                   return (
-                    <PackageCard
-                      key={index}
-                      id={data._id}
+                    <>
+                      <PackageCard
+                        key={index}
+                        id={data._id}
 
-                      banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
-                      durasi={data.durasi_perjalanan}
-                      ratingHotel={data.rating_hotel}
-                      kamar={data.pilihan_kamar}
-                      kuota={data.kuota}
-                      sisaKuota={data.sisa_kuota}
-                      lokasi={data.kota_keberangkatan}
-                      maskapai={data.maskapai_penerbangan}
-                      price={data.price}
-                      title={data.title}
-                      waktuKeberangkatan={data.waktu_keberangkatan}
-                    />
+                        banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
+                        durasi={data.durasi_perjalanan}
+                        ratingHotel={data.rating_hotel}
+                        kamar={data.pilihan_kamar}
+                        kuota={data.kuota}
+                        sisaKuota={data.sisa_kuota}
+                        lokasi={data.kota_keberangkatan}
+                        maskapai={data.maskapai_penerbangan}
+                        price={data.price}
+                        title={data.title}
+                        waktuKeberangkatan={data.waktu_keberangkatan}
+                      />
+
+                    </>
                   );
                 })
               )}

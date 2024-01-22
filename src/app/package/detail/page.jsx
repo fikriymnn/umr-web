@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { Pagination } from 'flowbite-react';
 
 
 import PackageCard from "@/components/packagecard";
@@ -48,7 +49,7 @@ function PackageDetail() {
 
   async function getDetailMitra(idMitra) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/mitra/${idMitra}`);
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/mitra/${idMitra}`);
       if (res.data.success == true) {
         setDetailMitra(res.data.data);
       }
@@ -60,7 +61,7 @@ function PackageDetail() {
   async function getDataTestimoni(idMitra) {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/ulasan/${idMitra}`
+        `${process.env.NEXT_PUBLIC_URL}/api/ulasan/${idMitra}`
       );
       if (res.data.success == true) {
         setUlasan(res.data.data);
@@ -73,7 +74,7 @@ function PackageDetail() {
   async function GetDataPaket() {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/paket?skip=0&limit=6"
+        `${process.env.NEXT_PUBLIC_URL}/api/paket?skip=0&limit=6`
       );
       if (res.data.success == true) {
         setPaket(res.data.data);
@@ -90,6 +91,9 @@ function PackageDetail() {
   };
 
   const availability = (numero.available / numero.total) * 100 + "%";
+
+
+
 
   return (
     <div className="bg">
@@ -171,7 +175,7 @@ function PackageDetail() {
               nama={DetailMitra.nama_mitra}
               noizin={DetailMitra.no_izin_umroh}
               rating={DetailMitra.rating}
-              profil={`http://localhost:5000/images/${DetailMitra.foto_profil}`}
+              profil={`${process.env.NEXT_PUBLIC_URL}/images/${DetailMitra.foto_profil}`}
             />
           )}
           {DetailPaket == null ? (
@@ -294,26 +298,33 @@ function PackageDetail() {
         {Paket == null ? (
           <div></div>
         ) : (
+
           Paket.paket.map((data, i) => {
             return (
-              <PackageCard
-                sisaKuota={data.sisa_kuota}
-                key={i}
-                id={data._id}
-                //banner={""}
-                banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
-                durasi={data.durasi_perjalanan}
-                ratingHotel={data.rating_hotel}
-                kamar={data.pilihan_kamar}
-                kuota={data.kuota}
-                lokasi={data.kota_keberangkatan}
-                maskapai={data.maskapai_penerbangan}
-                price={data.price}
-                title={data.title}
-                waktuKeberangkatan={data.waktu_keberangkatan}
-              />
+
+              <>
+                <PackageCard
+                  sisaKuota={data.sisa_kuota}
+                  key={i}
+                  id={data._id}
+                  //banner={""}
+                  banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
+                  durasi={data.durasi_perjalanan}
+                  ratingHotel={data.rating_hotel}
+                  kamar={data.pilihan_kamar}
+                  kuota={data.kuota}
+                  lokasi={data.kota_keberangkatan}
+                  maskapai={data.maskapai_penerbangan}
+                  price={data.price}
+                  title={data.title}
+                  waktuKeberangkatan={data.waktu_keberangkatan}
+                />
+              </>
             );
-          })
+          }
+          )
+
+
         )}
       </div>
     </div>

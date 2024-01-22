@@ -8,7 +8,7 @@ function Login() {
   const { push } = useRouter();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const url = "http://localhost:5000/api/login";
+  const url = `http://localhost:5000/api/login`;
 
   async function submitLogin(e) {
     e.preventDefault();

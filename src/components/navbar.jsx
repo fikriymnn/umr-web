@@ -38,7 +38,7 @@ export default function CustomNavbar() {
 
   async function getuser() {
     try {
-      const res = await axios.get("http://localhost:5000/api/user", {
+      const res = await axios.get(`http://localhost:5000/api/user`, {
         withCredentials: true,
       });
       if (res.data.success == true) {

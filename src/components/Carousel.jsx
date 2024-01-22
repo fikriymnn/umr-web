@@ -11,7 +11,7 @@ export default function DefaultCarousel({ image }) {
             key={i}
             className=""
             alt="..."
-            src={`http://localhost:5000/images/${data.img}`}
+            src={`${process.env.NEXT_PUBLIC_URL}/images/${data.img}`}
           />
         );
       })}

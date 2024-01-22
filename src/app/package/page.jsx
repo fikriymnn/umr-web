@@ -1,15 +1,16 @@
+'use client'
 import React from "react";
 import Dropdown from "@/components/Dropdown";
 import PackageCard from "@/components/packagecard";
 import FilterNotMobilePackage from "@/components/FilterNotMobilePackage";
 import FilterPackages from "@/components/FilterPackages";
 import axios from "axios";
-
+import DefaultPagination from "@/components/Pagination"
 async function GetDataPaket() {
   let data;
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/paket?skip=0&limit=15"
+      `${process.env.NEXT_PUBLIC_URL}/api/paket?skip=0&limit=15`
     );
     data = res.data.data;
   } catch (error) {
@@ -60,7 +61,7 @@ async function Package() {
                         key={index}
                         id={data._id}
                         //banner={""}
-                        banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
+                        banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
                         durasi={data.durasi_perjalanan}
                         ratingHotel={data.rating_hotel}
                         kamar={data.pilihan_kamar}
@@ -72,10 +73,12 @@ async function Package() {
                         title={data.title}
                         waktuKeberangkatan={data.waktu_keberangkatan}
                       />
+
                     );
                   })
                 )}
               </div>
+              hai
             </div>
           </div>
         </div>

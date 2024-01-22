@@ -5,7 +5,7 @@ async function GetDataMitra() {
   let data;
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/mitra?skip=0&limit=9"
+      `http://localhost:5000/api/mitra?skip=0&limit=9`
     );
     data = res.data.data;
 
@@ -41,7 +41,7 @@ async function MitraKami() {
 
                       <MitraCard id={data._id} namaTravel={data.nama_mitra}
                         key={index}
-                        noIzin={data.no_izin_umroh} penilaian={"data.rating.length"} ratingNilai={data.rating.toFixed(1)} profil={`http://localhost:5000/images/${data.foto_profil}`} />
+                        noIzin={data.no_izin_umroh} penilaian={"data.rating.length"} ratingNilai={data.rating.toFixed(1)} profil={`${process.env.NEXT_PUBLIC_URL}/images/${data.foto_profil}`} />
                     </>
                   )
                 }))}
