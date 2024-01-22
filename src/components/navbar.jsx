@@ -101,7 +101,7 @@ export default function CustomNavbar() {
                     <>
                       <div className="border-t-2 border-slate-200 md:h-full bg-white flex flex-col md:flex-row p-5 gap-5 font-semibold text-[17px]">
                         <a
-                          href="/package"
+                          href="/package?page=1"
                           className="flex gap-2 items-center md:hover:scale-105 duration-100"
                         >
                           <Image
@@ -172,7 +172,7 @@ export default function CustomNavbar() {
                 <>
                   <div className="md:h-full bg-white flex flex-col md:flex-row p-5 gap-5 font-semibold lg:text-[17px] md:text-[13px]">
                     <a
-                      href="/package"
+                      href="/package?page=1"
                       className="flex gap-2 items-center md:hover:scale-105 duration-100"
                     >
                       <Image

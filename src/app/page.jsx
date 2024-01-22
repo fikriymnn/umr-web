@@ -16,6 +16,7 @@ async function GetDataPaket() {
       `${process.env.NEXT_PUBLIC_URL}/api/paket?skip=0&limit=9`
     );
     data = res.data.data;
+    
   } catch (error) {
     data = null;
   }
@@ -71,7 +72,7 @@ export default async function Home() {
                 })
               )}
             </div>
-            <a href="/package" className="flex">
+            <a href="/package?page=1" className="flex">
               <div className="flex items-center justify-center bg-black p-4 mx-auto rounded-xl mb-10">
                 <p className=" text-white text-center  ">
                   Tampilkan Lebih Banyak
