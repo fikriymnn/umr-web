@@ -18,7 +18,7 @@ function Facility({ lokasi, namaHotel, content, fasilitas }) {
               key={i}
               className="w-44 h-full xl:h-36 md:h-28  md:p-1 sm:h-20   sm:p-1 p-1 "
               alt=""
-              src={`http://localhost:5000/images/${data.img}`}
+              src={`${process.env.NEXT_PUBLIC_URL}/images/${data.img}`}
             />
           );
         })}

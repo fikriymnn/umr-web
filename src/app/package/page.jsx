@@ -1,25 +1,81 @@
-import React from "react";
+'use client'
+
+import React, { useEffect, useState } from "react";
 import Dropdown from "@/components/Dropdown";
 import PackageCard from "@/components/packagecard";
 import FilterNotMobilePackage from "@/components/FilterNotMobilePackage";
 import FilterPackages from "@/components/FilterPackages";
 import axios from "axios";
 
-async function GetDataPaket() {
-  let data;
-  try {
-    const res = await axios.get(
-      "http://localhost:5000/api/paket?skip=0&limit=15"
-    );
-    data = res.data.data;
-  } catch (error) {
-    data = null;
-  }
-  return data;
-}
+import { useSearchParams } from "next/navigation";
+import { Pagination } from 'flowbite-react';
+import { useRouter } from "next/navigation";
 
-async function Package() {
-  const DataPaket = await GetDataPaket();
+// async function GetDataPaket() {
+//   let data;
+//   try {
+//     const res = await axios.get(
+//       "http://localhost:5000/api/paket?skip=0&limit=15"
+//     );
+//     data = res.data.data;
+//   } catch (error) {
+//     data = null;
+//   }
+//   return data;
+// }
+
+function Package() {
+  //const DataPaket = await GetDataPaket();
+  const router = useRouter()
+  const searchParams = useSearchParams();
+  const pageParams = searchParams.get("page");
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [page, setPage] = useState(pageParams);
+  const [dataPaket, setDataPaket] = useState(null);
+
+  const limit = 10;
+
+
+
+  useEffect(() => {
+
+
+    fetchData(page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const onPageChange = async (pagee) => {
+    router.push(`/package?page=${pagee}`);
+    setDataPaket(null)
+    fetchData(pagee)
+
+  };
+
+  const fetchData = async (pagee) => {
+    try {
+      const skip = (pagee - 1) * limit;
+      const response = await axios.get(
+        `${process.env.NEXT_PUBLIC_URL}/api/paket`,
+        {
+          params: {
+            durasi_perjalanan: "",
+            category_paket: "",
+            kota_keberangkatan: "",
+            priceFrom: "",
+            priceTo: "",
+            skip: skip,
+            limit: limit,
+
+          }
+        }
+      );
+      setCurrentPage(response.data.data.page)
+      setDataPaket(response.data.data.paket)
+    } catch (error) {
+      // Handle error
+    }
+  };
 
   return (
     <div className="bg pb-10">
@@ -29,7 +85,7 @@ async function Package() {
         <div className="flex  pt-5   z-10 relative">
           <FilterNotMobilePackage />
           <div className="lg:w-8/12 w-full mx-auto lg:ml-10 lg:mr-20 lg:p-0 px-5">
-            <div className="bg-white shadow-xl rounded-xl lg:w-full w-full">
+            {/* <div className="bg-white shadow-xl rounded-xl lg:w-full w-full">
               <div className="flex lg:flex-row flex-col">
                 <div className="lg:w-3/6 w-full p-5 py-3">
                   <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
@@ -44,23 +100,23 @@ async function Package() {
                   <Dropdown />
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="mt-2 ">
               <h1 className="text-xl font-semibold  my-5">
                 List Paket Umroh Yang Tersedia
               </h1>
-              <div className="mahfud  grid-cols-2 md:gap-10 gap-2">
-                {DataPaket == null ? (
-                  <div></div>
+              <div className="mahfud  grid-cols-2 md:gap-5 gap-2">
+                {dataPaket == null ? (
+                  <div>loading</div>
                 ) : (
-                  DataPaket.paket.map((data, index) => {
+                  dataPaket.map((data, index) => {
                     return (
 
                       <PackageCard
                         key={index}
                         id={data._id}
                         //banner={""}
-                        banner={`http://localhost:5000/images/${data.content_carousel[0].img}`}
+                        banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
                         durasi={data.durasi_perjalanan}
                         ratingHotel={data.rating_hotel}
                         kamar={data.pilihan_kamar}
@@ -72,9 +128,16 @@ async function Package() {
                         title={data.title}
                         waktuKeberangkatan={data.waktu_keberangkatan}
                       />
+
                     );
                   })
                 )}
+
+
+              </div>
+              <div className="flex justify-center items-center my-20">
+
+                <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons />
               </div>
             </div>
           </div>

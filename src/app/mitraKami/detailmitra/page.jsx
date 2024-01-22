@@ -58,65 +58,72 @@ function DetailMitra() {
                 <div className="  md:p-10 px-5 pt-10">
                   <div className="flex py-1 ">
                     <div className=" ">
-                      <div className="md:w-[100px] md:h-[100px] w-[40px] h-[40px] bg-gray-500 rounded-full "></div>
+                      <div className="md:w-[100px] md:h-[100px] w-[40px] h-[40px] bg-gray-500 rounded-full bg-cover bg-no-repeat bg-center"
+                        style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_URL}/images/${DetailMitra.foto_profil})` }}></div>
                     </div>
                     <div className="w-10/12 ps-5">
                       <h1 className=" text-black md:text-3xl text-xl pb-3 font-semibold">
                         {DetailMitra.nama_mitra}
                       </h1>
-                      <div className="md:flex pb-3 gap-9">
-                        <div className="flex gap-1">
-                          <p className="text-black md:text-xl text-sm font-bold">
-                            60
-                          </p>
-                          <p className="text-black md:text-xl text-sm">Penilaian</p>
-                        </div>
-                        <div className="flex gap-2">
-                          {/* <p className="text-black md:text-xl text-sm my-auto">
+                      <div className="md:flex flex-col grid grid-cols-2">
+
+                        <div className="md:flex pb-3 gap-9">
+                          <div className="flex gap-1">
+                            <p className="text-black md:text-xl text-sm font-bold">
+                              60
+                            </p>
+                            <p className="text-black md:text-xl text-sm">Penilaian</p>
+                          </div>
+                          <div className="flex gap-2">
+                            {/* <p className="text-black md:text-xl text-sm my-auto">
                             Rating
                           </p> */}
-                          <div className="">
-                            <div className="flex gap-1">
-                              <p className="text-black md:text-xl text-sm my-auto">
-                                Rating
-                              </p>
-                              <div className=" flex my-auto mr-2 w-4">
-                                <img
+                            <div className="">
+                              <div className="flex gap-1">
+                                <p className="text-black md:text-xl text-sm my-auto">
+                                  Rating
+                                </p>
+                                <div className=" flex my-auto mr-2 w-4">
+                                  <img
 
 
-                                  src={
-                                    "/assets/vector/Star.svg"
+                                    src={
+                                      "/assets/vector/Star.svg"
 
-                                  }
-                                  alt={`Star  `}
-                                />
-                                <div className="text-xs md:text-lg sm:text-base">
+                                    }
+                                    alt={`Star  `}
+                                  />
+                                  <div className="text-xs md:text-lg sm:text-base">
 
-                                  {DetailMitra.rating.toFixed(1)}
+                                    {DetailMitra.rating.toFixed(1)}
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <p className="text-black md:text-xl text-sm pb-1">
-                        Nomor Izin Umroh:
-                      </p>
-                      <p className="text-black md:text-xl text-sm pb-1">
-                        {DetailMitra.no_izin_umroh}
-                      </p>
-                      <div className="flex items-center md:gap-0 sm:gap-2 gap-3">
-                        <div className=" md:w-1/12">
-                          <Image
-                            src="/assets/vector/location.svg"
-                            alt="icon"
-                            width={15}
-                            height={15}
-                          />
+                        <div>
+
+                          <p className="text-black md:text-xl text-sm pb-1">
+                            Nomor Izin Umroh:
+                          </p>
+                          <p className="text-black md:text-xl text-sm pb-1">
+                            {DetailMitra.no_izin_umroh}
+                          </p>
                         </div>
-                        <p className="text-black md:text-xl text-sm font-semibold">
-                          {DetailMitra.location}
-                        </p>
+                        <div className="flex items-center md:gap-0 sm:gap-2 gap-3 -translate-x-14 md:translate-x-0">
+                          <div className=" md:w-1/12">
+                            <Image
+                              src="/assets/vector/location.svg"
+                              alt="icon"
+                              width={15}
+                              height={15}
+                            />
+                          </div>
+                          <p className="text-black md:text-xl text-sm font-semibold">
+                            {DetailMitra.location}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -128,7 +135,7 @@ function DetailMitra() {
 
                     <div></div>
                   </div>
-                  <div className="w-full py-14 lg:px-20  md:px-5 sm:px-5 px-5 grid grid-rows-3 gap-5 items-center">
+                  <div className="w-full md:py-14 py-5 lg:px-20  md:px-5 sm:px-5 px-5 grid grid-rows-3 gap-5 items-center">
                     <div className="flex gap-3">
                       <div className="w-5 my-auto ">
                         <Image
