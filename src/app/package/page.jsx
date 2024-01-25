@@ -34,7 +34,7 @@ function Package() {
   const [page, setPage] = useState(pageParams);
   const [dataPaket, setDataPaket] = useState(null);
 
-  const limit = 10;
+  const limit = 8;
 
 
 
@@ -105,7 +105,7 @@ function Package() {
               <h1 className="text-xl font-semibold  my-5">
                 List Paket Umroh Yang Tersedia
               </h1>
-              <div className="mahfud  grid-cols-2 md:gap-5 gap-2">
+              <div className="mahfud  grid-cols-2 md:gap-5 gap-2 min-h-screen">
                 {dataPaket == null ? (
                   <div>loading</div>
                 ) : (
@@ -135,7 +135,7 @@ function Package() {
 
 
               </div>
-              <div className="flex justify-center items-center my-20">
+              <div className="flex justify-end items-end my-10 w-full">
 
                 <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons />
               </div>
