@@ -20,7 +20,7 @@ const GenericPdfDownloader = () => {
     async function getDetailOrder(idd) {
         try {
             const res = await axios.get(
-                `http://localhost:5000/api/order/${id}`,
+                `${process.env.NEXT_PUBLIC_URL}/order/${id}`,
                 {
                     withCredentials: true,
                 }

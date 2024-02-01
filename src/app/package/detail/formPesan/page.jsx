@@ -19,7 +19,7 @@ function FormPesan() {
 
   async function getuser() {
     try {
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/user`, {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/user`, {
         withCredentials: true,
       });
       if (getuser == true) {

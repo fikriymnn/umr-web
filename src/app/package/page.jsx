@@ -56,7 +56,7 @@ function Package() {
     try {
       const skip = (pagee - 1) * limit;
       const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_URL}/api/paket`,
+        `${process.env.NEXT_PUBLIC_URL}/paket`,
         {
           params: {
             durasi_perjalanan: "",
@@ -115,7 +115,6 @@ function Package() {
                       <PackageCard
                         key={index}
                         id={data._id}
-                        //banner={""}
                         banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
                         durasi={data.durasi_perjalanan}
                         ratingHotel={data.rating_hotel}

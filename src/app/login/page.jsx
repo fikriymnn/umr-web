@@ -8,7 +8,7 @@ function Login() {
   const { push } = useRouter();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const url = `http://localhost:5000/api/login`;
+  const url = `${process.env.NEXT_PUBLIC_URL}/login`;
 
   async function submitLogin(e) {
     e.preventDefault();
@@ -23,9 +23,11 @@ function Login() {
       );
       alert("login success");
       push("/");
-
+      console.log(response)
     } catch (error) {
-      alert(error.response.data.message);
+      alert(error);
+      console.log(error)
+
     }
   }
   return (

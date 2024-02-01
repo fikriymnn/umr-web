@@ -16,7 +16,7 @@ function ProfilSaya() {
 
   async function getuser() {
     try {
-      const res = await axios.get("http://localhost:5000/api/user", {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/user`, {
         withCredentials: true,
       });
       if (res.data.success == true) {
