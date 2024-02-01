@@ -175,7 +175,7 @@ function PackageDetail() {
               nama={DetailMitra.nama_mitra}
               noizin={DetailMitra.no_izin_umroh}
               rating={DetailMitra.rating}
-              profil={`${process.env.NEXT_PUBLIC_URL}/images/${DetailMitra.foto_profil}`}
+              profil={DetailMitra.foto_profil}
             />
           )}
           {DetailPaket == null ? (
@@ -308,7 +308,7 @@ function PackageDetail() {
                   key={i}
                   id={data._id}
                   //banner={""}
-                  banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
+                  banner={data.content_carousel[0].img}
                   durasi={data.durasi_perjalanan}
                   ratingHotel={data.rating_hotel}
                   kamar={data.pilihan_kamar}

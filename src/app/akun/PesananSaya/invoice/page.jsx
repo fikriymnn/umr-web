@@ -98,15 +98,13 @@ const GenericPdfDownloader = () => {
                                         <div className='md:text-end text-start flex flex-col gap-2 '>
 
                                             <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>Date:</p>
-                                            <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>Payment Terms:</p>
-                                            <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>Due Date:</p>
+
                                             <p className='text-slate-500 md:text-xl sm:text-lg text-xs'>PO Number:</p>
                                             <p className='font-semibold md:text-xl sm:text-lg text-xs'>Balance Due:</p>
                                         </div>
                                         <div className='text-end flex flex-col gap-2'>
                                             <p className='md:text-xl sm:text-lg text-xs'>Des 20, 1945</p>
-                                            <p className='md:text-xl sm:text-lg text-xs'>3</p>
-                                            <p className='md:text-xl sm:text-lg text-xs'>Dec 1, 1975</p>
+
                                             <p className='md:text-xl sm:text-lg text-xs'>2223344</p>
                                             <p className='font-semibold md:text-xl sm:text-lg text-xs'>{order == null ? "ddd" : order.order.jumlah_bayar.toLocaleString('id-ID', {
                                                 style: 'currency',

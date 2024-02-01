@@ -28,6 +28,7 @@ function KonfirmasiBayar() {
         // console.log(res.data.data);
         setOrder(res.data.data.order);
         setPaket(res.data.data.paket);
+        console.log(res.data.data.order)
       }
     } catch (error) {
       console.log(error.response);
