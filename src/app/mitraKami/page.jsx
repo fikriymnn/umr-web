@@ -41,7 +41,7 @@ async function MitraKami() {
 
                       <MitraCard id={data._id} namaTravel={data.nama_mitra}
                         key={index}
-                        noIzin={data.no_izin_umroh} penilaian={"90"} ratingNilai={data.rating.toFixed(1)} profil={`${process.env.NEXT_PUBLIC_URL}/images/${data.foto_profil}`} />
+                        noIzin={data.no_izin_umroh} penilaian={"90"} ratingNilai={data.rating.toFixed(1)} profil={data.foto_profil} />
                     </>
                   )
                 }))}
