@@ -183,20 +183,8 @@ function DetailMitra() {
                   <FilterNotMobilePackage />
                   <div className="lg:w-8/12 w-full mx-auto lg:ml-10 lg:mr-20 lg:p-0 px-5">
                     <div className="bg-white shadow-xl rounded-xl lg:w-10/12 w-full">
-                      <div className="flex lg:flex-row flex-col">
-                        <div className="lg:w-3/6 w-full p-5 py-3">
-                          <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
-                            Jenis Keberangkatan
-                          </h1>
-                          <Dropdown />
-                        </div>
-                        <div className="lg:w-3/6 w-full p-5 lg:py-3 pt-0">
-                          <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
-                            Waktu Keberangkatan
-                          </h1>
-                          <Dropdown />
-                        </div>
-                      </div>
+
+
                     </div>
                     <div className="mt-2 ">
                       <h1 className="text-xl font-semibold  my-5">
