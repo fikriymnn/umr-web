@@ -10,7 +10,7 @@ function Register() {
   const [Password, setPassword] = useState("");
   const [NamaLengkap, setNamaLengkap] = useState("");
   const [NoWhatsapp, setNoWhatsapp] = useState("");
-  const url = `${process.env.NEXT_PUBLIC_URL}/api/register`;
+  const url = `${process.env.NEXT_PUBLIC_URL}/register`;
 
   async function submitRegister(e) {
     e.preventDefault();

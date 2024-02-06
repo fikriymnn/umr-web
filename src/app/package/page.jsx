@@ -34,7 +34,7 @@ function Package() {
   const [page, setPage] = useState(pageParams);
   const [dataPaket, setDataPaket] = useState(null);
 
-  const limit = 10;
+  const limit = 8;
 
 
 
@@ -56,7 +56,7 @@ function Package() {
     try {
       const skip = (pagee - 1) * limit;
       const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_URL}/api/paket`,
+        `${process.env.NEXT_PUBLIC_URL}/paket`,
         {
           params: {
             durasi_perjalanan: "",
@@ -105,7 +105,7 @@ function Package() {
               <h1 className="text-xl font-semibold  my-5">
                 List Paket Umroh Yang Tersedia
               </h1>
-              <div className="mahfud  grid-cols-2 md:gap-5 gap-2">
+              <div className="mahfud  grid-cols-2 md:gap-5 gap-2 min-h-screen">
                 {dataPaket == null ? (
                   <div>loading</div>
                 ) : (
@@ -115,8 +115,7 @@ function Package() {
                       <PackageCard
                         key={index}
                         id={data._id}
-                        //banner={""}
-                        banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
+                        banner={data.content_carousel[0].img}
                         durasi={data.durasi_perjalanan}
                         ratingHotel={data.rating_hotel}
                         kamar={data.pilihan_kamar}
@@ -135,7 +134,7 @@ function Package() {
 
 
               </div>
-              <div className="flex justify-center items-center my-20">
+              <div className="flex justify-end items-end my-10 w-full">
 
                 <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons />
               </div>

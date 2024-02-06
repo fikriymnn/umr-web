@@ -13,10 +13,10 @@ async function GetDataPaket() {
   let data;
   try {
     const res = await axios.get(
-      `http://localhost:5000/api/paket?skip=0&limit=9`
+      `${process.env.NEXT_PUBLIC_URL}/paket?skip=0&limit=9`
     );
     data = res.data.data;
-    
+
   } catch (error) {
     data = null;
   }

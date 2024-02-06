@@ -35,7 +35,7 @@ function PackageDetail() {
 
   async function getDetailPaket(idd) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/paket/${idd}`);
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/paket/${idd}`);
       if (res.data.success == true) {
         setDetailPaket(res.data.data);
         getDetailMitra(res.data.data.id_mitra);
@@ -49,7 +49,7 @@ function PackageDetail() {
 
   async function getDetailMitra(idMitra) {
     try {
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/api/mitra/${idMitra}`);
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/mitra/${idMitra}`);
       if (res.data.success == true) {
         setDetailMitra(res.data.data);
       }
@@ -61,7 +61,7 @@ function PackageDetail() {
   async function getDataTestimoni(idMitra) {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_URL}/api/ulasan/${idMitra}`
+        `${process.env.NEXT_PUBLIC_URL}/ulasan/${idMitra}`
       );
       if (res.data.success == true) {
         setUlasan(res.data.data);
@@ -74,7 +74,7 @@ function PackageDetail() {
   async function GetDataPaket() {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_URL}/api/paket?skip=0&limit=6`
+        `${process.env.NEXT_PUBLIC_URL}/paket?skip=0&limit=6`
       );
       if (res.data.success == true) {
         setPaket(res.data.data);
@@ -175,7 +175,7 @@ function PackageDetail() {
               nama={DetailMitra.nama_mitra}
               noizin={DetailMitra.no_izin_umroh}
               rating={DetailMitra.rating}
-              profil={`${process.env.NEXT_PUBLIC_URL}/images/${DetailMitra.foto_profil}`}
+              profil={DetailMitra.foto_profil}
             />
           )}
           {DetailPaket == null ? (
@@ -308,7 +308,7 @@ function PackageDetail() {
                   key={i}
                   id={data._id}
                   //banner={""}
-                  banner={`${process.env.NEXT_PUBLIC_URL}/images/${data.content_carousel[0].img}`}
+                  banner={data.content_carousel[0].img}
                   durasi={data.durasi_perjalanan}
                   ratingHotel={data.rating_hotel}
                   kamar={data.pilihan_kamar}

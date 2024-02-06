@@ -21,13 +21,14 @@ function KonfirmasiBayar() {
 
   async function getDetailOrder(idd) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/order/${idd}`, {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/order/${idd}`, {
         withCredentials: true,
       });
       if (res.data.success == true) {
         // console.log(res.data.data);
         setOrder(res.data.data.order);
         setPaket(res.data.data.paket);
+        console.log(res.data.data.order)
       }
     } catch (error) {
       console.log(error.response);
@@ -42,7 +43,7 @@ function KonfirmasiBayar() {
     formData.append("content", file);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/upload",
+        `${process.env.NEXT_PUBLIC_URL}/upload`,
         formData,
         {
           headers: {
@@ -62,7 +63,7 @@ function KonfirmasiBayar() {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/order/${id}`,
+        `${process.env.NEXT_PUBLIC_URL}/order/${id}`,
         {
           bukti_pembayaran: buktiPembayaran,
           status: "diproses",

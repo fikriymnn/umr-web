@@ -9,7 +9,7 @@ function AccountNav({ account, order }) {
     e.preventDefault();
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/logout",
+        `${process.env.NEXT_PUBLIC_URL}/logout`,
 
         {
           withCredentials: true,

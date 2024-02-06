@@ -16,7 +16,7 @@ function BelumBayar() {
 
   async function getuser() {
     try {
-      const res = await axios.get("http://localhost:5000/api/user", {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/user`, {
         withCredentials: true,
       });
       if (res.data.success == true) {
@@ -29,7 +29,7 @@ function BelumBayar() {
   async function getDetailOrder(idd) {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/order?id_user=${idd}&status=belum bayar&skip=0&limit=20`,
+        `${process.env.NEXT_PUBLIC_URL}/order?id_user=${idd}&status=belum bayar&skip=0&limit=20`,
         {
           withCredentials: true,
         }
