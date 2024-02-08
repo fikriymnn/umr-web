@@ -31,10 +31,11 @@ function MitraTravelSection({ profil, nama, rating, noizin }) {
         </div>
         <div className="flex md:py-7 py-3 md:px-9 px-4">
           <div className="md:w-3/12 sm:w-3/12 w-2/12">
-            <div
+            {/* <div
               className="md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] w-[40px] h-[40px] bg-gray-500 rounded-full bg-cover bg-no-repeat bg-center"
               style={{ backgroundImage: `url(${profil})` }}
-            ></div>
+            ></div> */}
+            <img src={`${profil}`} alt="" className="md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] w-[40px] h-[40px] bg-gray-500 rounded-full bg-cover bg-no-repeat bg-center" />
           </div>
           <div className="w-full ps-5">
             <h1 className=" text-black md:text-2xl sm:text-xl text-base pb-1 font-semibold">

@@ -30,10 +30,8 @@ function MitraCard({ id, namaTravel, noIzin, penilaian, ratingNilai, profil }) {
         <div className="px-3 pt-3 pb-1">
           <div className=" md:w-10/12 w-full  flex rounded-xl">
             <div className="flex py-1 ">
-              <div className=" ">
-                <div className="md:w-[60px] md:h-[60px] w-[60px] h-[60px] bg-gray-500 rounded-full bg-cover bg-no-repeat bg-center"
-                  style={{ backgroundImage: `url(${profil})` }}></div>
-              </div>
+
+              <img src={`${profil}`} alt="" className="md:w-[60px] md:h-[60px] w-[60px] h-[60px] bg-gray-500 rounded-full bg-cover bg-no-repeat bg-center" />
               <div className="md:w-12/12 ps-5">
                 <h1 className=" text-black md:text-lg text-lg md:pb-1 pb-0 font-semibold">
                   {namaTravel}

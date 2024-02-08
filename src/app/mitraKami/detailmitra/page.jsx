@@ -54,7 +54,7 @@ function DetailMitra() {
   }, []);
 
   const onPageChange = async (pagee) => {
-    router.push(`mitraKami/detailmitra?id=${idMitra}?page=${pagee}`);
+    router.push(`/detailmitra?id=${id}&page=${pagee}`);
     setDataPaket(null)
     fetchData(pagee)
 
@@ -281,7 +281,7 @@ function DetailMitra() {
                         </div>
                         <div className="flex justify-end items-end my-10 w-full">
 
-                          <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons />
+                          {/* <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons /> */}
                         </div>
                       </div>
                     </div>

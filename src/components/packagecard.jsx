@@ -101,18 +101,16 @@ function PackageCard({
     <a href={`/package/detail?id=${id}`} key={key}>
       <div className=" bg-white rounded-xl shadowcard md:hover:scale-[102%] duration-100 ease-in-out">
         <div className="p-3">
-          <div className="h-24 md:flex md:flex-row gap-1">
+          <div className="md:h-24 sm:h-32 h-24 md:flex md:flex-row gap-1">
             {!isMobile && (
               <>
                 <div className="md:w-8/12">{titleprice}</div>
               </>
             )}
-            <div
-              className="lg:w-4/12 sm:w-full md:w-7/12 sm:h-full md:h-20 h-full mx-auto rounded-xl bg-cover bg-no-repeat bg-center"
-              style={{ backgroundImage: `url(${banner})` }}
-            >
 
-            </div>
+            <img src={`${banner}`} alt="" className="lg:w-4/12 sm:w-full md:w-7/12 sm:h-32 md:h-20 w-full h-full mx-auto rounded-xl bg-cover bg-no-repeat bg-center" />
+
+
           </div>
           {isMobile && (
             <>

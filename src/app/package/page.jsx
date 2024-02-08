@@ -85,58 +85,46 @@ function Package() {
         <div className="flex  pt-5   z-10 relative">
           <FilterNotMobilePackage />
           <div className="lg:w-8/12 w-full mx-auto lg:ml-10 lg:mr-20 lg:p-0 px-5">
-            {/* <div className="bg-white shadow-xl rounded-xl lg:w-full w-full">
-              <div className="flex lg:flex-row flex-col">
-                <div className="lg:w-3/6 w-full p-5 py-3">
-                  <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
-                    Jenis Keberangkatan
-                  </h1>
-                  <Dropdown />
-                </div>
-                <div className="lg:w-3/6 w-full p-5 lg:py-3 pt-0">
-                  <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
-                    Waktu Keberangkatan
-                  </h1>
-                  <Dropdown />
-                </div>
-              </div>
-            </div> */}
             <div className="mt-2 ">
-              <h1 className="text-xl font-semibold  my-5">
-                List Paket Umroh Yang Tersedia
-              </h1>
-              <div className="mahfud  grid-cols-2 md:gap-5 gap-2 min-h-screen">
-                {dataPaket == null ? (
-                  <div>loading</div>
-                ) : (
-                  dataPaket.map((data, index) => {
-                    return (
+              <div className="flex flex-col justify-between min-h-screen">
+                <div>
+                  <h1 className="text-xl font-semibold  my-5">
+                    List Paket Umroh Yang Tersedia
+                  </h1>
+                  <div className="mahfud  grid-cols-2 md:gap-5 gap-2 ">
+                    {dataPaket == null ? (
+                      <div>loading</div>
+                    ) : (
+                      dataPaket.map((data, index) => {
+                        return (
 
-                      <PackageCard
-                        key={index}
-                        id={data._id}
-                        banner={data.content_carousel[0].img}
-                        durasi={data.durasi_perjalanan}
-                        ratingHotel={data.rating_hotel}
-                        kamar={data.pilihan_kamar}
-                        kuota={data.kuota}
-                        sisaKuota={data.sisa_kuota}
-                        lokasi={data.kota_keberangkatan}
-                        maskapai={data.maskapai_penerbangan}
-                        price={data.price}
-                        title={data.title}
-                        waktuKeberangkatan={data.waktu_keberangkatan}
-                      />
+                          <PackageCard
+                            key={index}
+                            id={data._id}
+                            banner={data.content_carousel[0].img}
+                            durasi={data.durasi_perjalanan}
+                            ratingHotel={data.rating_hotel}
+                            kamar={data.pilihan_kamar}
+                            kuota={data.kuota}
+                            sisaKuota={data.sisa_kuota}
+                            lokasi={data.kota_keberangkatan}
+                            maskapai={data.maskapai_penerbangan}
+                            price={data.price}
+                            title={data.title}
+                            waktuKeberangkatan={data.waktu_keberangkatan}
+                          />
 
-                    );
-                  })
-                )}
+                        );
+                      })
+                    )}
 
 
-              </div>
-              <div className="flex justify-end items-end my-10 w-full">
+                  </div>
+                </div>
+                <div className="flex justify-end items-end my-10 w-full">
 
-                <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons />
+                  <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons />
+                </div>
               </div>
             </div>
           </div>
