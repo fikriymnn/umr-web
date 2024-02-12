@@ -6,6 +6,15 @@ import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
 import { format } from "date-fns";
+import {
+  getStorage,
+  deleteObject,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
+import { storage } from "@/db/db";
+
 
 function KonfirmasiBayar() {
   const searchParams = useSearchParams();
@@ -39,23 +48,34 @@ function KonfirmasiBayar() {
     event.preventDefault();
 
     const file = event.target.files[0];
-    const formData = new FormData();
-    formData.append("content", file);
+    const fileName = file.name + "   " + new Date();
+
     try {
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_URL}/upload`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+      const storageRef = ref(storage, `/buktipembayaran/${fileName}`);
+      const uploadTask = uploadBytesResumable(storageRef, file);
+
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          const percent = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+          );
+        },
+        (err) => console.log(err),
+        () => {
+          // download url
+
+          getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+
+
+
+            setBuktiPembayaran(url);
+          });
         }
       );
-
-      const id = response.data.data;
-      setBuktiPembayaran(id);
     } catch (error) {
       alert(error.response.data.message);
+      console.log(error);
     }
   }
 

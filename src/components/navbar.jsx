@@ -14,7 +14,7 @@ export default function CustomNavbar() {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+    setIsMobile(window.innerWidth < 768);
   };
 
   useEffect(() => {

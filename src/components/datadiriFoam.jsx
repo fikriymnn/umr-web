@@ -5,6 +5,14 @@ import Image from "next/image";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import {
+  getStorage,
+  deleteObject,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
+import { storage } from "@/db/db";
 
 import { useState, useEffect } from "react";
 function DatadiriFoam({ idPaket }) {
@@ -33,7 +41,7 @@ function DatadiriFoam({ idPaket }) {
 
   async function getuser() {
     try {
-      const res = await axios.get("http://localhost:5000/api/user", {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/user`, {
         withCredentials: true,
       });
       if (res.data.success == true) {
@@ -52,7 +60,7 @@ function DatadiriFoam({ idPaket }) {
 
   async function getDetailPaket(idd) {
     try {
-      const res = await axios.get(`http://localhost:5000/api/paket/${idd}`);
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/paket/${idd}`);
       if (res.data.success == true) {
         setDetailPaket(res.data.data);
 
@@ -131,33 +139,45 @@ function DatadiriFoam({ idPaket }) {
     event.preventDefault();
     const { name, value } = event.target;
     const onchangeVal = [...jamaah];
+
     const file = event.target.files[0];
-    const formData = new FormData();
-    formData.append("content", file);
+    const fileName = file.name + "   " + new Date();
+
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/upload",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+      const storageRef = ref(storage, `/datadiri/${fileName}`);
+      const uploadTask = uploadBytesResumable(storageRef, file);
+
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          const percent = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+          );
+        },
+        (err) => console.log(err),
+        () => {
+          // download url
+
+          getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+
+
+            onchangeVal[i][name] = url;
+            setJamaah(onchangeVal);
+          });
         }
       );
-      console.log(response);
-      const id = response.data.data;
-      onchangeVal[i][name] = id;
-      setJamaah(onchangeVal);
     } catch (error) {
       alert(error.response.data.message);
+      console.log(error);
     }
+
   }
 
   async function submitOrder(e) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/order",
+        `${process.env.NEXT_PUBLIC_URL}/order`,
         {
           id_user: DataUser._id,
           id_mitra: DetailPaket.id_mitra,

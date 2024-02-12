@@ -6,27 +6,26 @@ import { Dropdown } from "flowbite-react";
 function FilterNotMobilePackage() {
   const [isMobile, setIsMobile] = useState(false);
   const [comp, setComp] = useState(0);
+  const [durasiPerjalanan, setDurasiPerjalanan] = useState('pilih durasi perjalanan');
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+    setIsMobile(window.innerWidth < 768);
   };
   useEffect(() => {
-    // Initial check on mount
     handleResize();
-
-    // Event listener for window resize
     window.addEventListener('resize', handleResize);
-
-    // Cleanup on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+
   const [DropdownKota, setDropdownKota] = useState(false);
   const [DropdownKategori, setDropdownKategori] = useState(false);
   const [DropdownEstimasi, setDropdownEstimasi] = useState(false);
   const [DropdownDurasi, setDropdownDurasi] = useState(false);
   const [DropdownJenis, setDropdownJenis] = useState(false);
   const [DropdownWaktu, setDropdownWaktu] = useState(false);
+
 
   const toggleDropdownKota = () => {
     setDropdownKota(!DropdownKota);
@@ -175,7 +174,7 @@ function FilterNotMobilePackage() {
                     className="flex justify-between items-center px-4 py-1 md:py-2 text-gray-800 border border-gray-500 rounded-lg  focus:outline-none focus:ring w-full"
                   >
 
-                    <span className="text-base">Dropdown Button</span>
+                    <span className="text-base">{durasiPerjalanan}</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -194,8 +193,9 @@ function FilterNotMobilePackage() {
 
                   {DropdownDurasi && (
                     <div className="absolute z-10 mt-2 space-y-2 bg-white border rounded-lg shadow-md">
+
                       {/* Dropdown content */}
-                      <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 1</a>
+                      <button onClick={() => setDurasiPerjalanan("99 tahun")} href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 1</button>
                       <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 2</a>
                       <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-[#E3B02B]">Option 3</a>
                     </div>

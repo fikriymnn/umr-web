@@ -47,7 +47,7 @@ function Diproses() {
       <div className=" flex lg:flex-row flex-col">
         <AccountNav order="bg-[#E3B02B] text-white" />
 
-        <div className="w-full lg:w-10/12 lg:ps-5">
+        <div className="w-full lg:w-10/12 lg:ps-5 overflow-auto h-[600px] rounded-lg">
           <div className="bg-white grid grid-cols-1 gap-3 lg:rounded-xl rounded-b-xl border-2 lg:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 lg:px-8 px-5">
             <div className="flex justify-center items-center lg:gap-32 gap-3 pt-3">
               <OrderNav

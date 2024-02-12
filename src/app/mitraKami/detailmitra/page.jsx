@@ -9,11 +9,22 @@ import FilterNotMobilePackage from "@/components/FilterNotMobilePackage";
 import FilterPackages from "@/components/FilterPackages";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
+import { Pagination } from 'flowbite-react';
+import { useRouter } from "next/navigation";
 
 function DetailMitra() {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   const [DetailMitra, setDetailMitra] = useState(null);
+
+
+  const pageParams = searchParams.get("page");
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [page, setPage] = useState(pageParams);
+  const [dataPaket, setDataPaket] = useState(null);
+  const router = useRouter()
+  const limit = 8;
 
 
   useEffect(() => {
@@ -31,6 +42,52 @@ function DetailMitra() {
 
     }
   }
+
+
+
+
+  useEffect(() => {
+
+
+    fetchData(page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const onPageChange = async (pagee) => {
+    router.push(`/detailmitra?id=${id}&page=${pagee}`);
+    setDataPaket(null)
+    fetchData(pagee)
+
+  };
+
+  const fetchData = async (pagee) => {
+    try {
+      const skip = (pagee - 1) * limit;
+      const response = await axios.get(
+        `${process.env.NEXT_PUBLIC_URL}/paket`,
+        {
+          params: {
+            durasi_perjalanan: "",
+            category_paket: "",
+            kota_keberangkatan: "",
+            priceFrom: "",
+            priceTo: "",
+            skip: 0,
+            limit: limit,
+            id_mitra: id
+
+
+          }
+        }
+      );
+      setCurrentPage(response.data.data.page)
+      setDataPaket(response.data.data.paket)
+      // console.log(response.data.data.paket)
+    } catch (error) {
+      // Handle error
+    }
+  };
+
 
   return (
 
@@ -183,27 +240,49 @@ function DetailMitra() {
                   <FilterNotMobilePackage />
                   <div className="lg:w-8/12 w-full mx-auto lg:ml-10 lg:mr-20 lg:p-0 px-5">
                     <div className="bg-white shadow-xl rounded-xl lg:w-10/12 w-full">
-                      <div className="flex lg:flex-row flex-col">
-                        <div className="lg:w-3/6 w-full p-5 py-3">
-                          <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
-                            Jenis Keberangkatan
-                          </h1>
-                          <Dropdown />
-                        </div>
-                        <div className="lg:w-3/6 w-full p-5 lg:py-3 pt-0">
-                          <h1 className="w-full mb-2 text-sm lg:text-xl font-semibold">
-                            Waktu Keberangkatan
-                          </h1>
-                          <Dropdown />
-                        </div>
-                      </div>
+
+
                     </div>
                     <div className="mt-2 ">
-                      <h1 className="text-xl font-semibold  my-5">
-                        List Paket Umroh Yang Tersedia
-                      </h1>
-                      <div className="mahfud lg:grid-cols-2 md:grid-cols-3 grid-cols-2 md:gap-10 gap-2">
+                      <div className="flex flex-col justify-between min-h-screen">
+                        <div>
+                          <h1 className="text-xl font-semibold  my-5">
+                            List Paket Umroh Yang Tersedia
+                          </h1>
+                          <div className="mahfud  grid-cols-2 md:gap-5 gap-2 ">
+                            {dataPaket == null ? (
+                              <div>loading</div>
+                            ) : (
+                              dataPaket.map((data, index) => {
+                                return (
 
+                                  <PackageCard
+                                    key={index}
+                                    id={data._id}
+                                    banner={data.content_carousel[0].img}
+                                    durasi={data.durasi_perjalanan}
+                                    ratingHotel={data.rating_hotel}
+                                    kamar={data.pilihan_kamar}
+                                    kuota={data.kuota}
+                                    sisaKuota={data.sisa_kuota}
+                                    lokasi={data.kota_keberangkatan}
+                                    maskapai={data.maskapai_penerbangan}
+                                    price={data.price}
+                                    title={data.title}
+                                    waktuKeberangkatan={data.waktu_keberangkatan}
+                                  />
+
+                                );
+                              })
+                            )}
+
+
+                          </div>
+                        </div>
+                        <div className="flex justify-end items-end my-10 w-full">
+
+                          {/* <Pagination currentPage={pageParams} totalPages={currentPage} onPageChange={onPageChange} showIcons /> */}
+                        </div>
                       </div>
                     </div>
                   </div>

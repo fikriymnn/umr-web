@@ -29,7 +29,7 @@ function Selesai() {
   async function getDetailOrder(idd) {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_URL}/order?id_user=${idd}&status=selesai&skip=0&limit=20`,
+        `${process.env.NEXT_PUBLIC_URL}/order?id_user=${idd}&status=pembayaran selesai&skip=0&limit=20`,
         {
           withCredentials: true,
         }
@@ -47,7 +47,7 @@ function Selesai() {
       <div className=" flex md:flex-row flex-col">
         <AccountNav order="bg-[#E3B02B] text-white" />
 
-        <div className="w-full md:w-10/12 md:ps-5">
+        <div className="w-full md:w-10/12 md:ps-5 overflow-auto h-[600px] rounded-lg">
           <div className="bg-white grid grid-cols-1 gap-3 md:rounded-xl rounded-b-xl border-2 md:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 md:px-8 px-5">
             <div className="flex justify-center items-center md:gap-32 gap-3 pt-3">
               <OrderNav
@@ -214,12 +214,13 @@ function Selesai() {
                         </p>
                         <div className="flex gap-2">
                           <div className="flex justify-center">
-                            <div
-                              className="bg-amber-500 px-7 rounded-lg md:py-0 py-1 md:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm md:text-base  bg-no-repeat bg-center"
+                            <a
+                              href={`invoice?id=${data.order._id}`}
+                              className="bg-amber-500 px-7 rounded-lg lg:py-0 py-1 lg:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm lg:text-base  bg-no-repeat bg-center"
                               style={{
                                 backgroundImage: `url(/assets/vector/download.svg)`,
                               }}
-                            ></div>
+                            ></a>
                           </div>
 
                           <div className="bg-green-500 px-7 rounded-lg md:py-0 py-2 md:mt-0 mt-2 text-white flex justify-center items-center text-center ">
