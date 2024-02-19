@@ -180,7 +180,7 @@ function DatadiriFoam({ idPaket }) {
         `${process.env.NEXT_PUBLIC_URL}/order`,
         {
           id_user: DataUser._id,
-          id_mitra: DetailPaket.id_mitra,
+          id_mitra: DetailPaket.id_mitra[0]._id,
           id_paket: DetailPaket._id,
           jumlah_bayar: DetailPaket.price * jamaah.length,
           jamaah: jamaah,
@@ -198,11 +198,27 @@ function DatadiriFoam({ idPaket }) {
         }
       );
 
+
       alert("Order succsess");
       push(`/akun/PesananSaya/KonfirmasiBayar?id=${response.data.data._id}`);
       console.log(response.data);
     } catch (error) {
       alert(error.response.data.message);
+      console.log({
+        id_user: DataUser._id,
+        id_mitra: DetailPaket.id_mitra[0]._id,
+        id_paket: DetailPaket._id,
+        jumlah_bayar: DetailPaket.price * jamaah.length,
+        jamaah: jamaah,
+        bank_tujuan: namaBank,
+        no_rekening_bank: noRekening,
+        bukti_pembayaran: "",
+        nama_lengkap: DataUser.nama_lengkap,
+        nama_pemilik_rekening: namaPemilikRekening,
+        email: DataUser.email,
+        no_telp: DataUser.no_whatsapp,
+        status: "belum bayar",
+      })
       console.log(error.response.data);
     }
   }

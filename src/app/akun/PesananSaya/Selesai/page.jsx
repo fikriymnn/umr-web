@@ -48,7 +48,8 @@ function Selesai() {
         <AccountNav order="bg-[#E3B02B] text-white" />
 
         <div className="w-full md:w-10/12 md:ps-5 overflow-auto h-[600px] rounded-lg">
-          <div className="bg-white grid grid-cols-1 gap-3 md:rounded-xl rounded-b-xl border-2 md:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 md:px-8 px-5">
+          <div className="flex flex-col justify-start  min-h-[500px] bg-white gap-3 md:rounded-xl rounded-b-xl border-2 md:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 md:px-8 px-5">
+
             <div className="flex justify-center items-center md:gap-32 gap-3 pt-3">
               <OrderNav
                 belbay={"text-black "}
@@ -61,7 +62,7 @@ function Selesai() {
             {order != null &&
               order.map((data, i) => {
                 const maxRating = 5;
-                const rating = data.paket.rating_hotel;
+                const rating = data.paket[0].rating_hotel;
                 const renderStars = () => {
                   const stars = [];
                   for (let i = 0; i < maxRating; i++) {
@@ -82,14 +83,14 @@ function Selesai() {
                   }
                   return stars;
                 };
-                const date = new Date(data.paket.waktu_keberangkatan);
+                const date = new Date(data.paket[0].waktu_keberangkatan);
                 // Format tanggal
                 const WaktuKeberangkatan = format(date, "d MMM y");
                 return (
                   <div key={i} className="my-4">
                     <div className="border-2 border-b-0 p-2 border-slate-200">
                       <p className="md:text-2xl font-bold">
-                        {data.paket.title}
+                        {data.paket[0].title}
                       </p>
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mt-5">
                         <div className="flex">
@@ -106,7 +107,7 @@ function Selesai() {
                               Pilihan Kamar
                             </p>
                             <p className="ps-1 pt-2 md:text-xl text-black">
-                              {data.paket.pilihan_kamar}
+                              {data.paket[0].pilihan_kamar}
                             </p>
                           </div>
                         </div>
@@ -142,7 +143,7 @@ function Selesai() {
                               Maskapai Pesawat
                             </p>
                             <p className="ps-1 pt-2 md:text-xl text-black">
-                              {data.paket.maskapai_penerbangan}
+                              {data.paket[0].maskapai_penerbangan}
                             </p>
                           </div>
                         </div>
@@ -160,7 +161,7 @@ function Selesai() {
                               Kota Keberangkatan
                             </p>
                             <p className="ps-1 pt-2 md:text-xl text-black">
-                              {data.paket.kota_keberangkatan}
+                              {data.paket[0].kota_keberangkatan}
                             </p>
                           </div>
                         </div>
@@ -178,7 +179,7 @@ function Selesai() {
                               Durasi Perjalanan
                             </p>
                             <p className="ps-1 pt-2 md:text-xl text-black">
-                              {data.paket.durasi_perjalanan}
+                              {data.paket[0].durasi_perjalanan}
                             </p>
                           </div>
                         </div>
@@ -210,12 +211,12 @@ function Selesai() {
                       </div>
                       <div className="border-2 p-2 border-slate-200 md:w-[70%] md:border-t-2 border-t-0 md:text-2xl sm:text-lg text-base font-bold px-12 py-3 flex md:flex-row flex-col justify-between ">
                         <p className="my-2 text-center md:text-start">
-                          Rp {data.order.jumlah_bayar}
+                          Rp {data.jumlah_bayar}
                         </p>
                         <div className="flex gap-2">
                           <div className="flex justify-center">
                             <a
-                              href={`invoice?id=${data.order._id}`}
+                              href={`invoice?id=${data._id}`}
                               className="bg-amber-500 px-7 rounded-lg lg:py-0 py-1 lg:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm lg:text-base  bg-no-repeat bg-center"
                               style={{
                                 backgroundImage: `url(/assets/vector/download.svg)`,

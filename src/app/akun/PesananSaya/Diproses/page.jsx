@@ -48,7 +48,7 @@ function Diproses() {
         <AccountNav order="bg-[#E3B02B] text-white" />
 
         <div className="w-full lg:w-10/12 lg:ps-5 overflow-auto h-[600px] rounded-lg">
-          <div className="bg-white grid grid-cols-1 gap-3 lg:rounded-xl rounded-b-xl border-2 lg:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 lg:px-8 px-5">
+          <div className="flex flex-col justify-start  min-h-[500px] bg-white gap-3 lg:rounded-xl rounded-b-xl border-2 lg:border-t-2 border-t-0 border-slate-300 shadow-xl p-3 lg:px-8 px-5">
             <div className="flex justify-center items-center lg:gap-32 gap-3 pt-3">
               <OrderNav
                 belbay={"text-black "}
@@ -60,7 +60,7 @@ function Diproses() {
             {order != null &&
               order.map((data, i) => {
                 const maxRating = 5;
-                const rating = data.paket.rating_hotel;
+                const rating = data.paket[0].rating_hotel;
                 const renderStars = () => {
                   const stars = [];
                   for (let i = 0; i < maxRating; i++) {
@@ -81,10 +81,10 @@ function Diproses() {
                   }
                   return stars;
                 };
-                const date = new Date(data.paket.waktu_keberangkatan);
+                const date = new Date(data.paket[0].waktu_keberangkatan);
                 // Format tanggal
                 const WaktuKeberangkatan = format(date, "d MMM y");
-                const nominal = data.order.jumlah_bayar;
+                const nominal = data.jumlah_bayar;
                 const formattedNominal = nominal.toLocaleString('id-ID', {
                   style: 'currency',
                   currency: 'IDR',
@@ -111,7 +111,7 @@ function Diproses() {
                               Pilihan Kamar
                             </p>
                             <p className="ps-1 pt-2 lg:text-xl text-black">
-                              {data.paket.pilihan_kamar}
+                              {data.paket[0].pilihan_kamar}
                             </p>
                           </div>
                         </div>
@@ -147,7 +147,7 @@ function Diproses() {
                               Maskapai Pesawat
                             </p>
                             <p className="ps-1 pt-2 lg:text-xl text-black">
-                              {data.paket.maskapai_penerbangan}
+                              {data.paket[0].maskapai_penerbangan}
                             </p>
                           </div>
                         </div>
@@ -165,7 +165,7 @@ function Diproses() {
                               Kota Keberangkatan
                             </p>
                             <p className="ps-1 pt-2 lg:text-xl text-black">
-                              {data.paket.kota_keberangkatan}
+                              {data.paket[0].kota_keberangkatan}
                             </p>
                           </div>
                         </div>
@@ -183,7 +183,7 @@ function Diproses() {
                               Durasi Perjalanan
                             </p>
                             <p className="ps-1 pt-2 lg:text-xl text-black">
-                              {data.paket.durasi_perjalanan}
+                              {data.paket[0].durasi_perjalanan}
                             </p>
                           </div>
                         </div>
@@ -215,7 +215,7 @@ function Diproses() {
                       </div>
                       <div className="border-2 p-2 border-slate-200 lg:w-[70%] lg:border-t-2 border-t-0  lg:text-2xl sm:text-lg text-base font-semibold px-12 py-3 flex lg:flex-row flex-col justify-between ">
                         <p className="my-2 text-center lg:text-start">
-                          {data.order.jamaah.length} Jamaah
+                          {data.jamaah.length} Jamaah
                         </p>
                         {/* <div className="flex gap-2">
 
@@ -238,7 +238,7 @@ function Diproses() {
                         <div className="flex gap-2 lg:mx-0 mx-auto">
                           <div className="flex justify-center">
                             <a
-                              href={`invoice?id=${data.order._id}`}
+                              href={`invoice?id=${data._id}`}
                               className="bg-amber-500 px-7 rounded-lg lg:py-0 py-1 lg:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm lg:text-base  bg-no-repeat bg-center"
                               style={{
                                 backgroundImage: `url(/assets/vector/download.svg)`,
