@@ -20,7 +20,7 @@ function KonfirmasiBayar() {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   const [order, setOrder] = useState(null);
-  const [paket, setPaket] = useState(null);
+
   const [buktiPembayaran, setBuktiPembayaran] = useState("");
   const { push } = useRouter();
 
@@ -34,10 +34,9 @@ function KonfirmasiBayar() {
         withCredentials: true,
       });
       if (res.data.success == true) {
-        // console.log(res.data.data);
-        setOrder(res.data.data.order);
-        setPaket(res.data.data.paket);
-        console.log(res.data.data.order)
+
+        setOrder(res.data.data);
+
       }
     } catch (error) {
       console.log(error.response);
@@ -66,9 +65,7 @@ function KonfirmasiBayar() {
           // download url
 
           getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-
-
-
+            console.log(url)
             setBuktiPembayaran(url);
           });
         }
@@ -98,7 +95,7 @@ function KonfirmasiBayar() {
     }
   }
   const maxRating = 5;
-  const rating = paket == null ? 0 : paket.rating_hotel;
+  const rating = order == null ? 0 : order.paket[0].rating_hotel;
   const renderStars = () => {
     const stars = [];
     for (let i = 0; i < maxRating; i++) {
@@ -119,7 +116,7 @@ function KonfirmasiBayar() {
     }
     return stars;
   };
-  const date = paket == null ? new Date() : new Date(paket.waktu_keberangkatan);
+  const date = order == null ? new Date() : new Date(order.paket[0].waktu_keberangkatan);
   // Format tanggal
   const WaktuKeberangkatan = format(date, "d MMM y");
 
@@ -164,7 +161,7 @@ function KonfirmasiBayar() {
             <p className="text-md font-semibold">Pesanan</p>
             <div className="border-2 border-slate-200 p-2">
               <p className="md:text-xl sm:text-lg text-base font-bold">
-                {paket == null ? "" : paket.title}
+                {order == null ? "" : order.paket[0].title}
               </p>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -173,7 +170,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>{paket == null ? "" : paket.pilihan_kamar}</p>
+                <p>{order == null ? "" : order.paket[0].pilihan_kamar}</p>
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -191,7 +188,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>{paket == null ? "" : paket.maskapai_penerbangan}</p>
+                <p>{order == null ? "" : order.paket[0].maskapai_penerbangan}</p>
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -200,7 +197,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>{paket == null ? "" : paket.durasi_perjalanan}</p>
+                <p>{order == null ? "" : order.paket[0].durasi_perjalanan}</p>
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image
@@ -209,7 +206,7 @@ function KonfirmasiBayar() {
                   height={25}
                   alt="icon"
                 />
-                <p>{paket == null ? "" : paket.kota_keberangkatan}</p>
+                <p>{order == null ? "" : order.paket[0].kota_keberangkatan}</p>
               </div>
               <div className="flex gap-4 items-center my-2">
                 <Image

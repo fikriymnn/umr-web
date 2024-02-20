@@ -66,6 +66,7 @@ function Package() {
             priceTo: "",
             skip: skip,
             limit: limit,
+            status: "aktif"
 
           }
         }

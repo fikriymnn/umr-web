@@ -25,8 +25,8 @@ function Login() {
       push("/");
       console.log(response)
     } catch (error) {
-      alert(error);
-      console.log(error)
+
+      alert(error.response.data.message);
 
     }
   }

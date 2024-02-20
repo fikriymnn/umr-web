@@ -89,7 +89,7 @@ const GenericPdfDownloader = () => {
                                     <div className='px-3 md:pb-0 pb-5'>
 
                                         <p className='md:text-xl sm:text-lg text-sm'>Bill To:</p>
-                                        <p className='font-semibold md:text-xl sm:text-lg text-sm'>Bukan Saya</p>
+                                        <p className='font-semibold md:text-xl sm:text-lg text-sm'> {order.nama_pemilik_rekening}</p>
 
 
 
@@ -106,7 +106,7 @@ const GenericPdfDownloader = () => {
                                             <p className='md:text-xl sm:text-lg text-xs'>Des 20, 1945</p>
 
                                             <p className='md:text-xl sm:text-lg text-xs'>2223344</p>
-                                            <p className='font-semibold md:text-xl sm:text-lg text-xs'>{order == null ? "ddd" : order.order.jumlah_bayar.toLocaleString('id-ID', {
+                                            <p className='font-semibold md:text-xl sm:text-lg text-xs'>{order == null ? "ddd" : order.jumlah_bayar.toLocaleString('id-ID', {
                                                 style: 'currency',
                                                 currency: 'IDR',
                                                 minimumFractionDigits: 0,
@@ -136,20 +136,20 @@ const GenericPdfDownloader = () => {
                                 <tbody>
                                     <tr className="flex">
                                         <td className="flex flex-col md:w-[50%] w-[35%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px]">
-                                            {order.paket.title}
+                                            {order.paket[0].title}
                                         </td>
                                         <td className="flex flex-col  w-[15%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px]">
-                                            {order.order.jamaah.length}
+                                            {order.jamaah.length}
                                         </td>
                                         <td className="flex flex-col md:w-[15%] w-[25%]  md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px] text-end">
-                                            {order.paket.price.toLocaleString('id-ID', {
+                                            {order.paket[0].price.toLocaleString('id-ID', {
                                                 style: 'currency',
                                                 currency: 'IDR',
                                                 minimumFractionDigits: 0,
                                             })}
                                         </td>
                                         <td className="flex flex-col md:w-[20%] w-[25%] md:p-3 p-2 font-semibold md:text-lg sm:text-sm text-[10px] text-end">
-                                            {order.order.jumlah_bayar.toLocaleString('id-ID', {
+                                            {order.jumlah_bayar.toLocaleString('id-ID', {
                                                 style: 'currency',
                                                 currency: 'IDR',
                                                 minimumFractionDigits: 0,
