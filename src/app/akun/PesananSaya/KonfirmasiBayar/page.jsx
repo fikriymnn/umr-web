@@ -65,9 +65,7 @@ function KonfirmasiBayar() {
           // download url
 
           getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-
-
-
+            console.log(url)
             setBuktiPembayaran(url);
           });
         }

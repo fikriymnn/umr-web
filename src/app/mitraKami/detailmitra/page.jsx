@@ -35,7 +35,8 @@ function DetailMitra() {
     try {
       const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/mitra/${idMitra}`);
       if (res.data.success == true) {
-        setDetailMitra(res.data.data);
+        setDetailMitra(res.data.data.mitra);
+        console.log(res.data.data)
       }
     } catch (error) {
       console.log(error.response);
@@ -74,7 +75,8 @@ function DetailMitra() {
             priceTo: "",
             skip: 0,
             limit: limit,
-            id_mitra: id
+            id_mitra: id,
+            status: "aktif"
 
 
           }
@@ -153,7 +155,7 @@ function DetailMitra() {
                                   />
                                   <div className="text-xs md:text-lg sm:text-base">
 
-                                    {DetailMitra.rating.toFixed(1)}
+                                    {DetailMitra == null ? "" : DetailMitra.rating.toFixed(1)}
                                   </div>
                                 </div>
                               </div>

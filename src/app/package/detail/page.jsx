@@ -38,43 +38,42 @@ function PackageDetail() {
       const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/paket/${idd}`);
       if (res.data.success == true) {
         setDetailPaket(res.data.data);
-        getDetailMitra(res.data.data.id_mitra);
-        getDataTestimoni(res.data.data.id_mitra);
-        //console.log(res.data.data);
+
+
       }
     } catch (error) {
       console.log(error.response);
     }
   }
 
-  async function getDetailMitra(idMitra) {
-    try {
-      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/mitra/${idMitra}`);
-      if (res.data.success == true) {
-        setDetailMitra(res.data.data);
-      }
-    } catch (error) {
-      console.log(error.response);
-    }
-  }
+  // async function getDetailMitra(idMitra) {
+  //   try {
+  //     const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/mitra/${idMitra}`);
+  //     if (res.data.success == true) {
+  //       setDetailMitra(res.data.data);
+  //     }
+  //   } catch (error) {
+  //     console.log(error.response);
+  //   }
+  // }
 
-  async function getDataTestimoni(idMitra) {
-    try {
-      const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_URL}/ulasan/${idMitra}`
-      );
-      if (res.data.success == true) {
-        setUlasan(res.data.data);
-      }
-    } catch (error) {
-      console.log(error.response);
-    }
-  }
+  // async function getDataTestimoni(idMitra) {
+  //   try {
+  //     const res = await axios.get(
+  //       `${process.env.NEXT_PUBLIC_URL}/ulasan/${idMitra}`
+  //     );
+  //     if (res.data.success == true) {
+  //       setUlasan(res.data.data);
+  //     }
+  //   } catch (error) {
+  //     console.log(error.response);
+  //   }
+  // }
 
   async function GetDataPaket() {
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_URL}/paket?skip=0&limit=6`
+        `${process.env.NEXT_PUBLIC_URL}/paket?status=aktif&skip=0&limit=9`
       );
       if (res.data.success == true) {
         setPaket(res.data.data);
@@ -149,7 +148,7 @@ function PackageDetail() {
             />
           )}
 
-          {DetailMitra == null ? (
+          {DetailPaket == null ? (
             <div>
               <section id="skeleton">
                 <div className="bg-white md:w-11/12 w-11/12 mx-auto  rounded-xl md:mt-[50px] sm:mt[30px] mt-[15px]">
@@ -172,10 +171,10 @@ function PackageDetail() {
           ) : (
             <MitraTravelSection
 
-              nama={DetailMitra.nama_mitra}
-              noizin={DetailMitra.no_izin_umroh}
-              rating={DetailMitra.rating}
-              profil={DetailMitra.foto_profil}
+              nama={DetailPaket.mitra[0].nama_mitra}
+              noizin={DetailPaket.mitra[0].no_izin_umroh}
+              rating={DetailPaket.mitra[0].rating}
+              profil={DetailPaket.mitra[0].foto_profil}
             />
           )}
           {DetailPaket == null ? (

@@ -34,7 +34,7 @@ export default function CustomNavbar() {
 
   useEffect(() => {
     getuser();
-  }, [1]);
+  }, []);
 
   async function getuser() {
     try {

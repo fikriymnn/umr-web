@@ -180,7 +180,7 @@ function DatadiriFoam({ idPaket }) {
         `${process.env.NEXT_PUBLIC_URL}/order`,
         {
           id_user: DataUser._id,
-          id_mitra: DetailPaket.id_mitra[0]._id,
+          id_mitra: DetailPaket.id_mitra,
           id_paket: DetailPaket._id,
           jumlah_bayar: DetailPaket.price * jamaah.length,
           jamaah: jamaah,
