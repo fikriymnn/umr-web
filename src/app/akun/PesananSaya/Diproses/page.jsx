@@ -236,15 +236,7 @@ function Diproses() {
                           {formattedNominal}
                         </p>
                         <div className="flex gap-2 lg:mx-0 mx-auto">
-                          <div className="flex justify-center">
-                            <a
-                              href={`invoice?id=${data._id}`}
-                              className="bg-amber-500 px-7 rounded-lg lg:py-0 py-1 lg:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm lg:text-base  bg-no-repeat bg-center"
-                              style={{
-                                backgroundImage: `url(/assets/vector/download.svg)`,
-                              }}
-                            ></a>
-                          </div>
+
                           <div className="bg-orange-500 px-7 rounded-lg lg:py-0 py-2 lg:mt-0 mt-2 text-white flex justify-center items-center text-center text-sm lg:text-base">
                             Pesanan Diproses
                           </div>
