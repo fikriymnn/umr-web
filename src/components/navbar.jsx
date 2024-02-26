@@ -61,7 +61,7 @@ export default function CustomNavbar() {
                 src="/assets/images/ibadahku1k2.png"
                 alt=""
                 width={140}
-                height={140}
+                height={20}
               />
             </a>
             {isClient && (
