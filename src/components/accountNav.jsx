@@ -29,7 +29,7 @@ function AccountNav({ account, order }) {
           <button>
             <a
               href="/akun/ProfilSaya"
-              className={`hover:bg-[#E3B02B] rounded-ss-xl xl:rounded-s-none xl:rounded-e-lg py-2 px-4 hover:text-white text-black duration-100 font-semibold text-start flex gap-2 ${account}`}
+              className={`hover:bg-[#E3B02B] rounded-ss-[10px] xl:rounded-s-none xl:rounded-e-lg py-2 px-4 hover:text-white text-black duration-100 font-semibold text-start flex gap-2 ${account}`}
             >
               <svg
                 width="24"

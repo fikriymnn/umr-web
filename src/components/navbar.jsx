@@ -61,7 +61,7 @@ export default function CustomNavbar() {
                 src="/assets/images/ibadahku1k2.png"
                 alt=""
                 width={140}
-                height={140}
+                height={20}
               />
             </a>
             {isClient && (
@@ -74,7 +74,7 @@ export default function CustomNavbar() {
                         className="h-full w-full p-7 flex flex-col justify-between"
                       >
                         <div
-                          className={`duration-100 bg-black h-1 w-full ${comp == 1 ? "rotate-45 translate-y-[9px]" : ""
+                          className={`duration-100 bg-black h-1 w-full ${comp == 1 ? "rotate-45 translate-y-[10px]" : ""
                             } rounded-full `}
                         ></div>
                         <div
@@ -82,7 +82,7 @@ export default function CustomNavbar() {
                             }`}
                         ></div>
                         <div
-                          className={`duration-100 bg-black h-1 w-full ${comp == 1 ? "-rotate-45 -translate-y-[9px]" : ""
+                          className={`duration-100 bg-black h-1 w-full ${comp == 1 ? "-rotate-45 -translate-y-[10px]" : ""
                             } rounded-full `}
                         ></div>
                       </button>
