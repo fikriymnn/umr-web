@@ -1,15 +1,38 @@
 "use client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import Router from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import Image from "next/image";
+
+
 function Login() {
   const { push } = useRouter();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const url = `${process.env.NEXT_PUBLIC_URL}/login`;
+  useEffect(() => {
+    getuser();
 
+  }, []);
+  async function getuser() {
+    try {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/user`, {
+        withCredentials: true,
+      });
+      if (res.data.success == true) {
+
+        push('/')
+
+      }
+
+    } catch (error) {
+      console.log(error.response);
+    }
+  }
+
+
+  const url = `${process.env.NEXT_PUBLIC_URL}/login`;
   async function submitLogin(e) {
     e.preventDefault();
     try {
@@ -21,8 +44,9 @@ function Login() {
           headers: { "Content-Type": "application/json" },
         }
       );
+
       alert("login success");
-      push("/");
+      window.location.reload();
       console.log(response)
     } catch (error) {
 
@@ -36,6 +60,7 @@ function Login() {
         <div className="md:w-[400px] w-11/12  md:ps-14 md:mx-0 mx-auto mt-10 ">
           <p className="text-3xl font-extrabold text-white ">
             Selamat Datang !
+
           </p>
           <p className="text-white pb-4">Masukkan Akun</p>
           <Card>
