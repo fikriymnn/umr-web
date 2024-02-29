@@ -96,7 +96,7 @@ function Login() {
               <div className="flex justify-center">
                 <p className="text-black text-sm">Belum Punya Akun?</p>
                 <a href="/register">
-                  <p className="text-[#E3B02B] text-sm">Masuk Disini</p>
+                  <p className="text-[#E3B02B] text-sm ml-1">Daftar Disini</p>
                 </a>
               </div>
             </form>

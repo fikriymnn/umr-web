@@ -11,7 +11,25 @@ function Register() {
   const [NamaLengkap, setNamaLengkap] = useState("");
   const [NoWhatsapp, setNoWhatsapp] = useState("");
   const url = `${process.env.NEXT_PUBLIC_URL}/register`;
+  useEffect(() => {
+    getuser();
 
+  }, []);
+  async function getuser() {
+    try {
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_URL}/user`, {
+        withCredentials: true,
+      });
+      if (res.data.success == true) {
+
+        push('/')
+
+      }
+
+    } catch (error) {
+      console.log(error.response);
+    }
+  }
   async function submitRegister(e) {
     e.preventDefault();
     try {
@@ -29,7 +47,7 @@ function Register() {
         }
       );
       alert("register success");
-      push("/");
+      window.location.reload();
     } catch (error) {
       alert(error.response.data.message);
     }
