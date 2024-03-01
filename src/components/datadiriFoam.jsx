@@ -199,7 +199,7 @@ function DatadiriFoam({ idPaket }) {
       );
 
 
-      alert("Order succsess");
+      alert("Order success");
       push(`/akun/PesananSaya/KonfirmasiBayar?id=${response.data.data._id}`);
       console.log(response.data);
     } catch (error) {

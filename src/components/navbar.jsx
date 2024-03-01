@@ -12,6 +12,7 @@ export default function CustomNavbar() {
   const [comp, setComp] = useState(0);
   const [isClient, setIsClient] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
@@ -34,6 +35,11 @@ export default function CustomNavbar() {
 
   useEffect(() => {
     getuser();
+    if (!DataUser) {
+      setIsLogin(false)
+    } else {
+      setIsLogin(true)
+    }
   }, []);
 
   async function getuser() {
