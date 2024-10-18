@@ -50,7 +50,7 @@ export default async function Home() {
                   </div></>
 
               ) : (
-                DataPaket.paket.map((data, index) => {
+                DataPaket?.paket.map((data, index) => {
                   return (
                     <>
                       <PackageCard
