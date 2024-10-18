@@ -56,7 +56,7 @@ function PackageCard({
       <div className="flex flex-col h-16 sm:h-20 md:h-24 lg:h-24">
 
         <p className="md:text-[14px] sm:text-[15px] text-[12px] font-semibold line-clamp-2 ">
-          {title} {title} {title}
+          {title}
 
         </p>
         <p className="lg:text-[20px] md:text-[15px] sm:text-[20px] text-[15px] font-semibold  text-[#E3B02B] md:mb-5 mt-auto flex ">
