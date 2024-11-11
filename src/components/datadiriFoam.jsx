@@ -623,7 +623,7 @@ function DatadiriFoam({ idPaket }) {
                   placeholder="Ketik Kode Promo.."
                 />
                 <button type="button" className="w-3/12 bg-amber-400 m-1 rounded-lg lg:text-sm text-xs font-medium p-2 ">
-                  Reedem
+                  Redeem
                 </button>
               </div>
             </div>
