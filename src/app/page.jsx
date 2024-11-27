@@ -100,11 +100,11 @@ export default async function Home() {
         <div className=" mx-auto md:w-11/12 w-64 bg-cover bg-image-container-left  ">
           <div className=" unflip">
             <Image
-              src={"/assets/images/pakhaji.png"}
+              src={"/assets/images/ibadahkudepan.jpg"}
               alt=""
               width={512}
               height={653}
-              className="mx-auto md:mt-10 mt-10 md:mb-24"
+              className="mx-auto md:mt-10 mt-10 md:mb-24 rounded-full"
             />
           </div>
         </div>

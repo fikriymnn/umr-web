@@ -18,10 +18,10 @@ export default function CustomFooter() {
             <p className="md:text-3xl text-lg font-extrabold md:pt-14 pt-7 md:ps-14 ps-4 pb-6">
               Ibadahku
             </p>
-            <p className="font-bold md:ps-14 ps-4 md:text-base text-sm">
+            {/* <p className="font-bold md:ps-14 ps-4 md:text-base text-sm">
               jl. Wastukencana Lorem ipsum dolor sit amet consectetur
               adipisicing.
-            </p>
+            </p> */}
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 md:p-14 p-4">
             <div>

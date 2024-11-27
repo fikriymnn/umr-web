@@ -118,7 +118,7 @@ function Register() {
             </form>
           </Card>
         </div>
-        <div className="mt-24 md:mx-0  mx-10 pb-10">
+        {/* <div className="mt-24 md:mx-0  mx-10 pb-10">
           <div className="flex gap-6 mx-auto mb-5">
             <div className="my-auto ">
               <svg
@@ -231,7 +231,7 @@ function Register() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
