@@ -15,7 +15,7 @@ function AboutUsHomepage() {
         haji dan umroh—mulai dari overclaim, pengelolaan keuangan yang buruk,
         hingga agen yang tidak bertanggung jawab—Ibadahku hadir sebagai solusi.
       </p>
-      <p className="font-semibold md:text-base text-sm md:line-clamp-none line-clamp-6 pt-1">
+      {/* <p className="font-semibold md:text-base text-sm md:line-clamp-none line-clamp-6 pt-1">
         Kami percaya, perjalanan ibadah ke Tanah Suci adalah momen suci yang
         harus dijalani dengan amanah dan tenang. Dengan teknologi canggih,
         kami membuka akses informasi yang transparan dan memastikan setiap mitra mematuhi standar pelayanan terbaik.
@@ -25,7 +25,7 @@ function AboutUsHomepage() {
       </p>
       <p className="text-black font- md:text-lg text-base  italic">
         Bersama kami, mari wujudkan ibadah yang lebih bermakna.
-      </p>
+      </p> */}
       <a href="/tentangKami" className="font-semibold md:text-base text-sm md:line-clamp-none line-clamp-6 text-amber-500 pt-2">
         lainnya...
       </a>
